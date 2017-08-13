@@ -15,7 +15,6 @@
 		8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD21F40D25E00808B16 /* AppDelegate.swift */; };
 		8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD41F40D28200808B16 /* Assets.xcassets */; };
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
-		8E1BABDA1F40D2BD00808B16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD91F40D2BD00808B16 /* Info.plist */; };
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +42,8 @@
 		8E1BABD21F40D25E00808B16 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E1BABD41F40D28200808B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E1BABD71F40D2B700808B16 /* InternaVet2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InternaVet2.xcdatamodel; sourceTree = "<group>"; };
-		8E1BABD91F40D2BD00808B16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,7 +161,7 @@
 		8E1BABD01F40D1B000808B16 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E1BABD91F40D2BD00808B16 /* Info.plist */,
+				8E1BABDE1F40D64A00808B16 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			path = "InternaVet2/Supporting Files";
@@ -276,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1BABDA1F40D2BD00808B16 /* Info.plist in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
 				8E1BABB01F40D18E00808B16 /* Main.storyboard in Resources */,
@@ -598,6 +596,7 @@
 				8E1BABC91F40D18E00808B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E1BABCA1F40D18E00808B16 /* Build configuration list for PBXNativeTarget "InternaVet2Tests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +605,7 @@
 				8E1BABCC1F40D18E00808B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
