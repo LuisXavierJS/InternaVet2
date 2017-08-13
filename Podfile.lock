@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 9d46e5123e8e5d1c35e0aa0561e5000541b124d9
+PODS:
+  - InputMask (2.2.5)
+  - LGSideMenuController (2.1.1)
+  - ReachabilitySwift (3)
+  - TPKeyboardAvoiding (1.3.1)
+
+DEPENDENCIES:
+  - InputMask (~> 2.2.0)
+  - LGSideMenuController (~> 2.1.1)
+  - ReachabilitySwift (~> 3)
+  - TPKeyboardAvoiding
+
+SPEC CHECKSUMS:
+  InputMask: fe1da1c6bf39133d88c1f79c507bcb0bf7728d51
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
+
+PODFILE CHECKSUM: 0c8e3f529876529e82bbc0a369d537f099c1f84a
 
 COCOAPODS: 1.2.1

@@ -6,7 +6,12 @@ target 'InternaVet2' do
   use_frameworks!
 
   # Pods for InternaVet2
-
+  
+  pod "LGSideMenuController", '~> 2.1.1'
+  pod "InputMask", '~> 2.2.0'
+  pod "ReachabilitySwift", '~> 3'
+  pod "TPKeyboardAvoiding"
+  
   target 'InternaVet2Tests' do
     inherit! :search_paths
     # Pods for testing
