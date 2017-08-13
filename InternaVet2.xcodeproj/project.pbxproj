@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E1BABAB1F40D18E00808B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABAA1F40D18E00808B16 /* AppDelegate.swift */; };
+		3776F5BB390D331A0BE47261 /* Pods_InternaVet2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */; };
+		5955FA70B9E80008BE251460 /* Pods_InternaVet2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC50C2C14B1B8CD24165323 /* Pods_InternaVet2Tests.framework */; };
 		8E1BABAD1F40D18E00808B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABAC1F40D18E00808B16 /* ViewController.swift */; };
 		8E1BABB01F40D18E00808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABAE1F40D18E00808B16 /* Main.storyboard */; };
-		8E1BABB31F40D18E00808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABB11F40D18E00808B16 /* InternaVet2.xcdatamodeld */; };
-		8E1BABB51F40D18E00808B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABB41F40D18E00808B16 /* Assets.xcassets */; };
-		8E1BABB81F40D18E00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABB61F40D18E00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABC31F40D18E00808B16 /* InternaVet2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */; };
+		8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD21F40D25E00808B16 /* AppDelegate.swift */; };
+		8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD41F40D28200808B16 /* Assets.xcassets */; };
+		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
+		8E1BABDA1F40D2BD00808B16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD91F40D2BD00808B16 /* Info.plist */; };
+		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +30,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FC50C2C14B1B8CD24165323 /* Pods_InternaVet2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternaVet2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238BDCE58DD29F17F6B56654 /* Pods-InternaVet2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.debug.xcconfig"; sourceTree = "<group>"; };
+		7169EFBB255783ED9952BD46 /* Pods-InternaVet2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternaVet2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABA71F40D18E00808B16 /* InternaVet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternaVet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E1BABAA1F40D18E00808B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E1BABAC1F40D18E00808B16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E1BABAF1F40D18E00808B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E1BABB21F40D18E00808B16 /* InternaVet2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InternaVet2.xcdatamodel; sourceTree = "<group>"; };
-		8E1BABB41F40D18E00808B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E1BABB71F40D18E00808B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E1BABB91F40D18E00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABBE1F40D18E00808B16 /* InternaVet2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternaVet2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternaVet2Tests.swift; sourceTree = "<group>"; };
 		8E1BABC41F40D18E00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E1BABD21F40D25E00808B16 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E1BABD41F40D28200808B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E1BABD71F40D2B700808B16 /* InternaVet2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InternaVet2.xcdatamodel; sourceTree = "<group>"; };
+		8E1BABD91F40D2BD00808B16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
+		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3776F5BB390D331A0BE47261 /* Pods_InternaVet2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +62,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5955FA70B9E80008BE251460 /* Pods_InternaVet2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19456F5E1BD0754FA5D996E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				238BDCE58DD29F17F6B56654 /* Pods-InternaVet2.debug.xcconfig */,
+				C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */,
+				7169EFBB255783ED9952BD46 /* Pods-InternaVet2Tests.debug.xcconfig */,
+				DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		471AAEFD9CCA45B066C16149 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */,
+				0FC50C2C14B1B8CD24165323 /* Pods_InternaVet2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E1BAB9E1F40D18D00808B16 = {
 			isa = PBXGroup;
 			children = (
 				8E1BABA91F40D18E00808B16 /* InternaVet2 */,
 				8E1BABC11F40D18E00808B16 /* InternaVet2Tests */,
 				8E1BABA81F40D18E00808B16 /* Products */,
+				19456F5E1BD0754FA5D996E7 /* Pods */,
+				471AAEFD9CCA45B066C16149 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +112,12 @@
 		8E1BABA91F40D18E00808B16 /* InternaVet2 */ = {
 			isa = PBXGroup;
 			children = (
-				8E1BABAA1F40D18E00808B16 /* AppDelegate.swift */,
+				8E1BABD01F40D1B000808B16 /* Supporting Files */,
+				8E1BABCF1F40D1A800808B16 /* Core Data */,
+				8E1BABCE1F40D1A000808B16 /* Resources */,
+				8E1BABCD1F40D19700808B16 /* Sources */,
 				8E1BABAC1F40D18E00808B16 /* ViewController.swift */,
 				8E1BABAE1F40D18E00808B16 /* Main.storyboard */,
-				8E1BABB41F40D18E00808B16 /* Assets.xcassets */,
-				8E1BABB61F40D18E00808B16 /* LaunchScreen.storyboard */,
-				8E1BABB91F40D18E00808B16 /* Info.plist */,
-				8E1BABB11F40D18E00808B16 /* InternaVet2.xcdatamodeld */,
 			);
 			path = InternaVet2;
 			sourceTree = "<group>";
@@ -99,6 +131,61 @@
 			path = InternaVet2Tests;
 			sourceTree = "<group>";
 		};
+		8E1BABCD1F40D19700808B16 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABD11F40D20C00808B16 /* Application */,
+			);
+			name = Sources;
+			path = InternaVet2/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABCE1F40D1A000808B16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABDB1F40D2D900808B16 /* User Interfaces */,
+				8E1BABD41F40D28200808B16 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = InternaVet2/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABCF1F40D1A800808B16 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */,
+			);
+			name = "Core Data";
+			path = "InternaVet2/Core Data";
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABD01F40D1B000808B16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABD91F40D2BD00808B16 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "InternaVet2/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABD11F40D20C00808B16 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABD21F40D25E00808B16 /* AppDelegate.swift */,
+			);
+			name = Application;
+			path = InternaVet2/Sources/Application;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABDB1F40D2D900808B16 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */,
+			);
+			name = "User Interfaces";
+			path = "InternaVet2/Resources/User Interfaces";
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E1BABC71F40D18E00808B16 /* Build configuration list for PBXNativeTarget "InternaVet2" */;
 			buildPhases = (
+				6325527E5FB184A3A0A7D63A /* [CP] Check Pods Manifest.lock */,
 				8E1BABA31F40D18E00808B16 /* Sources */,
 				8E1BABA41F40D18E00808B16 /* Frameworks */,
 				8E1BABA51F40D18E00808B16 /* Resources */,
+				C43ACE40207DC63580CBFD89 /* [CP] Embed Pods Frameworks */,
+				2E2E00BC5AED8D62EAA108AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E1BABCA1F40D18E00808B16 /* Build configuration list for PBXNativeTarget "InternaVet2Tests" */;
 			buildPhases = (
+				D2DB10A3CAA747A817E1FBA1 /* [CP] Check Pods Manifest.lock */,
 				8E1BABBA1F40D18E00808B16 /* Sources */,
 				8E1BABBB1F40D18E00808B16 /* Frameworks */,
 				8E1BABBC1F40D18E00808B16 /* Resources */,
+				01303AEA86CD6A868AA12786 /* [CP] Embed Pods Frameworks */,
+				8453CB5A9D050ACA95900D6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +242,7 @@
 				TargetAttributes = {
 					8E1BABA61F40D18E00808B16 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6T34FNX5YJ;
 						ProvisioningStyle = Automatic;
 					};
 					8E1BABBD1F40D18E00808B16 = {
@@ -182,8 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1BABB81F40D18E00808B16 /* LaunchScreen.storyboard in Resources */,
-				8E1BABB51F40D18E00808B16 /* Assets.xcassets in Resources */,
+				8E1BABDA1F40D2BD00808B16 /* Info.plist in Resources */,
+				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
+				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
 				8E1BABB01F40D18E00808B16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,14 +292,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01303AEA86CD6A868AA12786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E2E00BC5AED8D62EAA108AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6325527E5FB184A3A0A7D63A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8453CB5A9D050ACA95900D6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43ACE40207DC63580CBFD89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2DB10A3CAA747A817E1FBA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E1BABA31F40D18E00808B16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1BABB31F40D18E00808B16 /* InternaVet2.xcdatamodeld in Sources */,
+				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
+				8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */,
 				8E1BABAD1F40D18E00808B16 /* ViewController.swift in Sources */,
-				8E1BABAB1F40D18E00808B16 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,14 +421,6 @@
 				8E1BABAF1F40D18E00808B16 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E1BABB61F40D18E00808B16 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E1BABB71F40D18E00808B16 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,9 +523,11 @@
 		};
 		8E1BABC81F40D18E00808B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238BDCE58DD29F17F6B56654 /* Pods-InternaVet2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = InternaVet2/Info.plist;
+				DEVELOPMENT_TEAM = 6T34FNX5YJ;
+				INFOPLIST_FILE = "$(SRCROOT)/InternaVet2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jorge.xavier.InternaVet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,9 +537,11 @@
 		};
 		8E1BABC91F40D18E00808B16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = InternaVet2/Info.plist;
+				DEVELOPMENT_TEAM = 6T34FNX5YJ;
+				INFOPLIST_FILE = "$(SRCROOT)/InternaVet2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jorge.xavier.InternaVet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +551,7 @@
 		};
 		8E1BABCB1F40D18E00808B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7169EFBB255783ED9952BD46 /* Pods-InternaVet2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -381,6 +566,7 @@
 		};
 		8E1BABCC1F40D18E00808B16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -424,12 +610,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8E1BABB11F40D18E00808B16 /* InternaVet2.xcdatamodeld */ = {
+		8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8E1BABB21F40D18E00808B16 /* InternaVet2.xcdatamodel */,
+				8E1BABD71F40D2B700808B16 /* InternaVet2.xcdatamodel */,
 			);
-			currentVersion = 8E1BABB21F40D18E00808B16 /* InternaVet2.xcdatamodel */;
+			currentVersion = 8E1BABD71F40D2B700808B16 /* InternaVet2.xcdatamodel */;
 			path = InternaVet2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

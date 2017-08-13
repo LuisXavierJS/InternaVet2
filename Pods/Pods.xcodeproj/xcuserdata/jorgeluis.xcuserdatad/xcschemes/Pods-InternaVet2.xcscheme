@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E1BABA61F40D18E00808B16"
-               BuildableName = "InternaVet2.app"
-               BlueprintName = "InternaVet2"
-               ReferencedContainer = "container:InternaVet2.xcodeproj">
+               BlueprintIdentifier = "CA71F54089C23B40CB66ADFE0AB46BC4"
+               BuildableName = "Pods_InternaVet2.framework"
+               BlueprintName = "Pods-InternaVet2"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E1BABBD1F40D18E00808B16"
-               BuildableName = "InternaVet2Tests.xctest"
-               BlueprintName = "InternaVet2Tests"
-               ReferencedContainer = "container:InternaVet2.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E1BABA61F40D18E00808B16"
-            BuildableName = "InternaVet2.app"
-            BlueprintName = "InternaVet2"
-            ReferencedContainer = "container:InternaVet2.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E1BABA61F40D18E00808B16"
-            BuildableName = "InternaVet2.app"
-            BlueprintName = "InternaVet2"
-            ReferencedContainer = "container:InternaVet2.xcodeproj">
+            BlueprintIdentifier = "CA71F54089C23B40CB66ADFE0AB46BC4"
+            BuildableName = "Pods_InternaVet2.framework"
+            BlueprintName = "Pods-InternaVet2"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E1BABA61F40D18E00808B16"
-            BuildableName = "InternaVet2.app"
-            BlueprintName = "InternaVet2"
-            ReferencedContainer = "container:InternaVet2.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
