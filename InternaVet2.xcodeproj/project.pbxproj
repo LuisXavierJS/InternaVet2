@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3776F5BB390D331A0BE47261 /* Pods_InternaVet2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */; };
 		5955FA70B9E80008BE251460 /* Pods_InternaVet2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC50C2C14B1B8CD24165323 /* Pods_InternaVet2Tests.framework */; };
-		8E1BABAD1F40D18E00808B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABAC1F40D18E00808B16 /* ViewController.swift */; };
-		8E1BABB01F40D18E00808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABAE1F40D18E00808B16 /* Main.storyboard */; };
 		8E1BABC31F40D18E00808B16 /* InternaVet2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */; };
 		8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD21F40D25E00808B16 /* AppDelegate.swift */; };
 		8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD41F40D28200808B16 /* Assets.xcassets */; };
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
+		8E1BABE41F40D7DF00808B16 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABE31F40D7DF00808B16 /* MainTabBarController.swift */; };
+		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +34,6 @@
 		7169EFBB255783ED9952BD46 /* Pods-InternaVet2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternaVet2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABA71F40D18E00808B16 /* InternaVet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternaVet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E1BABAC1F40D18E00808B16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E1BABAF1F40D18E00808B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E1BABBE1F40D18E00808B16 /* InternaVet2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternaVet2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternaVet2Tests.swift; sourceTree = "<group>"; };
 		8E1BABC41F40D18E00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		8E1BABD71F40D2B700808B16 /* InternaVet2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InternaVet2.xcdatamodel; sourceTree = "<group>"; };
 		8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E1BABE31F40D7DF00808B16 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +115,6 @@
 				8E1BABCF1F40D1A800808B16 /* Core Data */,
 				8E1BABCE1F40D1A000808B16 /* Resources */,
 				8E1BABCD1F40D19700808B16 /* Sources */,
-				8E1BABAC1F40D18E00808B16 /* ViewController.swift */,
-				8E1BABAE1F40D18E00808B16 /* Main.storyboard */,
 			);
 			path = InternaVet2;
 			sourceTree = "<group>";
@@ -133,6 +131,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BABE11F40D7A700808B16 /* Main */,
 				8E1BABD11F40D20C00808B16 /* Application */,
 			);
 			name = Sources;
@@ -179,10 +178,29 @@
 		8E1BABDB1F40D2D900808B16 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BABE21F40D7B900808B16 /* Main */,
 				8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */,
 			);
 			name = "User Interfaces";
 			path = "InternaVet2/Resources/User Interfaces";
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABE11F40D7A700808B16 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABE31F40D7DF00808B16 /* MainTabBarController.swift */,
+			);
+			name = Main;
+			path = InternaVet2/Sources/Main;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABE21F40D7B900808B16 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABE51F40D7E600808B16 /* Main.storyboard */,
+			);
+			name = Main;
+			path = "InternaVet2/Resources/User Interfaces/Main";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -275,9 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
-				8E1BABB01F40D18E00808B16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1BABE41F40D7DF00808B16 /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 				8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */,
-				8E1BABAD1F40D18E00808B16 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,17 +429,6 @@
 			targetProxy = 8E1BABBF1F40D18E00808B16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8E1BABAE1F40D18E00808B16 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E1BABAF1F40D18E00808B16 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8E1BABC51F40D18E00808B16 /* Debug */ = {
