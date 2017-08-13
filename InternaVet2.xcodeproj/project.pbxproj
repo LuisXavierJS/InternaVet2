@@ -18,6 +18,8 @@
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
 		8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
+		8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */; };
+		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
+		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,8 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E67C9E71F40F56900C3C4CE /* Constants */,
+				8E67C9E01F40F48E00C3C4CE /* Views */,
 				8E67C9D51F40F35000C3C4CE /* Controllers */,
 			);
 			name = Sources;
@@ -201,6 +207,7 @@
 		8E67C9D51F40F35000C3C4CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E67C9DF1F40F48100C3C4CE /* Extensions */,
 				8E67C9D61F40F35000C3C4CE /* Application */,
 				8E67C9D81F40F35000C3C4CE /* CreateNewOwner */,
 				8E67C9DA1F40F35000C3C4CE /* Main */,
@@ -230,6 +237,53 @@
 				8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		8E67C9DF1F40F48100C3C4CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E67C9E01F40F48E00C3C4CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E67C9E41F40F4B500C3C4CE /* Extensions */,
+				8E67C9E11F40F48E00C3C4CE /* Cells */,
+				8E67C9E21F40F48E00C3C4CE /* Helpers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E67C9E11F40F48E00C3C4CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8E67C9E21F40F48E00C3C4CE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8E67C9E41F40F4B500C3C4CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E67C9E71F40F56900C3C4CE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +491,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
+				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
+				8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 			);
