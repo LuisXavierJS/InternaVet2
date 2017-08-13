@@ -10,6 +10,7 @@ target 'InternaVet2' do
   pod "LGSideMenuController", '~> 2.1.1'
   pod "InputMask", '~> 2.2.0'
   pod "ReachabilitySwift", '~> 3'
+  pod "JVFloatLabeledTextField", '~> 1.2.0'
   pod "TPKeyboardAvoiding"
   
   target 'InternaVet2Tests' do

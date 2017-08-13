@@ -16,6 +16,8 @@
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABE41F40D7DF00808B16 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABE31F40D7DF00808B16 /* MainTabBarController.swift */; };
 		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
+		8E1BABEC1F40E70F00808B16 /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABEB1F40E70F00808B16 /* CreateNewOwnerViewController.swift */; };
+		8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABE31F40D7DF00808B16 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8E1BABEB1F40E70F00808B16 /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
+		8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BABEA1F40E6FF00808B16 /* CreateNewOwner */,
 				8E1BABE11F40D7A700808B16 /* Main */,
 				8E1BABD11F40D20C00808B16 /* Application */,
 			);
@@ -178,6 +183,7 @@
 		8E1BABDB1F40D2D900808B16 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BABE71F40E69000808B16 /* CreateNewOwner */,
 				8E1BABE21F40D7B900808B16 /* Main */,
 				8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */,
 			);
@@ -201,6 +207,24 @@
 			);
 			name = Main;
 			path = "InternaVet2/Resources/User Interfaces/Main";
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABE71F40E69000808B16 /* CreateNewOwner */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */,
+			);
+			name = CreateNewOwner;
+			path = "InternaVet2/Resources/User Interfaces/CreateNewOwner";
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1BABEA1F40E6FF00808B16 /* CreateNewOwner */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BABEB1F40E70F00808B16 /* CreateNewOwnerViewController.swift */,
+			);
+			name = CreateNewOwner;
+			path = InternaVet2/Sources/CreateNewOwner;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -294,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
+				8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
 			);
@@ -407,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1BABE41F40D7DF00808B16 /* MainTabBarController.swift in Sources */,
+				8E1BABEC1F40E70F00808B16 /* CreateNewOwnerViewController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 				8E1BABD31F40D25E00808B16 /* AppDelegate.swift in Sources */,
 			);
