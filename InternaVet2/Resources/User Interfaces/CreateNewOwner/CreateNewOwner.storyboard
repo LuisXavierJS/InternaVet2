@@ -28,22 +28,39 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-tN-JSw" userLabel="ContentView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do Proprietário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-Ou-PSx" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="13" y="25" width="349" height="40"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-Ou-PSx" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="25" width="349" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="kEv-qA-8gh"/>
+                                                    <constraint firstAttribute="height" constant="35" id="kEv-qA-8gh"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefone do Proprietario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPN-vb-pMg" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="13" y="75" width="349" height="40"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefone do Proprietario:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPN-vb-pMg" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="115" width="349" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="WOR-Lt-plU"/>
-                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="maskText" value="([00]) [00000]-[0000]"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Celular do Proprietario:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="143-Kq-rV5" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="160" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="maskText" value="([00]) [00000]-[0000]"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4O-jW-H9T" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="70" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -52,11 +69,20 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Hfq-Ou-PSx" firstAttribute="top" secondItem="mSj-tN-JSw" secondAttribute="top" constant="25" id="1rP-kd-Lve"/>
-                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="top" secondItem="Hfq-Ou-PSx" secondAttribute="bottom" constant="10" id="28g-Ro-bDT"/>
                                             <constraint firstItem="Hfq-Ou-PSx" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="57u-SQ-nYW"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="height" secondItem="Hfq-Ou-PSx" secondAttribute="height" id="6vZ-7T-Ubm"/>
                                             <constraint firstItem="qPN-vb-pMg" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="7yH-Jh-4rr"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="top" secondItem="Hfq-Ou-PSx" secondAttribute="bottom" constant="10" id="91T-QA-eaL"/>
+                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="top" secondItem="s4O-jW-H9T" secondAttribute="bottom" constant="10" id="Jrp-zH-GaT"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Hfq-Ou-PSx" secondAttribute="trailing" constant="5" id="T8K-Zp-llP"/>
+                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="height" secondItem="Hfq-Ou-PSx" secondAttribute="height" id="WVY-Pa-wmw"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="XpS-ll-eZi"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="height" secondItem="qPN-vb-pMg" secondAttribute="height" id="eIw-Db-OCC"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="qPN-vb-pMg" secondAttribute="trailing" constant="5" id="h73-tr-sJm"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="143-Kq-rV5" secondAttribute="trailing" constant="5" id="jvn-Q8-rjy"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="lpN-cY-6Na"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="s4O-jW-H9T" secondAttribute="trailing" constant="5" id="o6i-3S-wyL"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="top" secondItem="qPN-vb-pMg" secondAttribute="bottom" constant="10" id="oTr-Ru-Dj1"/>
                                         </constraints>
                                     </view>
                                 </subviews>

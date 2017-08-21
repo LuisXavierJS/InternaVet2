@@ -15,6 +15,7 @@
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
 		8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */; };
+		8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */; };
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
 		8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
@@ -48,6 +49,7 @@
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
+		8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		8E67C9E41F40F4B500C3C4CE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				8E67C9EB1F40FAE800C3C4CE /* ContentView.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
 				8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */,
+				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 			);
