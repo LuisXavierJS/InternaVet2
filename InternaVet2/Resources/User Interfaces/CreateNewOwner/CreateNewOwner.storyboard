@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tRq-27-64m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create New Owner View Controller-->
+        <scene sceneID="1pj-hn-Epn">
+            <objects>
+                <viewController id="tRq-27-64m" customClass="CreateNewOwnerViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ExC-Dq-WrZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fgi-QP-Fvl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zjn-B6-v3s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-R8-BUB" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-tN-JSw" userLabel="ContentView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-Ou-PSx" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="25" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="kEv-qA-8gh"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefone do Proprietario:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPN-vb-pMg" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="115" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="maskText" value="([00]) [00000]-[0000]"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Celular do Proprietario:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="143-Kq-rV5" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="160" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="maskText" value="([00]) [00000]-[0000]"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4O-jW-H9T" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="70" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Endereço do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rET-nL-c6v" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="205" width="349" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Hfq-Ou-PSx" firstAttribute="top" secondItem="mSj-tN-JSw" secondAttribute="top" constant="25" id="1rP-kd-Lve"/>
+                                            <constraint firstItem="Hfq-Ou-PSx" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="57u-SQ-nYW"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="height" secondItem="Hfq-Ou-PSx" secondAttribute="height" id="6vZ-7T-Ubm"/>
+                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="7yH-Jh-4rr"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="top" secondItem="Hfq-Ou-PSx" secondAttribute="bottom" constant="10" id="91T-QA-eaL"/>
+                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="top" secondItem="s4O-jW-H9T" secondAttribute="bottom" constant="10" id="Jrp-zH-GaT"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Hfq-Ou-PSx" secondAttribute="trailing" constant="5" id="T8K-Zp-llP"/>
+                                            <constraint firstItem="qPN-vb-pMg" firstAttribute="height" secondItem="Hfq-Ou-PSx" secondAttribute="height" id="WVY-Pa-wmw"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="XpS-ll-eZi"/>
+                                            <constraint firstItem="rET-nL-c6v" firstAttribute="top" secondItem="143-Kq-rV5" secondAttribute="bottom" constant="10" id="YbG-75-N9s"/>
+                                            <constraint firstItem="rET-nL-c6v" firstAttribute="height" secondItem="143-Kq-rV5" secondAttribute="height" id="Yj1-BG-afS"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="height" secondItem="qPN-vb-pMg" secondAttribute="height" id="eIw-Db-OCC"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qPN-vb-pMg" secondAttribute="trailing" constant="5" id="h73-tr-sJm"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="rET-nL-c6v" secondAttribute="trailing" constant="5" id="iUs-fA-PXk"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="143-Kq-rV5" secondAttribute="trailing" constant="5" id="jvn-Q8-rjy"/>
+                                            <constraint firstItem="s4O-jW-H9T" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="lpN-cY-6Na"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="s4O-jW-H9T" secondAttribute="trailing" constant="5" id="o6i-3S-wyL"/>
+                                            <constraint firstItem="143-Kq-rV5" firstAttribute="top" secondItem="qPN-vb-pMg" secondAttribute="bottom" constant="10" id="oTr-Ru-Dj1"/>
+                                            <constraint firstItem="rET-nL-c6v" firstAttribute="leading" secondItem="mSj-tN-JSw" secondAttribute="leadingMargin" constant="5" id="yVX-bH-Y7B"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mSj-tN-JSw" firstAttribute="centerY" secondItem="Tnh-R8-BUB" secondAttribute="centerY" id="2dF-9m-kgB"/>
+                                    <constraint firstAttribute="trailing" secondItem="mSj-tN-JSw" secondAttribute="trailing" id="3X7-bv-5R9"/>
+                                    <constraint firstItem="mSj-tN-JSw" firstAttribute="top" secondItem="Tnh-R8-BUB" secondAttribute="top" id="EgJ-oi-XHv"/>
+                                    <constraint firstAttribute="bottom" secondItem="mSj-tN-JSw" secondAttribute="bottom" id="Rct-jY-XN3"/>
+                                    <constraint firstItem="mSj-tN-JSw" firstAttribute="leading" secondItem="Tnh-R8-BUB" secondAttribute="leading" id="UgZ-ep-luF"/>
+                                    <constraint firstItem="mSj-tN-JSw" firstAttribute="centerX" secondItem="Tnh-R8-BUB" secondAttribute="centerX" id="uti-0Q-In9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tnh-R8-BUB" firstAttribute="top" secondItem="ExC-Dq-WrZ" secondAttribute="bottom" id="1hy-Hs-jBt"/>
+                            <constraint firstItem="Fgi-QP-Fvl" firstAttribute="top" secondItem="Tnh-R8-BUB" secondAttribute="bottom" id="Cy0-u2-PP2"/>
+                            <constraint firstAttribute="trailing" secondItem="Tnh-R8-BUB" secondAttribute="trailing" id="TMJ-pV-veb"/>
+                            <constraint firstItem="Tnh-R8-BUB" firstAttribute="leading" secondItem="zjn-B6-v3s" secondAttribute="leading" id="UoD-aq-GNS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nB-95-CSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="399.85007496251876"/>
+        </scene>
+    </scenes>
+</document>
