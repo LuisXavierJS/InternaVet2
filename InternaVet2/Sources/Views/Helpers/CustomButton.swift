@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class CustomButton: UIButton {
 
     required init?(coder aDecoder: NSCoder) {
@@ -25,5 +26,9 @@ class CustomButton: UIButton {
         self.layer.borderWidth = 1
         self.layer.shadowColor = Colors.darkGreen.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        self.setupViews()
     }
 }
