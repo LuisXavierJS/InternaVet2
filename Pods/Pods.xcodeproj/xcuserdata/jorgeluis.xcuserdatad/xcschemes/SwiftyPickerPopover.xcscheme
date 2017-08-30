@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '20F4E3C5C52A3952098FD21E6C7B1880'
-               BlueprintName = 'TPKeyboardAvoiding'
+               BlueprintIdentifier = '097A25DA9024128615CECA5C10AC5CA3'
+               BlueprintName = 'SwiftyPickerPopover'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TPKeyboardAvoiding.framework'>
+               BuildableName = 'SwiftyPickerPopover.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

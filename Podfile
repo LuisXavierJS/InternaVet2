@@ -12,6 +12,7 @@ target 'InternaVet2' do
   pod "ReachabilitySwift", '~> 3'
   pod "JVFloatLabeledTextField", '~> 1.2.0'
   pod "TPKeyboardAvoiding"
+  pod "SwiftyPickerPopover"
   
   target 'InternaVet2Tests' do
     inherit! :search_paths

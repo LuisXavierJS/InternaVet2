@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyPickerPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,6 +47,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>097A25DA9024128615CECA5C10AC5CA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0A667609BF9BD15CE73A76A27D5C8C4B</key>
 		<dict>
 			<key>primary</key>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C6F39096F487E8FC91DA8F4F07ABFD2</key>
+		<key>20F4E3C5C52A3952098FD21E6C7B1880</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>966DF7FDDF758E04CB481C80DD52F46E</key>
+		<key>C6C053379D8294C9458D0572C11F06C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB7C80FC884DDC39E5597D4D6373BD66</key>
+		<key>DD39B9B7E8BF4250DA674499E795D23F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
