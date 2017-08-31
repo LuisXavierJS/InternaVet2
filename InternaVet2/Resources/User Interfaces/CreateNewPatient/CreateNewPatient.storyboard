@@ -30,25 +30,24 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSX-IG-8Yx" userLabel="PatientFieldsContainer" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwh-Tn-i4n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                                        <string key="text">Mais do que isso, utillizar botao com tela especifica para selecao e busca. Para inputs complexos, utilizar modais personalizados.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sob-f2-ivN" customClass="ArrowView" customModule="InternaVet2" customModuleProvider="target">
+                                                        <rect key="frame" x="165" y="41.5" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="bwL-Wi-zpR"/>
+                                                            <constraint firstAttribute="height" constant="45" id="xvx-51-KJt"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="Ipg-ye-yvr"/>
-                                                    <constraint firstItem="Pwh-Tn-i4n" firstAttribute="top" secondItem="KSX-IG-8Yx" secondAttribute="top" id="JgI-z1-MNt"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Pwh-Tn-i4n" secondAttribute="bottom" id="OXR-Pn-QkY"/>
-                                                    <constraint firstItem="Pwh-Tn-i4n" firstAttribute="leading" secondItem="KSX-IG-8Yx" secondAttribute="leading" id="bGN-Dc-eiL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Pwh-Tn-i4n" secondAttribute="trailing" id="xVI-YE-S8N"/>
+                                                    <constraint firstItem="sob-f2-ivN" firstAttribute="centerY" secondItem="KSX-IG-8Yx" secondAttribute="centerY" id="soY-ij-JF2"/>
+                                                    <constraint firstItem="sob-f2-ivN" firstAttribute="centerX" secondItem="KSX-IG-8Yx" secondAttribute="centerX" id="zyc-Ig-gl7"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vga-pa-FoO" customClass="CustomButton" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="183" width="379" height="40"/>
+                                                <rect key="frame" x="0.0" y="183" width="375" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="fav-a0-Odc"/>
                                                 </constraints>
@@ -58,7 +57,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toc-5h-cdJ" customClass="CustomButton" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="128" width="379" height="40"/>
+                                                <rect key="frame" x="0.0" y="128" width="375" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="p2w-1a-QbF"/>
                                                 </constraints>
@@ -73,12 +72,12 @@
                                             <constraint firstItem="KSX-IG-8Yx" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="1MP-oU-N6O"/>
                                             <constraint firstItem="Vga-pa-FoO" firstAttribute="top" secondItem="Toc-5h-cdJ" secondAttribute="bottom" constant="15" id="5y8-jA-UQB"/>
                                             <constraint firstAttribute="trailing" secondItem="KSX-IG-8Yx" secondAttribute="trailing" id="6gi-qe-yxI"/>
-                                            <constraint firstAttribute="trailing" secondItem="Toc-5h-cdJ" secondAttribute="trailing" constant="-2" id="7gK-Y0-ro8"/>
-                                            <constraint firstItem="Vga-pa-FoO" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="-2" id="Bh1-a4-acf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Toc-5h-cdJ" secondAttribute="trailing" id="7gK-Y0-ro8"/>
+                                            <constraint firstItem="Vga-pa-FoO" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="Bh1-a4-acf"/>
                                             <constraint firstAttribute="bottom" secondItem="Vga-pa-FoO" secondAttribute="bottom" id="UDU-6G-taa"/>
                                             <constraint firstItem="Toc-5h-cdJ" firstAttribute="top" secondItem="KSX-IG-8Yx" secondAttribute="bottom" id="kPc-og-i8P"/>
-                                            <constraint firstItem="Toc-5h-cdJ" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="-2" id="qmO-vw-uUp"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vga-pa-FoO" secondAttribute="trailing" constant="-2" id="rx7-f4-5Pp"/>
+                                            <constraint firstItem="Toc-5h-cdJ" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="qmO-vw-uUp"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vga-pa-FoO" secondAttribute="trailing" id="rx7-f4-5Pp"/>
                                             <constraint firstItem="KSX-IG-8Yx" firstAttribute="top" secondItem="027-k7-cjA" secondAttribute="top" id="sj1-aW-gJl"/>
                                         </constraints>
                                     </view>
