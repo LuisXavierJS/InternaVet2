@@ -57,7 +57,7 @@ class CustomFloatTextField: JVFloatLabeledTextField {
     fileprivate func textRectForBounds(b bounds: CGRect) -> CGRect {
         let needsTextRepositioning = !(self.text?.isEmpty ?? false)
         let topYDelta: CGFloat = needsTextRepositioning ? 4 : 0
-        return bounds.insetBy(dx: 5, dy: 0).insetBy(tY: topYDelta)
+        return bounds.insetBy(dx: 5, dy: 0).insetBy(left: topYDelta)
     }
     
     fileprivate func updateMask() {
