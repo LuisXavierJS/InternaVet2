@@ -88,6 +88,7 @@ class ArrowView: UIView{
         let arrowPoints = self.arrowPoints(in: area)
         
         let con = UIGraphicsGetCurrentContext()
+        
         con?.clip(to: rect.insetBy(dx: 1, dy: 1))
         con?.setLineWidth(self.lineWidth)
         con?.setStrokeColor(self.lineColor.cgColor)
@@ -95,6 +96,11 @@ class ArrowView: UIView{
         con?.addLine(to: arrowPoints.p1)
         con?.move(to: directionPoint)
         con?.addLine(to: arrowPoints.p2)
-        con?.strokePath()        
+        con?.move(to: directionPoint)
+        con?.strokePath()
+        con?.setStrokeColor(UIColor.clear.cgColor)
+        con?.setFillColor(self.lineColor.cgColor)
+        con?.addEllipse(in: CGSize(width: self.lineWidth, height: self.lineWidth).toRect().with(center:directionPoint))
+        con?.fillPath()
     }
 }

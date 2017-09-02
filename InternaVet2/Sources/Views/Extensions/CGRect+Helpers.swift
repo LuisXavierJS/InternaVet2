@@ -36,6 +36,10 @@ extension CGSize {
     func with(height: CGFloat) -> CGSize {
         return CGSize(width: self.width, height: height)
     }
+    
+    func toRect(point: CGPoint = CGPoint.zero) -> CGRect {
+        return CGRect(origin: point, size: self)
+    }
 }
 
 extension CGRect {
@@ -75,6 +79,10 @@ extension CGRect {
     
     func with(point delta: CGPoint) -> CGRect {
         return self.with(x: delta.x).with(y: delta.y)
+    }
+    
+    func with(center delta: CGPoint) -> CGRect {
+        return self.with(x: delta.x - self.width/2).with(y: delta.y - self.height/2)
     }
     
     func with(x delta: CGFloat) -> CGRect {
