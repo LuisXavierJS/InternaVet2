@@ -10,13 +10,13 @@ import UIKit
 
 class CreateNewPatientViewController: UIViewController {
     @IBOutlet weak var text: UITextField!
-    @IBOutlet weak var arrow: ArrowView!
+    @IBOutlet weak var arrow: SelectionSliderView! {
+        didSet{
+            arrow.items = ["dafoq man dafoq man dafoq man dafoq man", "stop lyingstop lyingstop lying", "aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?"]
+        }
+    }
     
     @IBAction func buttonTaped(){        
-        if let number = Double(text.text!) {
-            self.arrow.degree = CGFloat(number)
-            self.arrow.setNeedsDisplay()
-        }
-        
+            print("hey")
     }
 }

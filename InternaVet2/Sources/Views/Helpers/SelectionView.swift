@@ -9,13 +9,98 @@
 import UIKit
 
 @IBDesignable
-class SelectionButtonView: ContentView {
+class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
+    @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadData() } }
+    @IBInspectable var hiddingColor: UIColor = UIColor.white{ didSet{ self.setupGradientLayer() } }
+    @IBInspectable var hiddingLocation: CGFloat = 5{ didSet{ self.setupGradientLayer() } }
+    
+    fileprivate var scrollPageView: UIScrollView = UIScrollView()
+    
+    var selectedItemIndex: Int {
+        return Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
+    }
+    
+    var items: [String] = [] { didSet { self.reloadData() } }
+    
+    func reloadData(){
+        self.scrollPageView.subviews.filter({$0 is UILabel}).forEach({$0.removeFromSuperview()})
+        self.scrollPageView.setContentOffset(CGPoint.zero, animated: false)
+        let nLabels = CGFloat(self.items.count)
+        self.scrollPageView.contentSize = self.bounds.size.with(width: nLabels * self.bounds.size.width)
+        for i in 0..<Int(nLabels) {
+            let label = UILabel(frame: self.bounds.with(x: self.bounds.width * CGFloat(i)).insetBy(dx: 15, dy: self.lineWidth))
+            label.tag = i
+            label.text = self.items[i]
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            label.font = UIFont.systemFont(ofSize: self.fontSize)
+            self.scrollPageView.addSubview(label)
+        }
+    }
+    
+    private func setupScrollView(){
+        self.scrollPageView.isPagingEnabled = true
+        self.scrollPageView.alwaysBounceHorizontal = true
+        self.scrollPageView.alwaysBounceVertical = false
+        self.scrollPageView.delegate = self
+        self.scrollPageView.indicatorStyle = .white
+        self.addSubview(self.scrollPageView)
+    }
+    
+    private func setupGradientLayer(){
+        self.layer.sublayers?.filter({$0 is CAGradientLayer}).forEach({$0.removeFromSuperlayer()})
+        func gradientLayer(aligned: CGRectAlignment) -> CAGradientLayer {
+            let gradient = CAGradientLayer()
+            gradient.backgroundColor = UIColor.init(white: 1, alpha: 0).cgColor
+            gradient.frame = self.bounds
+                .insetBy(dx: 0, dy: self.lineWidth)
+                .with(width: 2 * (self.arrowsSize.width + self.arrowsLocation + self.hiddingLocation))
+                .aligned([aligned], in: self.bounds)
+            gradient.contentsScale = UIScreen.main.scale
+            gradient.locations = [0.0,1.0]
+            gradient.startPoint = CGPoint(x: 0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1, y: 0.5)
+            switch aligned {
+                case .right(_):gradient.colors = [gradient.backgroundColor!,self.hiddingColor.cgColor];break
+                default:gradient.colors = [self.hiddingColor.cgColor, gradient.backgroundColor!];break
+            }
+            return gradient
+        }
+        self.layer.insertSublayer(gradientLayer(aligned: .right(0)), above: self.scrollPageView.layer)
+        self.layer.insertSublayer(gradientLayer(aligned: .left(0)), above: self.scrollPageView.layer)
+    }
+    
+    private func setupPaging(){
+        self.setupScrollView()
+        self.setupGradientLayer()
+    }
+    
+    override func setupViews() {
+        self.setupPaging()
+        super.setupViews()
+    }
+    
+    override func setupFrames() {
+        super.setupFrames()
+        self.scrollPageView.frame = self.bounds
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+    }
+    
+}
+
+
+@IBDesignable
+class DoubleArrowsView: ContentView {
     @IBInspectable var lineColor: UIColor = Colors.lightGreen
     @IBInspectable var lineWidth: CGFloat = 1
-    @IBInspectable var arrowsMainColor: UIColor = Colors.darkGreen{didSet{self.setArrowsDisplay()}}
-    @IBInspectable var arrowsBaseColor: UIColor = Colors.lightGreen{didSet{self.setArrowsDisplay()}}
-    @IBInspectable var arrowsWidth: CGFloat = 4{didSet{self.setArrowsDisplay()}}
-    @IBInspectable var arrowsSize: CGSize = CGSize(width: 20, height: 25){didSet{self.setArrowsDisplay()}}
+    @IBInspectable var arrowsLocation: CGFloat = 5
+    @IBInspectable var arrowsMainColor: UIColor = Colors.darkGreen{ didSet{ self.setArrowsDisplay() } }
+    @IBInspectable var arrowsBaseColor: UIColor = Colors.lightGreen{ didSet{ self.setArrowsDisplay() } }
+    @IBInspectable var arrowsWidth: CGFloat = 4{ didSet{ self.setArrowsDisplay() } }
+    @IBInspectable var arrowsSize: CGSize = CGSize(width: 20, height: 25){ didSet{ self.setArrowsDisplay() } }
     
     fileprivate(set) var leftArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.left)
     fileprivate(set) var rightArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.right)
@@ -37,8 +122,8 @@ class SelectionButtonView: ContentView {
     }
     
     private func setupArrowsFrames(){
-        self.leftArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.left(5)], in: self.bounds)
-        self.rightArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.right(-5)], in: self.bounds)
+        self.leftArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.left(self.arrowsLocation)], in: self.bounds)
+        self.rightArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.right(-self.arrowsLocation)], in: self.bounds)
     }
     
     private func setupArrowsLayout(){
@@ -65,3 +150,4 @@ class SelectionButtonView: ContentView {
         con?.strokePath()        
     }
 }
+
