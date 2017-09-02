@@ -103,20 +103,29 @@ class ArrowView: UIView{
         
         let con = UIGraphicsGetCurrentContext()
         
-        con?.setLineWidth(1)
-        con?.setStrokeColor(self.lineColor.cgColor)
         con?.move(to: directionPoint)
         con?.addLine(to: arrowPoints.p1)
         con?.addLine(to:middleLinePoint)
         con?.move(to: directionPoint)
         con?.addLine(to: arrowPoints.p2)
         con?.addLine(to:middleLinePoint)
-        con?.strokePath()
-        con?.setLineWidth(0.5)
-        con?.setStrokeColor(self.lineColor.withAlphaComponent(0.7).cgColor)
+        
+        if let path = con?.path{
+            con?.setFillColor(self.lineColor.withAlphaComponent(0.3).cgColor)
+            con?.fillPath()
+            con?.addPath(path)
+            con?.setLineWidth(1)
+            con?.setStrokeColor(self.lineColor.cgColor)
+            con?.strokePath()
+        }
+        
         con?.move(to: middleLinePoint)
         con?.addLine(to: directionPoint.with(x: directionPoint.x + 1))
+        
+        con?.setLineWidth(0.5)
+        con?.setStrokeColor(self.lineColor.withAlphaComponent(0.75).cgColor)
         con?.strokePath()
+        
         con?.setStrokeColor(UIColor.clear.cgColor)
         con?.setFillColor(self.lineColor.cgColor)
         con?.addEllipse(in: CGSize(width: 1, height: 1).toRect().with(center:directionPoint))
