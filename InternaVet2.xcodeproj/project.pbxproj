@@ -27,6 +27,7 @@
 		8EF447971F57972E004A51DA /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447961F57972E004A51DA /* CustomUIButton.swift */; };
 		8EF4479A1F579785004A51DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447991F579785004A51DA /* ContentView.swift */; };
 		8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4479C1F5798E8004A51DA /* ArrowView.swift */; };
+		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8EF447961F57972E004A51DA /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		8EF447991F579785004A51DA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8EF4479C1F5798E8004A51DA /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */,
+				8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */,
 				8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
+				8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 			);

@@ -21,14 +21,15 @@ class ArrowView: UIView{
     @IBInspectable var direction: String = ArrowDirection.right.rawValue
     @IBInspectable var lineWidth: CGFloat = 1
     @IBInspectable var baseLineWidth: CGFloat = 0
+    
     @IBInspectable var lineColor: UIColor = UIColor.black
     @IBInspectable var middleLineColor: UIColor =  UIColor.black
     @IBInspectable var baseArrowColor: UIColor = UIColor.gray
     @IBInspectable var mainArrowColor: UIColor = UIColor.lightGray
     
-    private var inset: CGFloat = 0
+    fileprivate var inset: CGFloat = 0
     
-    private func arrowDirectionPoint(in rect: CGRect) -> CGPoint {
+    fileprivate func arrowDirectionPoint(in rect: CGRect) -> CGPoint {
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
         case .top:
@@ -42,7 +43,7 @@ class ArrowView: UIView{
         }
     }
     
-    private func defaultArrowPoints(in rect: CGRect) -> (p1: CGPoint, p2: CGPoint) {
+    fileprivate func defaultArrowPoints(in rect: CGRect) -> (p1: CGPoint, p2: CGPoint) {
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
         case .top:
@@ -56,7 +57,7 @@ class ArrowView: UIView{
         }
     }
     
-    private func calculateDefaultDegreeOfBiggestPossibleTriangle(in rect: CGRect) -> (defaultDegree: CGFloat, defaultBase: CGFloat)? {
+    fileprivate func calculateDefaultDegreeOfBiggestPossibleTriangle(in rect: CGRect) -> (defaultDegree: CGFloat, defaultBase: CGFloat)? {
         let arrowDirPoint = self.arrowDirectionPoint(in: rect)
         let defaultPoints = self.defaultArrowPoints(in: rect)
         let dir_p1 = hypot(defaultPoints.p1.x - arrowDirPoint.x, defaultPoints.p1.y - arrowDirPoint.y)
@@ -69,7 +70,7 @@ class ArrowView: UIView{
         return (defaultDegree: defaultDegree, defaultBase: p1_p2)
     }
     
-    private func arrowPoints(in rect: CGRect) -> (p1: CGPoint, p2: CGPoint) {
+    fileprivate func arrowPoints(in rect: CGRect) -> (p1: CGPoint, p2: CGPoint) {
         if degree > 0, let defaults = self.calculateDefaultDegreeOfBiggestPossibleTriangle(in: rect) {
             let dir = ArrowDirection(rawValue: self.direction) ?? .right
             let defaultDegreeReason = defaults.defaultBase/defaults.defaultDegree
@@ -86,7 +87,7 @@ class ArrowView: UIView{
     }
     
     
-    private func areaForDrawArrow(in rect: CGRect) -> CGRect {
+    fileprivate func areaForDrawArrow(in rect: CGRect) -> CGRect {
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
         case .top:
@@ -100,7 +101,7 @@ class ArrowView: UIView{
         }
     }
     
-    private func getMiddleLine(in rect: CGRect, for directionPoint: CGPoint) -> CGPoint {
+    fileprivate func getMiddleLine(in rect: CGRect, for directionPoint: CGPoint) -> CGPoint {
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
         case .top:
@@ -114,7 +115,7 @@ class ArrowView: UIView{
         }
     }
     
-    private func getHalfMiddleBaselinePoint(for points: (middle: CGPoint, direction: CGPoint)) -> CGPoint {
+    fileprivate func getHalfMiddleBaselinePoint(for points: (middle: CGPoint, direction: CGPoint)) -> CGPoint {
         let halfWidth = self.baseLineWidth > 0 ? self.baseLineWidth : self.lineWidth
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
@@ -175,5 +176,40 @@ class ArrowView: UIView{
         con?.setFillColor(self.lineColor.cgColor)
         con?.addEllipse(in: CGSize(width: 1, height: 1).toRect().with(center:directionPoint))
         con?.fillPath()
+    }
+    
+}
+
+class ArrowButton: ArrowView {
+    
+    fileprivate var _lineColor: UIColor = UIColor.black
+    fileprivate var _middleLineColor: UIColor =  UIColor.black
+    fileprivate var _baseArrowColor: UIColor = UIColor.gray
+    fileprivate var _mainArrowColor: UIColor = UIColor.lightGray
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self._lineColor = self.lineColor
+        self._baseArrowColor = self.baseArrowColor
+        self._mainArrowColor = self.mainArrowColor
+        self._middleLineColor = self.middleLineColor
+        
+        self.lineColor = self.lineColor.withBrightness(75/255)
+        self.middleLineColor = self.middleLineColor.withBrightness(75/255)
+        self.mainArrowColor = self.mainArrowColor.withBrightness(75/255)
+        self.baseArrowColor = self.baseArrowColor.withBrightness(75/255)
+        
+        UIView.transition(with: self, duration: 0.15, options: .transitionCrossDissolve, animations: {
+            self.setNeedsDisplay()
+        }, completion: nil)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.lineColor = self._lineColor
+        self.middleLineColor = self._middleLineColor
+        self.mainArrowColor = self._mainArrowColor
+        self.baseArrowColor = self._baseArrowColor
+        UIView.transition(with: self, duration: 0.15, options: .transitionCrossDissolve, animations: {
+            self.setNeedsDisplay()
+        }, completion: nil)
     }
 }
