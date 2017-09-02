@@ -20,7 +20,10 @@ class ArrowView: UIView{
     var degree: CGFloat = -1
     @IBInspectable var direction: String = ArrowDirection.right.rawValue
     @IBInspectable var lineWidth: CGFloat = 1
+    @IBInspectable var baseLineWidth: CGFloat = 0
     @IBInspectable var lineColor: UIColor = UIColor.black
+    @IBInspectable var baseArrowColor: UIColor = UIColor.gray
+    @IBInspectable var mainArrowColor: UIColor = UIColor.lightGray
     
     private var inset: CGFloat = 0
     
@@ -85,21 +88,52 @@ class ArrowView: UIView{
     private func areaForDrawArrow(in rect: CGRect) -> CGRect {
         let dir = ArrowDirection(rawValue: self.direction) ?? .right
         switch dir {
-        case .top, .bottom:
-            return rect.insetBy(dx: self.lineWidth, dy: 1)
+        case .top:
+            return rect.insetBy(left: self.lineWidth/2, right: self.lineWidth/2, top: 0, bottom: self.lineWidth)
+        case .bottom:
+            return rect.insetBy(left: self.lineWidth/2, right: self.lineWidth/2, top: self.lineWidth, bottom: 0)
         case .right:
-            return rect.insetBy(left: self.lineWidth, right: 0, top: self.lineWidth/2, bottom: self.lineWidth/2) //insetBy(dx: 1, dy: self.lineWidth)
+            return rect.insetBy(left: self.lineWidth, right: 0, top: self.lineWidth/2, bottom: self.lineWidth/2)
         case .left:
-            return rect.insetBy(left: 0, right: self.lineWidth, top: self.lineWidth/2, bottom: self.lineWidth/2) //insetBy(dx: 1, dy: self.lineWidth)
+            return rect.insetBy(left: 0, right: self.lineWidth, top: self.lineWidth/2, bottom: self.lineWidth/2)
+        }
+    }
+    
+    private func getMiddleLine(in rect: CGRect, for directionPoint: CGPoint) -> CGPoint {
+        let dir = ArrowDirection(rawValue: self.direction) ?? .right
+        switch dir {
+        case .top:
+            return CGPoint(x: directionPoint.x, y: max(directionPoint.y + lineWidth*2,rect.origin.y))
+        case .bottom:
+            return CGPoint(x: directionPoint.x, y: max(directionPoint.y - lineWidth*2,rect.origin.y))
+        case .right:
+            return CGPoint(x: max(directionPoint.x - lineWidth*2,rect.origin.x), y: directionPoint.y)
+        case .left:
+            return CGPoint(x: max(directionPoint.x + lineWidth*2,rect.origin.x), y: directionPoint.y)
+        }
+    }
+    
+    private func getHalfMiddleBaselinePoint(for points: (middle: CGPoint, direction: CGPoint)) -> CGPoint {
+        let halfWidth = self.baseLineWidth > 0 ? self.baseLineWidth : self.lineWidth
+        let dir = ArrowDirection(rawValue: self.direction) ?? .right
+        switch dir {
+        case .top:
+            return CGPoint(x: points.direction.x, y: points.middle.y - halfWidth)
+        case .bottom:
+            return CGPoint(x: points.direction.x, y: points.middle.y + halfWidth)
+        case .right:
+            return CGPoint(x: points.middle.x + halfWidth, y: points.direction.y)
+        case .left:
+            return CGPoint(x: points.middle.x - halfWidth, y: points.direction.y)
         }
     }
     
     override func draw(_ rect: CGRect) {
         
-        let area = self.areaForDrawArrow(in: rect)//rect.insetBy(dx: self.lineWidth, dy: self.lineWidth)
+        let area = self.areaForDrawArrow(in: rect)
         let directionPoint = self.arrowDirectionPoint(in: area)
         let arrowPoints = self.arrowPoints(in: area)
-        let middleLinePoint = CGPoint(x: max(directionPoint.x - lineWidth*2,rect.origin.x), y: directionPoint.y)
+        let middleLinePoint =  self.getMiddleLine(in: rect, for: directionPoint)
         
         let con = UIGraphicsGetCurrentContext()
         
@@ -111,8 +145,18 @@ class ArrowView: UIView{
         con?.addLine(to:middleLinePoint)
         
         if let path = con?.path{
-            con?.setFillColor(self.lineColor.withAlphaComponent(0.3).cgColor)
+            con?.setFillColor(self.mainArrowColor.cgColor)
             con?.fillPath()
+            
+            let halfMiddlePoint =  self.getHalfMiddleBaselinePoint(for:(middle:middleLinePoint,direction:directionPoint))
+            con?.move(to:halfMiddlePoint)
+            con?.addLine(to: arrowPoints.p1)
+            con?.addLine(to: middleLinePoint)
+            con?.addLine(to: arrowPoints.p2)
+            con?.addLine(to: halfMiddlePoint)
+            con?.setFillColor(self.baseArrowColor.cgColor)
+            con?.fillPath()
+            
             con?.addPath(path)
             con?.setLineWidth(1)
             con?.setStrokeColor(self.lineColor.cgColor)
