@@ -178,14 +178,18 @@ class ArrowView: UIView{
         con?.fillPath()
     }
     
+    convenience init(_ direction: ArrowDirection, frame: CGRect = CGRect.zero) {
+        self.init(frame: frame)
+        self.direction = direction.rawValue
+    }
+    
 }
 
-class ArrowButton: ArrowView {
-    
-    fileprivate var _lineColor: UIColor = UIColor.black
-    fileprivate var _middleLineColor: UIColor =  UIColor.black
-    fileprivate var _baseArrowColor: UIColor = UIColor.gray
-    fileprivate var _mainArrowColor: UIColor = UIColor.lightGray
+class ArrowTouchableView: ArrowView {    
+    private var _lineColor: UIColor = UIColor.black
+    private var _middleLineColor: UIColor =  UIColor.black
+    private var _baseArrowColor: UIColor = UIColor.gray
+    private var _mainArrowColor: UIColor = UIColor.lightGray
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self._lineColor = self.lineColor

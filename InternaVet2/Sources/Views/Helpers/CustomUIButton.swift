@@ -17,11 +17,9 @@ class CustomButton: UIButton {
         let con = UIGraphicsGetCurrentContext()
         
         con?.setLineWidth(self.lineWidth)
-        con?.setStrokeColor(self.lineColor.cgColor)
-        con?.move(to: CGPoint(x:0,y:0))
-        con?.addLine(to: CGPoint(x:rect.maxX,y:0))
-        con?.move(to: CGPoint(x:0,y:rect.maxY))
-        con?.addLine(to: CGPoint(x:rect.maxX,y:rect.maxY))
+        con?.setStrokeColor(self.lineColor.cgColor)    
+        con?.addLineInPath(for: rect, alignedIn: .top(0))
+        con?.addLineInPath(for: rect, alignedIn: .bottom(0))
         con?.strokePath()        
     }
 }

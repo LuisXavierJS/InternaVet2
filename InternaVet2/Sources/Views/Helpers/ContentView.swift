@@ -10,6 +10,7 @@ import UIKit
 
 
 class ContentView: UIView {
+    var lastLayoutedFrame: CGRect = CGRect.zero
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,6 +24,16 @@ class ContentView: UIView {
     
     func setupViews() {
         self.backgroundColor = Colors.mainLight
+    }
+    
+    func setupFrames() {}
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if self.frame != self.lastLayoutedFrame {
+            self.setupFrames()
+        }
+        self.lastLayoutedFrame = self.frame
     }
     
 }

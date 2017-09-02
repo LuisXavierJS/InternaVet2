@@ -9,16 +9,16 @@
 import UIKit
 
 public enum CGRectAlignment {
-    case verticallyCentralized(addendum: CGFloat)
-    case horizontallyCentralized(addendum: CGFloat)
-    case top(addendum: CGFloat)
-    case bottom(addendum: CGFloat)
-    case left(addendum: CGFloat)
-    case right(addendum: CGFloat)
+    case verticallyCentralized(CGFloat)
+    case horizontallyCentralized(CGFloat)
+    case top(CGFloat)
+    case bottom(CGFloat)
+    case left(CGFloat)
+    case right(CGFloat)
     
     static var centralized: [CGRectAlignment] {
-        return [CGRectAlignment.verticallyCentralized(addendum: 0),
-                CGRectAlignment.horizontallyCentralized(addendum: 0)]
+        return [CGRectAlignment.verticallyCentralized(0),
+                CGRectAlignment.horizontallyCentralized(0)]
     }
 }
 
