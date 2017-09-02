@@ -24,6 +24,7 @@
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 		8E67C9EB1F40FAE800C3C4CE /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9EA1F40FAE800C3C4CE /* ViewProtocols.swift */; };
 		8E8B52C61F4D1902004AC1B1 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */; };
+		8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */; };
 		8EF447971F57972E004A51DA /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447961F57972E004A51DA /* CustomUIButton.swift */; };
 		8EF4479A1F579785004A51DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447991F579785004A51DA /* ContentView.swift */; };
 		8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4479C1F5798E8004A51DA /* ArrowView.swift */; };
@@ -63,6 +64,7 @@
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E67C9EA1F40FAE800C3C4CE /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
 		8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPatient.swift; sourceTree = "<group>"; };
 		8EF447961F57972E004A51DA /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		8EF447991F579785004A51DA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8EF4479C1F5798E8004A51DA /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E67C9D61F40F35000C3C4CE /* Application */,
 				8E67C9E71F40F56900C3C4CE /* Constants */,
 				8E67C9E01F40F48E00C3C4CE /* Views */,
 				8E67C9D51F40F35000C3C4CE /* Controllers */,
@@ -239,9 +242,9 @@
 			isa = PBXGroup;
 			children = (
 				8E67C9DF1F40F48100C3C4CE /* Extensions */,
-				8E67C9D61F40F35000C3C4CE /* Application */,
 				8E67C9D81F40F35000C3C4CE /* CreateNewOwner */,
 				8E67C9DA1F40F35000C3C4CE /* Main */,
+				8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,7 +254,8 @@
 			children = (
 				8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */,
 			);
-			path = Application;
+			name = Application;
+			path = Controllers/Application;
 			sourceTree = "<group>";
 		};
 		8E67C9D81F40F35000C3C4CE /* CreateNewOwner */ = {
@@ -562,6 +566,7 @@
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
 				8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */,
 				8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */,
+				8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,

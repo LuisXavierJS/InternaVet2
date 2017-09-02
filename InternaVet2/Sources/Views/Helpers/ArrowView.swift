@@ -17,7 +17,7 @@ enum ArrowDirection: String {
 
 @IBDesignable
 class ArrowView: UIView{
-    @IBInspectable var degree: CGFloat = -1
+    var degree: CGFloat = -1
     @IBInspectable var direction: String = ArrowDirection.right.rawValue
     @IBInspectable var lineWidth: CGFloat = 1
     @IBInspectable var lineColor: UIColor = UIColor.black
@@ -81,26 +81,45 @@ class ArrowView: UIView{
         }
     }
     
+    
+    private func areaForDrawArrow(in rect: CGRect) -> CGRect {
+        let dir = ArrowDirection(rawValue: self.direction) ?? .right
+        switch dir {
+        case .top, .bottom:
+            return rect.insetBy(dx: self.lineWidth, dy: 1)
+        case .right:
+            return rect.insetBy(left: self.lineWidth, right: 0, top: self.lineWidth/2, bottom: self.lineWidth/2) //insetBy(dx: 1, dy: self.lineWidth)
+        case .left:
+            return rect.insetBy(left: 0, right: self.lineWidth, top: self.lineWidth/2, bottom: self.lineWidth/2) //insetBy(dx: 1, dy: self.lineWidth)
+        }
+    }
+    
     override func draw(_ rect: CGRect) {
         
-        let area = rect.insetBy(dx: self.lineWidth, dy: self.lineWidth)
+        let area = self.areaForDrawArrow(in: rect)//rect.insetBy(dx: self.lineWidth, dy: self.lineWidth)
         let directionPoint = self.arrowDirectionPoint(in: area)
         let arrowPoints = self.arrowPoints(in: area)
+        let middleLinePoint = CGPoint(x: max(directionPoint.x - lineWidth*2,rect.origin.x), y: directionPoint.y)
         
         let con = UIGraphicsGetCurrentContext()
         
-        con?.clip(to: rect.insetBy(dx: 1, dy: 1))
-        con?.setLineWidth(self.lineWidth)
+        con?.setLineWidth(1)
         con?.setStrokeColor(self.lineColor.cgColor)
         con?.move(to: directionPoint)
         con?.addLine(to: arrowPoints.p1)
+        con?.addLine(to:middleLinePoint)
         con?.move(to: directionPoint)
         con?.addLine(to: arrowPoints.p2)
-        con?.move(to: directionPoint)
+        con?.addLine(to:middleLinePoint)
+        con?.strokePath()
+        con?.setLineWidth(0.5)
+        con?.setStrokeColor(self.lineColor.withAlphaComponent(0.7).cgColor)
+        con?.move(to: middleLinePoint)
+        con?.addLine(to: directionPoint.with(x: directionPoint.x + 1))
         con?.strokePath()
         con?.setStrokeColor(UIColor.clear.cgColor)
         con?.setFillColor(self.lineColor.cgColor)
-        con?.addEllipse(in: CGSize(width: self.lineWidth, height: self.lineWidth).toRect().with(center:directionPoint))
+        con?.addEllipse(in: CGSize(width: 1, height: 1).toRect().with(center:directionPoint))
         con?.fillPath()
     }
 }

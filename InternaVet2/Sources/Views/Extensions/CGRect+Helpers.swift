@@ -22,6 +22,16 @@ public enum CGRectAlignment {
     }
 }
 
+extension CGPoint {
+    func with(x: CGFloat) -> CGPoint {
+        return CGPoint(x: x, y: self.y)
+    }
+    
+    func with(y: CGFloat) -> CGPoint {
+        return CGPoint(x: self.x, y: y)
+    }
+}
+
 extension CGSize {
     func limitedTo(_ limitSize: CGSize) -> CGSize{
         return self
@@ -47,9 +57,9 @@ extension CGRect {
     func insetBy(left: CGFloat = 0, right: CGFloat = 0, top: CGFloat = 0, bottom: CGFloat = 0) -> CGRect {
         return self
             .with(x: self.origin.x + left)
-            .with(width: self.size.width - right)
+            .with(width: self.size.width - right - left)
             .with(y: self.origin.y + top)
-            .with(height: self.size.height - bottom)
+            .with(height: self.size.height - bottom - top)
     }
     
     func aligned(_ alignments: [CGRectAlignment], in rect: CGRect) -> CGRect {
