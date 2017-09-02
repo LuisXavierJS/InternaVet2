@@ -22,6 +22,7 @@ class ArrowView: UIView{
     @IBInspectable var lineWidth: CGFloat = 1
     @IBInspectable var baseLineWidth: CGFloat = 0
     @IBInspectable var lineColor: UIColor = UIColor.black
+    @IBInspectable var middleLineColor: UIColor =  UIColor.black
     @IBInspectable var baseArrowColor: UIColor = UIColor.gray
     @IBInspectable var mainArrowColor: UIColor = UIColor.lightGray
     
@@ -164,10 +165,10 @@ class ArrowView: UIView{
         }
         
         con?.move(to: middleLinePoint)
-        con?.addLine(to: directionPoint.with(x: directionPoint.x + 1))
+        con?.addLine(to: directionPoint.with(x: directionPoint.x + 0.5))
         
         con?.setLineWidth(0.5)
-        con?.setStrokeColor(self.lineColor.withAlphaComponent(0.75).cgColor)
+        con?.setStrokeColor(self.middleLineColor.cgColor)
         con?.strokePath()
         
         con?.setStrokeColor(UIColor.clear.cgColor)

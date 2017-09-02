@@ -66,6 +66,31 @@
                                                     <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBR-9b-loc" customClass="ArrowView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="133" width="20" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="th1-f3-TQw"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseArrowColor">
+                                                        <color key="value" red="0.46666666870000001" green="0.76470589639999997" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="mainArrowColor">
+                                                        <color key="value" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="direction" value="left"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="middleLineColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toc-5h-cdJ" customClass="CustomButton" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="128" width="375" height="40"/>
                                                 <constraints>
@@ -76,6 +101,30 @@
                                                     <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98P-qW-mUR" customClass="ArrowView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="350" y="133" width="20" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="sLp-zr-nmE"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseArrowColor">
+                                                        <color key="value" red="0.46666666870000001" green="0.76470589639999997" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="mainArrowColor">
+                                                        <color key="value" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="middleLineColor">
+                                                        <color key="value" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.48777290239726029" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -84,10 +133,16 @@
                                             <constraint firstAttribute="trailing" secondItem="KSX-IG-8Yx" secondAttribute="trailing" id="6gi-qe-yxI"/>
                                             <constraint firstAttribute="trailing" secondItem="Toc-5h-cdJ" secondAttribute="trailing" id="7gK-Y0-ro8"/>
                                             <constraint firstItem="Vga-pa-FoO" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="Bh1-a4-acf"/>
+                                            <constraint firstItem="98P-qW-mUR" firstAttribute="trailing" secondItem="Toc-5h-cdJ" secondAttribute="trailing" constant="-5" id="FlS-Nx-tlI"/>
+                                            <constraint firstItem="ZBR-9b-loc" firstAttribute="leading" secondItem="Toc-5h-cdJ" secondAttribute="leading" constant="5" id="IoD-dc-K3E"/>
                                             <constraint firstAttribute="bottom" secondItem="Vga-pa-FoO" secondAttribute="bottom" id="UDU-6G-taa"/>
+                                            <constraint firstItem="ZBR-9b-loc" firstAttribute="centerY" secondItem="Toc-5h-cdJ" secondAttribute="centerY" id="YSZ-CS-non"/>
+                                            <constraint firstItem="98P-qW-mUR" firstAttribute="height" secondItem="Toc-5h-cdJ" secondAttribute="height" constant="-10" id="iUb-yW-lM6"/>
                                             <constraint firstItem="Toc-5h-cdJ" firstAttribute="top" secondItem="KSX-IG-8Yx" secondAttribute="bottom" id="kPc-og-i8P"/>
+                                            <constraint firstItem="ZBR-9b-loc" firstAttribute="height" secondItem="Toc-5h-cdJ" secondAttribute="height" constant="-10" id="leS-LM-oD8"/>
                                             <constraint firstItem="Toc-5h-cdJ" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="qmO-vw-uUp"/>
                                             <constraint firstAttribute="trailing" secondItem="Vga-pa-FoO" secondAttribute="trailing" id="rx7-f4-5Pp"/>
+                                            <constraint firstItem="98P-qW-mUR" firstAttribute="centerY" secondItem="Toc-5h-cdJ" secondAttribute="centerY" id="rzw-oN-hHV"/>
                                             <constraint firstItem="KSX-IG-8Yx" firstAttribute="top" secondItem="027-k7-cjA" secondAttribute="top" id="sj1-aW-gJl"/>
                                         </constraints>
                                     </view>
