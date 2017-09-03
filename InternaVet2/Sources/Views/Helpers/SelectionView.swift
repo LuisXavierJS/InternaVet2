@@ -77,10 +77,12 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
             var inset: CGFloat = 0
             switch aligned {
                 case .right(_):
+                    gradient.name = "right"
                     gradient.colors = [gradient.backgroundColor!,self.hiddingColor.cgColor]
                     inset = self.rightArrowLocation
                 break
                 default:
+                    gradient.name = "left"
                     gradient.colors = [self.hiddingColor.cgColor, gradient.backgroundColor!]
                     inset = self.leftArrowLocation
                 break
@@ -93,6 +95,16 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         }
         self.layer.insertSublayer(gradientLayer(aligned: .right(0)), above: self.scrollPageView.layer)
         self.layer.insertSublayer(gradientLayer(aligned: .left(0)), above: self.scrollPageView.layer)
+    }
+    
+    private func setupGradientFrames(){
+        self.layer.sublayers?.filter({$0 is CAGradientLayer}).forEach({
+            if $0.name == "right"{
+                $0.frame = $0.frame.aligned([.right(0)], in: self.bounds)
+            }else{
+                $0.frame = $0.frame.aligned([.left(0)], in: self.bounds)
+            }
+        })
     }
     
     private func setupPaging(){
@@ -110,6 +122,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         super.setupFrames()
         self.scrollPageView.frame = self.bounds
         self.scrollPageView.contentSize = self.bounds.size.with(width: CGFloat(self.items.count) * self.bounds.size.width)
+        self.setupGradientFrames()
         self.scrollPageView.subviews.filter({$0 is UILabel}).enumerated().forEach({
             $0.element.frame = self.bounds.with(x: self.bounds.width * CGFloat($0.offset)).insetBy(dx: 15, dy: self.lineWidth)
         })
@@ -125,15 +138,13 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     
     func arrowBeginTouches(arrow: ArrowTouchableView, touches: Set<UITouch>, with event: UIEvent?) {
         let index = arrow == self.rightArrow ? self.selectedItemIndex + 1 : self.selectedItemIndex - 1
-        let variation = arrow == self.rightArrow ? self.bounds.width : -self.bounds.width
-        let pos = self.scrollPageView.contentOffset.with(x: self.scrollPageView.contentOffset.x + variation)
-        self.scrollPageView.setContentOffset(pos, animated: true)
-        self.delegate?.userSelectedItem?(atIndex: index, slider: self)
+        let pos = self.scrollPageView.contentOffset.with(x: self.bounds.width * CGFloat(index))
+        self.scrollPageView.setContentOffset(pos, animated: true)        
     }
     
     private func updateArrowsVisibility(forSelectedIndex index: Int){
         if index == 0 {
-            self.leftArrowAlpha = 0.3
+            self.leftArrowAlpha = 0.5
             self.leftArrow.isUserInteractionEnabled = false
         }else {
             self.leftArrow.isUserInteractionEnabled = true
@@ -141,7 +152,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         }
         if index == self.items.count - 1 {
             self.rightArrow.isUserInteractionEnabled = false
-            self.rightArrowAlpha = 0.3
+            self.rightArrowAlpha = 0.5
         }else{
             self.rightArrow.isUserInteractionEnabled = true
             self.rightArrowAlpha = 1
@@ -163,60 +174,4 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     }
 }
 
-
-@IBDesignable
-class DoubleArrowsView: ContentView, ArrowTouchableDelegateProtocol {
-    @IBInspectable var leftArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
-    @IBInspectable var rightArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
-    @IBInspectable var leftArrowAlpha: CGFloat = 1{ didSet{ self.setArrowsDisplay() } }
-    @IBInspectable var rightArrowAlpha: CGFloat = 1{ didSet{ self.setArrowsDisplay() } }
-    @IBInspectable var arrowsMainColor: UIColor = Colors.darkGreen{ didSet{ self.setArrowsDisplay() } }
-    @IBInspectable var arrowsBaseColor: UIColor = Colors.lightGreen{ didSet{ self.setArrowsDisplay() } }
-    @IBInspectable var arrowsWidth: CGFloat = 4{ didSet{ self.setArrowsDisplay() } }
-    @IBInspectable var arrowsSize: CGSize = CGSize(width: 20, height: 25){ didSet{ self.setArrowsDisplay() } }
-    
-    fileprivate(set) var leftArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.left)
-    fileprivate(set) var rightArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.right)
-    
-    
-    private func setArrowsDisplay() {
-        self.setupArrowsLayout()
-        self.setupArrowsFrames()
-        self.leftArrow.setNeedsDisplay()
-        self.rightArrow.setNeedsDisplay()
-    }
-    
-    private func setupArrow(arrow: ArrowView, withAlpha alpha: CGFloat) {
-        arrow.mainArrowColor = self.arrowsMainColor.withAlphaComponent(alpha)
-        arrow.baseArrowColor = self.arrowsBaseColor.withAlphaComponent(alpha)
-        arrow.middleLineColor = UIColor.clear
-        arrow.lineColor = UIColor.clear
-        arrow.lineWidth = self.arrowsWidth
-        arrow.backgroundColor = UIColor.clear
-    }
-    
-    private func setupArrowsFrames(){
-        self.leftArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.left(self.leftArrowLocation)], in: self.bounds)
-        self.rightArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.right(-self.rightArrowLocation)], in: self.bounds)
-    }
-    
-    private func setupArrowsLayout(){
-        self.setupArrow(arrow: self.leftArrow, withAlpha: self.leftArrowAlpha)
-        self.setupArrow(arrow: self.rightArrow, withAlpha: self.rightArrowAlpha)
-    }
-    
-    override func setupViews() {
-        self.setupArrowsLayout()
-        
-        self.leftArrow.delegate = self
-        self.rightArrow.delegate = self
-        
-        self.addSubview(self.leftArrow)
-        self.addSubview(self.rightArrow)
-    }
-    
-    override func setupFrames() {
-        self.setupArrowsFrames()
-    }
-}
 
