@@ -16,7 +16,7 @@ enum ArrowDirection: String {
 }
 
 @IBDesignable
-class ArrowView: UIView{
+class ArrowView: ContentView{
     var degree: CGFloat = -1
     @IBInspectable var direction: String = ArrowDirection.right.rawValue
     @IBInspectable var lineWidth: CGFloat = 1
@@ -185,13 +185,22 @@ class ArrowView: UIView{
     
 }
 
+@objc protocol ArrowTouchableDelegateProtocol: class {
+    @objc optional func arrowBeginTouches(arrow: ArrowTouchableView, touches: Set<UITouch>, with event: UIEvent?)
+    @objc optional func arrowEndedTouches(arrow: ArrowTouchableView, touches: Set<UITouch>, with event: UIEvent?)
+}
+
 class ArrowTouchableView: ArrowView {    
     private var _lineColor: UIColor = UIColor.black
     private var _middleLineColor: UIColor =  UIColor.black
     private var _baseArrowColor: UIColor = UIColor.gray
     private var _mainArrowColor: UIColor = UIColor.lightGray
     
+    weak var delegate: ArrowTouchableDelegateProtocol?
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.arrowBeginTouches?(arrow: self, touches: touches, with: event)
+        
         self._lineColor = self.lineColor
         self._baseArrowColor = self.baseArrowColor
         self._mainArrowColor = self.mainArrowColor
@@ -208,6 +217,7 @@ class ArrowTouchableView: ArrowView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.arrowEndedTouches?(arrow: self, touches: touches, with: event)
         self.lineColor = self._lineColor
         self.middleLineColor = self._middleLineColor
         self.mainArrowColor = self._mainArrowColor

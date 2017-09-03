@@ -12,7 +12,7 @@ class CreateNewPatientViewController: UIViewController {
     @IBOutlet weak var text: UITextField!
     @IBOutlet weak var arrow: SelectionSliderView! {
         didSet{
-            arrow.items = ["dafoq man dafoq man dafoq man dafoq man", "stop lyingstop lyingstop lying", "aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?aaaããnh?"]
+            arrow.items = ["Primeiro item", "Segundo item", "Terceiro item gigantesco Terceiro item gigantesco Terceiro item gigantesco"]
         }
     }
     

@@ -10,7 +10,10 @@ import UIKit
 
 @IBDesignable
 class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
-    @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadData() } }
+    @IBInspectable var lineColor: UIColor = Colors.lightGreen
+    @IBInspectable var lineWidth: CGFloat = 1
+    @IBInspectable var textColor: UIColor = Colors.lightGreen{ didSet{ self.reloadLabelSettings() } }
+    @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var hiddingColor: UIColor = UIColor.white{ didSet{ self.setupGradientLayer() } }
     @IBInspectable var hiddingLocation: CGFloat = 5{ didSet{ self.setupGradientLayer() } }
     
@@ -34,8 +37,17 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
             label.numberOfLines = 0
             label.textAlignment = .center
             label.font = UIFont.systemFont(ofSize: self.fontSize)
+            label.textColor = self.textColor
             self.scrollPageView.addSubview(label)
         }
+    }
+    
+    private func reloadLabelSettings(){
+        func setupLabel(label: UILabel){
+            label.textColor = self.textColor
+            label.font = UIFont.systemFont(ofSize: self.fontSize)
+        }
+        self.scrollPageView.subviews.filter({$0 is UILabel}).forEach({setupLabel(label: $0 as! UILabel)})
     }
     
     private func setupScrollView(){
@@ -43,7 +55,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         self.scrollPageView.alwaysBounceHorizontal = true
         self.scrollPageView.alwaysBounceVertical = false
         self.scrollPageView.delegate = self
-        self.scrollPageView.indicatorStyle = .white
+        self.scrollPageView.showsHorizontalScrollIndicator = false
         self.addSubview(self.scrollPageView)
     }
     
@@ -52,18 +64,25 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         func gradientLayer(aligned: CGRectAlignment) -> CAGradientLayer {
             let gradient = CAGradientLayer()
             gradient.backgroundColor = UIColor.init(white: 1, alpha: 0).cgColor
-            gradient.frame = self.bounds
-                .insetBy(dx: 0, dy: self.lineWidth)
-                .with(width: 2 * (self.arrowsSize.width + self.arrowsLocation + self.hiddingLocation))
-                .aligned([aligned], in: self.bounds)
             gradient.contentsScale = UIScreen.main.scale
             gradient.locations = [0.0,1.0]
             gradient.startPoint = CGPoint(x: 0, y: 0.5)
             gradient.endPoint = CGPoint(x: 1, y: 0.5)
+            var inset: CGFloat = 0
             switch aligned {
-                case .right(_):gradient.colors = [gradient.backgroundColor!,self.hiddingColor.cgColor];break
-                default:gradient.colors = [self.hiddingColor.cgColor, gradient.backgroundColor!];break
+                case .right(_):
+                    gradient.colors = [gradient.backgroundColor!,self.hiddingColor.cgColor]
+                    inset = self.rightArrowLocation
+                break
+                default:
+                    gradient.colors = [self.hiddingColor.cgColor, gradient.backgroundColor!]
+                    inset = self.leftArrowLocation
+                break
             }
+            gradient.frame = self.bounds
+                .insetBy(dx: 0, dy: self.lineWidth)
+                .with(width: 2 * (self.arrowsSize.width + inset + self.hiddingLocation))
+                .aligned([aligned], in: self.bounds)
             return gradient
         }
         self.layer.insertSublayer(gradientLayer(aligned: .right(0)), above: self.scrollPageView.layer)
@@ -89,14 +108,33 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         
     }
     
+    override func draw(_ rect: CGRect) {
+        let con = UIGraphicsGetCurrentContext()
+        con?.setLineWidth(self.lineWidth)
+        con?.setStrokeColor(self.lineColor.cgColor)
+        con?.addLineInPath(for: rect, alignedIn: .top(0))
+        con?.addLineInPath(for: rect, alignedIn: .bottom(0))
+        con?.strokePath()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        let label = UILabel(frame: self.bounds.insetBy(dx: 15, dy: self.lineWidth))
+        label.font = UIFont.systemFont(ofSize: self.fontSize)
+        label.textColor = self.textColor
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = "Placeholder Text"
+        self.addSubview(label)
+    }
 }
 
 
 @IBDesignable
 class DoubleArrowsView: ContentView {
-    @IBInspectable var lineColor: UIColor = Colors.lightGreen
-    @IBInspectable var lineWidth: CGFloat = 1
-    @IBInspectable var arrowsLocation: CGFloat = 5
+    @IBInspectable var leftArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
+    @IBInspectable var rightArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
+    @IBInspectable var leftArrowAlpha: CGFloat = 1{ didSet{ self.setArrowsDisplay() } }
+    @IBInspectable var rightArrowAlpha: CGFloat = 1{ didSet{ self.setArrowsDisplay() } }
     @IBInspectable var arrowsMainColor: UIColor = Colors.darkGreen{ didSet{ self.setArrowsDisplay() } }
     @IBInspectable var arrowsBaseColor: UIColor = Colors.lightGreen{ didSet{ self.setArrowsDisplay() } }
     @IBInspectable var arrowsWidth: CGFloat = 4{ didSet{ self.setArrowsDisplay() } }
@@ -112,9 +150,9 @@ class DoubleArrowsView: ContentView {
         self.rightArrow.setNeedsDisplay()
     }
     
-    private func setupArrow(arrow: ArrowView) {
-        arrow.mainArrowColor = self.arrowsMainColor
-        arrow.baseArrowColor = self.arrowsBaseColor
+    private func setupArrow(arrow: ArrowView, withAlpha alpha: CGFloat) {
+        arrow.mainArrowColor = self.arrowsMainColor.withAlphaComponent(alpha)
+        arrow.baseArrowColor = self.arrowsBaseColor.withAlphaComponent(alpha)
         arrow.middleLineColor = UIColor.clear
         arrow.lineColor = UIColor.clear
         arrow.lineWidth = self.arrowsWidth
@@ -122,13 +160,13 @@ class DoubleArrowsView: ContentView {
     }
     
     private func setupArrowsFrames(){
-        self.leftArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.left(self.arrowsLocation)], in: self.bounds)
-        self.rightArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.right(-self.arrowsLocation)], in: self.bounds)
+        self.leftArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.left(self.leftArrowLocation)], in: self.bounds)
+        self.rightArrow.frame = self.arrowsSize.toRect().aligned([.verticallyCentralized(0),.right(-self.rightArrowLocation)], in: self.bounds)
     }
     
     private func setupArrowsLayout(){
-        self.setupArrow(arrow: self.leftArrow)
-        self.setupArrow(arrow: self.rightArrow)
+        self.setupArrow(arrow: self.leftArrow, withAlpha: self.leftArrowAlpha)
+        self.setupArrow(arrow: self.rightArrow, withAlpha: self.rightArrowAlpha)
     }
     
     override func setupViews() {
@@ -139,15 +177,6 @@ class DoubleArrowsView: ContentView {
     
     override func setupFrames() {
         self.setupArrowsFrames()
-    }
-    
-    override func draw(_ rect: CGRect) {
-        let con = UIGraphicsGetCurrentContext()
-        con?.setLineWidth(self.lineWidth)
-        con?.setStrokeColor(self.lineColor.cgColor)
-        con?.addLineInPath(for: rect, alignedIn: .top(0))
-        con?.addLineInPath(for: rect, alignedIn: .bottom(0))
-        con?.strokePath()        
     }
 }
 

@@ -22,9 +22,7 @@ class ContentView: UIView {
         self.setupViews()
     }
     
-    func setupViews() {
-        self.backgroundColor = Colors.mainLight
-    }
+    func setupViews() {}
     
     func setupFrames() {}
     
