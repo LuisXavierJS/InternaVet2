@@ -8,6 +8,10 @@
 
 import UIKit
 
+@objc protocol SelectionSliderViewDelegateProtocol: class {
+    @objc optional func userSelectedItem(atIndex index: Int, slider: SelectionSliderView)
+}
+
 @IBDesignable
 class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     @IBInspectable var lineColor: UIColor = Colors.lightGreen
@@ -18,6 +22,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     @IBInspectable var hiddingLocation: CGFloat = 5{ didSet{ self.setupGradientLayer() } }
     
     fileprivate var scrollPageView: UIScrollView = UIScrollView()
+    weak var delegate: SelectionSliderViewDelegateProtocol?
     
     var selectedItemIndex: Int {
         return Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
@@ -29,7 +34,6 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         self.scrollPageView.subviews.filter({$0 is UILabel}).forEach({$0.removeFromSuperview()})
         self.scrollPageView.setContentOffset(CGPoint.zero, animated: false)
         let nLabels = CGFloat(self.items.count)
-        self.scrollPageView.contentSize = self.bounds.size.with(width: nLabels * self.bounds.size.width)
         for i in 0..<Int(nLabels) {
             let label = UILabel(frame: self.bounds.with(x: self.bounds.width * CGFloat(i)).insetBy(dx: 15, dy: self.lineWidth))
             label.tag = i
@@ -47,7 +51,9 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
             label.textColor = self.textColor
             label.font = UIFont.systemFont(ofSize: self.fontSize)
         }
-        self.scrollPageView.subviews.filter({$0 is UILabel}).forEach({setupLabel(label: $0 as! UILabel)})
+        self.scrollPageView.subviews.filter({$0 is UILabel}).enumerated().forEach({
+            setupLabel(label: $0.element as! UILabel)
+        })
     }
     
     private func setupScrollView(){
@@ -97,14 +103,49 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     override func setupViews() {
         self.setupPaging()
         super.setupViews()
+        self.updateArrowsVisibility(forSelectedIndex: 0)
     }
     
     override func setupFrames() {
         super.setupFrames()
         self.scrollPageView.frame = self.bounds
+        self.scrollPageView.contentSize = self.bounds.size.with(width: CGFloat(self.items.count) * self.bounds.size.width)
+        self.scrollPageView.subviews.filter({$0 is UILabel}).enumerated().forEach({
+            $0.element.frame = self.bounds.with(x: self.bounds.width * CGFloat($0.offset)).insetBy(dx: 15, dy: self.lineWidth)
+        })
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.delegate?.userSelectedItem?(atIndex: self.selectedItemIndex, slider: self)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.updateArrowsVisibility(forSelectedIndex: self.selectedItemIndex)
+    }
+    
+    func arrowBeginTouches(arrow: ArrowTouchableView, touches: Set<UITouch>, with event: UIEvent?) {
+        let index = arrow == self.rightArrow ? self.selectedItemIndex + 1 : self.selectedItemIndex - 1
+        let variation = arrow == self.rightArrow ? self.bounds.width : -self.bounds.width
+        let pos = self.scrollPageView.contentOffset.with(x: self.scrollPageView.contentOffset.x + variation)
+        self.scrollPageView.setContentOffset(pos, animated: true)
+        self.delegate?.userSelectedItem?(atIndex: index, slider: self)
+    }
+    
+    private func updateArrowsVisibility(forSelectedIndex index: Int){
+        if index == 0 {
+            self.leftArrowAlpha = 0.3
+            self.leftArrow.isUserInteractionEnabled = false
+        }else {
+            self.leftArrow.isUserInteractionEnabled = true
+            self.leftArrowAlpha = 1
+        }
+        if index == self.items.count - 1 {
+            self.rightArrow.isUserInteractionEnabled = false
+            self.rightArrowAlpha = 0.3
+        }else{
+            self.rightArrow.isUserInteractionEnabled = true
+            self.rightArrowAlpha = 1
+        }
         
     }
     
@@ -118,19 +159,13 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     }
     
     override func prepareForInterfaceBuilder() {
-        let label = UILabel(frame: self.bounds.insetBy(dx: 15, dy: self.lineWidth))
-        label.font = UIFont.systemFont(ofSize: self.fontSize)
-        label.textColor = self.textColor
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.text = "Placeholder Text"
-        self.addSubview(label)
+        self.items = ["IB Placeholder Text", "IB Placeholder Text 2", "IB Placeholder Text 3"]
     }
 }
 
 
 @IBDesignable
-class DoubleArrowsView: ContentView {
+class DoubleArrowsView: ContentView, ArrowTouchableDelegateProtocol {
     @IBInspectable var leftArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
     @IBInspectable var rightArrowLocation: CGFloat = 5{ didSet{ self.setupArrowsFrames() } }
     @IBInspectable var leftArrowAlpha: CGFloat = 1{ didSet{ self.setArrowsDisplay() } }
@@ -142,6 +177,7 @@ class DoubleArrowsView: ContentView {
     
     fileprivate(set) var leftArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.left)
     fileprivate(set) var rightArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.right)
+    
     
     private func setArrowsDisplay() {
         self.setupArrowsLayout()
@@ -171,6 +207,10 @@ class DoubleArrowsView: ContentView {
     
     override func setupViews() {
         self.setupArrowsLayout()
+        
+        self.leftArrow.delegate = self
+        self.rightArrow.delegate = self
+        
         self.addSubview(self.leftArrow)
         self.addSubview(self.rightArrow)
     }
