@@ -54,7 +54,8 @@ class CustomFloatTextField: JVFloatLabeledTextField {
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return self.textRectForBounds(b:bounds)
+        let rect = self.textRectForBounds(b:bounds)
+        return self.text!.isEmpty ? rect : rect.insetBy(top:5)
     }
     
     fileprivate func textRectForBounds(b bounds: CGRect) -> CGRect {

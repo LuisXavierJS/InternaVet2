@@ -29,7 +29,7 @@
 		8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4479C1F5798E8004A51DA /* ArrowView.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
-		8EFC66E31F5CBAF20090F291 /* LabeledSelectionViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E21F5CBAF20090F291 /* LabeledSelectionViewField.swift */; };
+		8EFC66E31F5CBAF20090F291 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		8EF4479C1F5798E8004A51DA /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
-		8EFC66E21F5CBAF20090F291 /* LabeledSelectionViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledSelectionViewField.swift; sourceTree = "<group>"; };
+		8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,7 +345,7 @@
 				8EF447991F579785004A51DA /* ContentView.swift */,
 				8EF4479C1F5798E8004A51DA /* ArrowView.swift */,
 				8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */,
-				8EFC66E21F5CBAF20090F291 /* LabeledSelectionViewField.swift */,
+				8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -565,7 +565,7 @@
 			files = (
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
 				8EF4479A1F579785004A51DA /* ContentView.swift in Sources */,
-				8EFC66E31F5CBAF20090F291 /* LabeledSelectionViewField.swift in Sources */,
+				8EFC66E31F5CBAF20090F291 /* SelectionViewFields.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8E8B52C61F4D1902004AC1B1 /* SelectionView.swift in Sources */,
 				8EF447971F57972E004A51DA /* BorderedView.swift in Sources */,

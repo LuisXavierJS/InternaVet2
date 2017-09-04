@@ -9,6 +9,57 @@
 import UIKit
 
 
+@IBDesignable
+class LabeledSelectionViewField: SelectionViewField {
+    @IBInspectable var labelText: String = ""{ didSet{ self.label.text = labelText } }
+    @IBInspectable var labelSize: CGFloat = 14{ didSet{ self.label.font = UIFont.systemFont(ofSize: self.labelSize) } }
+    @IBInspectable var labelColor: UIColor = Colors.darkGreen{ didSet{ self.label.textColor = self.labelColor } }    
+    
+    private var label: UILabel = UILabel()
+    
+    override weak var field: UIView! {
+        return self.label
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        self.label.textColor = self.labelColor
+        self.label.numberOfLines = 0
+        self.label.font = UIFont.systemFont(ofSize: self.labelSize)
+    }    
+
+}
+
+@IBDesignable
+class TextSelectionViewField: SelectionViewField {
+    @IBInspectable var placeholder: String = "" { didSet{ self.textField.placeholder = self.placeholder } }
+    @IBInspectable var textColor: UIColor = Colors.darkGreen { didSet{ self.textField.textColor = self.textColor } }
+    @IBInspectable var placeholderColor: UIColor = Colors.darkGreen{ didSet{ self.textField.placeholderColor = self.placeholderColor } }
+    @IBInspectable var floatingLabelTextColor: UIColor = Colors.darkGreen{ didSet{ self.textField.floatingLabelTextColor = self.floatingLabelTextColor } }
+    @IBInspectable var floatingLabelActiveTextColor: UIColor = Colors.lightGreen{ didSet{ self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor } }
+    
+    private var textField: CustomFloatTextField = CustomFloatTextField()
+    
+    override var field: UIView! {
+        return self.textField
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        self.textField.placeholderColor = self.placeholderColor
+        self.textField.floatingLabelTextColor = self.floatingLabelTextColor
+        self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor
+        self.textField.textColor = self.textColor
+        
+    }
+    
+    override func setupFrames() {
+        super.setupFrames()
+        self.textField.frame = self.textField.frame.insetBy(dx: 0, dy: 5)
+    }
+}
+
+
 class SelectionViewField: BorderedView, SelectionSliderViewDelegateProtocol {
     @IBInspectable var fieldIndent: CGFloat = 15{ didSet{ self.setupFrames() } }
     @IBInspectable var spaceBetween: CGFloat = 10{ didSet{ self.setupFrames() } }
@@ -49,45 +100,5 @@ class SelectionViewField: BorderedView, SelectionSliderViewDelegateProtocol {
     
     override func prepareForInterfaceBuilder() {
         self.selectionView.prepareForInterfaceBuilder()
-    }
-}
-
-@IBDesignable
-class LabeledSelectionViewField: SelectionViewField {
-    @IBInspectable var labelText: String = ""{ didSet{ self.label.text = labelText } }
-    @IBInspectable var labelSize: CGFloat = 14{ didSet{ self.label.font = UIFont.systemFont(ofSize: self.labelSize) } }
-    @IBInspectable var labelColor: UIColor = Colors.darkGreen{ didSet{ self.label.textColor = self.labelColor } }    
-    
-    private var label: UILabel = UILabel()
-    
-    override weak var field: UIView! {
-        return self.label
-    }
-    
-    override func setupViews() {
-        super.setupViews()
-        self.label.textColor = self.labelColor
-        self.label.numberOfLines = 0
-        self.label.font = UIFont.systemFont(ofSize: self.labelSize)
-    }    
-
-}
-
-@IBDesignable
-class TextSelectionViewField: SelectionViewField {
-    @IBInspectable var placeholder: String = "" { didSet{ self.textField.placeholder = self.placeholder } }
-    @IBInspectable var placeholderColor: UIColor = Colors.darkGreen{ didSet{ self.textField.placeholderColor = self.placeholderColor } }
-    @IBInspectable var floatingLabelTextColor: UIColor = Colors.darkGreen{ didSet{ self.textField.floatingLabelTextColor = self.floatingLabelTextColor } }
-    @IBInspectable var floatingLabelActiveTextColor: UIColor = Colors.lightGreen{ didSet{ self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor } }
-    
-    private var textField: CustomFloatTextField = CustomFloatTextField()
-    
-    override var field: UIView! {
-        return self.textField
-    }    
-    
-    override func setupFrames() {
-        super.setupFrames()
-        self.textField.frame = self.textField.frame.insetBy(dx: 0, dy: 5)
     }
 }
