@@ -14,8 +14,7 @@ import UIKit
 
 @IBDesignable
 class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
-    @IBInspectable var lineColor: UIColor = Colors.lightGreen
-    @IBInspectable var lineWidth: CGFloat = 1
+    @IBInspectable var labelVerticalPadding: CGFloat = 1{ didSet{ self.setupFrames() } }
     @IBInspectable var textColor: UIColor = Colors.lightGreen{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var hiddingColor: UIColor = UIColor.white{ didSet{ self.setupGradientLayer() } }
@@ -33,9 +32,10 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     func reloadData(){
         self.scrollPageView.subviews.filter({$0 is UILabel}).forEach({$0.removeFromSuperview()})
         self.scrollPageView.setContentOffset(CGPoint.zero, animated: false)
+        self.updateArrowsVisibility(forSelectedIndex: 0)
         let nLabels = CGFloat(self.items.count)
         for i in 0..<Int(nLabels) {
-            let label = UILabel(frame: self.bounds.with(x: self.bounds.width * CGFloat(i)).insetBy(dx: 15, dy: self.lineWidth))
+            let label = UILabel(frame: self.bounds.with(x: self.bounds.width * CGFloat(i)).insetBy(dx: 15, dy: self.labelVerticalPadding))
             label.tag = i
             label.text = self.items[i]
             label.numberOfLines = 0
@@ -87,10 +87,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
                     inset = self.leftArrowLocation
                 break
             }
-            gradient.frame = self.bounds
-                .insetBy(dx: 0, dy: self.lineWidth)
-                .with(width: 2 * (self.arrowsSize.width + inset + self.hiddingLocation))
-                .aligned([aligned], in: self.bounds)
+            gradient.frame = CGSize(width: 2 * (self.arrowsSize.width + inset + self.hiddingLocation), height: 0).toRect()
             return gradient
         }
         self.layer.insertSublayer(gradientLayer(aligned: .right(0)), above: self.scrollPageView.layer)
@@ -100,9 +97,9 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     private func setupGradientFrames(){
         self.layer.sublayers?.filter({$0 is CAGradientLayer}).forEach({
             if $0.name == "right"{
-                $0.frame = $0.frame.aligned([.right(0)], in: self.bounds)
+                $0.frame = self.bounds.insetBy(dx: 0, dy: self.labelVerticalPadding).with(width: $0.frame.width).aligned([.right(0)], in: self.bounds)
             }else{
-                $0.frame = $0.frame.aligned([.left(0)], in: self.bounds)
+                $0.frame = self.bounds.insetBy(dx: 0, dy: self.labelVerticalPadding).with(width: $0.frame.width).aligned([.left(0)], in: self.bounds)
             }
         })
     }
@@ -124,7 +121,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         self.scrollPageView.contentSize = self.bounds.size.with(width: CGFloat(self.items.count) * self.bounds.size.width)
         self.setupGradientFrames()
         self.scrollPageView.subviews.filter({$0 is UILabel}).enumerated().forEach({
-            $0.element.frame = self.bounds.with(x: self.bounds.width * CGFloat($0.offset)).insetBy(dx: 15, dy: self.lineWidth)
+            $0.element.frame = self.bounds.with(x: self.bounds.width * CGFloat($0.offset)).insetBy(dx: 15, dy: self.labelVerticalPadding)
         })
     }
     
@@ -143,35 +140,16 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     }
     
     private func updateArrowsVisibility(forSelectedIndex index: Int){
-        if index == 0 {
-            self.leftArrowAlpha = 0.5
-            self.leftArrow.isUserInteractionEnabled = false
-        }else {
-            self.leftArrow.isUserInteractionEnabled = true
-            self.leftArrowAlpha = 1
-        }
-        if index == self.items.count - 1 {
-            self.rightArrow.isUserInteractionEnabled = false
-            self.rightArrowAlpha = 0.5
-        }else{
-            self.rightArrow.isUserInteractionEnabled = true
-            self.rightArrowAlpha = 1
-        }
-        
-    }
-    
-    override func draw(_ rect: CGRect) {
-        let con = UIGraphicsGetCurrentContext()
-        con?.setLineWidth(self.lineWidth)
-        con?.setStrokeColor(self.lineColor.cgColor)
-        con?.addLineInPath(for: rect, alignedIn: .top(0))
-        con?.addLineInPath(for: rect, alignedIn: .bottom(0))
-        con?.strokePath()
+        self.leftArrow.isUserInteractionEnabled = !(index == 0 || self.items.isEmpty)
+        self.leftArrow.alpha =  index == 0 || self.items.isEmpty ? 0.3 : 1
+        self.rightArrow.isUserInteractionEnabled = !(index == self.items.count - 1 || self.items.isEmpty)
+        self.rightArrow.alpha =  index == self.items.count - 1 || self.items.isEmpty ? 0.3 : 1
     }
     
     override func prepareForInterfaceBuilder() {
         self.items = ["IB Placeholder Text", "IB Placeholder Text 2", "IB Placeholder Text 3"]
     }
 }
+
 
 

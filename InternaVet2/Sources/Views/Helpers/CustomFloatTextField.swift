@@ -31,23 +31,26 @@ class CustomFloatTextField: JVFloatLabeledTextField {
     
     func setupViews(){
         self.borderStyle = .none
-        self.layer.cornerRadius = 5
-        self.layer.borderWidth = 1
-        self.layer.shadowOffset = CGSize(width: 2, height: 4)
+        self.layer.cornerRadius = 3
+        self.layer.borderWidth = 0.4
+        self.layer.shadowOffset = CGSize(width: 1, height: 2)
         self.layer.shadowColor = Colors.darkGreen.cgColor
-        self.layer.borderColor = Colors.lightGreen.cgColor
+        self.layer.borderColor = Colors.clearLightGreen.cgColor
         
         self.placeholderColor = Colors.clearLightGreen
         self.floatingLabelTextColor = Colors.darkGreen
         self.floatingLabelActiveTextColor = Colors.lightGreen
         self.floatingLabelYPadding = 2
+        self.floatingLabelFont = self.floatingLabelFont.withSize(7)
+        self.font = UIFont.systemFont(ofSize: 12)
         self.backgroundColor = Colors.mainLight
         
         self.clipsToBounds = true
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return self.textRectForBounds(b:bounds)
+        let rect = self.textRectForBounds(b:bounds)
+        return self.text!.isEmpty ? rect : rect.insetBy(top:5)
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
