@@ -18,7 +18,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     @IBInspectable var textColor: UIColor = Colors.lightGreen{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var hiddingColor: UIColor = UIColor.white{ didSet{ self.setupGradientLayer() } }
-    @IBInspectable var hiddingLocation: CGFloat = 5{ didSet{ self.setupGradientLayer() } }
+    @IBInspectable var hiddingLocation: CGFloat = -10{ didSet{ self.setupGradientLayer() } }
     
     fileprivate var scrollPageView: UIScrollView = UIScrollView()
     weak var delegate: SelectionSliderViewDelegateProtocol?
@@ -141,9 +141,9 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     
     private func updateArrowsVisibility(forSelectedIndex index: Int){
         self.leftArrow.isUserInteractionEnabled = !(index == 0 || self.items.isEmpty)
-        self.leftArrow.alpha =  index == 0 || self.items.isEmpty ? 0.3 : 1
+        self.leftArrow.alpha =  index <= 0 || self.items.isEmpty ? 0.3 : 1
         self.rightArrow.isUserInteractionEnabled = !(index == self.items.count - 1 || self.items.isEmpty)
-        self.rightArrow.alpha =  index == self.items.count - 1 || self.items.isEmpty ? 0.3 : 1
+        self.rightArrow.alpha =  index >= self.items.count - 1 || self.items.isEmpty ? 0.3 : 1
     }
     
     override func prepareForInterfaceBuilder() {

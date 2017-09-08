@@ -32,10 +32,8 @@ class CustomFloatTextField: JVFloatLabeledTextField {
     func setupViews(){
         self.borderStyle = .none
         self.layer.cornerRadius = 3
-        self.layer.borderWidth = 0.4
-        self.layer.shadowOffset = CGSize(width: 1, height: 2)
-        self.layer.shadowColor = Colors.darkGreen.cgColor
-        self.layer.borderColor = Colors.clearLightGreen.cgColor
+        self.layer.borderWidth = 0.4        
+        self.layer.borderColor = Colors.darkGreen.cgColor
         
         self.placeholderColor = Colors.clearLightGreen
         self.floatingLabelTextColor = Colors.darkGreen

@@ -198,8 +198,7 @@ class ArrowTouchableView: ArrowView {
     
     weak var delegate: ArrowTouchableDelegateProtocol?
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.delegate?.arrowBeginTouches?(arrow: self, touches: touches, with: event)
+    func beginTouchAnimation(){
         
         self._lineColor = self.lineColor
         self._baseArrowColor = self.baseArrowColor
@@ -216,8 +215,7 @@ class ArrowTouchableView: ArrowView {
         }, completion: nil)
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.delegate?.arrowEndedTouches?(arrow: self, touches: touches, with: event)
+    func endTouchAnimation(){
         self.lineColor = self._lineColor
         self.middleLineColor = self._middleLineColor
         self.mainArrowColor = self._mainArrowColor
@@ -225,6 +223,23 @@ class ArrowTouchableView: ArrowView {
         UIView.transition(with: self, duration: 0.15, options: .transitionCrossDissolve, animations: {
             self.setNeedsDisplay()
         }, completion: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.delegate?.arrowBeginTouches?(arrow: self, touches: touches, with: event)
+        self.beginTouchAnimation()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        self.delegate?.arrowEndedTouches?(arrow: self, touches: touches, with: event)
+        self.endTouchAnimation()
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        self.endTouchAnimation()
     }
 }
 
@@ -240,8 +255,8 @@ class DoubleArrowsView: ContentView, ArrowTouchableDelegateProtocol {
     @IBInspectable var arrowsWidth: CGFloat = 4{ didSet{ self.setArrowsDisplay() } }
     @IBInspectable var arrowsSize: CGSize = CGSize(width: 20, height: 25){ didSet{ self.setArrowsDisplay() } }
     
-    fileprivate(set) var leftArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.left)
-    fileprivate(set) var rightArrow: ArrowTouchableView = ArrowTouchableView(ArrowDirection.right)
+    fileprivate(set) weak var leftArrow: ArrowTouchableView!
+    fileprivate(set) weak var rightArrow: ArrowTouchableView!
     
     
     private func setArrowsDisplay() {
@@ -273,6 +288,12 @@ class DoubleArrowsView: ContentView, ArrowTouchableDelegateProtocol {
     }
     
     override func setupViews() {
+        let left = ArrowTouchableView(ArrowDirection.left)
+        self.leftArrow = left
+        
+        let right = ArrowTouchableView(ArrowDirection.right)
+        self.rightArrow = right
+        
         self.setupArrowsLayout()
         
         self.leftArrow.delegate = self
