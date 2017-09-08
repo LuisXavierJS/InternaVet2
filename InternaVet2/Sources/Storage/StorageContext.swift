@@ -16,35 +16,24 @@
 
 import Foundation
 import FileKit
+import Swift_Json
 
 protocol NameableStorageItem: class {
     var fileName: String {get}
+    static func localPath(from root: Path) -> Path
 }
 
 class StorageItem: NSObject {
-    var xmlString: String = ""
-    
-    required init(_ xml: AEXMLDocument) {
-        
+    var jsonString: String {
+        return JsonWriter().write(anyObject: self)!
     }
-}
-
-class AEXMLDocument: NSObject {
-    var xmlString: String = ""
     
-    init(xml: String) {
-        
-    }
-}
-
-class AEXMLElement: NSObject {
-    var xmlString: String = ""
 }
 
 protocol Context: class {
-    func fetch<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem
+    func fetch<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem, Type: NameableStorageItem
     
-    func fetch<Type>(_ type: Type.Type, _ isIncluded: ((Type) -> Bool)) -> [Type] where Type : StorageItem
+    func fetch<Type>(_ type: Type.Type, _ isIncluded: ((Type) -> Bool)) -> [Type] where Type : StorageItem, Type: NameableStorageItem
     
     func fetch<Type>(_ type: Type.Type, _ isIncluded: ((String) -> Bool)) -> [Type] where Type: StorageItem, Type : NameableStorageItem
     
@@ -56,11 +45,11 @@ protocol Context: class {
 }
 
 class StorageContext: Context {
-    func fetch<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem {
+    func fetch<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem, Type: NameableStorageItem {
         return ContextFactory.new(type).fetch(type)
     }
     
-    func fetch<Type>(_ type: Type.Type, _ isIncluded: ((Type) -> Bool)) -> [Type] where Type : StorageItem {
+    func fetch<Type>(_ type: Type.Type, _ isIncluded: ((Type) -> Bool)) -> [Type] where Type : StorageItem, Type: NameableStorageItem {
         return ContextFactory.new(type).fetch(type, isIncluded)
     }
     
@@ -88,12 +77,13 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
         self.path = path
     }
     
-    fileprivate func convert(_ path: Path) -> AEXMLDocument {
-        return try! AEXMLDocument(xml: try! TextFile(path: path).read())
+    fileprivate func convert<Type>(_ path: Path) -> Type where Type: StorageItem {
+        let object: Type! = JsonParser().parse(data: try! DataFile(path: path).read())
+        return object
     }
     
     fileprivate func filter<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem {
-        return self.path.children().filter({!$0.isDirectory && !$0.fileName.hasPrefix(".")}).map({ Type(self.convert($0)) })
+        return self.path.children().filter({!$0.isDirectory && !$0.fileName.hasPrefix(".")}).map({ self.convert($0) })
     }
     
     func fetch<Type>(_ type: Type.Type) -> [Type] where Type : StorageItem {
@@ -105,7 +95,7 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
     }
     
     func fetch<Type>(_ type: Type.Type, _ isIncluded: ((String) -> Bool)) -> [Type] where Type : StorageItem, Type : NameableStorageItem {
-        return self.path.children().filter({!$0.fileName.hasPrefix(".") && !$0.isDirectory && isIncluded($0.fileName)}).map({ Type(self.convert($0)) })
+        return self.path.children().filter({!$0.fileName.hasPrefix(".") && !$0.isDirectory && isIncluded($0.fileName)}).map({ self.convert($0) })
     }
     
     func save<Type>(_ object: Type) where Type : StorageItem, Type : NameableStorageItem {
@@ -118,9 +108,9 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
         try? self.path.createDirectory(withIntermediateDirectories: true)
         
         let fileText = TextFile(path: finalPath)
-        try! fileText.write(object.xmlString, atomically: false)
+        try! fileText.write(object.jsonString, atomically: false)
         
-        self.updateObjectHash(object)
+//        self.updateObjectHash(object)
     }
     
     func delete<Type>(_ object: Type) where Type : StorageItem, Type : NameableStorageItem {
@@ -131,38 +121,24 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
         let fileText = TextFile(path: finalPath)
         try! fileText.delete()
         
-        self.updateObjectHash(nil)
+//        self.updateObjectHash(nil)
     }
     
     func count<Type>(_ type: Type.Type) -> Int where Type : StorageItem, Type : NameableStorageItem {
         return self.path.children().filter({!$0.isDirectory}).count
     }
     
-    fileprivate func updateObjectHash(_ object: StorageItem?) {
-        _ = object?.perform("updateHash:", with: object?.xmlString.hashValue ?? -1)
-    }
 }
 
 fileprivate class ContextFactory {
     fileprivate static let mainPath: Path = Path.userDocuments + "XML"
     
-    static func new<Type>(_ type: Type.Type) -> RealStorageContext<Type> where Type : StorageItem {
+    static func new<Type>(_ type: Type.Type) -> RealStorageContext<Type> where Type : StorageItem, Type: NameableStorageItem {
         // TODO: setup username
         return RealStorageContext(self.getPath(type, self.mainPath))
     }
     
-    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type : StorageItem {
-        switch type {
-//        case is Session.Type: return base
-//        case is Parameters.Type: return base + "username" + "Parametros"
-//        case is RetailHierarchy.Type: return base + "username" + "Hierarquia de Venda"
-//        case is Client.Type: return base + "username" + "Clientes"
-//        case is EconomicGroup.Type: return base + "username" + "Clientes" + "Grupos Economicos"
-//        case is Proposal.Type: return base + "username" + "Propostas"
-//        case is LocalParameters.Type: return base + "Parametros Locais"
-        default:
-            assertionFailure("Tipo Não implementado \(type)")
-        }
-        return Path()
+    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type : StorageItem, Type: NameableStorageItem {        
+        return type.localPath(from: base)
     }
 }
