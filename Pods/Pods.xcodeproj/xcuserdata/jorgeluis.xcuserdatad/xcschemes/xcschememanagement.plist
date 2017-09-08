@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Swift.Json.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>120654144F3CFAE0C83ACDC667448EA2</key>
+		<key>2A4448146C785C426971111F117D773C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A4448146C785C426971111F117D773C</key>
+		<key>313D7A2148B0CDEA22DCD2CCE1C96003</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DFD7B8075CCDCF54F360B372C009B60</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CEA47C2C5AD382C1A648B902657D6E73</key>
+		<key>7E3D5C3014C4950190CC34DA62E8C7B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EE5568CD1227C620A2438E52FF5F6D9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F32FD4E948A76C81BC2023F12ADFD38C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCFF52B5A5B99247B52DEB5FF8634F29</key>
 		<dict>
 			<key>primary</key>
 			<true/>

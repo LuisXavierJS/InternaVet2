@@ -13,6 +13,7 @@ target 'InternaVet2' do
   pod "JVFloatLabeledTextField", '~> 1.2.0'
   pod "TPKeyboardAvoiding"  
   pod "FileKit", '~> 4.0.1'
+  pod "Swift.Json", '~> 1.3.0'
   
   target 'InternaVet2Tests' do
     inherit! :search_paths

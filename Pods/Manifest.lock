@@ -4,6 +4,7 @@ PODS:
   - JVFloatLabeledTextField (1.2.0)
   - LGSideMenuController (2.1.1)
   - ReachabilitySwift (3)
+  - Swift.Json (1.3.0)
   - TPKeyboardAvoiding (1.3.1)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - JVFloatLabeledTextField (~> 1.2.0)
   - LGSideMenuController (~> 2.1.1)
   - ReachabilitySwift (~> 3)
+  - Swift.Json (~> 1.3.0)
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
@@ -20,8 +22,9 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: 96c0c1b6739001801340d25b86aff990d67c4181
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Swift.Json: 9b96a4d51a1888cda145f9f4dfad773e6bcb0dbe
   TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
 
-PODFILE CHECKSUM: 8ec19b78d0d8b2b2e70b174c8a00e20f469e5f0c
+PODFILE CHECKSUM: f3a8287bc7133a1ed298b20caa0dcc300a965b3c
 
 COCOAPODS: 1.2.1
