@@ -28,7 +28,10 @@
 		8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */; };
 		8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B401F62BB1000682C19 /* SelectionView.swift */; };
 		8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B471F62CF1B00682C19 /* DatePickerContainerView.swift */; };
-		8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */; };
+		8EA87B4B1F62FC9C00682C19 /* CreateNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B4A1F62FC9C00682C19 /* CreateNewPatient.swift */; };
+		8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B4C1F63008D00682C19 /* SearchableListViewController.swift */; };
+		8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */; };
+		8EA87B521F63414500682C19 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B511F63414500682C19 /* StorageContext.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +74,10 @@
 		8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
 		8EA87B401F62BB1000682C19 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		8EA87B471F62CF1B00682C19 /* DatePickerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerContainerView.swift; sourceTree = "<group>"; };
-		8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPatient.swift; sourceTree = "<group>"; };
+		8EA87B4A1F62FC9C00682C19 /* CreateNewPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPatient.swift; sourceTree = "<group>"; };
+		8EA87B4C1F63008D00682C19 /* SearchableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableListViewController.swift; sourceTree = "<group>"; };
+		8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchableList.storyboard; sourceTree = "<group>"; };
+		8EA87B511F63414500682C19 /* StorageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8EA87B501F630F3000682C19 /* Storage */,
 				8E67C9D61F40F35000C3C4CE /* Application */,
 				8E67C9E71F40F56900C3C4CE /* Constants */,
 				8E67C9E01F40F48E00C3C4CE /* Views */,
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1BABE51F40D7E600808B16 /* Main.storyboard */,
+				8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */,
 			);
 			name = Main;
 			path = "InternaVet2/Resources/User Interfaces/Main";
@@ -248,9 +256,9 @@
 			isa = PBXGroup;
 			children = (
 				8E67C9DF1F40F48100C3C4CE /* Extensions */,
+				8EA87B491F62FC9C00682C19 /* CreateNewPatient */,
 				8E67C9D81F40F35000C3C4CE /* CreateNewOwner */,
 				8E67C9DA1F40F35000C3C4CE /* Main */,
-				8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */,
+				8EA87B4C1F63008D00682C19 /* SearchableListViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -350,6 +359,22 @@
 				8EA87B401F62BB1000682C19 /* SelectionView.swift */,
 			);
 			path = CustomInputFields;
+			sourceTree = "<group>";
+		};
+		8EA87B491F62FC9C00682C19 /* CreateNewPatient */ = {
+			isa = PBXGroup;
+			children = (
+				8EA87B4A1F62FC9C00682C19 /* CreateNewPatient.swift */,
+			);
+			path = CreateNewPatient;
+			sourceTree = "<group>";
+		};
+		8EA87B501F630F3000682C19 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8EA87B511F63414500682C19 /* StorageContext.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +469,7 @@
 			files = (
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
 				8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */,
+				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
 				8E2D3B0C1F4BBC6000A6B783 /* CreateNewPatient.storyboard in Resources */,
@@ -560,13 +586,15 @@
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */,
+				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
+				8EA87B4B1F62FC9C00682C19 /* CreateNewPatient.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
-				8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
+				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,
 				8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */,
 				8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */,
 				8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */,

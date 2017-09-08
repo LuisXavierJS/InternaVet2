@@ -72,6 +72,11 @@ class DatePickerContainerView: ContentView {
     }
     
     override func prepareForInterfaceBuilder() {
-        self.backgroundColor = UIColor.green
+        self.backgroundColor = UIColor.green.with(alpha: 0.5)
+        let label = UILabel(frame: self.bounds)
+        label.text = "UIDatePicker"
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+        self.addSubview(label)
     }
 }
