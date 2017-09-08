@@ -8,8 +8,10 @@
 
 import UIKit
 
+@IBDesignable
 class DatePickerContainerView: ContentView {
-    var height: CGFloat = 0
+    private(set) var height: CGFloat = 0
+    
     @IBInspectable var dateIsShowing: Bool = false
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!{
@@ -34,7 +36,7 @@ class DatePickerContainerView: ContentView {
         let dtPicker = UIDatePicker()
         self.addSubview(dtPicker)
         self.datePicker = dtPicker
-        
+        self.datePicker?.translatesAutoresizingMaskIntoConstraints = false
         self.datePickerConstraints = [NSLayoutConstraint.constraints(withVisualFormat: "V:|[dtPicker(height)]",
                                                                     metrics: ["height" : self.height],
                                                                     views: ["dtPicker" : dtPicker]),
@@ -61,4 +63,15 @@ class DatePickerContainerView: ContentView {
         self.updateHeightConstraint()
     }
     
+    func changeDatePickerVisibility() {
+        if self.dateIsShowing {
+            self.hideDatePicker()
+        }else {
+            self.showDatePicker()
+        }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        self.backgroundColor = UIColor.green
+    }
 }

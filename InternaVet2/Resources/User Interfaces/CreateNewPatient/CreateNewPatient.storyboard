@@ -42,7 +42,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9O-hJ-sX4" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="160" width="414" height="40"/>
+                                                <rect key="frame" x="0.0" y="335" width="414" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ebG-yT-ynH"/>
@@ -69,7 +69,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do Paciente:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiG-Xq-kaP" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="13" y="215" width="388" height="35"/>
+                                                <rect key="frame" x="13" y="390" width="388" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="11P-VN-3dj"/>
@@ -78,21 +78,27 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yhS-Id-dfO">
-                                                <rect key="frame" x="0.0" y="258" width="414" height="216"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="526562627.60739702">
-                                                    <!--2017-09-08 11:23:47 +0000-->
-                                                </date>
-                                            </datePicker>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-nR-oFL" customClass="DatePickerContainerView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="145" width="414" height="175"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="h6Z-s8-QdO"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="heightConstraint" destination="h6Z-s8-QdO" id="0V5-Vu-dwR"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ehk-nR-oFL" secondAttribute="trailing" id="4IF-Uo-YGU"/>
                                             <constraint firstItem="iiG-Xq-kaP" firstAttribute="top" secondItem="d9O-hJ-sX4" secondAttribute="bottom" constant="15" id="7nD-vp-2Zx"/>
+                                            <constraint firstItem="d9O-hJ-sX4" firstAttribute="top" secondItem="ehk-nR-oFL" secondAttribute="bottom" constant="15" id="Af6-ji-M0o"/>
                                             <constraint firstItem="m6Y-cp-Pr8" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="I4C-NR-sIQ"/>
+                                            <constraint firstItem="ehk-nR-oFL" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="JUO-yp-Xm1"/>
                                             <constraint firstItem="R5p-ve-U4p" firstAttribute="top" secondItem="m6Y-cp-Pr8" secondAttribute="bottom" constant="15" id="Lr5-da-jb7"/>
+                                            <constraint firstItem="ehk-nR-oFL" firstAttribute="top" secondItem="R5p-ve-U4p" secondAttribute="bottom" id="QJR-wb-oZR"/>
                                             <constraint firstItem="iiG-Xq-kaP" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leadingMargin" constant="5" id="TJo-NQ-Fes"/>
-                                            <constraint firstItem="d9O-hJ-sX4" firstAttribute="top" secondItem="R5p-ve-U4p" secondAttribute="bottom" constant="15" id="YYn-bk-9Cf"/>
                                             <constraint firstAttribute="trailing" secondItem="d9O-hJ-sX4" secondAttribute="trailing" id="h2L-Gu-4cI"/>
                                             <constraint firstAttribute="trailing" secondItem="R5p-ve-U4p" secondAttribute="trailing" id="iv9-IM-Hn9"/>
                                             <constraint firstItem="R5p-ve-U4p" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="kzI-AP-DkN"/>
@@ -121,10 +127,14 @@
                             <constraint firstItem="BUi-SZ-g3n" firstAttribute="top" secondItem="Ocl-fM-H0x" secondAttribute="bottom" id="zd1-Fl-VdH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="R5p-ve-U4p" id="hM8-iI-V5R"/>
+                        <outlet property="datePicker" destination="ehk-nR-oFL" id="Akv-VZ-hfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-D1-kBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.799999999999997" y="187.55622188905548"/>
+            <point key="canvasLocation" x="63.768115942028992" y="187.50000000000003"/>
         </scene>
     </scenes>
 </document>
