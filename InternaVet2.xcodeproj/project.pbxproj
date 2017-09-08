@@ -20,16 +20,16 @@
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
 		8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
-		8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
-		8E8B52C61F4D1902004AC1B1 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */; };
+		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
+		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
+		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
+		8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3D1F62BB1000682C19 /* ContentView.swift */; };
+		8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */; };
+		8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B401F62BB1000682C19 /* SelectionView.swift */; };
 		8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */; };
-		8EF447971F57972E004A51DA /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447961F57972E004A51DA /* BorderedView.swift */; };
-		8EF4479A1F579785004A51DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF447991F579785004A51DA /* ContentView.swift */; };
-		8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4479C1F5798E8004A51DA /* ArrowView.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
-		8EFC66E31F5CBAF20090F291 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,16 +62,16 @@
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
+		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
+		8EA87B3D1F62BB1000682C19 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
+		8EA87B401F62BB1000682C19 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPatient.swift; sourceTree = "<group>"; };
-		8EF447961F57972E004A51DA /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
-		8EF447991F579785004A51DA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8EF4479C1F5798E8004A51DA /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
-		8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,12 +305,11 @@
 		8E67C9E21F40F48E00C3C4CE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				8EF4479B1F57979B004A51DA /* UITextField */,
-				8EF447981F579767004A51DA /* UIView */,
-				8EF447951F57971D004A51DA /* UIButton */,
+				8EA87B391F62BB1000682C19 /* BorderedFields */,
+				8EA87B3D1F62BB1000682C19 /* ContentView.swift */,
+				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
 			);
-			name = CustomViews;
-			path = Helpers;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8E67C9E41F40F4B500C3C4CE /* Extensions */ = {
@@ -331,31 +330,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		8EF447951F57971D004A51DA /* UIButton */ = {
+		8EA87B391F62BB1000682C19 /* BorderedFields */ = {
 			isa = PBXGroup;
 			children = (
+				8EA87B3A1F62BB1000682C19 /* ArrowView.swift */,
+				8EA87B3B1F62BB1000682C19 /* BorderedView.swift */,
+				8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */,
 			);
-			name = UIButton;
+			path = BorderedFields;
 			sourceTree = "<group>";
 		};
-		8EF447981F579767004A51DA /* UIView */ = {
+		8EA87B3E1F62BB1000682C19 /* CustomInputFields */ = {
 			isa = PBXGroup;
 			children = (
-				8EF447961F57972E004A51DA /* BorderedView.swift */,
-				8EF447991F579785004A51DA /* ContentView.swift */,
-				8EF4479C1F5798E8004A51DA /* ArrowView.swift */,
-				8E8B52C51F4D1902004AC1B1 /* SelectionView.swift */,
-				8EFC66E21F5CBAF20090F291 /* SelectionViewFields.swift */,
+				8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */,
+				8EA87B401F62BB1000682C19 /* SelectionView.swift */,
 			);
-			name = UIView;
-			sourceTree = "<group>";
-		};
-		8EF4479B1F57979B004A51DA /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-				8E67C9E51F40F4D500C3C4CE /* CustomFloatTextField.swift */,
-			);
-			name = UITextField;
+			path = CustomInputFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,21 +554,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
+				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
-				8EF4479A1F579785004A51DA /* ContentView.swift in Sources */,
-				8EFC66E31F5CBAF20090F291 /* SelectionViewFields.swift in Sources */,
+				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
-				8E8B52C61F4D1902004AC1B1 /* SelectionView.swift in Sources */,
-				8EF447971F57972E004A51DA /* BorderedView.swift in Sources */,
+				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
-				8E67C9E61F40F4D500C3C4CE /* CustomFloatTextField.swift in Sources */,
-				8EF4479D1F5798E8004A51DA /* ArrowView.swift in Sources */,
 				8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
 				8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */,
 				8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */,
+				8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
+				8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
