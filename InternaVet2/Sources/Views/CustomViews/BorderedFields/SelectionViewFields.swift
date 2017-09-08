@@ -68,8 +68,20 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
+class BorderedButtonViewField: PushButtonViewField {    
+    override var fieldRelativeSize: CGFloat {
+        return 1
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        self.arrowsView.rightArrow.isHidden = true
+    }
+}
+
+@IBDesignable
 class PushButtonViewField: BorderedArrowViewField {
-    @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.firsLabel.text = titleLabelText } }
+    @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.titleLabelText = titleLabelText } }
     @IBInspectable var valueLabelText: String = ""{ didSet{ self.dualLabelView.valueLabelText = valueLabelText } }
     @IBInspectable var placeholderText: String = ""{ didSet{ self.dualLabelView.placeholderText = placeholderText } }
     @IBInspectable var labelSize: CGFloat = 14{ didSet{ self.dualLabelView.labelSize = self.labelSize } }
@@ -124,6 +136,7 @@ class PushButtonViewField: BorderedArrowViewField {
 
 @IBDesignable
 class DualLabelView: ContentView {
+    @IBInspectable var titleLabelText: String = ""{ didSet{ self.firsLabel.text = titleLabelText } }
     @IBInspectable var labelSize: CGFloat = 14 {
         didSet {
             self.firsLabel.font = UIFont.systemFont(ofSize: self.labelSize)

@@ -27,6 +27,7 @@
 		8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3D1F62BB1000682C19 /* ContentView.swift */; };
 		8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */; };
 		8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B401F62BB1000682C19 /* SelectionView.swift */; };
+		8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B471F62CF1B00682C19 /* DatePickerContainerView.swift */; };
 		8EC41A881F5A475D00EF645C /* CreateNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
@@ -69,6 +70,7 @@
 		8EA87B3D1F62BB1000682C19 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
 		8EA87B401F62BB1000682C19 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		8EA87B471F62CF1B00682C19 /* DatePickerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerContainerView.swift; sourceTree = "<group>"; };
 		8EC41A871F5A475D00EF645C /* CreateNewPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPatient.swift; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
@@ -305,8 +307,8 @@
 		8E67C9E21F40F48E00C3C4CE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3D1F62BB1000682C19 /* ContentView.swift */,
+				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
 			);
 			path = CustomViews;
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */,
+				8EA87B471F62CF1B00682C19 /* DatePickerContainerView.swift */,
 				8EA87B401F62BB1000682C19 /* SelectionView.swift */,
 			);
 			path = CustomInputFields;
@@ -556,6 +559,7 @@
 			files = (
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
+				8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */,
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
