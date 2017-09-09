@@ -390,8 +390,8 @@
 		8EA87B531F63600D00682C19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8EA87B541F63605800682C19 /* Owner.swift */,
 				8E135B8B1F648DF700F9162B /* User.swift */,
+				8EA87B541F63605800682C19 /* Owner.swift */,
 				8E135B871F648BBA00F9162B /* Patient.swift */,
 			);
 			path = Model;

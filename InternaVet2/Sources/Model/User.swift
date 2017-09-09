@@ -10,18 +10,17 @@ import Foundation
 import FileKit
 
 class User: StorageItem, NameableStorageItem {
-    static func localPathOnStorage(from root: Path) -> Path {
-        return root + "Patients"
-    }
+    dynamic var username: String?
+    dynamic private(set) var patients: [Patient] = []
+    dynamic private(set) var owners: [Owner] = []
     
-    var fileName: String {        
+    var fileName: String {
         return nameConstructor(attributes: ["udid":self.udid])
     }
     
-    dynamic var username: String?
-    
-    dynamic private(set) var patients: [Patient] = []
-    dynamic private(set) var owners: [Owner] = []
+    static func localPathOnStorage(from root: Path) -> Path {
+        return root + "Users"
+    }
     
     func addIfPossibleAndSavePatient(_ patient: Patient) {
         if !self.patients.contains(where: {patient.udid == $0.udid}) {
