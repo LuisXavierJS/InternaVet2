@@ -15,7 +15,7 @@ class Owner: StorageItem, NameableStorageItem {
     }
     
     var fileName: String {
-        return nameConstructor(title: self.name ?? "anonymous…owner", attributes: [:])
+        return nameConstructor(attributes: ["udid":self.udid])
     }
     
     dynamic var name: String?

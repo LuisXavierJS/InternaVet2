@@ -18,9 +18,9 @@ import Foundation
 import FileKit
 import Swift_Json
 
-func nameConstructor(title: String, attributes: [String:String]) -> String {
-    return attributes.reduce(title + "…", { (result, dir) -> String in
-        return result + "" + dir.key + "@" + dir.value
+func nameConstructor(attributes: [String:String]) -> String {
+    return attributes.reduce("", { (result, dir) -> String in
+        return result + dir.key + "≈" + dir.value + "…"
     })
 }
 
@@ -30,10 +30,16 @@ protocol NameableStorageItem: class {
 }
 
 class StorageItem: NSObject {
+    dynamic var udid: String
     fileprivate(set) var originalHash: Int = 0
     
     var jsonString: String {
         return JsonWriter().write(anyObject: self)!
+    }
+    
+    override init() {
+        self.udid = NSUUID().uuidString
+        super.init()
     }
     
 }
@@ -108,7 +114,7 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
     }
     
     func save<Type>(_ object: Type) where Type : StorageItem, Type : NameableStorageItem {
-        let finalPath = self.path + (object.fileName + ".xml")
+        let finalPath = self.path + (object.fileName + ".json")
         
         #if DEBUG
             print("saving object: \(object.fileName) to path: ",finalPath)
@@ -123,7 +129,7 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
     }
     
     func delete<Type>(_ object: Type) where Type : StorageItem, Type : NameableStorageItem {
-        let finalPath = self.path + (object.fileName + ".xml")
+        let finalPath = self.path + (object.fileName + ".json")
         
         try? self.path.createDirectory(withIntermediateDirectories: true)
         
@@ -140,7 +146,7 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
 }
 
 fileprivate class ContextFactory {
-    fileprivate static let mainPath: Path = Path.userDocuments + "XML"
+    fileprivate static let mainPath: Path = Path.userDocuments + "JSON"
     
     static func new<Type>(_ type: Type.Type) -> RealStorageContext<Type> where Type : StorageItem, Type: NameableStorageItem {
         // TODO: setup username
