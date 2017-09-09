@@ -32,6 +32,7 @@
 		8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B4C1F63008D00682C19 /* SearchableListViewController.swift */; };
 		8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */; };
 		8EA87B521F63414500682C19 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B511F63414500682C19 /* StorageContext.swift */; };
+		8EA87B551F63605800682C19 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B541F63605800682C19 /* Owner.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		8EA87B4C1F63008D00682C19 /* SearchableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableListViewController.swift; sourceTree = "<group>"; };
 		8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchableList.storyboard; sourceTree = "<group>"; };
 		8EA87B511F63414500682C19 /* StorageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
+		8EA87B541F63605800682C19 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8EA87B531F63600D00682C19 /* Model */,
 				8EA87B501F630F3000682C19 /* Storage */,
 				8E67C9D61F40F35000C3C4CE /* Application */,
 				8E67C9E71F40F56900C3C4CE /* Constants */,
@@ -375,6 +378,14 @@
 				8EA87B511F63414500682C19 /* StorageContext.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		8EA87B531F63600D00682C19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EA87B541F63605800682C19 /* Owner.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,6 +597,7 @@
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */,
+				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
 				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
 				8EA87B4B1F62FC9C00682C19 /* CreateNewPatient.swift in Sources */,

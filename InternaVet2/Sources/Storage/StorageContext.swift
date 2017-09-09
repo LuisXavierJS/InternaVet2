@@ -18,12 +18,20 @@ import Foundation
 import FileKit
 import Swift_Json
 
+func nameConstructor(title: String, attributes: [String:String]) -> String {
+    return attributes.reduce(title + "…", { (result, dir) -> String in
+        return result + "" + dir.key + "@" + dir.value
+    })
+}
+
 protocol NameableStorageItem: class {
     var fileName: String {get}
-    static func localPath(from root: Path) -> Path
+    static func localPathOnStorage(from root: Path) -> Path
 }
 
 class StorageItem: NSObject {
+    fileprivate(set) var originalHash: Int = 0
+    
     var jsonString: String {
         return JsonWriter().write(anyObject: self)!
     }
@@ -79,6 +87,7 @@ fileprivate class RealStorageContext<Type>: Context where Type : StorageItem {
     
     fileprivate func convert<Type>(_ path: Path) -> Type where Type: StorageItem {
         let object: Type! = JsonParser().parse(data: try! DataFile(path: path).read())
+        object.originalHash = object.jsonString.hash
         return object
     }
     
@@ -138,7 +147,7 @@ fileprivate class ContextFactory {
         return RealStorageContext(self.getPath(type, self.mainPath))
     }
     
-    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type : StorageItem, Type: NameableStorageItem {        
-        return type.localPath(from: base)
+    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type : StorageItem, Type: NameableStorageItem {
+        return type.localPathOnStorage(from: base)
     }
 }
