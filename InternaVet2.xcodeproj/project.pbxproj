@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3776F5BB390D331A0BE47261 /* Pods_InternaVet2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */; };
 		5955FA70B9E80008BE251460 /* Pods_InternaVet2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC50C2C14B1B8CD24165323 /* Pods_InternaVet2Tests.framework */; };
+		8E135B881F648BBA00F9162B /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B871F648BBA00F9162B /* Patient.swift */; };
+		8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B891F648C1E00F9162B /* SessionController.swift */; };
+		8E135B8C1F648DF700F9162B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B8B1F648DF700F9162B /* User.swift */; };
 		8E1BABC31F40D18E00808B16 /* InternaVet2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */; };
 		8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABD41F40D28200808B16 /* Assets.xcassets */; };
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
@@ -52,6 +55,9 @@
 		238BDCE58DD29F17F6B56654 /* Pods-InternaVet2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.debug.xcconfig"; sourceTree = "<group>"; };
 		7169EFBB255783ED9952BD46 /* Pods-InternaVet2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		79C15F1DDA5279E9476FF73B /* Pods_InternaVet2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternaVet2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E135B871F648BBA00F9162B /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		8E135B891F648C1E00F9162B /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		8E135B8B1F648DF700F9162B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8E1BABA71F40D18E00808B16 /* InternaVet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternaVet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABBE1F40D18E00808B16 /* InternaVet2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternaVet2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternaVet2Tests.swift; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA87B511F63414500682C19 /* StorageContext.swift */,
+				8E135B891F648C1E00F9162B /* SessionController.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -384,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				8EA87B541F63605800682C19 /* Owner.swift */,
+				8E135B8B1F648DF700F9162B /* User.swift */,
+				8E135B871F648BBA00F9162B /* Patient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -599,10 +608,13 @@
 				8EA87B481F62CF1B00682C19 /* DatePickerContainerView.swift in Sources */,
 				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
 				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
+				8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */,
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
 				8EA87B4B1F62FC9C00682C19 /* CreateNewPatient.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
+				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
+				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,

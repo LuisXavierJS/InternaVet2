@@ -9,17 +9,10 @@
 import Foundation
 import FileKit
 
-class Owner: StorageItem, NameableStorageItem {
-    static func localPathOnStorage(from root: Path) -> Path {
-        return root + "Owners"
-    }
-    
-    var fileName: String {
-        return nameConstructor(attributes: ["udid":self.udid])
-    }
-    
+class Owner: StorageItem {
     dynamic var name: String?
     dynamic var email: String?
-    
-    
+    dynamic var celular: String?
+    dynamic var telefone: String?
+    dynamic var endereco: String?
 }

@@ -30,8 +30,8 @@ protocol NameableStorageItem: class {
 }
 
 class StorageItem: NSObject {
-    dynamic var udid: String
-    fileprivate(set) var originalHash: Int = 0
+    fileprivate(set) dynamic var udid: String
+    fileprivate(set) dynamic var originalHash: Int = 0
     
     var jsonString: String {
         return JsonWriter().write(anyObject: self)!
