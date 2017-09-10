@@ -23,6 +23,8 @@
 		8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2944391F65D6EE00F0FA8A /* CreateNewTaskViewController.swift */; };
 		8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */; };
 		8E2D3B0C1F4BBC6000A6B783 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2D3B0B1F4BBC6000A6B783 /* CreateNewPatient.storyboard */; };
+		8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */; };
+		8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */; };
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
 		8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
@@ -76,6 +78,8 @@
 		8E2944391F65D6EE00F0FA8A /* CreateNewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewTaskViewController.swift; sourceTree = "<group>"; };
 		8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		8E2D3B0B1F4BBC6000A6B783 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
+		8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButtonFields.swift; sourceTree = "<group>"; };
+		8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualLabelView.swift; sourceTree = "<group>"; };
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -276,6 +280,14 @@
 			path = CreateNewTask;
 			sourceTree = "<group>";
 		};
+		8E30CEEB1F65F1C8007D34F7 /* CustomOutputFields */ = {
+			isa = PBXGroup;
+			children = (
+				8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */,
+			);
+			path = CustomOutputFields;
+			sourceTree = "<group>";
+		};
 		8E67C9D51F40F35000C3C4CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA87B3D1F62BB1000682C19 /* ContentView.swift */,
+				8E30CEEB1F65F1C8007D34F7 /* CustomOutputFields */,
 				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
 			);
@@ -373,6 +386,7 @@
 				8EA87B3A1F62BB1000682C19 /* ArrowView.swift */,
 				8EA87B3B1F62BB1000682C19 /* BorderedView.swift */,
 				8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */,
+				8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */,
 			);
 			path = BorderedFields;
 			sourceTree = "<group>";
@@ -630,12 +644,14 @@
 				8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */,
 				8E135B8E1F655E8D00F9162B /* UIView+Helpers.swift in Sources */,
 				8EA87B4B1F62FC9C00682C19 /* CreateNewPatientViewController.swift in Sources */,
+				8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
 				8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
+				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
 				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,

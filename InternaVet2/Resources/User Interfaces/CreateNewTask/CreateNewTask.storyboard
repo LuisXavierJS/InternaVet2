@@ -79,6 +79,27 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Paciente"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Va-OMu" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="265" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="h0F-hz-Iwn"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Intervalo das Aplicações:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Intervalo"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-0s-iSB" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="310" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="wh0-B2-Raa"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-6g-lHc" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="745" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,21 +142,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Va-OMu" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="265" width="320" height="45"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="h0F-hz-Iwn"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Intervalo das Aplicações:"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Intervalo"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
-                                                        <real key="value" value="25"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy" customClass="TextViewContainer" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="790" width="320" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -154,13 +161,6 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Iry-Xk-ugU"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-0s-iSB" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="310" width="320" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="wh0-B2-Raa"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

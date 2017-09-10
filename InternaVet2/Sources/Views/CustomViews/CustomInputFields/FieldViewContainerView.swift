@@ -49,10 +49,27 @@ class PickerViewContainer: FieldViewContainerView, UIPickerViewDelegate, UIPicke
     }
 }
 
-class TextViewContainer: FieldViewContainerView {
+class TextViewContainer: FieldViewContainerView, UITextViewDelegate {
     override func fieldViewInstance() -> UIView {
         let textView = UITextView()
+        textView.layer.cornerRadius = 3
+        textView.layer.borderWidth = 0.4
+        textView.layer.borderColor = Colors.darkGreen.cgColor
+        textView.delegate = self
         return textView
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        self.backgroundColor = UIColor.green.with(alpha: 0.5)
+        let label = UILabel(frame: self.bounds)
+        label.text = "UITextField"
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+        self.addSubview(label)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        self.delegate?.valueWasChanged(textView.text)
     }
 }
 
