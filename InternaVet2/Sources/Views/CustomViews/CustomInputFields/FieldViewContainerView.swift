@@ -82,7 +82,7 @@ class DatePickerViewContainer: FieldViewContainerView {
     
     func datePickerValueChanged(_ sender: UIDatePicker){
         print(sender.date)
-        self.delegate?.valueWasChanged(sender)
+        self.delegate?.valueWasChanged(sender.date)
     }
 
     override func prepareForInterfaceBuilder() {

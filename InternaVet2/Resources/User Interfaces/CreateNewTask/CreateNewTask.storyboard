@@ -62,7 +62,6 @@
                                                     <constraint firstAttribute="height" constant="45" id="yE9-SG-9tr"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Nome:"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar nome da Tarefa"/>
                                                 </userDefinedRuntimeAttributes>
@@ -74,7 +73,6 @@
                                                     <constraint firstAttribute="height" constant="45" id="gQz-Qf-Zks"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Paciente:"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Paciente"/>
                                                 </userDefinedRuntimeAttributes>
@@ -100,20 +98,6 @@
                                                     <constraint firstAttribute="height" constant="100" id="wh0-B2-Raa"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-6g-lHc" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="745" width="320" height="45"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="F3w-zN-FY3"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Observações:"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Adicione observações"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
-                                                        <real key="value" value="25"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-Ee-S6u" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="425" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,6 +111,13 @@
                                                         <real key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-ks-gXf" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="470" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Iry-Xk-ugU"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-zp-HUG" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="585" width="320" height="45"/>
@@ -142,13 +133,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy" customClass="TextViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="790" width="320" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="nAT-Jk-tYA"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Yh-o5P" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="630" width="320" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,11 +140,25 @@
                                                     <constraint firstAttribute="height" constant="100" id="RE8-KJ-Ik0"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-ks-gXf" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="470" width="320" height="100"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-6g-lHc" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="745" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Iry-Xk-ugU"/>
+                                                    <constraint firstAttribute="height" constant="45" id="F3w-zN-FY3"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Observações:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Adicione observações"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy" customClass="TextViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="790" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="nAT-Jk-tYA"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

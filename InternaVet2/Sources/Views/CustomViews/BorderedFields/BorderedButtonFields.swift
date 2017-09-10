@@ -14,26 +14,38 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
-class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
-    @IBOutlet fileprivate weak var containerField: PickerViewContainer? {
+class DateViewButtonField: ExpandCollapseContainerButton<Date> {
+    weak var datePickerContainer: DatePickerViewContainer? {
+        return self.containerField as? DatePickerViewContainer
+    }
+    
+}
+
+@IBDesignable
+class PickerViewButtonField: ExpandCollapseContainerButton<String> {
+    weak var pickerContainer: PickerViewContainer? {
+        return self.containerField as? PickerViewContainer
+    }
+    
+    func setItems(_ items: [String]) {
+        self.pickerContainer?.datasourceItems = [items]
+    }
+    
+}
+
+@IBDesignable
+class ExpandCollapseContainerButton<T>: PushButtonViewField, FieldViewContainerProtocol where T:StringRepresentable{
+    @IBOutlet fileprivate weak var containerField: FieldViewContainerView? {
         didSet{
             self.containerField?.delegate = self
         }
     }
     
-    var selectedItem: String?
+    var selectedItem: T?
     
-    func setItems(_ items: [String]) {
-        self.containerField?.datasourceItems = [items]
-    }
     
     override var fieldRelativeSize: CGFloat {
         return 1
-    }
-    
-    override func setupViews() {
-        super.setupViews()
-        self.arrowsView.rightArrow.isHidden = true
     }
     
     override func buttonWasTapped() {
@@ -47,10 +59,15 @@ class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
         }
     }
     
+    override func setupViews() {
+        super.setupViews()
+        self.arrowsView.rightArrow.isHidden = true
+    }
+    
     func valueWasChanged(_ newValue: Any) {
-        if let selected = newValue as? String {
+        if let selected = newValue as? T {
             self.selectedItem = selected
-            self.valueLabelText = selected
+            self.valueLabelText = selected.stringRepresentation 
         }
     }
 }
