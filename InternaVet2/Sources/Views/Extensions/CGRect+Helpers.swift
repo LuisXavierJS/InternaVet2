@@ -30,6 +30,10 @@ extension CGPoint {
     func with(y: CGFloat) -> CGPoint {
         return CGPoint(x: self.x, y: y)
     }
+    
+    func adding(onY y: CGFloat = 0, onX x: CGFloat = 0) -> CGPoint {
+        return self.with(y: self.y + y).with(x: self.x + x)
+    }
 }
 
 extension CGSize {
@@ -45,6 +49,10 @@ extension CGSize {
     
     func with(height: CGFloat) -> CGSize {
         return CGSize(width: self.width, height: height)
+    }
+    
+    func adding(onWidth width: CGFloat = 0, onHeight height: CGFloat = 0) -> CGSize {
+        return self.with(width: self.width + width).with(height: self.height + height)
     }
     
     func toRect(point: CGPoint = CGPoint.zero) -> CGRect {
@@ -109,5 +117,9 @@ extension CGRect {
     
     func with(height delta: CGFloat) -> CGRect {
         return CGRect(x: self.origin.x, y: self.origin.y, width: self.size.width, height: delta)
+    }
+    
+    func adding(onY y: CGFloat = 0, onX x: CGFloat = 0, onWidth width: CGFloat = 0, onHeight height: CGFloat = 0) -> CGRect {
+        return self.with(size: self.size.adding(onWidth: width, onHeight: height)).with(point: self.origin.adding(onY: y, onX: x))
     }
 }

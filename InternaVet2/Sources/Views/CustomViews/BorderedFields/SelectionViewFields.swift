@@ -69,7 +69,9 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
-class BorderedButtonViewField: PushButtonViewField {    
+class ExpandCollapseBottomViewButtonField: PushButtonViewField {
+    @IBOutlet weak var containerField: FieldViewContainerView?
+    
     override var fieldRelativeSize: CGFloat {
         return 1
     }
@@ -77,6 +79,17 @@ class BorderedButtonViewField: PushButtonViewField {
     override func setupViews() {
         super.setupViews()
         self.arrowsView.rightArrow.isHidden = true
+    }
+    
+    override func buttonWasTapped() {
+        super.buttonWasTapped()
+        guard let container = self.containerField else {return}
+        container.changeFieldViewVisibility()
+        UIView.animate(withDuration: 0.25) {self.rootView?.layoutIfNeeded()}
+        if let scroll = self.scrollSuperview {
+            let yVariation: CGFloat = container.fieldIsShowing ? container.bounds.height : 0
+            scroll.setContentOffset(scroll.contentOffset.adding(onY: yVariation), animated: true)
+        }
     }
 }
 
@@ -124,7 +137,7 @@ class PushButtonViewField: BorderedArrowViewField {
         self.dualLabelView.endTouchAnimation()
         if let point = touches.first?.location(in: self),
             self.point(inside: point, with: event) {
-            self.delegate?.pushButtonWasTapped(self)
+            self.buttonWasTapped()
         }
     }
     
@@ -132,6 +145,10 @@ class PushButtonViewField: BorderedArrowViewField {
         super.touchesCancelled(touches, with: event)
         self.arrowsView.rightArrow.endTouchAnimation()
         self.dualLabelView.endTouchAnimation()
+    }
+    
+    func buttonWasTapped(){
+        self.delegate?.pushButtonWasTapped(self)
     }
 }
 
