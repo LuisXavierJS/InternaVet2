@@ -51,6 +51,7 @@ class TextSelectionViewField: SelectionArrowViewField {
         let text = CustomFloatTextField()
         self.textField = text
         super.setupViews()
+        self.textField.textAlignment = .center
         self.textField.placeholderColor = self.placeholderColor
         self.textField.floatingLabelTextColor = self.floatingLabelTextColor
         self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor
