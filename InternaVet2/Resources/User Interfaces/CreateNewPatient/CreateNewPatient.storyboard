@@ -136,7 +136,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecione a Raça"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x9-jc-5Ik" customClass="ExpandCollapseBottomViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x9-jc-5Ik" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="655" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -163,7 +163,7 @@
                                                     <outlet property="heightConstraint" destination="Nm8-gA-Tg7" id="So9-0l-xST"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-Un-Eox" customClass="ExpandCollapseBottomViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-Un-Eox" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="815" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>

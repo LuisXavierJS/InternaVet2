@@ -20,7 +20,7 @@ class Patient: StorageItem {
     dynamic var gender: String?
     dynamic var isCastrated: Bool = false
     dynamic var isDead: Bool = false
-    dynamic var dogHouse: String?
+    dynamic fileprivate(set) var dogHouseId: String?
     dynamic var hospitalizationTime: Double = 0
     
     func getOwner() -> Owner? {
@@ -31,5 +31,25 @@ class Patient: StorageItem {
     func setAndSaveOwner(_ owner: Owner) {
         self.ownerId = owner.udid
         SessionController.currentUser?.addIfPossibleAndSaveOwner(owner)
+    }
+    
+    func setAndSaveDogHouse(_ dogHouse: DogHouse) {
+        self.dogHouseId = dogHouse.udid
+        dogHouse.patientId = self.udid
+    }
+    
+    func getDogHouse() -> DogHouse? {
+        guard let id = self.dogHouseId else {return nil}
+        return SessionController.currentUser?.dogHouses.filter({$0.udid == id}).first
+    }
+}
+
+class DogHouse: StorageItem {
+    dynamic var dogHouserNumber: Int = 0
+    dynamic fileprivate(set) var patientId: String?
+    
+    func getPatient() -> Patient? {
+        guard let id = self.patientId else {return nil}
+        return SessionController.currentUser?.patients.filter({$0.udid == id}).first
     }
 }

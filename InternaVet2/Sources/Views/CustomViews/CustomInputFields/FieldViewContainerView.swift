@@ -8,9 +8,19 @@
 
 import UIKit
 
-class PickerViewContainer: FieldViewContainerView {
+class PickerViewContainer: FieldViewContainerView, UIPickerViewDelegate, UIPickerViewDataSource {
+    var datasourceItems: [[String]] = [[]] {
+        didSet{
+            (self.fieldView as? UIPickerView)?.reloadAllComponents()
+        }
+    }
+    
     override func fieldViewInstance() -> UIView {
-        return UIPickerView()
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        picker.reloadAllComponents()
+        return picker
     }
     
     override func prepareForInterfaceBuilder() {
@@ -21,13 +31,36 @@ class PickerViewContainer: FieldViewContainerView {
         label.font = UIFont.boldSystemFont(ofSize: 25)
         self.addSubview(label)
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return self.datasourceItems.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.datasourceItems[component].count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.datasourceItems[component][row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.delegate?.valueWasChanged(self.datasourceItems[component][row])
+    }
 }
 
 class DatePickerViewContainer: FieldViewContainerView {
     override func fieldViewInstance() -> UIView {
-        return UIDatePicker()
+        let datePicker =  UIDatePicker()
+        datePicker.addTarget(self, action: #selector(self.datePickerValueChanged(_:)), for: .valueChanged)
+        return datePicker
     }
     
+    func datePickerValueChanged(_ sender: UIDatePicker){
+        print(sender.date)
+        self.delegate?.valueWasChanged(sender)
+    }
+
     override func prepareForInterfaceBuilder() {
         self.backgroundColor = UIColor.green.with(alpha: 0.5)
         let label = UILabel(frame: self.bounds)
@@ -38,6 +71,12 @@ class DatePickerViewContainer: FieldViewContainerView {
     }
 }
 
+
+protocol FieldViewContainerProtocol: class {
+    func valueWasChanged(_ newValue: Any)
+}
+
+//abstract class
 @IBDesignable
 class FieldViewContainerView: ContentView {
     private(set) var height: CGFloat = 0
@@ -53,8 +92,9 @@ class FieldViewContainerView: ContentView {
     
     weak var fieldView: UIView?
     
-    var fieldViewConstraints: [NSLayoutConstraint] = []
+    weak var delegate: FieldViewContainerProtocol?
     
+    var fieldViewConstraints: [NSLayoutConstraint] = []
 
     override func setupViews() {
         self.clipsToBounds = true

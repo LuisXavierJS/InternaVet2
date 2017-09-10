@@ -69,8 +69,12 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
-class ExpandCollapseBottomViewButtonField: PushButtonViewField {
-    @IBOutlet weak var containerField: FieldViewContainerView?
+class PickerViewButtonField: PushButtonViewField {
+    @IBOutlet fileprivate weak var containerField: PickerViewContainer?
+    
+    func setItems(_ items: [[String]]) {
+        self.containerField?.datasourceItems = items        
+    }
     
     override var fieldRelativeSize: CGFloat {
         return 1
@@ -224,6 +228,15 @@ class SelectionArrowViewField: BorderedArrowViewField, SelectionSliderViewDelega
     @IBInspectable var selFontSize: CGFloat = 12.5{ didSet{ self.selectionView.fontSize = self.selFontSize } }
     @IBInspectable var selHiddingColor: UIColor = UIColor.white{ didSet{ self.selectionView.hiddingColor = self.selHiddingColor } }
     @IBInspectable var selHiddingLocation: CGFloat = -10{ didSet{ self.selectionView.hiddingLocation = self.selHiddingLocation } }
+    
+    var selectionOptions: [String] {
+        set {
+            self.selectionView.items = newValue
+        }
+        get {
+            return self.selectionView.items
+        }
+    }
     
     weak var selectionView: SelectionSliderView! {
         return self.arrowsView as! SelectionSliderView

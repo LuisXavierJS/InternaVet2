@@ -24,7 +24,15 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     weak var delegate: SelectionSliderViewDelegateProtocol?
     
     var selectedItemIndex: Int {
-        return Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
+        get {
+            return Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
+        }
+        
+        set {
+            if newValue >= 0 && newValue < self.items.count {
+                self.scrollPageView.setContentOffset(CGPoint.zero.with(x: self.bounds.width * CGFloat(newValue)), animated: false)
+            }
+        }
     }
     
     var items: [String] = [] { didSet { self.reloadData() } }

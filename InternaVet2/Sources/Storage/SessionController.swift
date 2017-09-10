@@ -30,6 +30,7 @@ class SessionController {
         if let _ = loadUser(from: user) {return false}
         let newUser = User()
         newUser.username = user
+        User.resetDogHousesToDefault(onUser: newUser)
         self.context.save(newUser)
         return true
     }

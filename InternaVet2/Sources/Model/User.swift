@@ -13,6 +13,7 @@ class User: StorageItem, NameableStorageItem {
     dynamic var username: String?
     dynamic private(set) var patients: [Patient] = []
     dynamic private(set) var owners: [Owner] = []
+    dynamic private(set) var dogHouses: [DogHouse] = []
     
     var fileName: String {
         return nameConstructor(attributes: ["udid":self.udid])
@@ -20,6 +21,14 @@ class User: StorageItem, NameableStorageItem {
     
     static func localPathOnStorage(from root: Path) -> Path {
         return root + "Users"
+    }
+    
+    static func resetDogHousesToDefault(onUser user: User) {
+        let dogHouses = Array(1...45).map { (number) -> DogHouse in
+                            let dogHouse = DogHouse()
+                            return dogHouse
+                        }
+        user.dogHouses = dogHouses
     }
     
     func addIfPossibleAndSavePatient(_ patient: Patient) {
@@ -42,5 +51,9 @@ class User: StorageItem, NameableStorageItem {
     
     func getOwner(ofId id: String) -> Owner? {
         return self.owners.filter({$0.udid == id}).first
+    }
+    
+    func getDogHouse(ofNumber number: Int) -> DogHouse? {
+        return self.dogHouses.filter({$0.dogHouserNumber == number}).first
     }
 }

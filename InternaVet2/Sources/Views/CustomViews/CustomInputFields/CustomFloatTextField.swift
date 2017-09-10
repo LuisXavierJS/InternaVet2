@@ -35,7 +35,7 @@ class CustomFloatTextField: JVFloatLabeledTextField {
         self.layer.borderWidth = 0.4        
         self.layer.borderColor = Colors.darkGreen.cgColor
         
-        self.placeholderColor = Colors.clearLightGreen
+        self.placeholderColor = Colors.darkGreen.withAlphaComponent(0.5)
         self.floatingLabelTextColor = Colors.darkGreen
         self.floatingLabelActiveTextColor = Colors.lightGreen
         self.floatingLabelYPadding = 2
