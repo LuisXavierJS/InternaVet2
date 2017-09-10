@@ -38,7 +38,14 @@ class CreateNewPatientViewController: UIViewController {
     }
     
     func setupPickerSelectors(){
-        self.dogHousePickerSelector.setItems([[]])
+        let freeDogHousesList: [String] = SessionController.currentUser?.dogHouses.filter({$0.patientId == nil}).map({String($0.dogHouserNumber)}) ?? []
+        let totalDogHousesToList: [String] = [["--"], freeDogHousesList].flatMap({$0})
+        self.dogHousePickerSelector.setItems(totalDogHousesToList)
+        
+        let monthsToList: [String] = Array(1...11).map({String($0) + ($0 > 1 ? " meses" : " mês")})
+        let yearsToList: [String] = Array(1...30).map({String($0) + ($0 > 1 ? " anos" : " ano")})
+        let totalAgesToList: [String] = [monthsToList, yearsToList].flatMap({$0})
+        self.agePickerSelector.setItems(totalAgesToList)
     }
     
 }

@@ -33,9 +33,9 @@ class Patient: StorageItem {
         SessionController.currentUser?.addIfPossibleAndSaveOwner(owner)
     }
     
-    func setAndSaveDogHouse(_ dogHouse: DogHouse) {
-        self.dogHouseId = dogHouse.udid
-        dogHouse.patientId = self.udid
+    func setAndSaveDogHouse(_ dogHouse: DogHouse?) {
+        self.dogHouseId = dogHouse?.udid
+        dogHouse?.patientId = self.udid
     }
     
     func getDogHouse() -> DogHouse? {

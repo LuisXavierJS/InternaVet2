@@ -69,11 +69,13 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
-class PickerViewButtonField: PushButtonViewField {
+class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
     @IBOutlet fileprivate weak var containerField: PickerViewContainer?
     
-    func setItems(_ items: [[String]]) {
-        self.containerField?.datasourceItems = items        
+    var selectedItem: String?
+    
+    func setItems(_ items: [String]) {
+        self.containerField?.datasourceItems = [items]
     }
     
     override var fieldRelativeSize: CGFloat {
@@ -82,6 +84,7 @@ class PickerViewButtonField: PushButtonViewField {
     
     override func setupViews() {
         super.setupViews()
+        self.containerField?.delegate = self
         self.arrowsView.rightArrow.isHidden = true
     }
     
@@ -93,6 +96,13 @@ class PickerViewButtonField: PushButtonViewField {
         if let scroll = self.scrollSuperview {
             let yVariation: CGFloat = container.fieldIsShowing ? container.bounds.height : 0
             scroll.setContentOffset(scroll.contentOffset.adding(onY: yVariation), animated: true)
+        }
+    }
+    
+    func valueWasChanged(_ newValue: Any) {
+        if let selected = newValue as? String {
+            self.selectedItem = selected
+            self.titleLabelText = selected
         }
     }
 }
