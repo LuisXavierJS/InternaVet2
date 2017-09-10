@@ -25,7 +25,9 @@ class CreateNewPatientViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupSelectorsOptions()
+        self.setupTextfields()
+        self.setupPickerSelectors()
     }
     
     func setupSelectorsOptions(){
@@ -46,6 +48,13 @@ class CreateNewPatientViewController: UIViewController {
         let yearsToList: [String] = Array(1...30).map({String($0) + ($0 > 1 ? " anos" : " ano")})
         let totalAgesToList: [String] = [monthsToList, yearsToList].flatMap({$0})
         self.agePickerSelector.setItems(totalAgesToList)
+    }
+    
+    func setupTextfields() {
+        self.weightSelectionText.textField.keyboardType = .numbersAndPunctuation
+        self.weightSelectionText.textField.allowsEditingTextAttributes = false
+        self.hospitalizationSelectionText.textField.keyboardType = .numbersAndPunctuation
+        self.hospitalizationSelectionText.textField.allowsEditingTextAttributes = false
     }
     
 }

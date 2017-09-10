@@ -19,6 +19,8 @@
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
 		8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */; };
+		8E2944371F65D6C300F0FA8A /* CreateNewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2944361F65D6C300F0FA8A /* CreateNewTask.storyboard */; };
+		8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2944391F65D6EE00F0FA8A /* CreateNewTaskViewController.swift */; };
 		8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */; };
 		8E2D3B0C1F4BBC6000A6B783 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2D3B0B1F4BBC6000A6B783 /* CreateNewPatient.storyboard */; };
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E1BABED1F40E72800808B16 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
+		8E2944361F65D6C300F0FA8A /* CreateNewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewTask.storyboard; sourceTree = "<group>"; };
+		8E2944391F65D6EE00F0FA8A /* CreateNewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewTaskViewController.swift; sourceTree = "<group>"; };
 		8E2D3B071F4A022F00A6B783 /* CGRect+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		8E2D3B0B1F4BBC6000A6B783 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +252,14 @@
 			path = "InternaVet2/Resources/User Interfaces/CreateNewOwner";
 			sourceTree = SOURCE_ROOT;
 		};
+		8E2944381F65D6E000F0FA8A /* CreateNewTask */ = {
+			isa = PBXGroup;
+			children = (
+				8E2944391F65D6EE00F0FA8A /* CreateNewTaskViewController.swift */,
+			);
+			path = CreateNewTask;
+			sourceTree = "<group>";
+		};
 		8E2D3B091F4BBC5100A6B783 /* CreateNewPatient */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +271,7 @@
 		8E2D3B0A1F4BBC5100A6B783 /* CreateNewTask */ = {
 			isa = PBXGroup;
 			children = (
+				8E2944361F65D6C300F0FA8A /* CreateNewTask.storyboard */,
 			);
 			path = CreateNewTask;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8E67C9DF1F40F48100C3C4CE /* Extensions */,
+				8E2944381F65D6E000F0FA8A /* CreateNewTask */,
 				8EA87B491F62FC9C00682C19 /* CreateNewPatient */,
 				8E67C9D81F40F35000C3C4CE /* CreateNewOwner */,
 				8E67C9DA1F40F35000C3C4CE /* Main */,
@@ -490,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2944371F65D6C300F0FA8A /* CreateNewTask.storyboard in Resources */,
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
 				8E1BABEE1F40E72800808B16 /* CreateNewOwner.storyboard in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
@@ -618,6 +633,7 @@
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
+				8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,

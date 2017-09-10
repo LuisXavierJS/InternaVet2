@@ -262,6 +262,21 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outlet property="agePickerSelector" destination="jW0-Un-Eox" id="srr-z9-RsR"/>
+                        <outlet property="castratedSelection" destination="ztQ-8m-EQ1" id="epP-qW-Pp4"/>
+                        <outlet property="chipTextField" destination="3BA-ya-wxb" id="LVW-Ml-APB"/>
+                        <outlet property="diedSelection" destination="Lxi-xZ-OVi" id="wa9-18-cVI"/>
+                        <outlet property="dogHousePickerSelector" destination="5x9-jc-5Ik" id="p73-NN-zwt"/>
+                        <outlet property="genderSelection" destination="G4F-I6-l6N" id="hJM-Nt-oqB"/>
+                        <outlet property="hospitalizationSelectionText" destination="Zf4-7R-3dh" id="eVX-Rz-Bza"/>
+                        <outlet property="nameTextField" destination="dDO-oA-RNL" id="i7O-oM-19l"/>
+                        <outlet property="ownerPushButton" destination="gUI-sw-HgN" id="mBz-lo-C5F"/>
+                        <outlet property="racePushButton" destination="GuI-gM-1pU" id="Cay-JX-jSm"/>
+                        <outlet property="registerTextField" destination="si4-9K-Sbv" id="1c8-Yz-wcw"/>
+                        <outlet property="specieSelection" destination="1P9-Nv-RZQ" id="ZiW-wc-RiS"/>
+                        <outlet property="weightSelectionText" destination="aIG-xR-tWz" id="Dxz-NI-gJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-D1-kBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

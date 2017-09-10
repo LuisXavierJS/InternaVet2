@@ -41,7 +41,7 @@ class TextSelectionViewField: SelectionArrowViewField {
     @IBInspectable var floatingLabelTextColor: UIColor = Colors.darkGreen{ didSet{ self.textField.floatingLabelTextColor = self.floatingLabelTextColor } }
     @IBInspectable var floatingLabelActiveTextColor: UIColor = Colors.lightGreen{ didSet{ self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor } }
     
-    private weak var textField: CustomFloatTextField!
+    private(set) weak var textField: CustomFloatTextField!
     
     override weak var field: UIView! {
         return self.textField
@@ -70,7 +70,11 @@ protocol PushButtonProtocol: class {
 
 @IBDesignable
 class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
-    @IBOutlet fileprivate weak var containerField: PickerViewContainer?
+    @IBOutlet fileprivate weak var containerField: PickerViewContainer? {
+        didSet{
+            self.containerField?.delegate = self
+        }
+    }
     
     var selectedItem: String?
     
@@ -84,7 +88,6 @@ class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
     
     override func setupViews() {
         super.setupViews()
-        self.containerField?.delegate = self
         self.arrowsView.rightArrow.isHidden = true
     }
     
@@ -102,7 +105,7 @@ class PickerViewButtonField: PushButtonViewField, FieldViewContainerProtocol {
     func valueWasChanged(_ newValue: Any) {
         if let selected = newValue as? String {
             self.selectedItem = selected
-            self.titleLabelText = selected
+            self.valueLabelText = selected
         }
     }
 }

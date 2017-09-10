@@ -49,6 +49,13 @@ class PickerViewContainer: FieldViewContainerView, UIPickerViewDelegate, UIPicke
     }
 }
 
+class TextViewContainer: FieldViewContainerView {
+    override func fieldViewInstance() -> UIView {
+        let textView = UITextView()
+        return textView
+    }
+}
+
 class DatePickerViewContainer: FieldViewContainerView {
     override func fieldViewInstance() -> UIView {
         let datePicker =  UIDatePicker()

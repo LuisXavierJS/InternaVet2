@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1zh-ch-1xD">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create New Task View Controller-->
+        <scene sceneID="kye-Ls-vmd">
+            <objects>
+                <viewController id="1zh-ch-1xD" customClass="CreateNewTaskViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u8v-ik-xfG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ben-EO-98c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SJL-8h-MFd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="980"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-WW-ncf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="960"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM9-FS-tEk" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="915"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-QR-hxd" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="25" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Eis-MP-SQi"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Tipo de Tarefa:"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-s4-mtc" userLabel="DynamicSeparatorSpaceView">
+                                                <rect key="frame" x="145" y="70" width="30" height="15"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="15" id="5lQ-ck-RNh"/>
+                                                    <constraint firstAttribute="width" constant="30" id="aOz-k4-ifJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Hcd-RO-w3r"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-al-Uhs" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="145" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="yE9-SG-9tr"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Nome:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar nome da Tarefa"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtV-bK-Peu" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="205" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="gQz-Qf-Zks"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Paciente:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Paciente"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-6g-lHc" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="745" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="F3w-zN-FY3"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Observações:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Adicione observações"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-Ee-S6u" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="425" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="lkr-45-YG5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Início do Tratamento:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar data"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-zp-HUG" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="585" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="8PZ-g0-Dei"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Fim do Tratamento:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar data"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Va-OMu" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="265" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="h0F-hz-Iwn"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Intervalo das Aplicações:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Intervalo"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy">
+                                                <rect key="frame" x="0.0" y="790" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="nAT-Jk-tYA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Yh-o5P" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="630" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="RE8-KJ-Ik0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-ks-gXf" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="470" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Iry-Xk-ugU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-0s-iSB" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="310" width="320" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="wh0-B2-Raa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mtV-bK-Peu" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="04L-33-zw5"/>
+                                            <constraint firstItem="Tkx-ks-gXf" firstAttribute="top" secondItem="Pl3-Ee-S6u" secondAttribute="bottom" id="0qN-1W-qGY"/>
+                                            <constraint firstItem="9ad-QR-hxd" firstAttribute="top" secondItem="iM9-FS-tEk" secondAttribute="top" constant="25" id="51y-gq-NfG"/>
+                                            <constraint firstItem="mtV-bK-Peu" firstAttribute="top" secondItem="sWf-al-Uhs" secondAttribute="bottom" constant="15" id="5if-h6-ccq"/>
+                                            <constraint firstItem="Pl3-Ee-S6u" firstAttribute="top" secondItem="kTM-0s-iSB" secondAttribute="bottom" constant="15" id="6mM-xH-EbO"/>
+                                            <constraint firstItem="UiS-s4-mtc" firstAttribute="height" secondItem="0Xc-ga-vB0" secondAttribute="height" priority="750" id="7jL-dw-ezB"/>
+                                            <constraint firstAttribute="trailing" secondItem="mtV-bK-Peu" secondAttribute="trailing" id="94F-xi-pKU"/>
+                                            <constraint firstItem="hW2-zp-HUG" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="Dpc-Fa-HrW"/>
+                                            <constraint firstItem="kTM-0s-iSB" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="Ehx-tT-TcJ"/>
+                                            <constraint firstItem="9ad-QR-hxd" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="FyZ-lp-OTm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pjl-Yh-o5P" secondAttribute="trailing" id="GoZ-fd-LeU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tkx-ks-gXf" secondAttribute="trailing" id="HSr-Im-XUA"/>
+                                            <constraint firstItem="tVh-6g-lHc" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="Huz-Ad-JLO"/>
+                                            <constraint firstAttribute="trailing" secondItem="tVh-6g-lHc" secondAttribute="trailing" id="IDy-7L-Wsf"/>
+                                            <constraint firstItem="hW2-zp-HUG" firstAttribute="top" secondItem="Tkx-ks-gXf" secondAttribute="bottom" constant="15" id="LSm-qG-BYr"/>
+                                            <constraint firstItem="pmD-Va-OMu" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="NP7-bb-GGr"/>
+                                            <constraint firstItem="tVh-6g-lHc" firstAttribute="top" secondItem="Pjl-Yh-o5P" secondAttribute="bottom" constant="15" id="QdQ-Ef-Lmq"/>
+                                            <constraint firstAttribute="trailing" secondItem="pmD-Va-OMu" secondAttribute="trailing" id="Qnf-wx-axn"/>
+                                            <constraint firstItem="0Xc-ga-vB0" firstAttribute="top" secondItem="UiS-s4-mtc" secondAttribute="bottom" id="Tc6-px-Pho"/>
+                                            <constraint firstAttribute="trailing" secondItem="9ad-QR-hxd" secondAttribute="trailing" id="X76-eN-OxH"/>
+                                            <constraint firstItem="Tkx-ks-gXf" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="Y8t-Ss-Suw"/>
+                                            <constraint firstItem="Pjl-Yh-o5P" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="cfo-KO-ZQo"/>
+                                            <constraint firstAttribute="trailing" secondItem="sWf-al-Uhs" secondAttribute="trailing" id="dXn-ej-6JE"/>
+                                            <constraint firstAttribute="trailing" secondItem="5mW-aw-nAy" secondAttribute="trailing" id="ega-5y-ddM"/>
+                                            <constraint firstItem="sWf-al-Uhs" firstAttribute="top" secondItem="0Xc-ga-vB0" secondAttribute="bottom" constant="15" id="h9c-h1-F5Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="5mW-aw-nAy" secondAttribute="bottom" constant="25" id="jUu-b9-h7m"/>
+                                            <constraint firstItem="pmD-Va-OMu" firstAttribute="top" secondItem="mtV-bK-Peu" secondAttribute="bottom" constant="15" id="jpk-y4-2gq"/>
+                                            <constraint firstAttribute="trailing" secondItem="kTM-0s-iSB" secondAttribute="trailing" id="lUi-6e-lYV"/>
+                                            <constraint firstAttribute="trailing" secondItem="hW2-zp-HUG" secondAttribute="trailing" id="m2T-7S-idM"/>
+                                            <constraint firstItem="Pl3-Ee-S6u" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="mRu-Y9-3nX"/>
+                                            <constraint firstItem="UiS-s4-mtc" firstAttribute="top" secondItem="9ad-QR-hxd" secondAttribute="bottom" id="mdA-t7-REj"/>
+                                            <constraint firstItem="kTM-0s-iSB" firstAttribute="top" secondItem="pmD-Va-OMu" secondAttribute="bottom" id="nbg-H6-IcS"/>
+                                            <constraint firstItem="0Xc-ga-vB0" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="oCl-E8-eL8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pl3-Ee-S6u" secondAttribute="trailing" id="pKC-JY-skY"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Xc-ga-vB0" secondAttribute="trailing" id="qpk-2h-RcC"/>
+                                            <constraint firstItem="UiS-s4-mtc" firstAttribute="centerX" secondItem="9ad-QR-hxd" secondAttribute="centerX" id="uIt-MQ-ccK"/>
+                                            <constraint firstItem="sWf-al-Uhs" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="uuO-eF-IhP"/>
+                                            <constraint firstItem="Pjl-Yh-o5P" firstAttribute="top" secondItem="hW2-zp-HUG" secondAttribute="bottom" id="vaU-WT-D8h"/>
+                                            <constraint firstItem="5mW-aw-nAy" firstAttribute="top" secondItem="tVh-6g-lHc" secondAttribute="bottom" id="wkZ-ou-Lpm"/>
+                                            <constraint firstItem="5mW-aw-nAy" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="yBq-Ki-HU2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iM9-FS-tEk" secondAttribute="trailing" id="22L-wU-zq0"/>
+                                    <constraint firstItem="iM9-FS-tEk" firstAttribute="centerX" secondItem="x5h-WW-ncf" secondAttribute="centerX" id="23u-hP-YKz"/>
+                                    <constraint firstItem="iM9-FS-tEk" firstAttribute="top" secondItem="x5h-WW-ncf" secondAttribute="top" id="AeN-u7-SOX"/>
+                                    <constraint firstAttribute="bottom" secondItem="iM9-FS-tEk" secondAttribute="bottom" id="Jxq-lP-WcS"/>
+                                    <constraint firstItem="iM9-FS-tEk" firstAttribute="leading" secondItem="x5h-WW-ncf" secondAttribute="leading" id="kpL-Rt-rdM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ben-EO-98c" firstAttribute="top" secondItem="x5h-WW-ncf" secondAttribute="bottom" id="DZ3-Er-bxI"/>
+                            <constraint firstItem="x5h-WW-ncf" firstAttribute="top" secondItem="u8v-ik-xfG" secondAttribute="bottom" id="oI7-bY-lAP"/>
+                            <constraint firstAttribute="trailing" secondItem="x5h-WW-ncf" secondAttribute="trailing" id="qhP-tR-6oT"/>
+                            <constraint firstItem="x5h-WW-ncf" firstAttribute="leading" secondItem="SJL-8h-MFd" secondAttribute="leading" id="t42-Rx-c9p"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="980"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oa6-ep-cKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.375" y="205"/>
+        </scene>
+    </scenes>
+</document>
