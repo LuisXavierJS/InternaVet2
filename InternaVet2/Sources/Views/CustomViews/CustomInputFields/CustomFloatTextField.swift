@@ -34,6 +34,7 @@ class CustomFloatTextField: JVFloatLabeledTextField {
         self.layer.cornerRadius = 3
         self.layer.borderWidth = 0.4        
         self.layer.borderColor = Colors.darkGreen.cgColor
+        self.layer.shadowColor = UIColor.clear.cgColor
         
         self.placeholderColor = Colors.darkGreen.withAlphaComponent(0.5)
         self.floatingLabelTextColor = Colors.darkGreen
