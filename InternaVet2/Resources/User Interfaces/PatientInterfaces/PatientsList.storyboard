@@ -25,15 +25,15 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="194" id="Y0T-UU-Kin">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="194"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="195" id="Y0T-UU-Kin">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0T-UU-Kin" id="eJP-Z5-UNX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="193.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3EZ-7W-N5r" userLabel="HeaderContainer">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                                    <rect key="frame" x="0.0" y="1" width="375" height="52"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canis Familiaris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-Xi-zOb" userLabel="Espécie">
                                                             <rect key="frame" x="5" y="5" width="95" height="16"/>
@@ -80,7 +80,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-U8-nzg" userLabel="BodyContainer">
-                                                    <rect key="frame" x="0.0" y="53" width="375" height="140"/>
+                                                    <rect key="frame" x="0.0" y="54" width="375" height="140"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TO-ub-dfX" customClass="ValuedUILabel" customModule="InternaVet2" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="0.0" width="365" height="17"/>
@@ -200,7 +200,7 @@
                                                 <constraint firstItem="3EZ-7W-N5r" firstAttribute="leading" secondItem="eJP-Z5-UNX" secondAttribute="leading" id="CXZ-3a-TZP"/>
                                                 <constraint firstAttribute="trailing" secondItem="wQ9-U8-nzg" secondAttribute="trailing" id="U82-iP-buF"/>
                                                 <constraint firstItem="wQ9-U8-nzg" firstAttribute="top" secondItem="3EZ-7W-N5r" secondAttribute="bottom" constant="1" id="hDC-1Q-5ht"/>
-                                                <constraint firstItem="3EZ-7W-N5r" firstAttribute="top" secondItem="eJP-Z5-UNX" secondAttribute="top" id="jgz-nz-u1t"/>
+                                                <constraint firstItem="3EZ-7W-N5r" firstAttribute="top" secondItem="eJP-Z5-UNX" secondAttribute="top" constant="1" id="jgz-nz-u1t"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -219,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ap0-k5-K1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.60000000000002" y="-108.39580209895054"/>
+            <point key="canvasLocation" x="601" y="-104"/>
         </scene>
     </scenes>
 </document>

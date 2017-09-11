@@ -26,13 +26,13 @@
 		8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */; };
 		8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */; };
 		8E30CEF91F6623BE007D34F7 /* CreateNewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */; };
-		8E30CEFB1F6623E0007D34F7 /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEFA1F6623E0007D34F7 /* PatientsList.storyboard */; };
 		8E30CF011F66249A007D34F7 /* PatientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CF001F66249A007D34F7 /* PatientsListViewController.swift */; };
 		8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */; };
 		8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */; };
 		8E67C9DD1F40F35000C3C4CE /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
+		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
 		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
 		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
@@ -85,13 +85,13 @@
 		8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
 		8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
 		8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewTask.storyboard; sourceTree = "<group>"; };
-		8E30CEFA1F6623E0007D34F7 /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E30CF001F66249A007D34F7 /* PatientsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsListViewController.swift; sourceTree = "<group>"; };
 		8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuedUILabel.swift; sourceTree = "<group>"; };
 		8E67C9D71F40F35000C3C4CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E67C9D91F40F35000C3C4CE /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
@@ -285,7 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */,
-				8E30CEFA1F6623E0007D34F7 /* PatientsList.storyboard */,
 			);
 			path = OwnerInterfaces;
 			sourceTree = "<group>";
@@ -293,6 +292,7 @@
 		8E30CEF31F6623BE007D34F7 /* PatientInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */,
 				8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */,
 			);
 			path = PatientInterfaces;
@@ -547,7 +547,7 @@
 			files = (
 				8E30CEF91F6623BE007D34F7 /* CreateNewTask.storyboard in Resources */,
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
-				8E30CEFB1F6623E0007D34F7 /* PatientsList.storyboard in Resources */,
+				8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */,
 				8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */,
 				8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
