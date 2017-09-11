@@ -31,7 +31,7 @@ class ValuedUILabel: UILabel {
         }
     }
     
-    func setValue(_ text: String) {
+    func setValue(_ text: String) {        
         let titleAttrStr = NSAttributedString(string: self.title, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: self.font.pointSize, weight: UIFontWeightMedium)])
         let valueAttrStr = NSAttributedString(string: text, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: self.font.pointSize)])
         let attrStr = NSMutableAttributedString()
