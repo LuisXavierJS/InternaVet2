@@ -28,7 +28,7 @@ class MockCell {
 
 class MockTableViewCell: UITableViewCell {
     @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label2: ValuedUILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
     
@@ -50,7 +50,7 @@ class SearchableListViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     let datasource: [MockCell] = [MockCell("cell 1"),MockCell("cell 2"),MockCell("cell 3"),
-                                  MockCell("cell 4"),MockCell("cell 5"),MockCell("cell 6")]
+                                  MockCell("cell 4"),MockCell("cell 5"),MockCell("")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
