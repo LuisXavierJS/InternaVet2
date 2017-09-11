@@ -14,15 +14,22 @@ protocol PushButtonProtocol: class {
 }
 
 @IBDesignable
-class DateViewButtonField: ExpandCollapseContainerButton<Date> {
+class DateViewButtonField: ExpandCollapseContainerButton {
     weak var datePickerContainer: DatePickerViewContainer? {
         return self.containerField as? DatePickerViewContainer
-    }
-    
+    }    
 }
 
 @IBDesignable
-class PickerViewButtonField: ExpandCollapseContainerButton<String> {
+class TextViewButtonField: ExpandCollapseContainerButton {
+    weak var textViewContainer: TextViewContainer? {
+        return self.containerField as? TextViewContainer
+    }
+}
+
+
+@IBDesignable
+class PickerViewButtonField: ExpandCollapseContainerButton {
     weak var pickerContainer: PickerViewContainer? {
         return self.containerField as? PickerViewContainer
     }
@@ -34,14 +41,14 @@ class PickerViewButtonField: ExpandCollapseContainerButton<String> {
 }
 
 @IBDesignable
-class ExpandCollapseContainerButton<T>: PushButtonViewField, FieldViewContainerProtocol where T:StringRepresentable{
+class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProtocol{
     @IBOutlet fileprivate weak var containerField: FieldViewContainerView? {
         didSet{
             self.containerField?.delegate = self
         }
     }
     
-    var selectedItem: T?
+    var selectedItem: StringRepresentable?
     
     
     override var fieldRelativeSize: CGFloat {
@@ -64,11 +71,9 @@ class ExpandCollapseContainerButton<T>: PushButtonViewField, FieldViewContainerP
         self.arrowsView.rightArrow.isHidden = true
     }
     
-    func valueWasChanged(_ newValue: Any) {
-        if let selected = newValue as? T {
-            self.selectedItem = selected
-            self.valueLabelText = selected.stringRepresentation 
-        }
+    func valueWasChanged(_ newValue: StringRepresentable) {
+        self.selectedItem = newValue
+        self.valueLabelText = newValue.stringRepresentation
     }
 }
 

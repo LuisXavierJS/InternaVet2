@@ -71,6 +71,17 @@ class TextViewContainer: FieldViewContainerView, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.delegate?.valueWasChanged(textView.text)
     }
+    
+    override func setupViews() {
+        super.setupViews()
+        self.verticalDistance = 5
+        self.horizontalDistance = 5
+    }
+    
+    override func heightConstraintWasSetted() {
+        super.heightConstraintWasSetted()        
+        self.createFieldViewIfNeeded()
+    }
 }
 
 class DatePickerViewContainer: FieldViewContainerView {
@@ -97,7 +108,7 @@ class DatePickerViewContainer: FieldViewContainerView {
 
 
 protocol FieldViewContainerProtocol: class {
-    func valueWasChanged(_ newValue: Any)
+    func valueWasChanged(_ newValue: StringRepresentable )
 }
 
 //abstract class
@@ -109,10 +120,12 @@ class FieldViewContainerView: ContentView {
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!{
         didSet{
-            self.height = self.heightConstraint.constant
-            self.updateHeightConstraint()
+            self.heightConstraintWasSetted()
         }
     }
+    
+    var verticalDistance: CGFloat = 0
+    var horizontalDistance: CGFloat = 0
     
     weak var fieldView: UIView?
     
@@ -122,6 +135,11 @@ class FieldViewContainerView: ContentView {
 
     override func setupViews() {
         self.clipsToBounds = true
+    }
+    
+    func heightConstraintWasSetted(){
+        self.height = self.heightConstraint.constant
+        self.updateHeightConstraint()
     }
     
     func fieldViewInstance() -> UIView {
@@ -136,11 +154,11 @@ class FieldViewContainerView: ContentView {
         self.addSubview(fv)
         self.fieldView = fv
         self.fieldView?.translatesAutoresizingMaskIntoConstraints = false
-        self.fieldViewConstraints = [NSLayoutConstraint.constraints(withVisualFormat: "V:|[fv(height)]",
-                                                                    metrics: ["height" : self.height],
+        self.fieldViewConstraints = [NSLayoutConstraint.constraints(withVisualFormat: "V:|-(top)-[fv(height)]",
+                                                                    metrics: ["height" : self.height - (self.verticalDistance * 2), "top": self.verticalDistance],
                                                                     views: ["fv" : fv]),
-                                     NSLayoutConstraint.constraints(withVisualFormat: "H:|[fv]|",
-                                                                    metrics: nil,
+                                     NSLayoutConstraint.constraints(withVisualFormat: "H:|-(left)-[fv]-(right)-|",
+                                                                    metrics: ["left":self.horizontalDistance, "right":self.horizontalDistance],
                                                                     views: ["fv" : fv])].flatMap({$0})
         NSLayoutConstraint.activate(self.fieldViewConstraints)
         
