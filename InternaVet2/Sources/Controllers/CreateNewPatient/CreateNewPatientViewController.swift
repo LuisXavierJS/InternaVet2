@@ -9,9 +9,9 @@
 import UIKit
 
 class CreateNewPatientViewController: UIViewController {
-    @IBOutlet weak var nameTextField: CustomFloatTextField!
-    @IBOutlet weak var registerTextField: CustomFloatTextField!
-    @IBOutlet weak var chipTextField: CustomFloatTextField!
+    @IBOutlet weak var nameTextField: BorderedTextFieldView!
+    @IBOutlet weak var registerTextField: BorderedTextFieldView!
+    @IBOutlet weak var chipTextField: BorderedTextFieldView!
     @IBOutlet weak var weightSelectionText: TextSelectionViewField!
     @IBOutlet weak var hospitalizationSelectionText: TextSelectionViewField!
     @IBOutlet weak var genderSelection: LabeledSelectionViewField!
@@ -62,5 +62,41 @@ class CreateNewPatientViewController: UIViewController {
         self.hospitalizationSelectionText.textField.keyboardType = .numbersAndPunctuation
         self.hospitalizationSelectionText.textField.allowsEditingTextAttributes = false
     }
+
+    func allFieldsFullfilled() -> Bool{
+        return true
+//            self.weightSelectionText.getFullfilled() &&
+//            self.hospitalizationSelectionText.getFullfilled() &&
+//            self.genderSelection.getFullfilled() &&
+//            self.diedSelection.getFullfilled() &&
+//            self.specieSelection.getFullfilled() &&
+//            self.castratedSelection.getFullfilled() &&
+//            self.racePushButton.getFullfilled() &&
+//            self.ownerPushButton.getFullfilled() &&
+//            self.dogHousePickerSelector.getFullfilled() &&
+//            self.agePickerSelector.getFullfilled() &&
+//            self.nameTextField.getFullfilled() &&
+//            self.chipTextField.getFullfilled() &&
+//            self.registerTextField.getFullfilled()
+    }
+
+    func performSave(){
+        if self.allFieldsFullfilled() {
+            let newPatient = Patient()
+            newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
+            newPatient.name = self.nameTextField.textField.text
+            newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
+            newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
+            SessionController.currentUser?.addIfPossibleAndSavePatient(newPatient)
+        }
+    }
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        self.performSave()
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 }

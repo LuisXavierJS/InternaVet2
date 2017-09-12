@@ -9,6 +9,7 @@
 import Foundation
 import FileKit
 
+@objc(Owner)
 class Owner: StorageItem {
     dynamic var name: String?
     dynamic var email: String?

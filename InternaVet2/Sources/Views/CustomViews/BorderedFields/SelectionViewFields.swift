@@ -62,6 +62,10 @@ class TextSelectionViewField: SelectionArrowViewField {
         super.setupFrames()
         self.textField.frame = self.textField.frame.insetBy(dx: 0, dy: 5)
     }
+    
+    override var isFullfilled: Bool {
+        return self.textField.text?.isEmpty ?? false
+    }
 }
 
 //abstract class!

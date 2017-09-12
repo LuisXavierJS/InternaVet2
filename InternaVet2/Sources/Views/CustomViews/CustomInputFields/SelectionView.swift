@@ -23,9 +23,16 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     fileprivate var scrollPageView: UIScrollView = UIScrollView()
     weak var delegate: SelectionSliderViewDelegateProtocol?
     
+    var selectedItemTitle: String {
+        return self.items[self.selectedItemIndex]
+    }
+    
     var selectedItemIndex: Int {
         get {
-            return Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
+            let index = Int(round(self.scrollPageView.contentOffset.x/self.bounds.width))
+            if index >= self.items.count { return self.items.count - 1 }
+            else if index < 0 { return 0 }
+            return index
         }
         
         set {

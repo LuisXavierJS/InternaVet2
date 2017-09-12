@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MuB-kB-orf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3G8-Nb-Z2g">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create New Patient View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="lAq-NJ-IXx">
+            <objects>
+                <navigationController id="3G8-Nb-Z2g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBr-FN-ei1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MuB-kB-orf" kind="relationship" relationship="rootViewController" id="cmQ-Ym-Akv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkG-fu-Tnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="-239"/>
+        </scene>
+        <!--Paciente-->
         <scene sceneID="fbV-PH-F0t">
             <objects>
                 <viewController id="MuB-kB-orf" customClass="CreateNewPatientViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,40 +38,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-fM-H0x">
-                                <rect key="frame" x="0.0" y="20" width="320" height="980"/>
+                                <rect key="frame" x="0.0" y="-1" width="320" height="1001"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="027-k7-cjA" userLabel="ContainerView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="985"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1015"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Paciente:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-oA-RNL" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="25" width="300" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="xia-WS-pek"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ficha do Paciente:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="si4-9K-Sbv" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="75" width="300" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="I1L-JK-3LX"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chip do Paciente:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3BA-ya-wxb" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="125" width="300" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="K9w-nf-r2U"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIG-xR-tWz" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="175" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="205" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="9kd-vw-Ven"/>
@@ -65,7 +54,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-7R-3dh" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="235" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="265" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="EkZ-a2-akG"/>
@@ -75,7 +64,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4F-I6-l6N" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="295" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="325" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="fes-8W-2Az"/>
@@ -85,7 +74,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztQ-8m-EQ1" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="355" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="385" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="rbq-br-0eA"/>
@@ -95,7 +84,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxi-xZ-OVi" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="415" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="445" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="QbL-SV-TEg"/>
@@ -105,7 +94,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-Nv-RZQ" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="475" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="505" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="CdJ-9c-vak"/>
@@ -115,7 +104,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-sw-HgN" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="595" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="625" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="4qk-6M-Gbm"/>
@@ -126,7 +115,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuI-gM-1pU" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="535" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="565" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="6Xi-Sr-1T9"/>
@@ -137,7 +126,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x9-jc-5Ik" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="655" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="685" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="qWn-Lw-tV8"/>
@@ -154,7 +143,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-CL-IOc" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="700" width="320" height="100"/>
+                                                <rect key="frame" x="0.0" y="730" width="320" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Nm8-gA-Tg7"/>
@@ -164,7 +153,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-Un-Eox" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="815" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="845" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="wJf-g6-gPU"/>
@@ -181,7 +170,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2J-ih-WHi" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="860" width="320" height="100"/>
+                                                <rect key="frame" x="0.0" y="890" width="320" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="UVd-lT-7vk"/>
@@ -190,25 +179,51 @@
                                                     <outlet property="heightConstraint" destination="UVd-lT-7vk" id="fK8-EV-7Sl"/>
                                                 </connections>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoT-55-NiY" customClass="BorderedTextFieldView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="25" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="NUc-Xs-apG"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nome do Paciente:"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-C0-0Zg" customClass="BorderedTextFieldView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Xy6-s6-Feb"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ficha do Paciente:"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwg-3c-0OX" customClass="BorderedTextFieldView" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="145" width="320" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Yjt-6o-j9A"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Chip do Paciente:"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="1P9-Nv-RZQ" secondAttribute="trailing" id="17N-EK-Z3y"/>
-                                            <constraint firstAttribute="trailing" secondItem="dDO-oA-RNL" secondAttribute="trailing" constant="10" id="17r-tp-u1f"/>
-                                            <constraint firstItem="dDO-oA-RNL" firstAttribute="top" secondItem="027-k7-cjA" secondAttribute="top" constant="25" id="1rF-rF-nVU"/>
                                             <constraint firstItem="1P9-Nv-RZQ" firstAttribute="top" secondItem="Lxi-xZ-OVi" secondAttribute="bottom" constant="15" id="2Hr-kH-dUg"/>
-                                            <constraint firstItem="si4-9K-Sbv" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="10" id="2ab-hd-VYV"/>
                                             <constraint firstItem="gUI-sw-HgN" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="2sE-4Z-t94"/>
                                             <constraint firstAttribute="bottom" secondItem="V2J-ih-WHi" secondAttribute="bottom" constant="25" id="3fQ-3H-8Bi"/>
-                                            <constraint firstItem="si4-9K-Sbv" firstAttribute="top" secondItem="dDO-oA-RNL" secondAttribute="bottom" constant="15" id="58P-J2-jLg"/>
                                             <constraint firstItem="5x9-jc-5Ik" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="5Cx-eO-RBX"/>
                                             <constraint firstItem="V2J-ih-WHi" firstAttribute="top" secondItem="jW0-Un-Eox" secondAttribute="bottom" id="5jk-Hu-B1Q"/>
                                             <constraint firstItem="4K0-CL-IOc" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="6EN-WA-d7H"/>
                                             <constraint firstAttribute="trailing" secondItem="5x9-jc-5Ik" secondAttribute="trailing" id="7Va-A7-vZT"/>
+                                            <constraint firstItem="Qwg-3c-0OX" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="BfT-8Y-Ogv"/>
                                             <constraint firstItem="Zf4-7R-3dh" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="CfT-7h-flu"/>
                                             <constraint firstItem="5x9-jc-5Ik" firstAttribute="top" secondItem="gUI-sw-HgN" secondAttribute="bottom" constant="15" id="FRV-tQ-Hmg"/>
                                             <constraint firstItem="G4F-I6-l6N" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="G4g-Xj-wVO"/>
-                                            <constraint firstItem="3BA-ya-wxb" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="10" id="GGV-tr-oEo"/>
                                             <constraint firstItem="1P9-Nv-RZQ" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="H7B-Ec-pEk"/>
                                             <constraint firstItem="aIG-xR-tWz" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="JFf-2e-LtH"/>
                                             <constraint firstItem="4K0-CL-IOc" firstAttribute="top" secondItem="5x9-jc-5Ik" secondAttribute="bottom" id="L5X-JL-0ZM"/>
@@ -221,23 +236,27 @@
                                             <constraint firstAttribute="trailing" secondItem="Lxi-xZ-OVi" secondAttribute="trailing" id="US6-YL-9dG"/>
                                             <constraint firstAttribute="trailing" secondItem="Zf4-7R-3dh" secondAttribute="trailing" id="Ubh-lc-udi"/>
                                             <constraint firstAttribute="trailing" secondItem="ztQ-8m-EQ1" secondAttribute="trailing" id="Uqb-hU-GIH"/>
-                                            <constraint firstAttribute="trailing" secondItem="si4-9K-Sbv" secondAttribute="trailing" constant="10" id="XvP-lA-x6o"/>
+                                            <constraint firstItem="IS3-C0-0Zg" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="Vbg-EM-Zxt"/>
+                                            <constraint firstItem="XoT-55-NiY" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="WJS-Nc-Efc"/>
+                                            <constraint firstAttribute="trailing" secondItem="IS3-C0-0Zg" secondAttribute="trailing" id="Wz3-fM-BhA"/>
+                                            <constraint firstItem="IS3-C0-0Zg" firstAttribute="top" secondItem="XoT-55-NiY" secondAttribute="bottom" constant="15" id="Xjr-Rd-jHU"/>
                                             <constraint firstItem="gUI-sw-HgN" firstAttribute="top" secondItem="GuI-gM-1pU" secondAttribute="bottom" constant="15" id="YfH-bM-DcC"/>
-                                            <constraint firstItem="3BA-ya-wxb" firstAttribute="top" secondItem="si4-9K-Sbv" secondAttribute="bottom" constant="15" id="YjM-54-1SM"/>
+                                            <constraint firstItem="aIG-xR-tWz" firstAttribute="top" secondItem="Qwg-3c-0OX" secondAttribute="bottom" constant="15" id="aC8-il-2OB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qwg-3c-0OX" secondAttribute="trailing" id="aD0-OV-Rj2"/>
+                                            <constraint firstItem="Qwg-3c-0OX" firstAttribute="top" secondItem="IS3-C0-0Zg" secondAttribute="bottom" constant="15" id="c3P-DC-9lC"/>
                                             <constraint firstItem="Zf4-7R-3dh" firstAttribute="top" secondItem="aIG-xR-tWz" secondAttribute="bottom" constant="15" id="cge-Kn-nZe"/>
+                                            <constraint firstItem="XoT-55-NiY" firstAttribute="top" secondItem="027-k7-cjA" secondAttribute="top" constant="25" id="eju-YU-0kG"/>
+                                            <constraint firstAttribute="trailing" secondItem="XoT-55-NiY" secondAttribute="trailing" id="fOV-02-t59"/>
                                             <constraint firstItem="V2J-ih-WHi" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="fOc-YA-Bh8"/>
                                             <constraint firstItem="Lxi-xZ-OVi" firstAttribute="top" secondItem="ztQ-8m-EQ1" secondAttribute="bottom" constant="15" id="fjS-TF-aW9"/>
                                             <constraint firstItem="GuI-gM-1pU" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="iWF-zm-nCI"/>
                                             <constraint firstItem="G4F-I6-l6N" firstAttribute="top" secondItem="Zf4-7R-3dh" secondAttribute="bottom" constant="15" id="jhk-2k-o1e"/>
-                                            <constraint firstItem="aIG-xR-tWz" firstAttribute="top" secondItem="3BA-ya-wxb" secondAttribute="bottom" constant="15" id="lK9-v2-PI0"/>
                                             <constraint firstItem="jW0-Un-Eox" firstAttribute="top" secondItem="4K0-CL-IOc" secondAttribute="bottom" constant="15" id="n76-cf-yt4"/>
                                             <constraint firstAttribute="trailing" secondItem="gUI-sw-HgN" secondAttribute="trailing" id="rgj-oT-ByL"/>
                                             <constraint firstAttribute="trailing" secondItem="V2J-ih-WHi" secondAttribute="trailing" id="ssi-Ja-dmr"/>
                                             <constraint firstItem="ztQ-8m-EQ1" firstAttribute="top" secondItem="G4F-I6-l6N" secondAttribute="bottom" constant="15" id="tk2-Nd-cQD"/>
                                             <constraint firstAttribute="trailing" secondItem="G4F-I6-l6N" secondAttribute="trailing" id="ueS-Zc-NFD"/>
                                             <constraint firstAttribute="trailing" secondItem="aIG-xR-tWz" secondAttribute="trailing" id="wgX-6D-vTQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="3BA-ya-wxb" secondAttribute="trailing" constant="10" id="xb1-hH-Snq"/>
-                                            <constraint firstItem="dDO-oA-RNL" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="10" id="zXj-zT-3X4"/>
                                             <constraint firstItem="ztQ-8m-EQ1" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="zlm-YU-dhI"/>
                                         </constraints>
                                     </view>
@@ -254,33 +273,45 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ocl-fM-H0x" firstAttribute="top" secondItem="wYI-GZ-udR" secondAttribute="bottom" id="NGv-m9-Fwr"/>
+                            <constraint firstItem="Ocl-fM-H0x" firstAttribute="top" secondItem="wYI-GZ-udR" secondAttribute="bottom" constant="-65" id="a5y-sr-qg0"/>
                             <constraint firstAttribute="trailing" secondItem="Ocl-fM-H0x" secondAttribute="trailing" id="o6H-zF-7dx"/>
                             <constraint firstItem="Ocl-fM-H0x" firstAttribute="leading" secondItem="JYM-1n-zeD" secondAttribute="leading" id="t3P-kW-NSA"/>
                             <constraint firstItem="BUi-SZ-g3n" firstAttribute="top" secondItem="Ocl-fM-H0x" secondAttribute="bottom" id="zd1-Fl-VdH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Paciente" id="uLa-rf-vAB">
+                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="evS-rU-w38">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="MuB-kB-orf" id="zwm-Ci-sxA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="yhI-o7-pqr">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="MuB-kB-orf" id="LnN-pR-WQx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="agePickerSelector" destination="jW0-Un-Eox" id="srr-z9-RsR"/>
                         <outlet property="castratedSelection" destination="ztQ-8m-EQ1" id="epP-qW-Pp4"/>
-                        <outlet property="chipTextField" destination="3BA-ya-wxb" id="LVW-Ml-APB"/>
+                        <outlet property="chipTextField" destination="Qwg-3c-0OX" id="IbA-tI-BcZ"/>
                         <outlet property="diedSelection" destination="Lxi-xZ-OVi" id="wa9-18-cVI"/>
                         <outlet property="dogHousePickerSelector" destination="5x9-jc-5Ik" id="p73-NN-zwt"/>
                         <outlet property="genderSelection" destination="G4F-I6-l6N" id="hJM-Nt-oqB"/>
                         <outlet property="hospitalizationSelectionText" destination="Zf4-7R-3dh" id="eVX-Rz-Bza"/>
-                        <outlet property="nameTextField" destination="dDO-oA-RNL" id="i7O-oM-19l"/>
+                        <outlet property="nameTextField" destination="XoT-55-NiY" id="0ev-MO-cTH"/>
                         <outlet property="ownerPushButton" destination="gUI-sw-HgN" id="mBz-lo-C5F"/>
                         <outlet property="racePushButton" destination="GuI-gM-1pU" id="Cay-JX-jSm"/>
-                        <outlet property="registerTextField" destination="si4-9K-Sbv" id="1c8-Yz-wcw"/>
+                        <outlet property="registerTextField" destination="IS3-C0-0Zg" id="ZeH-me-sYm"/>
                         <outlet property="specieSelection" destination="1P9-Nv-RZQ" id="ZiW-wc-RiS"/>
                         <outlet property="weightSelectionText" destination="aIG-xR-tWz" id="Dxz-NI-gJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-D1-kBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="50"/>
+            <point key="canvasLocation" x="217.5" y="50"/>
         </scene>
     </scenes>
 </document>

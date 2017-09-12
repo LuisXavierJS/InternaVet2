@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create New Owner View Controller-->
+        <!--Novo Proprietario-->
         <scene sceneID="1pj-hn-Epn">
             <objects>
                 <viewController id="tRq-27-64m" customClass="CreateNewOwnerViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,6 +122,7 @@
                             <constraint firstItem="Tnh-R8-BUB" firstAttribute="leading" secondItem="zjn-B6-v3s" secondAttribute="leading" id="UoD-aq-GNS"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Novo Proprietario" image="user" id="dn3-C3-Lbv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nB-95-CSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,4 +130,7 @@
             <point key="canvasLocation" x="-226.40000000000001" y="399.85007496251876"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user" width="32" height="32"/>
+    </resources>
 </document>

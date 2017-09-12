@@ -20,3 +20,6 @@
 "day" = "Dia";
 "month" = "Mês";
 "year" = "Ano";
+
+
+"default_empty" = "Não informado";

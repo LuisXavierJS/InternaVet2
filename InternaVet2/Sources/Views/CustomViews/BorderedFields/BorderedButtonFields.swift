@@ -134,4 +134,8 @@ class PushButtonViewField: BorderedArrowViewField {
     func buttonWasTapped(){
         self.delegate?.pushButtonWasTapped(self)
     }
+    
+    override var isFullfilled: Bool {
+        return self.dualLabelView.secondLabel.text != self.placeholderText && !self.valueLabelText.isEmpty
+    }    
 }

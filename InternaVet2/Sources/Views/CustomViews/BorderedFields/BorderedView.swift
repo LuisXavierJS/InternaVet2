@@ -36,6 +36,15 @@ class BorderedView: ContentView {
         }
         con?.strokePath()        
     }
+    
+    var isFullfilled: Bool { return true }
+    
+    func getFullfilled() -> Bool {
+        let fullfilled = self.isFullfilled
+        self.lineColor = fullfilled ? Colors.lightGreen : UIColor.red
+        self.setNeedsDisplay()
+        return fullfilled
+    }
 }
 
 //abstract class!
@@ -80,5 +89,35 @@ class BorderedArrowViewField: BorderedView {
     
     override func prepareForInterfaceBuilder() {
         self.arrowsView.prepareForInterfaceBuilder()
+    }
+}
+
+
+@IBDesignable
+class BorderedTextFieldView: BorderedView {
+    @IBInspectable var dxInsets: CGFloat = 10 {didSet{self.setupFrames()}}
+    @IBInspectable var dyInsets: CGFloat = 5 {didSet{self.setupFrames()}}
+    @IBInspectable var placeholder: String = ""{didSet{self.textField.placeholder = self.placeholder}}    
+    @IBInspectable var textColor: UIColor = Colors.darkGreen { didSet{ self.textField.textColor = self.textColor } }
+    @IBInspectable var placeholderColor: UIColor = Colors.darkGreen.withAlphaComponent(0.5){ didSet{ self.textField.placeholderColor = self.placeholderColor } }
+    @IBInspectable var floatingLabelTextColor: UIColor = Colors.darkGreen{ didSet{ self.textField.floatingLabelTextColor = self.floatingLabelTextColor } }
+    @IBInspectable var floatingLabelActiveTextColor: UIColor = Colors.lightGreen{ didSet{ self.textField.floatingLabelActiveTextColor = self.floatingLabelActiveTextColor } }
+    
+    weak var textField: CustomFloatTextField!
+    
+    func createTextField() -> CustomFloatTextField {
+        return CustomFloatTextField()
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        let textField = self.createTextField()
+        self.textField = textField
+        self.addSubview(self.textField)
+    }
+    
+    override func setupFrames() {
+        super.setupFrames()
+        self.textField.frame = self.bounds.insetBy(dx: self.dxInsets, dy: self.dyInsets)
     }
 }

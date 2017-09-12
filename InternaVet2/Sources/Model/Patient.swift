@@ -9,6 +9,7 @@
 import Foundation
 import FileKit
 
+@objc(Patient)
 class Patient: StorageItem {
     dynamic fileprivate(set) var ownerId: String?
     dynamic var name: String?

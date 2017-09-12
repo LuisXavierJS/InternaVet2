@@ -9,6 +9,7 @@
 import Foundation
 import FileKit
 
+@objc(User)
 class User: StorageItem, NameableStorageItem {
     dynamic var username: String?
     dynamic private(set) var patients: [Patient] = []

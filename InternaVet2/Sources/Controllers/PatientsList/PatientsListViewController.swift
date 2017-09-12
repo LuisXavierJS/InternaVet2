@@ -16,6 +16,7 @@ class PatientsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableDatasource = PatientsTableController(self.tableView)
+        self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,9 +25,10 @@ class PatientsListViewController: UIViewController {
         self.tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addButtonTapped(_ sender: Any) {
+        if let patientCtrlr: UINavigationController = CreateNewPatientViewController.instantiate(nil) as? UINavigationController {
+            self.navigationController?.present(patientCtrlr, animated: true, completion: nil)
+        }
     }
 }
 
@@ -34,13 +36,13 @@ class PatientsListViewController: UIViewController {
 class PatientsTableController:JSGenericTableController<PatientTableViewCell> {
     struct PatientVisibilityState {
         var isShowing: Bool = false
-        var height: CGFloat {return self.isShowing ? 40 : 100}
+        var height: CGFloat {return !self.isShowing ? 54 : 195}
     }
     
     override var items: [[Patient]] {
         get { return super.items }
         set { super.items = newValue;
-            self.patientsVisibilityState = newValue.flatMap({_ in PatientVisibilityState()}) }
+            self.patientsVisibilityState = newValue[0].map({_ in PatientVisibilityState()}) }
     }
     
     var patientsVisibilityState: [PatientVisibilityState] = []
