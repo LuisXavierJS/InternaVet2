@@ -33,6 +33,9 @@
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
+		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
+		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
+		8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */; };
 		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
 		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
 		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
@@ -92,6 +95,9 @@
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
+		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
+		8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitaryFunctions.swift; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 		8E1BABCD1F40D19700808B16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E79E2F81F67638D007FA9BD /* UtilitaryExtensions */,
 				8E30CEEE1F65FBE5007D34F7 /* UtilitaryProtocols */,
 				8EA87B531F63600D00682C19 /* Model */,
 				8EA87B501F630F3000682C19 /* Storage */,
@@ -277,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */,
+				8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */,
 			);
 			path = UtilitaryProtocols;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 		8E67C9E11F40F48E00C3C4CE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -405,6 +414,14 @@
 				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		8E79E2F81F67638D007FA9BD /* UtilitaryExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */,
+			);
+			path = UtilitaryExtensions;
 			sourceTree = "<group>";
 		};
 		8EA87B391F62BB1000682C19 /* BorderedFields */ = {
@@ -682,14 +699,17 @@
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */,
 				8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */,
+				8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */,
 				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
 				8E67C9DC1F40F35000C3C4CE /* AppDelegate.swift in Sources */,
 				8E2D3B081F4A022F00A6B783 /* CGRect+Helpers.swift in Sources */,
 				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,
 				8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */,
 				8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */,
+				8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */,
 				8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
+				8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 				8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */,
 			);

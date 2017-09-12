@@ -17,11 +17,5 @@ extension String: StringRepresentable {
 }
 
 extension Date: StringRepresentable {
-    var stringRepresentation: String { return self.formatted()}
-    
-    func formatted(_ format: String = "dd/MM/yyyy HH:mm") -> String{
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: self)
-    }
+    var stringRepresentation: String { return self.formatted()}    
 }
