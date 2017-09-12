@@ -31,12 +31,12 @@ class CreateNewPatientViewController: UIViewController {
     }
     
     func setupSelectorsOptions(){
-        self.weightSelectionText.selectionOptions = ["Gramas", "Quilogramas"]
-        self.hospitalizationSelectionText.selectionOptions = ["Horas", "Dias"]
-        self.genderSelection.selectionOptions = ["Macho", "Fêmea"]
-        self.castratedSelection.selectionOptions = ["Não", "Sim"]
-        self.diedSelection.selectionOptions = ["Não", "Sim"]
-        self.specieSelection.selectionOptions = ["Canis Familiaris", "Felis Catus"]
+        self.weightSelectionText.selectionOptions = [Words.grams, Words.kilograms]
+        self.hospitalizationSelectionText.selectionOptions = [Words.hour.plural, Words.day.plural]
+        self.genderSelection.selectionOptions = [Words.male, Words.female]
+        self.castratedSelection.selectionOptions = [Words.no, Words.yes]
+        self.diedSelection.selectionOptions = [Words.no, Words.yes]
+        self.specieSelection.selectionOptions = [Words.dog, Words.cat]
     }
     
     func setupPickerSelectors(){
@@ -44,10 +44,16 @@ class CreateNewPatientViewController: UIViewController {
         let totalDogHousesToList: [String] = [["--"], freeDogHousesList].flatMap({$0})
         self.dogHousePickerSelector.setItems(totalDogHousesToList)
         
-        let monthsToList: [String] = Array(1...11).map({String($0) + ($0 > 1 ? " meses" : " mês")})
-        let yearsToList: [String] = Array(1...30).map({String($0) + ($0 > 1 ? " anos" : " ano")})
+        let yearsToList: [String] = Array(1...11).map({ self.getPlural(from: $0, word: Words.year)})
+        let monthsToList: [String] = Array(1...11).map({self.getPlural(from: $0, word: Words.month)})
         let totalAgesToList: [String] = [monthsToList, yearsToList].flatMap({$0})
         self.agePickerSelector.setItems(totalAgesToList)
+    }
+
+    func getPlural(from: Int, word: String) -> String{
+        let begin = String(from) + " "
+        let end = from > 1 ? word.plural : word
+        return begin + end
     }
     
     func setupTextfields() {

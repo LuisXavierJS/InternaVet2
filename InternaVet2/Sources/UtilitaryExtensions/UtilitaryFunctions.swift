@@ -68,3 +68,19 @@ extension Date {
         return formatter.string(from: self)
     }
 }
+
+extension Bool {
+    var semantic: String {
+        return self ? Words.yes : Words.no
+    }
+}
+
+extension String {
+    var plural: String{
+        if let lch = self.characters.last {
+            let last = String(lch)
+            if ["a","e","i","o","u"].contains(last) {return self + "s"}
+        }
+        return self
+    }
+}

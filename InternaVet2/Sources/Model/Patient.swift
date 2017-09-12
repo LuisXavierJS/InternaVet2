@@ -21,7 +21,12 @@ class Patient: StorageItem {
     dynamic var isCastrated: Bool = false
     dynamic var isDead: Bool = false
     dynamic fileprivate(set) var dogHouseId: String?
-    dynamic var hospitalizationTime: Double = 0
+    dynamic var hospitalizationTime: String?
+    
+    func getHospitalizationTimeInterval() -> TimeInterval {
+        assertionFailure("MUST CONVERT hospitalizationTime: String TO TIME INTERVAL!")
+        return 0
+    }
     
     func getOwner() -> Owner? {
         guard let id = self.ownerId else {return nil}

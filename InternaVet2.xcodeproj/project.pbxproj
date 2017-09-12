@@ -36,6 +36,8 @@
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
 		8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */; };
+		8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2FB1F676798007FA9BD /* Localizable.strings */; };
+		8E79E2FE1F676818007FA9BD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2FD1F676818007FA9BD /* Strings.swift */; };
 		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
 		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
 		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
@@ -98,6 +100,8 @@
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
 		8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitaryFunctions.swift; sourceTree = "<group>"; };
+		8E79E2FB1F676798007FA9BD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8E79E2FD1F676818007FA9BD /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 			children = (
 				8E1BABDB1F40D2D900808B16 /* User Interfaces */,
 				8E1BABD41F40D28200808B16 /* Assets.xcassets */,
+				8E79E2FB1F676798007FA9BD /* Localizable.strings */,
 			);
 			name = Resources;
 			path = InternaVet2/Resources;
@@ -412,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
+				8E79E2FD1F676818007FA9BD /* Strings.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */,
 				8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
+				8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 				8E1BABD51F40D28200808B16 /* Assets.xcassets in Resources */,
 			);
@@ -681,6 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E30CF011F66249A007D34F7 /* PatientsListViewController.swift in Sources */,
+				8E79E2FE1F676818007FA9BD /* Strings.swift in Sources */,
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* FieldViewContainerView.swift in Sources */,

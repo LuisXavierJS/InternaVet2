@@ -1,0 +1,22 @@
+/* 
+  LocalizableStrings.strings
+  InternaVet2
+
+  Created by Jorge Luis on 11/09/17.
+  Copyright © 2017 Jorge Luis. All rights reserved.
+*/
+
+"yes" = "Sim";
+"no" = "Não";
+"micrograms" = "Microgramas";
+"miligrams" = "Miligramas";
+"grams" = "Gramas";
+"kilograms" = "Quilogramas";
+"female" = "Fêmea";
+"male" = "Macho";
+"dog" = "Canis Familiaris";
+"cat" = "Felis Catus";
+"hour" = "Hora";
+"day" = "Dia";
+"month" = "Mês";
+"year" = "Ano";
