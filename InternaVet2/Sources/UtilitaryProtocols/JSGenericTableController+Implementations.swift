@@ -117,6 +117,10 @@ class JSTableViewDelegateDatasource: NSObject, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate.tableView?(tableView, didSelectRowAt: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.delegate.tableView?(tableView, heightForRowAt: indexPath) ?? 44
+    }
 }
 
 class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JSTableViewControllerProtocol where CellType: UITableViewCell {

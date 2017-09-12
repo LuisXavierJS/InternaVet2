@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-R8-BUB" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-tN-JSw" userLabel="ContentView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do Proprietário:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-Ou-PSx" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="25" width="355" height="35"/>
@@ -122,6 +122,7 @@
                             <constraint firstItem="Tnh-R8-BUB" firstAttribute="leading" secondItem="zjn-B6-v3s" secondAttribute="leading" id="UoD-aq-GNS"/>
                         </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nB-95-CSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,27 +9,53 @@
 import UIKit
 
 class PatientsListViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tableDatasource: PatientsTableController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tableDatasource = PatientsTableController(self.tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableDatasource.items = [SessionController.currentUser?.patients ?? []]
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+class PatientsTableController:JSGenericTableController<PatientTableViewCell> {
+    struct PatientVisibilityState {
+        var isShowing: Bool = false
+        var height: CGFloat {return self.isShowing ? 40 : 100}
     }
-    */
-
+    
+    override var items: [[Patient]] {
+        get { return super.items }
+        set { super.items = newValue;
+            self.patientsVisibilityState = newValue.flatMap({_ in PatientVisibilityState()}) }
+    }
+    
+    var patientsVisibilityState: [PatientVisibilityState] = []
+    
+    init(_ tableView: UITableView) {
+        super.init(tableView: tableView)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.patientsVisibilityState[indexPath.row].isShowing = !self.patientsVisibilityState[indexPath.row].isShowing
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.patientsVisibilityState[indexPath.row].height
+    }
 }

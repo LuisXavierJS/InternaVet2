@@ -51,16 +51,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bolacha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-6P-wA2" userLabel="Nome">
-                                                            <rect key="frame" x="5" y="26" width="316" height="20"/>
+                                                            <rect key="frame" x="5" y="26" width="315.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canil 14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoY-6U-eEx">
-                                                            <rect key="frame" x="321" y="27" width="49" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoY-6U-eEx" customClass="ValuedUILabel" customModule="InternaVet2" customModuleProvider="target">
+                                                            <rect key="frame" x="320.5" y="27" width="49.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Canil:"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,6 +207,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="2TO-ub-dfX" id="6nc-Lo-XI6"/>
+                                            <outlet property="chipLabel" destination="PCI-87-U1g" id="i4I-iS-1xn"/>
+                                            <outlet property="dogHoseLabel" destination="xoY-6U-eEx" id="eGp-3h-xba"/>
+                                            <outlet property="genderLabel" destination="sF2-cs-Pa6" id="mh5-Ut-tI4"/>
+                                            <outlet property="hospitalizationTimeLabel" destination="QuL-RN-PaZ" id="bxW-He-HL8"/>
+                                            <outlet property="isCastratedLabel" destination="fzN-V8-Ofz" id="bua-ZI-9Of"/>
+                                            <outlet property="isDiedLabel" destination="C8V-1U-7vp" id="MHq-sB-paZ"/>
+                                            <outlet property="nameLabel" destination="KTI-6P-wA2" id="Jkj-KS-779"/>
+                                            <outlet property="ownerLabel" destination="FlA-0k-Dn2" id="Up5-5O-osp"/>
+                                            <outlet property="raceLabel" destination="E7t-LP-7wB" id="gNl-kM-Erh"/>
+                                            <outlet property="recordLabel" destination="aez-B1-J9w" id="Ygv-CO-ybM"/>
+                                            <outlet property="specieLabel" destination="9Tg-Xi-zOb" id="CE2-Li-dwk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
