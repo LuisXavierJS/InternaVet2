@@ -26,7 +26,7 @@ protocol JSSetupableCellProtocol: class {
 }
 
 @objc protocol JSTableViewControllerProtocol: class {
-    var delegateDatasource: JSTableViewDelegateDatasource {get set}
+    var delegateDatasource: JSTableViewDelegateDatasource! {get set}
     func numberOfSections(in tableView: UITableView) -> Int
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -118,9 +118,6 @@ class JSTableViewDelegateDatasource: NSObject, UITableViewDataSource, UITableVie
         self.delegate.tableView?(tableView, didSelectRowAt: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.delegate.tableView?(tableView, heightForRowAt: indexPath) ?? 44
-    }
 }
 
 class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JSTableViewControllerProtocol where CellType: UITableViewCell {
@@ -128,9 +125,20 @@ class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JST
     
     var items: [[DataType]] = []
     
-    lazy var delegateDatasource: JSTableViewDelegateDatasource = {
+    var delegateDatasource: JSTableViewDelegateDatasource!
+    
+    @discardableResult
+    func setDelegateDatasourceObject() -> JSTableViewDelegateDatasource! {
+        guard let delegate = self.delegateDatasource else {
+            self.delegateDatasource = self.createDelegateDatasourceObject()
+            return self.delegateDatasource
+        }
+        return delegate
+    }
+    
+    func createDelegateDatasourceObject() -> JSTableViewDelegateDatasource {
         return JSTableViewDelegateDatasource()
-    }()
+    }
     
     fileprivate(set) weak var tableView: UITableView?
     
@@ -141,6 +149,7 @@ class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JST
     init<T:UITableView>(tableView: T){
         self.tableView = tableView
         super.init()
+        self.setDelegateDatasourceObject()
         self.delegateDatasource.delegate = self
     }
     
@@ -163,5 +172,4 @@ class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JST
         cell.setup(self.items[indexPath.section][indexPath.row])
         return cell
     }
-    
 }

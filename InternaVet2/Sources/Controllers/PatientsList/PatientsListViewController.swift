@@ -11,11 +11,11 @@ import UIKit
 class PatientsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var tableDatasource: PatientsTableController!
+    var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableDatasource = PatientsTableController(self.tableView)
+        self.tableDatasource = JSGenericExpansableCellTableController(self.tableView)
         self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }
     
@@ -29,35 +29,5 @@ class PatientsListViewController: UIViewController {
         if let patientCtrlr: UINavigationController = CreateNewPatientViewController.instantiate(nil) as? UINavigationController {
             self.navigationController?.present(patientCtrlr, animated: true, completion: nil)
         }
-    }
-}
-
-
-class PatientsTableController:JSGenericTableController<PatientTableViewCell> {
-    struct PatientVisibilityState {
-        var isShowing: Bool = false
-        var height: CGFloat {return !self.isShowing ? 54 : 195}
-    }
-    
-    override var items: [[Patient]] {
-        get { return super.items }
-        set { super.items = newValue;
-            self.patientsVisibilityState = newValue[0].map({_ in PatientVisibilityState()}) }
-    }
-    
-    var patientsVisibilityState: [PatientVisibilityState] = []
-    
-    init(_ tableView: UITableView) {
-        super.init(tableView: tableView)
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.patientsVisibilityState[indexPath.row].isShowing = !self.patientsVisibilityState[indexPath.row].isShowing
-        tableView.beginUpdates()
-        tableView.endUpdates()
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.patientsVisibilityState[indexPath.row].height
     }
 }

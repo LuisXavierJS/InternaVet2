@@ -50,6 +50,7 @@
 		8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */; };
 		8EA87B521F63414500682C19 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B511F63414500682C19 /* StorageContext.swift */; };
 		8EA87B551F63605800682C19 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B541F63605800682C19 /* Owner.swift */; };
+		8EE38B141F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE38B131F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift */; };
 		8EFC66DF1F5B0D520090F291 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */; };
 		8EFC66E11F5B1FD30090F291 /* CGContext+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +115,7 @@
 		8EA87B4E1F6301C200682C19 /* SearchableList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchableList.storyboard; sourceTree = "<group>"; };
 		8EA87B511F63414500682C19 /* StorageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
 		8EA87B541F63605800682C19 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		8EE38B131F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSExpansableTableProtocol+Implementations.swift"; sourceTree = "<group>"; };
 		8EFC66DE1F5B0D520090F291 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		8EFC66E01F5B1FD30090F291 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */,
 				8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */,
+				8EE38B131F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift */,
 			);
 			path = UtilitaryProtocols;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
+				8EE38B141F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
 				8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,

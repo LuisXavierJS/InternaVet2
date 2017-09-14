@@ -50,6 +50,7 @@ class Patient: StorageItem {
     }
 }
 
+@objc(DogHouse)
 class DogHouse: StorageItem {
     dynamic var dogHouserNumber: Int = 0
     dynamic fileprivate(set) var patientId: String?
