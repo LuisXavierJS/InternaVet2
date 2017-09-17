@@ -15,6 +15,8 @@ class BaseNavigationController : UINavigationController {
     }
     
     func customizeNavigationBar(){
-        self.navigationBar.barTintColor = Colors.clearLightGreen
+        self.navigationBar.barTintColor = Colors.mainLight
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium), NSForegroundColorAttributeName:Colors.darkGreen]
+        
     }
 }

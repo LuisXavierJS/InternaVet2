@@ -82,7 +82,7 @@ class PushButtonViewField: BorderedArrowViewField {
     @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.titleLabelText = titleLabelText } }
     @IBInspectable var valueLabelText: String = ""{ didSet{ self.dualLabelView.valueLabelText = valueLabelText } }
     @IBInspectable var placeholderText: String = ""{ didSet{ self.dualLabelView.placeholderText = placeholderText } }
-    @IBInspectable var labelSize: CGFloat = 14{ didSet{ self.dualLabelView.labelSize = self.labelSize } }
+    @IBInspectable var labelSize: CGFloat = FontSize.medium{ didSet{ self.dualLabelView.labelSize = self.labelSize } }
     @IBInspectable var placeholderColor: UIColor = Colors.lightGreen{ didSet{ self.dualLabelView.placeholderColor = self.labelColor } }
     @IBInspectable var labelColor: UIColor = Colors.darkGreen{ didSet{ self.dualLabelView.labelColor = self.labelColor } }
     

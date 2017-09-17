@@ -17,7 +17,7 @@ fileprivate extension UIColor{
 
 struct Colors {
     static let mainLight = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    static let lightGreen = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-    static let clearLightGreen = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+    static let lightGreen = #colorLiteral(red: 0.6109729409, green: 0.7655876676, blue: 0.2366265191, alpha: 1)
+    static let clearLightGreen = #colorLiteral(red: 0.6109729409, green: 0.7655876676, blue: 0.2366265191, alpha: 0.8420109161)
     static let darkGreen = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 }

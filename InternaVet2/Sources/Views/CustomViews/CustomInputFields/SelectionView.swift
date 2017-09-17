@@ -16,7 +16,7 @@ import UIKit
 class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     @IBInspectable var labelVerticalPadding: CGFloat = 1{ didSet{ self.setupFrames() } }
     @IBInspectable var textColor: UIColor = Colors.lightGreen{ didSet{ self.reloadLabelSettings() } }
-    @IBInspectable var fontSize: CGFloat = 14{ didSet{ self.reloadLabelSettings() } }
+    @IBInspectable var fontSize: CGFloat = FontSize.medium{ didSet{ self.reloadLabelSettings() } }
     @IBInspectable var hiddingColor: UIColor = UIColor.white{ didSet{ self.setupGradientLayer() } }
     @IBInspectable var hiddingLocation: CGFloat = -10{ didSet{ self.setupGradientLayer() } }
     

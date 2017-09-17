@@ -15,6 +15,7 @@ class PatientsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = Colors.mainLight
         self.tableDatasource = JSGenericExpansableCellTableController(self.tableView)
         self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }

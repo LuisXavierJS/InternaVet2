@@ -33,6 +33,8 @@
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 		8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */; };
+		8E76F5AD1F6EE4F600AC1039 /* CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */; };
+		8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */; };
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
@@ -99,6 +101,8 @@
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarButton.swift; sourceTree = "<group>"; };
+		8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 				8E30CEEB1F65F1C8007D34F7 /* CustomOutputFields */,
 				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
+				8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 			children = (
 				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
 				8E79E2FD1F676818007FA9BD /* Words.swift */,
+				8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -705,6 +711,7 @@
 				8E79E2FE1F676818007FA9BD /* Words.swift in Sources */,
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
+				8E76F5AD1F6EE4F600AC1039 /* CustomBarButton.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* FieldViewContainerView.swift in Sources */,
 				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
 				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
@@ -720,6 +727,7 @@
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
 				8E29443A1F65D6EE00F0FA8A /* CreateNewTaskViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
+				8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */,
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */,
 				8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */,
