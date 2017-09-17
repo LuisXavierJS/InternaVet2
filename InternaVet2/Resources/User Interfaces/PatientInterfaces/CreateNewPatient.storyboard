@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3G8-Nb-Z2g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3G8-Nb-Z2g">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="lAq-NJ-IXx">
             <objects>
-                <navigationController id="3G8-Nb-Z2g" sceneMemberID="viewController">
+                <navigationController id="3G8-Nb-Z2g" customClass="BaseNavigationController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBr-FN-ei1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -280,12 +280,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Paciente" id="uLa-rf-vAB">
-                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="evS-rU-w38">
+                        <barButtonItem key="leftBarButtonItem" image="previous" id="evS-rU-w38">
+                            <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButtonTapped:" destination="MuB-kB-orf" id="zwm-Ci-sxA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="yhI-o7-pqr">
+                        <barButtonItem key="rightBarButtonItem" image="task-complete" id="yhI-o7-pqr">
+                            <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="MuB-kB-orf" id="LnN-pR-WQx"/>
                             </connections>
@@ -314,4 +316,8 @@
             <point key="canvasLocation" x="217.5" y="50"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="previous" width="16" height="16"/>
+        <image name="task-complete" width="16" height="16"/>
+    </resources>
 </document>

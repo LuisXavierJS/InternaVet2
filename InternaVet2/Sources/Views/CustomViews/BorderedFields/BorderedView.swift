@@ -12,8 +12,8 @@ import UIKit
 class BorderedView: ContentView {
     @IBInspectable var lineColor: UIColor = Colors.lightGreen
     @IBInspectable var lineWidth: CGFloat = 1
-    @IBInspectable var bottomBorder: Bool = true
-    @IBInspectable var topBorder: Bool = true
+    @IBInspectable var bottomBorder: Bool = false
+    @IBInspectable var topBorder: Bool = false
     @IBInspectable var leftBorder: Bool = false
     @IBInspectable var rightBorder: Bool = false
     

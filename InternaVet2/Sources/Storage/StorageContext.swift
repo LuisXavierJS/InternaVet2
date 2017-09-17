@@ -153,7 +153,7 @@ fileprivate class ContextFactory {
         return RealStorageContext(self.getPath(type, self.mainPath))
     }
     
-    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type : StorageItem, Type: NameableStorageItem {
+    fileprivate static func getPath<Type: StorageItem>(_ type: Type.Type, _ base: Path) -> Path where Type: NameableStorageItem {
         return type.localPathOnStorage(from: base)
     }
 }
