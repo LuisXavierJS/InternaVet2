@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "backward-arrow.png",
+      "filename" : "medical-history@2x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "backward-arrow@2x.png",
+      "filename" : "medical-history@3x.png",
       "scale" : "2x"
     },
     {

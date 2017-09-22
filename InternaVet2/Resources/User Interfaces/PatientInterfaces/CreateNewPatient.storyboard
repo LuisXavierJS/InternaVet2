@@ -16,6 +16,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="sBr-FN-ei1">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="MuB-kB-orf" kind="relationship" relationship="rootViewController" id="cmQ-Ym-Akv"/>
@@ -281,13 +282,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Paciente" id="uLa-rf-vAB">
                         <barButtonItem key="leftBarButtonItem" image="previous" id="evS-rU-w38">
-                            <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="backButtonTapped:" destination="MuB-kB-orf" id="zwm-Ci-sxA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="task-complete" id="yhI-o7-pqr">
-                            <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="MuB-kB-orf" id="LnN-pR-WQx"/>
                             </connections>

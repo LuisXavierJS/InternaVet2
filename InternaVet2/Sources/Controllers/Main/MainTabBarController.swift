@@ -9,18 +9,33 @@
 import UIKit
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
-
+    weak var tabBarBackgroundView: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupViews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupViews(){
+        let backgroundImageView = UIImageView()
+        backgroundImageView.backgroundColor = Colors.darkGreen
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.bounds = self.tabBar.bounds
+        self.tabBar.insertSubview(backgroundImageView, at: 0)
+        self.tabBar.unselectedItemTintColor = Colors.lightGreen
+        self.tabBarBackgroundView = backgroundImageView
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.tabBarBackgroundView?.frame = self.tabBar.bounds
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.tabBarBackgroundView?.frame = self.tabBar.bounds
+    }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {        
         let fromView: UIView = tabBarController.selectedViewController!.view

@@ -23,11 +23,11 @@
 		8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */; };
 		8E30CEF91F6623BE007D34F7 /* CreateNewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */; };
 		8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */; };
+		8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6421F749BBB007C66A4 /* TaskList.storyboard */; };
 		8E496A3E1F6ED49D00BBC65E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 		8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */; };
-		8E76F5AD1F6EE4F600AC1039 /* CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */; };
 		8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */; };
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
@@ -91,11 +91,11 @@
 		8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
 		8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewTask.storyboard; sourceTree = "<group>"; };
 		8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuedUILabel.swift; sourceTree = "<group>"; };
+		8E48E6421F749BBB007C66A4 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarButton.swift; sourceTree = "<group>"; };
 		8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
@@ -317,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */,
+				8E48E6421F749BBB007C66A4 /* TaskList.storyboard */,
 			);
 			path = TaskInterfaces;
 			sourceTree = "<group>";
@@ -374,7 +375,6 @@
 				8E30CEEB1F65F1C8007D34F7 /* CustomOutputFields */,
 				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
-				8E76F5AC1F6EE4F600AC1039 /* CustomBarButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -572,6 +572,7 @@
 				8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
 				8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */,
+				8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */,
 				8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -691,7 +692,6 @@
 				8E79E2FE1F676818007FA9BD /* Words.swift in Sources */,
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
-				8E76F5AD1F6EE4F600AC1039 /* CustomBarButton.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* FieldViewContainerView.swift in Sources */,
 				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
 				8EEE026D1F6F20C100A007C5 /* UIView+Helpers.swift in Sources */,

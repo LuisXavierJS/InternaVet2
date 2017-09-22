@@ -1,23 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CnH-l1-FhP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q1B-Lg-E5v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Side Menu Controller-->
+        <scene sceneID="tDX-G3-gfw">
+            <objects>
+                <viewController id="Q1B-Lg-E5v" customClass="LGSideMenuController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ga8-5V-arh"/>
+                        <viewControllerLayoutGuide type="bottom" id="rZ9-7d-zG7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5zh-zn-CoV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftViewSwipeGestureEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftViewHidesOnTouch" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftViewPresentationStyle">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="CnH-l1-FhP" kind="custom" identifier="root" customClass="LGSideMenuSegue" id="pRm-dl-Aho"/>
+                        <segue destination="hui-VP-Uru" kind="custom" identifier="left" customClass="LGSideMenuSegue" id="29q-6y-PBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cso-3w-omz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="18"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L5b-KO-WX2">
+            <objects>
+                <viewController id="hui-VP-Uru" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u5d-dq-ja9"/>
+                        <viewControllerLayoutGuide type="bottom" id="klE-2V-GKp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FA0-pE-SBI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.46666666870000001" green="0.76470589639999997" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzS-0x-hnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="794"/>
+        </scene>
         <!--Main Tab Bar-->
         <scene sceneID="W45-b1-1GH">
             <objects>
                 <tabBarController title="Main Tab Bar" id="CnH-l1-FhP" customClass="MainTabBarController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Tbh-nw-SJ4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="vmX-rq-uW3">
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="vmX-rq-uW3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="5ip-Cn-ivL" kind="relationship" relationship="viewControllers" id="4cL-ph-QkL"/>

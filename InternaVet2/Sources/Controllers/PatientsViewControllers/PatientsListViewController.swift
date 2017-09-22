@@ -14,8 +14,7 @@ class PatientsListViewController: UIViewController {
     var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = Colors.mainLight
+        super.viewDidLoad()        
         self.tableDatasource = JSGenericExpansableCellTableController(self.tableView)
         self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }
