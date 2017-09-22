@@ -25,6 +25,8 @@
 		8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */; };
 		8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6421F749BBB007C66A4 /* TaskList.storyboard */; };
 		8E48E6451F75A76B007C66A4 /* OwnerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */; };
+		8E48E6481F75AD36007C66A4 /* ReportList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6471F75AD36007C66A4 /* ReportList.storyboard */; };
+		8E48E64A1F75AD41007C66A4 /* CreateNewReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6491F75AD41007C66A4 /* CreateNewReport.storyboard */; };
 		8E496A3E1F6ED49D00BBC65E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */; };
 		8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */; };
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
@@ -94,6 +96,8 @@
 		8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuedUILabel.swift; sourceTree = "<group>"; };
 		8E48E6421F749BBB007C66A4 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OwnerList.storyboard; sourceTree = "<group>"; };
+		8E48E6471F75AD36007C66A4 /* ReportList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportList.storyboard; sourceTree = "<group>"; };
+		8E48E6491F75AD41007C66A4 /* CreateNewReport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateNewReport.storyboard; sourceTree = "<group>"; };
 		8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8E67C9DB1F40F35000C3C4CE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		8E1BABDB1F40D2D900808B16 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				8E48E6461F75AD2C007C66A4 /* ReportInterfaces */,
 				8E30CEF11F6623BE007D34F7 /* OwnerInterfaces */,
 				8E30CEF31F6623BE007D34F7 /* PatientInterfaces */,
 				8E30CEF51F6623BE007D34F7 /* TaskInterfaces */,
@@ -323,6 +328,15 @@
 				8E48E6421F749BBB007C66A4 /* TaskList.storyboard */,
 			);
 			path = TaskInterfaces;
+			sourceTree = "<group>";
+		};
+		8E48E6461F75AD2C007C66A4 /* ReportInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8E48E6471F75AD36007C66A4 /* ReportList.storyboard */,
+				8E48E6491F75AD41007C66A4 /* CreateNewReport.storyboard */,
+			);
+			path = ReportInterfaces;
 			sourceTree = "<group>";
 		};
 		8E496A3C1F6ED48C00BBC65E /* Bases */ = {
@@ -572,10 +586,12 @@
 				8E48E6451F75A76B007C66A4 /* OwnerList.storyboard in Resources */,
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
 				8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */,
+				8E48E64A1F75AD41007C66A4 /* CreateNewReport.storyboard in Resources */,
 				8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */,
 				8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
 				8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */,
+				8E48E6481F75AD36007C66A4 /* ReportList.storyboard in Resources */,
 				8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */,
 				8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
