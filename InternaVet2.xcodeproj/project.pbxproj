@@ -26,6 +26,9 @@
 		8E4174E51F90210700C07CCF /* ReportsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E41F90210700C07CCF /* ReportsListViewController.swift */; };
 		8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */; };
 		8E4174E91F90233200C07CCF /* BaseRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */; };
+		8E4174EB1F90265500C07CCF /* OwnersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174EA1F90265500C07CCF /* OwnersListViewController.swift */; };
+		8E4174ED1F90271900C07CCF /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174EC1F90271900C07CCF /* TasksListViewController.swift */; };
+		8E4174EF1F90282900C07CCF /* CreateNewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174EE1F90282900C07CCF /* CreateNewReportViewController.swift */; };
 		8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6421F749BBB007C66A4 /* TaskList.storyboard */; };
 		8E48E6451F75A76B007C66A4 /* OwnerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */; };
 		8E48E6481F75AD36007C66A4 /* ReportList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6471F75AD36007C66A4 /* ReportList.storyboard */; };
@@ -100,6 +103,9 @@
 		8E4174E41F90210700C07CCF /* ReportsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListViewController.swift; sourceTree = "<group>"; };
 		8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewController.swift; sourceTree = "<group>"; };
 		8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRegisterViewController.swift; sourceTree = "<group>"; };
+		8E4174EA1F90265500C07CCF /* OwnersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersListViewController.swift; sourceTree = "<group>"; };
+		8E4174EC1F90271900C07CCF /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
+		8E4174EE1F90282900C07CCF /* CreateNewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewReportViewController.swift; sourceTree = "<group>"; };
 		8E48E6421F749BBB007C66A4 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OwnerList.storyboard; sourceTree = "<group>"; };
 		8E48E6471F75AD36007C66A4 /* ReportList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportList.storyboard; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 		8E4174E31F901F7900C07CCF /* ReportsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E4174EE1F90282900C07CCF /* CreateNewReportViewController.swift */,
 				8E4174E41F90210700C07CCF /* ReportsListViewController.swift */,
 			);
 			path = ReportsViewControllers;
@@ -488,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				8EEE02601F6F208800A007C5 /* CreateNewTaskViewController.swift */,
+				8E4174EC1F90271900C07CCF /* TasksListViewController.swift */,
 			);
 			path = TasksViewControllers;
 			sourceTree = "<group>";
@@ -496,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				8EEE02621F6F208900A007C5 /* CreateNewOwnerViewController.swift */,
+				8E4174EA1F90265500C07CCF /* OwnersListViewController.swift */,
 			);
 			path = OwnersViewControllers;
 			sourceTree = "<group>";
@@ -741,6 +750,7 @@
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8EE38B141F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
+				8E4174EF1F90282900C07CCF /* CreateNewReportViewController.swift in Sources */,
 				8E4174E51F90210700C07CCF /* ReportsListViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EEE026B1F6F20C100A007C5 /* CGRect+Helpers.swift in Sources */,
@@ -748,8 +758,10 @@
 				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */,
 				8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */,
+				8E4174EB1F90265500C07CCF /* OwnersListViewController.swift in Sources */,
 				8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */,
 				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
+				8E4174ED1F90271900C07CCF /* TasksListViewController.swift in Sources */,
 				8EEE026C1F6F20C100A007C5 /* CGContext+Helpers.swift in Sources */,
 				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
 				8EEE026A1F6F20C100A007C5 /* UIColor+Helpers.swift in Sources */,
