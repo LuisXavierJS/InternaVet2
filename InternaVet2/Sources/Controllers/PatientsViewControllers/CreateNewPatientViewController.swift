@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: UIViewController {
+class CreateNewPatientViewController: BaseRegisterViewController {
     @IBOutlet weak var nameTextField: BorderedTextFieldView!
     @IBOutlet weak var registerTextField: BorderedTextFieldView!
     @IBOutlet weak var chipTextField: BorderedTextFieldView!

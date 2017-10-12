@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PatientsListViewController: UIViewController {
+class PatientsListViewController: BaseListViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!

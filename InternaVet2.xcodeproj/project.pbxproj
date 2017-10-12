@@ -23,6 +23,9 @@
 		8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */; };
 		8E30CEF91F6623BE007D34F7 /* CreateNewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */; };
 		8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */; };
+		8E4174E51F90210700C07CCF /* ReportsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E41F90210700C07CCF /* ReportsListViewController.swift */; };
+		8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */; };
+		8E4174E91F90233200C07CCF /* BaseRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */; };
 		8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6421F749BBB007C66A4 /* TaskList.storyboard */; };
 		8E48E6451F75A76B007C66A4 /* OwnerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */; };
 		8E48E6481F75AD36007C66A4 /* ReportList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48E6471F75AD36007C66A4 /* ReportList.storyboard */; };
@@ -94,6 +97,9 @@
 		8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
 		8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewTask.storyboard; sourceTree = "<group>"; };
 		8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuedUILabel.swift; sourceTree = "<group>"; };
+		8E4174E41F90210700C07CCF /* ReportsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListViewController.swift; sourceTree = "<group>"; };
+		8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewController.swift; sourceTree = "<group>"; };
+		8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRegisterViewController.swift; sourceTree = "<group>"; };
 		8E48E6421F749BBB007C66A4 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OwnerList.storyboard; sourceTree = "<group>"; };
 		8E48E6471F75AD36007C66A4 /* ReportList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportList.storyboard; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 			children = (
 				8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */,
 				8E30CF021F662C45007D34F7 /* ValuedUILabel.swift */,
+				8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */,
 			);
 			path = CustomOutputFields;
 			sourceTree = "<group>";
@@ -330,6 +337,14 @@
 			path = TaskInterfaces;
 			sourceTree = "<group>";
 		};
+		8E4174E31F901F7900C07CCF /* ReportsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E4174E41F90210700C07CCF /* ReportsListViewController.swift */,
+			);
+			path = ReportsViewControllers;
+			sourceTree = "<group>";
+		};
 		8E48E6461F75AD2C007C66A4 /* ReportInterfaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */,
+				8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */,
+				8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 				8EEE02611F6F208900A007C5 /* OwnersViewControllers */,
 				8EEE02631F6F208900A007C5 /* PatientsViewControllers */,
 				8EEE025F1F6F208800A007C5 /* TasksViewControllers */,
+				8E4174E31F901F7900C07CCF /* ReportsViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -433,7 +451,6 @@
 				8EA87B3A1F62BB1000682C19 /* ArrowView.swift */,
 				8EA87B3B1F62BB1000682C19 /* BorderedView.swift */,
 				8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */,
-				8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */,
 			);
 			path = BorderedFields;
 			sourceTree = "<group>";
@@ -724,6 +741,7 @@
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
 				8EE38B141F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
+				8E4174E51F90210700C07CCF /* ReportsListViewController.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EEE026B1F6F20C100A007C5 /* CGRect+Helpers.swift in Sources */,
 				8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */,
@@ -733,8 +751,10 @@
 				8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */,
 				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
 				8EEE026C1F6F20C100A007C5 /* CGContext+Helpers.swift in Sources */,
+				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
 				8EEE026A1F6F20C100A007C5 /* UIColor+Helpers.swift in Sources */,
 				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,
+				8E4174E91F90233200C07CCF /* BaseRegisterViewController.swift in Sources */,
 				8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */,
 				8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewOwnerViewController: UIViewController {
+class CreateNewOwnerViewController: BaseRegisterViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
