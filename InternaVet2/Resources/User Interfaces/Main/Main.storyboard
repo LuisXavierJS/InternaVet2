@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="-10" y="18"/>
         </scene>
-        <!--CreateNewOwner-->
+        <!--ReportList-->
         <scene sceneID="wB5-Ib-42G">
             <objects>
-                <viewControllerPlaceholder storyboardName="CreateNewOwner" id="8WP-pl-KWA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ReportList" id="8WP-pl-KWA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Proprietários" image="user" id="Nu8-Lr-4CP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIP-7p-nY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,12 +96,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPi-lO-6yD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="18"/>
+            <point key="canvasLocation" x="649" y="17"/>
         </scene>
-        <!--CreateNewTask-->
+        <!--TaskList-->
         <scene sceneID="ZC0-te-MgG">
             <objects>
-                <viewControllerPlaceholder storyboardName="CreateNewTask" id="fIr-FH-YzU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TaskList" id="fIr-FH-YzU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tarefas" image="clock" id="gsU-w9-vHX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQD-UU-XYr" userLabel="First Responder" sceneMemberID="firstResponder"/>

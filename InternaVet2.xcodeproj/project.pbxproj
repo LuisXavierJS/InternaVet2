@@ -319,8 +319,8 @@
 		8E30CEF11F6623BE007D34F7 /* OwnerInterfaces */ = {
 			isa = PBXGroup;
 			children = (
-				8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */,
 				8E48E6441F75A76B007C66A4 /* OwnerList.storyboard */,
+				8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */,
 			);
 			path = OwnerInterfaces;
 			sourceTree = "<group>";
@@ -337,8 +337,8 @@
 		8E30CEF51F6623BE007D34F7 /* TaskInterfaces */ = {
 			isa = PBXGroup;
 			children = (
-				8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */,
 				8E48E6421F749BBB007C66A4 /* TaskList.storyboard */,
+				8E30CEF61F6623BE007D34F7 /* CreateNewTask.storyboard */,
 			);
 			path = TaskInterfaces;
 			sourceTree = "<group>";

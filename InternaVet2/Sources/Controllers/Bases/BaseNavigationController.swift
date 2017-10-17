@@ -19,6 +19,5 @@ class BaseNavigationController : UINavigationController {
         self.navigationBar.barTintColor = Colors.darkGreen
         self.navigationBar.tintColor = Colors.mainLight
         self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium), NSForegroundColorAttributeName:Colors.mainLight]
-//        self.navigationBar.setBackgroundImage(UIImage(named:"top_grass_blur_field"), for: UIBarMetrics.default)
     }
 }
