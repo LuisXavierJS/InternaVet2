@@ -8,6 +8,7 @@
 
 import UIKit
 
-struct FontSize {
+struct DefaultValues {
+    static let standardUsername = "standard_user"
     static let medium: CGFloat = 15
 }

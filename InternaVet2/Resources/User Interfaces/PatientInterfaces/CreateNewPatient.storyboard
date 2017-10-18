@@ -13,7 +13,7 @@
         <scene sceneID="lAq-NJ-IXx">
             <objects>
                 <navigationController id="3G8-Nb-Z2g" customClass="BaseNavigationController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="sBr-FN-ei1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBr-FN-ei1">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,11 +35,11 @@
                         <viewControllerLayoutGuide type="bottom" id="BUi-SZ-g3n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JYM-1n-zeD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="936"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-fM-H0x">
-                                <rect key="frame" x="0.0" y="-65" width="320" height="1001"/>
+                                <rect key="frame" x="0.0" y="-1" width="320" height="1001"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="027-k7-cjA" userLabel="ContainerView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1015"/>
@@ -313,6 +313,7 @@
                         <outlet property="dogHousePickerSelector" destination="5x9-jc-5Ik" id="p73-NN-zwt"/>
                         <outlet property="genderSelection" destination="G4F-I6-l6N" id="hJM-Nt-oqB"/>
                         <outlet property="hospitalizationSelectionText" destination="Zf4-7R-3dh" id="eVX-Rz-Bza"/>
+                        <outlet property="imageView" destination="QPI-rj-ZI6" id="Vvk-uV-sh1"/>
                         <outlet property="nameTextField" destination="XoT-55-NiY" id="0ev-MO-cTH"/>
                         <outlet property="ownerPushButton" destination="gUI-sw-HgN" id="mBz-lo-C5F"/>
                         <outlet property="racePushButton" destination="GuI-gM-1pU" id="Cay-JX-jSm"/>

@@ -12,6 +12,7 @@
 		8E135B881F648BBA00F9162B /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B871F648BBA00F9162B /* Patient.swift */; };
 		8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B891F648C1E00F9162B /* SessionController.swift */; };
 		8E135B8C1F648DF700F9162B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B8B1F648DF700F9162B /* User.swift */; };
+		8E1633C11F96DC6F00FDB40A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1633C01F96DC6F00FDB40A /* Keys.swift */; };
 		8E1BABC31F40D18E00808B16 /* InternaVet2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */; };
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		8E135B871F648BBA00F9162B /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		8E135B891F648C1E00F9162B /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		8E135B8B1F648DF700F9162B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E1633C01F96DC6F00FDB40A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8E1BABA71F40D18E00808B16 /* InternaVet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternaVet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABBE1F40D18E00808B16 /* InternaVet2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternaVet2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternaVet2Tests.swift; sourceTree = "<group>"; };
@@ -187,6 +189,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E1633BE1F96DC0400FDB40A /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		8E1633BF1F96DC1700FDB40A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		8E1BAB9E1F40D18D00808B16 = {
 			isa = PBXGroup;
 			children = (
@@ -234,10 +250,12 @@
 				8E79E2F81F67638D007FA9BD /* UtilitaryExtensions */,
 				8E30CEEE1F65FBE5007D34F7 /* UtilitaryProtocols */,
 				8EA87B531F63600D00682C19 /* Model */,
+				8E1633BF1F96DC1700FDB40A /* Business */,
+				8E1633BE1F96DC0400FDB40A /* DAO */,
 				8EA87B501F630F3000682C19 /* Storage */,
 				8E67C9E71F40F56900C3C4CE /* Constants */,
 				8E67C9E01F40F48E00C3C4CE /* Views */,
-				8E67C9D51F40F35000C3C4CE /* Controllers */,
+				8E67C9D51F40F35000C3C4CE /* ViewControllers */,
 			);
 			name = Sources;
 			path = InternaVet2/Sources;
@@ -371,7 +389,7 @@
 			path = Bases;
 			sourceTree = "<group>";
 		};
-		8E67C9D51F40F35000C3C4CE /* Controllers */ = {
+		8E67C9D51F40F35000C3C4CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8E496A3C1F6ED48C00BBC65E /* Bases */,
@@ -381,7 +399,7 @@
 				8EEE025F1F6F208800A007C5 /* TasksViewControllers */,
 				8E4174E31F901F7900C07CCF /* ReportsViewControllers */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8E67C9DA1F40F35000C3C4CE /* Main */ = {
@@ -424,8 +442,9 @@
 		8E67C9E71F40F56900C3C4CE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
 				8E79E2FD1F676818007FA9BD /* Words.swift */,
+				8E67C9E81F40F57100C3C4CE /* Colors.swift */,
+				8E1633C01F96DC6F00FDB40A /* Keys.swift */,
 				8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */,
 			);
 			path = Constants;
@@ -742,6 +761,7 @@
 				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
 				8EEE026D1F6F20C100A007C5 /* UIView+Helpers.swift in Sources */,
 				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
+				8E1633C11F96DC6F00FDB40A /* Keys.swift in Sources */,
 				8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */,
 				8EEE02731F6F23B300A007C5 /* AppDelegate.swift in Sources */,
 				8E496A3E1F6ED49D00BBC65E /* BaseNavigationController.swift in Sources */,

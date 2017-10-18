@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class DualLabelView: ContentView {
     @IBInspectable var titleLabelText: String = ""{ didSet{ self.firsLabel.text = titleLabelText } }
-    @IBInspectable var labelSize: CGFloat = FontSize.medium {
+    @IBInspectable var labelSize: CGFloat = DefaultValues.medium {
         didSet {
             self.firsLabel.font = UIFont.systemFont(ofSize: self.labelSize)
             self.secondLabel.font = UIFont.systemFont(ofSize: self.labelSize)

@@ -9,24 +9,23 @@
 import Foundation
 
 class SessionController {
-    static private let usernameKey: String = "lastLoggedUser"
-    static let context = StorageContext()
+    private let context = StorageContext()
+    private(set) var currentUser: User?
     
-    static private(set) var currentUser: User?
-    
-    static var currentUsername: String? {
-        return UserDefaults.standard.value(forKey: usernameKey) as? String
-    }
+    static var standard: SessionController = {
+        let sc = SessionController()
+        return sc
+    }()
     
     @discardableResult
-    static func performLogin(username user: String) -> User? {
-        UserDefaults.standard.set(user, forKey: usernameKey)
+    func performLogin(username user: String) -> User? {
+        UserDefaults.standard.set(user, forKey: Keys.usernameKey)
         self.currentUser = self.loadUser(from: user)
         return self.currentUser
     }
     
     @discardableResult
-    static func registerUser(username user: String) -> Bool {
+    func registerUser(username user: String) -> Bool {
         if let _ = loadUser(from: user) {return false}
         let newUser = User()
         newUser.username = user
@@ -35,7 +34,7 @@ class SessionController {
         return true
     }
 
-    private static func loadUser(from username: String) -> User? {
+    func loadUser(from username: String) -> User? {
         return self.context.fetch(User.self, {$0.username == username}).first
     }
 }

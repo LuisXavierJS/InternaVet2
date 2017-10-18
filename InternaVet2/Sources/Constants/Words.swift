@@ -26,7 +26,6 @@ struct Words {
     static let grams = LocStr(key: "grams")
     static let kilograms = LocStr(key: "kilograms")
     static let female = LocStr(key: "female")
-    static let male = LocStr(key: "male")
-    
+    static let male = LocStr(key: "male")    
     static let empty = LocStr(key: "default_empty")
 }
