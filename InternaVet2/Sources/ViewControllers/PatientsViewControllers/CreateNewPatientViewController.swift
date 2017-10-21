@@ -88,14 +88,17 @@ class CreateNewPatientViewController: BaseRegisterViewController {
         newPatient.record = self.registerTextField.textField.text
         newPatient.race = self.racePushButton.valueLabelText
         newPatient.dogHouseNumber = self.dogHousePickerSelector.valueLabelText
-        self.sessionController.currentUser?.patients.append(newPatient)
+        if self.editingPatient == nil {
+            self.sessionController.currentUser?.patients.append(newPatient)
+        }
+        self.sessionController.saveContext()
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if self.allFieldsFullfilled() {
             self.performSave()
+            self.navigationController?.dismiss(animated: true, completion: nil)
         }
-        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

@@ -34,6 +34,7 @@ class SessionController {
     static var standard: SessionController = {
         let sc = SessionController()
         try? sc.registerUser(username: DefaultValues.standardUsername)
+        let _ = try? sc.performLogin(username: DefaultValues.standardUsername)
         return sc
     }()
     
@@ -56,7 +57,20 @@ class SessionController {
         self.context.save(newUser)        
     }
 
-    func loadUser(from username: String) -> User? {
+    func saveContext() {
+        if let user = self.currentUser {
+            self.context.save(user)
+        }
+    }
+    
+    func resetContext() {
+        if let currentUsername = self.currentUser?.username,
+            let user = self.loadUser(from: currentUsername) {
+            self.currentUser = user
+        }
+    }
+    
+    fileprivate func loadUser(from username: String) -> User? {
         return self.context.fetch(User.self, {$0.username == username}).first
     }
 }
