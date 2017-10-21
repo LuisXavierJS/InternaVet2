@@ -41,7 +41,7 @@ class CustomFloatTextField: JVFloatLabeledTextField {
         self.floatingLabelActiveTextColor = Colors.lightGreen
         self.floatingLabelYPadding = 2
         self.floatingLabelFont = self.floatingLabelFont.withSize(11)
-        self.font = UIFont.systemFont(ofSize: FontSize.medium)
+        self.font = UIFont.systemFont(ofSize: DefaultValues.medium)
         self.backgroundColor = Colors.mainLight                
         
         self.clipsToBounds = true

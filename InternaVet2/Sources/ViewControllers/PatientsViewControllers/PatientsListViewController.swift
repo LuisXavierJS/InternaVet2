@@ -12,6 +12,7 @@ class PatientsListViewController: BaseListViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!
+    weak var sessionController: SessionController!
     
     override func viewDidLoad() {
         super.viewDidLoad()        
@@ -21,7 +22,7 @@ class PatientsListViewController: BaseListViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableDatasource.items = [SessionController.currentUser?.patients ?? []]
+        self.tableDatasource.items = [self.sessionController.currentUser?.patients ?? []]
         self.tableView.reloadData()
     }
 

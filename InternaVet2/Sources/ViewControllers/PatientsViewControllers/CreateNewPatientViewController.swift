@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController {
+class CreateNewPatientViewController: BaseRegisterViewController, SessionControllerManagerProtocol {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: BorderedTextFieldView!
     @IBOutlet weak var registerTextField: BorderedTextFieldView!
@@ -23,6 +23,8 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     @IBOutlet weak var ownerPushButton: PushButtonViewField!
     @IBOutlet weak var dogHousePickerSelector: PickerViewButtonField!
     @IBOutlet weak var agePickerSelector: PickerViewButtonField!
+    
+    weak var sessionController: SessionController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     }
     
     func setupPickerSelectors(){
-        let freeDogHousesList: [String] = SessionController.currentUser?.dogHouses.filter({$0.patientId == nil}).map({String($0.dogHouserNumber)}) ?? []
+        let freeDogHousesList: [String] = self.sessionController.currentUser?.dogHouses.filter({$0.patientId == nil}).map({String($0.dogHouserNumber)}) ?? []
         let totalDogHousesToList: [String] = [["--"], freeDogHousesList].flatMap({$0})
         self.dogHousePickerSelector.setItems(totalDogHousesToList)
         
@@ -88,7 +90,7 @@ class CreateNewPatientViewController: BaseRegisterViewController {
             newPatient.name = self.nameTextField.textField.text
             newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
             newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
-            SessionController.currentUser?.addIfPossibleAndSavePatient(newPatient)
+            self.sessionController.currentUser?.patients.append(newPatient)
         }
     }
     

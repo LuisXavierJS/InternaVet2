@@ -29,25 +29,6 @@ class Patient: StorageItem {
         return 0
     }
     
-    func getOwner() -> Owner? {
-        guard let id = self.ownerId else {return nil}
-        return SessionController.currentUser?.owners.filter({$0.udid == id}).first
-    }
-    
-    func setAndSaveOwner(_ owner: Owner) {
-        self.ownerId = owner.udid
-        SessionController.currentUser?.addIfPossibleAndSaveOwner(owner)
-    }
-    
-    func setAndSaveDogHouse(_ dogHouse: DogHouse?) {
-        self.dogHouseId = dogHouse?.udid
-        dogHouse?.patientId = self.udid
-    }
-    
-    func getDogHouse() -> DogHouse? {
-        guard let id = self.dogHouseId else {return nil}
-        return SessionController.currentUser?.dogHouses.filter({$0.udid == id}).first
-    }
 }
 
 @objc(DogHouse)
@@ -55,8 +36,8 @@ class DogHouse: StorageItem {
     dynamic var dogHouserNumber: Int = 0
     dynamic fileprivate(set) var patientId: String?
     
-    func getPatient() -> Patient? {
-        guard let id = self.patientId else {return nil}
-        return SessionController.currentUser?.patients.filter({$0.udid == id}).first
+    convenience init(_ dogHouse: Int) {
+        self.init()
+        self.dogHouserNumber = dogHouse
     }
 }

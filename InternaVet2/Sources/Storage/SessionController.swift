@@ -8,12 +8,23 @@
 
 import Foundation
 
+protocol SessionControllerManagerProtocol: class {
+    weak var sessionController: SessionController! {get set}
+}
+
+enum SessionControllerError: Error {
+    case userAlreadyRegistered
+}
+
 class SessionController {
     private let context = StorageContext()
+    
     private(set) var currentUser: User?
+    private(set) var dogHousesNumber: Int = DefaultValues.numberOfDogHouses
     
     static var standard: SessionController = {
         let sc = SessionController()
+        try? sc.registerUser(username: DefaultValues.standardUsername)
         return sc
     }()
     
@@ -24,14 +35,12 @@ class SessionController {
         return self.currentUser
     }
     
-    @discardableResult
-    func registerUser(username user: String) -> Bool {
-        if let _ = loadUser(from: user) {return false}
+    func registerUser(username user: String) throws {
+        if let _ = loadUser(from: user) {throw SessionControllerError.userAlreadyRegistered}
         let newUser = User()
         newUser.username = user
-        User.resetDogHousesToDefault(onUser: newUser)
-        self.context.save(newUser)
-        return true
+        newUser.dogHouses.append(contentsOf: Array(1...max(1,self.dogHousesNumber)).map({DogHouse($0)}))
+        self.context.save(newUser)        
     }
 
     func loadUser(from username: String) -> User? {

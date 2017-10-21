@@ -12,9 +12,9 @@ import FileKit
 @objc(User)
 class User: StorageItem, NameableStorageItem {
     dynamic var username: String?
-    dynamic private(set) var patients: [Patient] = []
-    dynamic private(set) var owners: [Owner] = []
-    dynamic private(set) var dogHouses: [DogHouse] = []
+    dynamic var patients: [Patient] = []
+    dynamic var owners: [Owner] = []
+    dynamic var dogHouses: [DogHouse] = []
     
     var fileName: String {
         return nameConstructor(attributes: ["udid":self.udid])
@@ -24,37 +24,4 @@ class User: StorageItem, NameableStorageItem {
         return root + "Users"
     }
     
-    static func resetDogHousesToDefault(onUser user: User) {
-        let dogHouses = Array(1...45).map { (number) -> DogHouse in
-                            let dogHouse = DogHouse()
-                            return dogHouse
-                        }
-        user.dogHouses = dogHouses
-    }
-    
-    func addIfPossibleAndSavePatient(_ patient: Patient) {
-        if !self.patients.contains(where: {patient.udid == $0.udid}) {
-            self.patients.append(patient)
-        }
-        SessionController.context.save(self)
-    }
-    
-    func getPatient(ofId id: String) -> Patient? {
-        return self.patients.filter({$0.udid == id}).first
-    }
-    
-    func addIfPossibleAndSaveOwner(_ owner: Owner) {
-        if !self.owners.contains(where: {$0.udid == owner.udid}) {
-            self.owners.append(owner)
-        }
-        SessionController.context.save(self)
-    }
-    
-    func getOwner(ofId id: String) -> Owner? {
-        return self.owners.filter({$0.udid == id}).first
-    }
-    
-    func getDogHouse(ofNumber number: Int) -> DogHouse? {
-        return self.dogHouses.filter({$0.dogHouserNumber == number}).first
-    }
 }

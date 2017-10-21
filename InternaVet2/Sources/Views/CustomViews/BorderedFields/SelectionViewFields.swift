@@ -13,7 +13,7 @@ import UIKit
 @IBDesignable
 class LabeledSelectionViewField: SelectionArrowViewField {
     @IBInspectable var labelText: String = ""{ didSet{ self.label.text = labelText } }
-    @IBInspectable var labelSize: CGFloat = FontSize.medium{ didSet{ self.label.font = UIFont.systemFont(ofSize: self.labelSize) } }
+    @IBInspectable var labelSize: CGFloat = DefaultValues.medium{ didSet{ self.label.font = UIFont.systemFont(ofSize: self.labelSize) } }
     @IBInspectable var labelColor: UIColor = Colors.darkGreen{ didSet{ self.label.textColor = self.labelColor } }    
     
     private weak var label: UILabel!
@@ -72,7 +72,7 @@ class TextSelectionViewField: SelectionArrowViewField {
 class SelectionArrowViewField: BorderedArrowViewField, SelectionSliderViewDelegateProtocol {
     @IBInspectable var selLabelVerticalPadding: CGFloat = 1{ didSet{ self.selectionView.labelVerticalPadding = self.selLabelVerticalPadding } }
     @IBInspectable var selTextColor: UIColor = Colors.lightGreen{ didSet{ self.selectionView.textColor = self.selTextColor } }
-    @IBInspectable var selFontSize: CGFloat = FontSize.medium{ didSet{ self.selectionView.fontSize = self.selFontSize } }
+    @IBInspectable var selFontSize: CGFloat = DefaultValues.medium{ didSet{ self.selectionView.fontSize = self.selFontSize } }
     @IBInspectable var selHiddingColor: UIColor = UIColor.white{ didSet{ self.selectionView.hiddingColor = self.selHiddingColor } }
     @IBInspectable var selHiddingLocation: CGFloat = -10{ didSet{ self.selectionView.hiddingLocation = self.selHiddingLocation } }
     

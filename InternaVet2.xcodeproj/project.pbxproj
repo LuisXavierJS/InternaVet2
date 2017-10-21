@@ -12,6 +12,7 @@
 		8E135B881F648BBA00F9162B /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B871F648BBA00F9162B /* Patient.swift */; };
 		8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B891F648C1E00F9162B /* SessionController.swift */; };
 		8E135B8C1F648DF700F9162B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E135B8B1F648DF700F9162B /* User.swift */; };
+		8E162E511F99975200048FCB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E162E501F99975200048FCB /* Session.swift */; };
 		8E1633C11F96DC6F00FDB40A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1633C01F96DC6F00FDB40A /* Keys.swift */; };
 		8E1BABC31F40D18E00808B16 /* InternaVet2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABC21F40D18E00808B16 /* InternaVet2Tests.swift */; };
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
@@ -86,6 +87,7 @@
 		8E135B871F648BBA00F9162B /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		8E135B891F648C1E00F9162B /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		8E135B8B1F648DF700F9162B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E162E501F99975200048FCB /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8E1633C01F96DC6F00FDB40A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8E1BABA71F40D18E00808B16 /* InternaVet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternaVet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1BABBE1F40D18E00808B16 /* InternaVet2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternaVet2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,8 +230,8 @@
 			children = (
 				8E1BABD01F40D1B000808B16 /* Supporting Files */,
 				8E1BABCF1F40D1A800808B16 /* Core Data */,
-				8E1BABCE1F40D1A000808B16 /* Resources */,
 				8E1BABCD1F40D19700808B16 /* Sources */,
+				8E1BABCE1F40D1A000808B16 /* Resources */,
 			);
 			path = InternaVet2;
 			sourceTree = "<group>";
@@ -503,6 +505,7 @@
 		8EA87B531F63600D00682C19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E162E501F99975200048FCB /* Session.swift */,
 				8E135B8B1F648DF700F9162B /* User.swift */,
 				8EA87B541F63605800682C19 /* Owner.swift */,
 				8E135B871F648BBA00F9162B /* Patient.swift */,
@@ -790,6 +793,7 @@
 				8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */,
 				8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */,
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
+				8E162E511F99975200048FCB /* Session.swift in Sources */,
 				8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
 				8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */,

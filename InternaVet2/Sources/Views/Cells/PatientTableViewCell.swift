@@ -47,7 +47,7 @@ class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
         self.isDiedLabel.text = object.isDead.semantic
         self.isCastratedLabel.text = object.isCastrated.semantic
         self.genderLabel.text = object.gender
-        self.ownerLabel.text = object.getOwner()?.name
+        self.ownerLabel.text = object.ownerId
         self.recordLabel.text = object.record
         self.chipLabel.text = object.chip
     }
