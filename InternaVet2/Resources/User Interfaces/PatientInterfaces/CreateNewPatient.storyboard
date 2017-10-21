@@ -210,7 +210,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Chip do Paciente:"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-rj-ZI6">
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-rj-ZI6">
                                                 <rect key="frame" x="174" y="85" width="138" height="112"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="138" id="Ggb-YY-swI"/>
@@ -328,7 +328,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="login" width="32" height="32"/>
+        <image name="photo-camera" width="32" height="32"/>
         <image name="previous" width="32" height="32"/>
         <image name="task-complete" width="32" height="32"/>
     </resources>

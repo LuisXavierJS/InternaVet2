@@ -113,7 +113,7 @@ class BorderedTextFieldView: BorderedView, CustomInputFieldProtocol {
     }
     
     var isFullfilled: Bool {
-        return self.textField.text?.isEmpty ?? false
+        return !(self.textField.text?.isEmpty ?? false)
     }
     
     func getInputValue() -> String {
