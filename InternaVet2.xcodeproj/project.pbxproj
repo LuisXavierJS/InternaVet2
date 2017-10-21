@@ -46,7 +46,7 @@
 		8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */; };
 		8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2FB1F676798007FA9BD /* Localizable.strings */; };
 		8E79E2FE1F676818007FA9BD /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2FD1F676818007FA9BD /* Words.swift */; };
-		8E961AB21F9BD724004CA884 /* InputVerificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E961AB11F9BD724004CA884 /* InputVerificationProtocol.swift */; };
+		8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */; };
 		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
 		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
 		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
@@ -127,7 +127,7 @@
 		8E79E2FB1F676798007FA9BD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8E79E2FD1F676818007FA9BD /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		8E7BE13C1F6F2FDC00BA49EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E961AB11F9BD724004CA884 /* InputVerificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVerificationProtocol.swift; sourceTree = "<group>"; };
+		8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputFieldProtocol.swift; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
@@ -334,7 +334,7 @@
 				8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */,
 				8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */,
 				8EE38B131F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift */,
-				8E961AB11F9BD724004CA884 /* InputVerificationProtocol.swift */,
+				8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */,
 			);
 			path = UtilitaryProtocols;
 			sourceTree = "<group>";
@@ -761,7 +761,7 @@
 				8EEE02711F6F22F300A007C5 /* CreateNewTaskViewController.swift in Sources */,
 				8EEE026E1F6F22EC00A007C5 /* PatientsListViewController.swift in Sources */,
 				8E79E2FE1F676818007FA9BD /* Words.swift in Sources */,
-				8E961AB21F9BD724004CA884 /* InputVerificationProtocol.swift in Sources */,
+				8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */,
 				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* FieldViewContainerView.swift in Sources */,

@@ -39,7 +39,7 @@ class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
     func setup(_ object: Patient) {
         self.specieLabel.text = object.specie
         self.nameLabel.text = object.name
-        self.dogHoseLabel.text = object.dogHouseId
+        self.dogHoseLabel.text = object.dogHouseNumber
         self.raceLabel.text = object.race
         
         self.hospitalizationTimeLabel.text = object.hospitalizationTime

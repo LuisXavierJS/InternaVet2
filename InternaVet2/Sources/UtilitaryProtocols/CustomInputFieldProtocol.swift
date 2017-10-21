@@ -8,6 +8,9 @@
 
 import Foundation
 
-protocol InputVerificationProtocol: class {
+protocol CustomInputFieldProtocol: class {    
     var isFullfilled: Bool {get}
+    
+    func getInputValue() -> String
+    func setInputValue(newValue: String)
 }

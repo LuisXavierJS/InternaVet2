@@ -24,6 +24,8 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     @IBOutlet weak var dogHousePickerSelector: PickerViewButtonField!
     @IBOutlet weak var agePickerSelector: PickerViewButtonField!
     
+    weak var editingPatient: Patient?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSelectorsOptions()
@@ -65,35 +67,34 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     }
 
     func allFieldsFullfilled() -> Bool{
-        return true
-//            self.weightSelectionText.getFullfilled() &&
-//            self.hospitalizationSelectionText.getFullfilled() &&
-//            self.genderSelection.getFullfilled() &&
-//            self.diedSelection.getFullfilled() &&
-//            self.specieSelection.getFullfilled() &&
-//            self.castratedSelection.getFullfilled() &&
-//            self.racePushButton.getFullfilled() &&
-//            self.ownerPushButton.getFullfilled() &&
-//            self.dogHousePickerSelector.getFullfilled() &&
-//            self.agePickerSelector.getFullfilled() &&
-//            self.nameTextField.getFullfilled() &&
-//            self.chipTextField.getFullfilled() &&
-//            self.registerTextField.getFullfilled()
+        return self.weightSelectionText.isFullfilled &&
+            self.hospitalizationSelectionText.isFullfilled &&                       
+            self.racePushButton.isFullfilled &&
+            self.ownerPushButton.isFullfilled &&
+            self.dogHousePickerSelector.isFullfilled &&
+            self.agePickerSelector.isFullfilled &&
+            self.nameTextField.isFullfilled &&
+            self.chipTextField.isFullfilled &&
+            self.registerTextField.isFullfilled
     }
 
     func performSave(){
-        if self.allFieldsFullfilled() {
-            let newPatient = Patient()
-            newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
-            newPatient.name = self.nameTextField.textField.text
-            newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
-            newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
-            self.sessionController.currentUser?.patients.append(newPatient)
-        }
+        let newPatient = self.editingPatient ?? Patient()
+        newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
+        newPatient.name = self.nameTextField.textField.text
+        newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
+        newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
+        newPatient.chip = self.chipTextField.textField.text
+        newPatient.record = self.registerTextField.textField.text
+        newPatient.race = self.racePushButton.valueLabelText
+        newPatient.dogHouseNumber = self.dogHousePickerSelector.valueLabelText
+        self.sessionController.currentUser?.patients.append(newPatient)
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        self.performSave()
+        if self.allFieldsFullfilled() {
+            self.performSave()
+        }
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     

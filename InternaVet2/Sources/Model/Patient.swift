@@ -21,7 +21,7 @@ class Patient: StorageItem {
     dynamic var gender: String?
     dynamic var isCastrated: Bool = false
     dynamic var isDead: Bool = false
-    dynamic fileprivate(set) var dogHouseId: String?
+    dynamic var dogHouseNumber: String?
     dynamic var hospitalizationTime: String?
     
     func getHospitalizationTimeInterval() -> TimeInterval {

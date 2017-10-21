@@ -85,7 +85,7 @@ class BorderedArrowViewField: BorderedView {
 
 
 @IBDesignable
-class BorderedTextFieldView: BorderedView {
+class BorderedTextFieldView: BorderedView, CustomInputFieldProtocol {
     @IBInspectable var dxInsets: CGFloat = 10 {didSet{self.setupFrames()}}
     @IBInspectable var dyInsets: CGFloat = 5 {didSet{self.setupFrames()}}
     @IBInspectable var placeholder: String = ""{didSet{self.textField.placeholder = self.placeholder}}    
@@ -111,4 +111,17 @@ class BorderedTextFieldView: BorderedView {
         super.setupFrames()
         self.textField.frame = self.bounds.insetBy(dx: self.dxInsets, dy: self.dyInsets)
     }
+    
+    var isFullfilled: Bool {
+        return self.textField.text?.isEmpty ?? false
+    }
+    
+    func getInputValue() -> String {
+        return self.textField.text!
+    }
+    
+    func setInputValue(newValue: String) {
+        self.textField.text = newValue
+    }
+    
 }

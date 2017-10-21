@@ -78,7 +78,8 @@ class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProt
 }
 
 @IBDesignable
-class PushButtonViewField: BorderedArrowViewField, InputVerificationProtocol {
+class PushButtonViewField: BorderedArrowViewField, CustomInputFieldProtocol {
+    
     @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.titleLabelText = titleLabelText } }
     @IBInspectable var valueLabelText: String = ""{ didSet{ self.dualLabelView.valueLabelText = valueLabelText } }
     @IBInspectable var placeholderText: String = ""{ didSet{ self.dualLabelView.placeholderText = placeholderText } }
@@ -137,5 +138,14 @@ class PushButtonViewField: BorderedArrowViewField, InputVerificationProtocol {
     
     var isFullfilled: Bool {
         return self.dualLabelView.secondLabel.text != self.placeholderText && !self.valueLabelText.isEmpty
-    }    
+    }
+    
+    func getInputValue() -> String {
+        return self.dualLabelView.secondLabel.text!
+    }
+    
+    func setInputValue(newValue: String) {
+        self.dualLabelView.secondLabel.text = newValue
+    }
+    
 }

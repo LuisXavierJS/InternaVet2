@@ -22,6 +22,7 @@ extension SessionControllerManagerProtocol {
 
 enum SessionControllerError: Error {
     case userAlreadyRegistered
+    case userNotRegistered
 }
 
 class SessionController {
@@ -37,10 +38,14 @@ class SessionController {
     }()
     
     @discardableResult
-    func performLogin(username user: String) -> User? {
+    func performLogin(username user: String) throws -> User {
         UserDefaults.standard.set(user, forKey: Keys.usernameKey)
-        self.currentUser = self.loadUser(from: user)
-        return self.currentUser
+        if let currentUser = self.loadUser(from: user) {
+            self.currentUser = currentUser
+            return currentUser
+        }else {
+            throw SessionControllerError.userNotRegistered
+        }
     }
     
     func registerUser(username user: String) throws {
