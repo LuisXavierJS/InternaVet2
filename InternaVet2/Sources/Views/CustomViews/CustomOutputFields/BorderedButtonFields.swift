@@ -78,7 +78,7 @@ class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProt
 }
 
 @IBDesignable
-class PushButtonViewField: BorderedArrowViewField {
+class PushButtonViewField: BorderedArrowViewField, InputVerificationProtocol {
     @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.titleLabelText = titleLabelText } }
     @IBInspectable var valueLabelText: String = ""{ didSet{ self.dualLabelView.valueLabelText = valueLabelText } }
     @IBInspectable var placeholderText: String = ""{ didSet{ self.dualLabelView.placeholderText = placeholderText } }
@@ -135,7 +135,7 @@ class PushButtonViewField: BorderedArrowViewField {
         self.delegate?.pushButtonWasTapped(self)
     }
     
-    override var isFullfilled: Bool {
+    var isFullfilled: Bool {
         return self.dualLabelView.secondLabel.text != self.placeholderText && !self.valueLabelText.isEmpty
     }    
 }

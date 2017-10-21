@@ -34,7 +34,7 @@ class LabeledSelectionViewField: SelectionArrowViewField {
 }
 
 @IBDesignable
-class TextSelectionViewField: SelectionArrowViewField {
+class TextSelectionViewField: SelectionArrowViewField, InputVerificationProtocol {
     @IBInspectable var placeholder: String = "" { didSet{ self.textField.placeholder = self.placeholder } }
     @IBInspectable var textColor: UIColor = Colors.darkGreen { didSet{ self.textField.textColor = self.textColor } }
     @IBInspectable var placeholderColor: UIColor = Colors.darkGreen.withAlphaComponent(0.5){ didSet{ self.textField.placeholderColor = self.placeholderColor } }
@@ -63,7 +63,7 @@ class TextSelectionViewField: SelectionArrowViewField {
         self.textField.frame = self.textField.frame.insetBy(dx: 0, dy: 5)
     }
     
-    override var isFullfilled: Bool {
+    var isFullfilled: Bool {
         return self.textField.text?.isEmpty ?? false
     }
 }

@@ -36,15 +36,6 @@ class BorderedView: ContentView {
         }
         con?.strokePath()        
     }
-    
-    var isFullfilled: Bool { return true }
-    
-    func getFullfilled() -> Bool {
-        let fullfilled = self.isFullfilled
-        self.lineColor = fullfilled ? Colors.lightGreen : UIColor.red
-        self.setNeedsDisplay()
-        return fullfilled
-    }
 }
 
 //abstract class!
