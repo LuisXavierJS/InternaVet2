@@ -12,7 +12,6 @@ class PatientsListViewController: BaseListViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!
-    weak var sessionController: SessionController!
     
     override func viewDidLoad() {
         super.viewDidLoad()        

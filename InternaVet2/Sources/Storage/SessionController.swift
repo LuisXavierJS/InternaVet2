@@ -6,10 +6,18 @@
 //  Copyright © 2017 Jorge Luis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SessionControllerManagerProtocol: class {
     weak var sessionController: SessionController! {get set}
+}
+
+extension SessionControllerManagerProtocol {
+    func trySetSession(on vc: UIViewController) {
+        if let session = self.sessionController {
+            (vc as? SessionControllerManagerProtocol)?.sessionController = session
+        }
+    }
 }
 
 enum SessionControllerError: Error {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController, SessionControllerManagerProtocol {
+class CreateNewPatientViewController: BaseRegisterViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: BorderedTextFieldView!
     @IBOutlet weak var registerTextField: BorderedTextFieldView!
@@ -23,8 +23,6 @@ class CreateNewPatientViewController: BaseRegisterViewController, SessionControl
     @IBOutlet weak var ownerPushButton: PushButtonViewField!
     @IBOutlet weak var dogHousePickerSelector: PickerViewButtonField!
     @IBOutlet weak var agePickerSelector: PickerViewButtonField!
-    
-    weak var sessionController: SessionController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class BaseListViewController: UIViewController {
-    
+class BaseListViewController: UIViewController, SessionControllerManagerProtocol {
+    weak var sessionController: SessionController!
 }

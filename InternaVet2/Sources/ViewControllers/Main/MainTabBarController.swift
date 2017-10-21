@@ -11,10 +11,15 @@ import UIKit
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     weak var tabBarBackgroundView: UIImageView?
     
+    var session = SessionController.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         self.setupViews()
+        self.viewControllers?.forEach({
+            ($0 as? SessionControllerManagerProtocol)?.sessionController = self.session
+        })
     }
 
     func setupViews(){
