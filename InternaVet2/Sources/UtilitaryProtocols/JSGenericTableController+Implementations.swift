@@ -81,6 +81,7 @@ protocol JSSetupableCellProtocol: class {
 
 class JSTableViewDelegateDatasource: NSObject, UITableViewDataSource, UITableViewDelegate {
     weak var delegate: JSTableViewControllerProtocol!
+    weak var listener: UITableViewDelegate?
     
     //MARK: REQUIRED METHODS
     
@@ -115,6 +116,7 @@ class JSTableViewDelegateDatasource: NSObject, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.listener?.tableView?(tableView, didSelectRowAt: indexPath)
         self.delegate.tableView?(tableView, didSelectRowAt: indexPath)
     }
     
