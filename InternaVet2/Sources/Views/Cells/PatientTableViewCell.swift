@@ -12,7 +12,7 @@ import UIKit
 class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
     static var collapsedHeight: CGFloat { return 54 }
 
-    static var expandedHeight: CGFloat { return 195}
+    var expandedHeight: CGFloat { return 195}
 
     typealias DataType = Patient
     

@@ -11,7 +11,7 @@ import UIKit
 
 protocol JSExpansableCellProtocol: JSSetupableCellProtocol {
     static var collapsedHeight: CGFloat {get}
-    static var expandedHeight: CGFloat {get}
+    var expandedHeight: CGFloat {get}
 }
 
 class TableViewDelegateDatasource: JSTableViewDelegateDatasource {
@@ -21,18 +21,16 @@ class TableViewDelegateDatasource: JSTableViewDelegateDatasource {
 }
 
 class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>:JSGenericTableController<CellType> where CellType: UITableViewCell{
-    struct CellVisibilityState {
-        var isShowing: Bool = false
-        var height: CGFloat {return !self.isShowing ? CellType.collapsedHeight : CellType.expandedHeight}
-    }
-    
     override var items: [[DataType]] {
         get { return super.items }
-        set { super.items = newValue;
-            self.cellsVisibilityState = newValue[0].map({_ in CellVisibilityState()}) }
+        set {
+            super.items = newValue;
+            self.cellsVisibilityState = [:]
+            
+        }
     }
     
-    var cellsVisibilityState: [CellVisibilityState] = []
+    private(set) var cellsVisibilityState: [IndexPath:Bool] = [:]
     
     init(_ tableView: UITableView) {
         super.init(tableView: tableView)
@@ -43,13 +41,20 @@ class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.cellsVisibilityState[indexPath.row].isShowing = !self.cellsVisibilityState[indexPath.row].isShowing
+        self.cellsVisibilityState[indexPath] = !(self.cellsVisibilityState[indexPath] ?? false)
         tableView.beginUpdates()
         tableView.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.cellsVisibilityState[indexPath.row].height
+        return self.getCellHeight(at: indexPath)
+    }
+    
+    private func getCellHeight(at indexPath: IndexPath) -> CGFloat {
+        let cellIsShowing = self.cellsVisibilityState[indexPath] ?? false
+        let expandedHeight = (self.tableView?.cellForRow(at: indexPath) as? CellType)?.expandedHeight ?? CellType.collapsedHeight
+        let collapsedHeight = CellType.collapsedHeight
+        return cellIsShowing ? expandedHeight : collapsedHeight
     }
 }
 
