@@ -52,9 +52,10 @@ class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>
     
     private func getCellHeight(at indexPath: IndexPath) -> CGFloat {
         let cellIsShowing = self.cellsVisibilityState[indexPath] ?? false
-        let expandedHeight = (self.tableView?.cellForRow(at: indexPath) as? CellType)?.expandedHeight ?? CellType.collapsedHeight
-        let collapsedHeight = CellType.collapsedHeight
-        return cellIsShowing ? expandedHeight : collapsedHeight
+        func expandedHeight() -> CGFloat {
+            return (self.tableView?.cellForRow(at: indexPath) as? CellType)?.expandedHeight ?? CellType.collapsedHeight
+        }        
+        return cellIsShowing ? expandedHeight() : CellType.collapsedHeight
     }
 }
 

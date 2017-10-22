@@ -67,6 +67,7 @@
 		8EEE02701F6F22F300A007C5 /* CreateNewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02641F6F208900A007C5 /* CreateNewPatientViewController.swift */; };
 		8EEE02711F6F22F300A007C5 /* CreateNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02601F6F208800A007C5 /* CreateNewTaskViewController.swift */; };
 		8EEE02731F6F23B300A007C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02721F6F23B300A007C5 /* AppDelegate.swift */; };
+		8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		8EEE02681F6F20C100A007C5 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
 		8EEE02691F6F20C100A007C5 /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
 		8EEE02721F6F23B300A007C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = InternaVet2/Sources/Application/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -427,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */,
+				8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
 				8E4174ED1F90271900C07CCF /* TasksListViewController.swift in Sources */,
 				8EEE026C1F6F20C100A007C5 /* CGContext+Helpers.swift in Sources */,
+				8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */,
 				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
 				8EEE026A1F6F20C100A007C5 /* UIColor+Helpers.swift in Sources */,
 				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,
