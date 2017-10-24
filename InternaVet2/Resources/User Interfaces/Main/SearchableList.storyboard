@@ -98,6 +98,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="Q1q-eL-fP0" secondAttribute="trailing" constant="10" id="eyL-w4-yer"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchResultTitleImage" destination="Q1q-eL-fP0" id="UN7-SO-mHt"/>
+                                            <outlet property="searchResultTitleLabel" destination="vZU-Od-zbN" id="Mec-nn-U5s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

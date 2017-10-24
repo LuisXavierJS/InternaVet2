@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchableItem: class {
-    func resultItemTitle() -> String
+    func resultItemTitle() -> String
     func resultItemImage() -> UIImage?
     func shouldResult(for query: String) -> Bool
 }
