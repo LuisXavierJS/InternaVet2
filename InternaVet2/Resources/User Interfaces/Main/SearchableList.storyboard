@@ -117,7 +117,18 @@
                             <constraint firstItem="MRH-Ab-PV9" firstAttribute="top" secondItem="n2s-DI-YdN" secondAttribute="top" id="o3h-vz-n0L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Busca" id="d7u-k4-eK6"/>
+                    <navigationItem key="navigationItem" title="Busca" id="d7u-k4-eK6">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="previous" id="FN3-di-phu">
+                            <connections>
+                                <action selector="backButtonTapped" destination="8Hl-hg-yBf" id="hRT-GS-heT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="tick" id="siJ-Rm-aGP">
+                            <connections>
+                                <action selector="confirmButtonTapped" destination="8Hl-hg-yBf" id="KEd-A2-eNd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="DYm-yv-Acb" id="zKX-2M-dSz"/>
                         <outlet property="searchTextfield" destination="Quk-Ps-6WG" id="ViF-oA-PtA"/>
@@ -131,5 +142,7 @@
     </scenes>
     <resources>
         <image name="magnifier" width="32" height="32"/>
+        <image name="previous" width="32" height="32"/>
+        <image name="tick" width="32" height="32"/>
     </resources>
 </document>

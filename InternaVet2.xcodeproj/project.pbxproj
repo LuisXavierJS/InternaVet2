@@ -17,6 +17,12 @@
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
+		8E24622E1FA020C400DA7A9A /* UITableView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E24622D1FA020C400DA7A9A /* UITableView+Helpers.swift */; };
+		8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E24622F1FA0210600DA7A9A /* UITableViewCell+Helpers.swift */; };
+		8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462311FA0212D00DA7A9A /* UIViewController+Helpers.swift */; };
+		8E2462341FA0214D00DA7A9A /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462331FA0214D00DA7A9A /* NSObject+Helpers.swift */; };
+		8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */; };
+		8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */; };
 		8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */; };
 		8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */; };
 		8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */; };
@@ -42,7 +48,6 @@
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
-		8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */; };
 		8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2FB1F676798007FA9BD /* Localizable.strings */; };
 		8E79E2FE1F676818007FA9BD /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2FD1F676818007FA9BD /* Words.swift */; };
 		8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */; };
@@ -66,7 +71,6 @@
 		8EEE026F1F6F22F300A007C5 /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02621F6F208900A007C5 /* CreateNewOwnerViewController.swift */; };
 		8EEE02701F6F22F300A007C5 /* CreateNewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02641F6F208900A007C5 /* CreateNewPatientViewController.swift */; };
 		8EEE02711F6F22F300A007C5 /* CreateNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02601F6F208800A007C5 /* CreateNewTaskViewController.swift */; };
-		8EEE02731F6F23B300A007C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE02721F6F23B300A007C5 /* AppDelegate.swift */; };
 		8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +101,12 @@
 		8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8E24622D1FA020C400DA7A9A /* UITableView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
+		8E24622F1FA0210600DA7A9A /* UITableViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpers.swift"; sourceTree = "<group>"; };
+		8E2462311FA0212D00DA7A9A /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		8E2462331FA0214D00DA7A9A /* NSObject+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
+		8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Helpers.swift"; sourceTree = "<group>"; };
 		8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButtonFields.swift; sourceTree = "<group>"; };
 		8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualLabelView.swift; sourceTree = "<group>"; };
 		8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringRepresentable+Implementations.swift"; sourceTree = "<group>"; };
@@ -122,7 +132,6 @@
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
-		8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitaryFunctions.swift; sourceTree = "<group>"; };
 		8E79E2FB1F676798007FA9BD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8E79E2FD1F676818007FA9BD /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		8E7BE13C1F6F2FDC00BA49EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +156,6 @@
 		8EEE02671F6F20C100A007C5 /* CGRect+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		8EEE02681F6F20C100A007C5 /* CGContext+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGContext+Helpers.swift"; sourceTree = "<group>"; };
 		8EEE02691F6F20C100A007C5 /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
-		8EEE02721F6F23B300A007C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = InternaVet2/Sources/Application/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		C1C5BB12C58792A2AEF9DBC0 /* Pods-InternaVet2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2/Pods-InternaVet2.release.xcconfig"; sourceTree = "<group>"; };
 		DF5EEA3D31CD443686A0E574 /* Pods-InternaVet2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternaVet2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternaVet2Tests/Pods-InternaVet2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -459,12 +467,16 @@
 		8E79E2F81F67638D007FA9BD /* UtilitaryExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				8EEE02721F6F23B300A007C5 /* AppDelegate.swift */,
 				8EEE02681F6F20C100A007C5 /* CGContext+Helpers.swift */,
 				8EEE02671F6F20C100A007C5 /* CGRect+Helpers.swift */,
 				8EEE02661F6F20C100A007C5 /* UIColor+Helpers.swift */,
+				8E24622D1FA020C400DA7A9A /* UITableView+Helpers.swift */,
+				8E24622F1FA0210600DA7A9A /* UITableViewCell+Helpers.swift */,
+				8E2462311FA0212D00DA7A9A /* UIViewController+Helpers.swift */,
+				8E2462331FA0214D00DA7A9A /* NSObject+Helpers.swift */,
+				8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */,
+				8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */,
 				8EEE02691F6F20C100A007C5 /* UIView+Helpers.swift */,
-				8E79E2F91F676452007FA9BD /* UtilitaryFunctions.swift */,
 			);
 			path = UtilitaryExtensions;
 			sourceTree = "<group>";
@@ -770,7 +782,6 @@
 				8EA87B4D1F63008D00682C19 /* SearchableListViewController.swift in Sources */,
 				8E1633C11F96DC6F00FDB40A /* Keys.swift in Sources */,
 				8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */,
-				8EEE02731F6F23B300A007C5 /* AppDelegate.swift in Sources */,
 				8E496A3E1F6ED49D00BBC65E /* BaseNavigationController.swift in Sources */,
 				8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */,
 				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
@@ -786,13 +797,18 @@
 				8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */,
 				8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */,
 				8E4174EB1F90265500C07CCF /* OwnersListViewController.swift in Sources */,
-				8E79E2FA1F676452007FA9BD /* UtilitaryFunctions.swift in Sources */,
 				8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */,
+				8E24622E1FA020C400DA7A9A /* UITableView+Helpers.swift in Sources */,
 				8E4174ED1F90271900C07CCF /* TasksListViewController.swift in Sources */,
 				8EEE026C1F6F20C100A007C5 /* CGContext+Helpers.swift in Sources */,
 				8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */,
+				8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */,
+				8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */,
+				8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */,
 				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
 				8EEE026A1F6F20C100A007C5 /* UIColor+Helpers.swift in Sources */,
+				8E2462341FA0214D00DA7A9A /* NSObject+Helpers.swift in Sources */,
+				8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */,
 				8EA87B521F63414500682C19 /* StorageContext.swift in Sources */,
 				8E4174E91F90233200C07CCF /* BaseRegisterViewController.swift in Sources */,
 				8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */,
