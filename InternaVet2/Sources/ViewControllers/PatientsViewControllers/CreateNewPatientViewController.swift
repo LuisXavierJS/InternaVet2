@@ -35,7 +35,7 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     
     func setupSelectorsOptions(){
         self.weightSelectionText.selectionOptions = [Words.grams, Words.kilograms]
-        self.hospitalizationSelectionText.selectionOptions = [Words.hour.plural, Words.day.plural]
+        self.hospitalizationSelectionText.selectionOptions = [Words.hour + "s", Words.day + "s"]
         self.genderSelection.selectionOptions = [Words.male, Words.female]
         self.castratedSelection.selectionOptions = [Words.no, Words.yes]
         self.diedSelection.selectionOptions = [Words.no, Words.yes]
@@ -55,7 +55,7 @@ class CreateNewPatientViewController: BaseRegisterViewController {
 
     func getPlural(from: Int, word: String) -> String{
         let begin = String(from) + " "
-        let end = from > 1 ? word.plural : word
+        let end = from > 1 ? word + "s" : word
         return begin + end
     }
     
