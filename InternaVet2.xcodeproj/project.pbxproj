@@ -23,6 +23,7 @@
 		8E2462341FA0214D00DA7A9A /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462331FA0214D00DA7A9A /* NSObject+Helpers.swift */; };
 		8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */; };
 		8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */; };
+		8E24623A1FA38EEA00DA7A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */; };
 		8E30CEEA1F65F170007D34F7 /* BorderedButtonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */; };
 		8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */; };
 		8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */; };
@@ -107,6 +108,7 @@
 		8E2462331FA0214D00DA7A9A /* NSObject+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Helpers.swift"; sourceTree = "<group>"; };
+		8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E30CEE91F65F170007D34F7 /* BorderedButtonFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButtonFields.swift; sourceTree = "<group>"; };
 		8E30CEEC1F65F1E5007D34F7 /* DualLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualLabelView.swift; sourceTree = "<group>"; };
 		8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringRepresentable+Implementations.swift"; sourceTree = "<group>"; };
@@ -134,7 +136,6 @@
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
 		8E79E2FB1F676798007FA9BD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8E79E2FD1F676818007FA9BD /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
-		8E7BE13C1F6F2FDC00BA49EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputFieldProtocol.swift; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
@@ -484,7 +485,7 @@
 		8E7BE13B1F6F2FDC00BA49EB /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				8E7BE13C1F6F2FDC00BA49EB /* AppDelegate.swift */,
+				8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -806,6 +807,7 @@
 				8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */,
 				8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */,
 				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
+				8E24623A1FA38EEA00DA7A9A /* AppDelegate.swift in Sources */,
 				8EEE026A1F6F20C100A007C5 /* UIColor+Helpers.swift in Sources */,
 				8E2462341FA0214D00DA7A9A /* NSObject+Helpers.swift in Sources */,
 				8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */,
