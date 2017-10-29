@@ -30,11 +30,7 @@ class CustomFloatTextField: JVFloatLabeledTextField {
     }
     
     func setupViews(){
-        self.borderStyle = .none
-        self.layer.cornerRadius = 3
-        self.layer.borderWidth = 0.4        
-        self.layer.borderColor = Colors.darkGreen.cgColor
-        self.layer.shadowColor = UIColor.clear.cgColor
+        self.setupBorder()
         
         self.placeholderColor = Colors.darkGreen.withAlphaComponent(0.5)
         self.floatingLabelTextColor = Colors.darkGreen
@@ -45,6 +41,14 @@ class CustomFloatTextField: JVFloatLabeledTextField {
         self.backgroundColor = Colors.mainLight                
         
         self.clipsToBounds = true
+    }
+    
+    func setupBorder(color: UIColor = Colors.darkGreen) {
+        self.borderStyle = .none
+        self.layer.cornerRadius = 3
+        self.layer.borderWidth = 0.4
+        self.layer.borderColor = color.cgColor
+        self.layer.shadowColor = UIColor.clear.cgColor
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {

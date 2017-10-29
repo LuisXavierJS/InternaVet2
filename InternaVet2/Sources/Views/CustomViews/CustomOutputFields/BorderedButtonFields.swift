@@ -79,7 +79,6 @@ class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProt
 
 @IBDesignable
 class PushButtonViewField: BorderedArrowViewField, CustomInputFieldProtocol {
-    
     @IBInspectable var titleLabelText: String = ""{ didSet{ self.dualLabelView.titleLabelText = titleLabelText } }
     @IBInspectable var valueLabelText: String = ""{ didSet{ self.dualLabelView.valueLabelText = valueLabelText } }
     @IBInspectable var placeholderText: String = ""{ didSet{ self.dualLabelView.placeholderText = placeholderText } }
@@ -148,4 +147,13 @@ class PushButtonViewField: BorderedArrowViewField, CustomInputFieldProtocol {
         self.dualLabelView.secondLabel.text = newValue
     }
     
+    func setInvalidState() {
+        self.dualLabelView.firsLabel.textColor = UIColor.red
+        self.dualLabelView.secondLabel.textColor = UIColor.red
+    }
+    
+    func setValidState() {
+        self.dualLabelView.firsLabel.textColor = self.labelColor
+        self.dualLabelView.secondLabel.textColor = self.placeholderColor
+    }
 }

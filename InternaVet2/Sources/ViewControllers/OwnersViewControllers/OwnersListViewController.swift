@@ -11,3 +11,4 @@ import UIKit
 class OwnersListViewController: BaseListViewController {
     
 }
+

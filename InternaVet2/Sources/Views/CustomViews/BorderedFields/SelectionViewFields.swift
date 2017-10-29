@@ -74,6 +74,15 @@ class TextSelectionViewField: SelectionArrowViewField, CustomInputFieldProtocol 
     func setInputValue(newValue: String) {
         self.textField.text = newValue
     }
+    
+    func setInvalidState() {
+        self.textField.setupBorder(color: UIColor.red)
+    }
+    
+    func setValidState() {
+        self.textField.setupBorder()
+    }
+    
 }
 
 //abstract class!

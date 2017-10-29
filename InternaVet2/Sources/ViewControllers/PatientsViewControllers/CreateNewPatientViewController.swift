@@ -67,15 +67,18 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     }
 
     func allFieldsFullfilled() -> Bool{
-        return self.weightSelectionText.isFullfilled &&
-            self.hospitalizationSelectionText.isFullfilled &&                       
-            self.racePushButton.isFullfilled &&
-            self.ownerPushButton.isFullfilled &&
-            self.dogHousePickerSelector.isFullfilled &&
-            self.agePickerSelector.isFullfilled &&
-            self.nameTextField.isFullfilled &&
-            self.chipTextField.isFullfilled &&
-            self.registerTextField.isFullfilled
+        return [self.weightSelectionText,
+            self.hospitalizationSelectionText,
+            self.racePushButton,
+            self.ownerPushButton,
+            self.dogHousePickerSelector,
+            self.agePickerSelector,
+            self.nameTextField,
+            self.chipTextField,
+            self.registerTextField].reduce(true, {
+                let fieldIsFullfilled = ($0.1 as? CustomInputFieldProtocol)?.updateFullfilledState() ?? true
+                return $0.0 && fieldIsFullfilled
+            })
     }
 
     func performSave(){
