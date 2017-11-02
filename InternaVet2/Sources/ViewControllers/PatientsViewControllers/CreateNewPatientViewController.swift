@@ -10,9 +10,9 @@ import UIKit
 
 class CreateNewPatientViewController: BaseRegisterViewController {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameTextField: BorderedTextFieldView!
-    @IBOutlet weak var registerTextField: BorderedTextFieldView!
-    @IBOutlet weak var chipTextField: BorderedTextFieldView!
+    @IBOutlet weak var nameTextField: CustomFloatTextField!
+    @IBOutlet weak var registerTextField: CustomFloatTextField!
+    @IBOutlet weak var chipTextField: CustomFloatTextField!
     @IBOutlet weak var weightSelectionText: TextSelectionViewField!
     @IBOutlet weak var hospitalizationSelectionText: TextSelectionViewField!
     @IBOutlet weak var genderSelection: LabeledSelectionViewField!
@@ -84,11 +84,11 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     func performSave(){
         let newPatient = self.editingPatient ?? Patient()
         newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
-        newPatient.name = self.nameTextField.textField.text
+        newPatient.name = self.nameTextField.text
         newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
         newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
-        newPatient.chip = self.chipTextField.textField.text
-        newPatient.record = self.registerTextField.textField.text
+        newPatient.chip = self.chipTextField.text
+        newPatient.record = self.registerTextField.text
         newPatient.race = self.racePushButton.valueLabelText
         newPatient.dogHouseNumber = self.dogHousePickerSelector.valueLabelText
         if self.editingPatient == nil {

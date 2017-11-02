@@ -19,7 +19,7 @@ protocol CustomInputFieldProtocol: class {
     func updateFullfilledState() -> Bool
 }
 
-extension CustomInputFieldProtocol where Self:BorderedView{    
+extension CustomInputFieldProtocol {    
     func updateFullfilledState() -> Bool {
         let isFullfilled = self.isFullfilled
         if isFullfilled {

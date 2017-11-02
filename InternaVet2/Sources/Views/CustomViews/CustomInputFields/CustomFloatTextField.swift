@@ -10,7 +10,7 @@ import UIKit
 import JVFloatLabeledTextField
 import InputMask
 
-class CustomFloatTextField: JVFloatLabeledTextField {
+class CustomFloatTextField: JVFloatLabeledTextField, CustomInputFieldProtocol {
     @IBInspectable var maskText: String? = nil {
         didSet{
             self.updateMask()
@@ -73,4 +73,25 @@ class CustomFloatTextField: JVFloatLabeledTextField {
             self.delegate = self.maskDelegate
         }
     }
+    
+    var isFullfilled: Bool {
+        return !(self.text?.isEmpty ?? false)
+    }
+    
+    func getInputValue() -> String {
+        return self.text!
+    }
+    
+    func setInputValue(newValue: String) {
+        self.text = newValue
+    }
+    
+    func setInvalidState() {
+        self.setupBorder(color: UIColor.red)
+    }
+    
+    func setValidState() {
+        self.setupBorder()
+    }
+    
 }
