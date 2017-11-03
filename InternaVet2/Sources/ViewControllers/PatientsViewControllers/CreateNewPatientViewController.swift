@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController {
+class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: CustomFloatTextField!
     @IBOutlet weak var registerTextField: CustomFloatTextField!
@@ -33,7 +33,11 @@ class CreateNewPatientViewController: BaseRegisterViewController {
         self.setupPickerSelectors()
     }
     
-    func setupSelectorsOptions(){
+    fileprivate func setupButtons() {
+        self.racePushButton.delegate = self
+    }
+    
+    fileprivate func setupSelectorsOptions(){
         self.weightSelectionText.selectionOptions = [Words.grams, Words.kilograms]
         self.hospitalizationSelectionText.selectionOptions = [Words.hour + "s", Words.day + "s"]
         self.genderSelection.selectionOptions = [Words.male, Words.female]
@@ -42,31 +46,31 @@ class CreateNewPatientViewController: BaseRegisterViewController {
         self.specieSelection.selectionOptions = [Words.dog, Words.cat]
     }
     
-    func setupPickerSelectors(){
+    fileprivate func setupPickerSelectors(){
         let freeDogHousesList: [String] = self.sessionController.currentUser?.dogHouses.filter({$0.patientId == nil}).map({String($0.dogHouserNumber)}) ?? []
         let totalDogHousesToList: [String] = [["--"], freeDogHousesList].flatMap({$0})
         self.dogHousePickerSelector.setItems(totalDogHousesToList)
         
-        let yearsToList: [String] = Array(1...11).map({ self.getPlural(from: $0, word: Words.year)})
-        let monthsToList: [String] = Array(1...11).map({self.getPlural(from: $0, word: Words.month)})
+        func getPlural(from: Int, word: String) -> String{
+            let begin = String(from) + " "
+            let end = from > 1 ? word + "s" : word
+            return begin + end
+        }
+        
+        let yearsToList: [String] = Array(1...11).map({ getPlural(from: $0, word: Words.year)})
+        let monthsToList: [String] = Array(1...11).map({ getPlural(from: $0, word: Words.month)})
         let totalAgesToList: [String] = [monthsToList, yearsToList].flatMap({$0})
         self.agePickerSelector.setItems(totalAgesToList)
     }
-
-    func getPlural(from: Int, word: String) -> String{
-        let begin = String(from) + " "
-        let end = from > 1 ? word + "s" : word
-        return begin + end
-    }
     
-    func setupTextfields() {
+    fileprivate func setupTextfields() {
         self.weightSelectionText.textField.keyboardType = .numbersAndPunctuation
         self.weightSelectionText.textField.allowsEditingTextAttributes = false
         self.hospitalizationSelectionText.textField.keyboardType = .numbersAndPunctuation
         self.hospitalizationSelectionText.textField.allowsEditingTextAttributes = false
     }
 
-    func allFieldsFullfilled() -> Bool{
+    fileprivate func allFieldsFullfilled() -> Bool{
         return [self.weightSelectionText,
             self.hospitalizationSelectionText,
             self.racePushButton,
@@ -81,7 +85,7 @@ class CreateNewPatientViewController: BaseRegisterViewController {
             })
     }
 
-    func performSave(){
+    fileprivate func performSave(){
         let newPatient = self.editingPatient ?? Patient()
         newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
         newPatient.name = self.nameTextField.text
@@ -106,5 +110,17 @@ class CreateNewPatientViewController: BaseRegisterViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func pushButtonWasTapped(_ button: PushButtonViewField) {
+        if let vc = SearchableListViewController.instantiate() {
+           vc.setList(items: [],
+                      didChooseItem: { item in
+                        
+                      },
+                      didCreateItem: { itemName in
+                        
+                      })
+        }
     }
 }

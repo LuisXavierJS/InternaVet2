@@ -11,6 +11,11 @@ import UIKit
 typealias SearchableListChoosedCallback = ((_ item: SearchableItem) -> Void)
 typealias SearchableListCreatedCallback = ((_ itemName: String) -> Void)
 
+fileprivate enum SearchMode {
+    case autocompletion(type: AutoCompletionType)
+    case itemList
+}
+
 class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate {
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var listTableView: UITableView!
@@ -24,6 +29,8 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
    
     private(set) var confirmChoosedItemCallback: SearchableListChoosedCallback?
     private(set) var confirmCreationItemCallback: SearchableListCreatedCallback?
+    
+    private var searchMode: SearchMode = .itemList
     
     //MARK: Override methods
     
@@ -47,12 +54,20 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     //MARK: Public methods
     
     func setList(items: [SearchableItem], didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
+        self.searchMode = .itemList
+        self.searchTextfield.text = ""
         self.originalListItems = items
         self.listDatasource.items = [items]
-        self.confirmChoosedItemCallback = didChooseItem
-        self.confirmCreationItemCallback = didCreateItem
+        self.setCallbacks()
     }
     
+    func setAutocompletion(_ type: AutoCompletionType, didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
+        self.searchMode = .autocompletion(type: type)
+        self.searchTextfield.text = ""
+        self.originalListItems = []
+        self.listDatasource.items = [[]]
+        self.setCallbacks()
+    }
     
     //MARK: Delegate Methods
     
@@ -60,7 +75,7 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         let newText = NSString(string:textField.text!).replacingCharacters(in: range, with: string)
         if !newText.isEmpty {
             self.selectedIndex = nil
-            self.listDatasource.items = [self.originalListItems.filter({$0.shouldResult(for: newText)})]
+            self.listDatasource.items = [self.calculateNewListDatasourceItems(for:newText)]
             self.listTableView.reloadData()
         }
         return true
@@ -93,6 +108,18 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
             self.confirmChoosedItemCallback?(self.listDatasource.items[selected.section][selected.row])
         }else{
             self.confirmCreationItemCallback?(self.searchTextfield.text!)
+        }
+    }
+    
+    fileprivate func setCallbacks(didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil){
+        self.confirmChoosedItemCallback = didChooseItem
+        self.confirmCreationItemCallback = didCreateItem
+    }
+    
+    fileprivate func calculateNewListDatasourceItems(for newText: String) -> [SearchableItem] {
+        switch self.searchMode {
+        case .autocompletion(let type): return AutoCompletionController(type).stringsToComplete(string: newText)?.map({SearchableItemM($0)}) ?? []
+        case .itemList: return self.originalListItems.filter({$0.shouldResult(for: newText)})
         }
     }
 }

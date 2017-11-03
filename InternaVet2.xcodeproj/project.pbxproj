@@ -17,6 +17,8 @@
 		8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BABD61F40D2B700808B16 /* InternaVet2.xcdatamodeld */; };
 		8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */; };
 		8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BABE51F40D7E600808B16 /* Main.storyboard */; };
+		8E232C591FABFCED00E223D5 /* AutoCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E232C581FABFCED00E223D5 /* AutoCompletionController.swift */; };
+		8E232C5B1FAC94EC00E223D5 /* SearchableItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E232C5A1FAC94EC00E223D5 /* SearchableItemProtocol.swift */; };
 		8E24622E1FA020C400DA7A9A /* UITableView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E24622D1FA020C400DA7A9A /* UITableView+Helpers.swift */; };
 		8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E24622F1FA0210600DA7A9A /* UITableViewCell+Helpers.swift */; };
 		8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462311FA0212D00DA7A9A /* UIViewController+Helpers.swift */; };
@@ -102,6 +104,8 @@
 		8E1BABDC1F40D31A00808B16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E1BABDE1F40D64A00808B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1BABE51F40D7E600808B16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8E232C581FABFCED00E223D5 /* AutoCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompletionController.swift; sourceTree = "<group>"; };
+		8E232C5A1FAC94EC00E223D5 /* SearchableItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableItemProtocol.swift; sourceTree = "<group>"; };
 		8E24622D1FA020C400DA7A9A /* UITableView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
 		8E24622F1FA0210600DA7A9A /* UITableViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462311FA0212D00DA7A9A /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 		8E30CEEE1F65FBE5007D34F7 /* UtilitaryProtocols */ = {
 			isa = PBXGroup;
 			children = (
+				8E232C5A1FAC94EC00E223D5 /* SearchableItemProtocol.swift */,
 				8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */,
 				8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */,
 				8EE38B131F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift */,
@@ -514,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA87B511F63414500682C19 /* StorageContext.swift */,
+				8E232C581FABFCED00E223D5 /* AutoCompletionController.swift */,
 				8E135B891F648C1E00F9162B /* SessionController.swift */,
 			);
 			path = Storage;
@@ -791,6 +797,7 @@
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
 				8E4174EF1F90282900C07CCF /* CreateNewReportViewController.swift in Sources */,
 				8E4174E51F90210700C07CCF /* ReportsListViewController.swift in Sources */,
+				8E232C5B1FAC94EC00E223D5 /* SearchableItemProtocol.swift in Sources */,
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EEE026B1F6F20C100A007C5 /* CGRect+Helpers.swift in Sources */,
 				8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */,
@@ -805,6 +812,7 @@
 				8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */,
 				8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */,
 				8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */,
+				8E232C591FABFCED00E223D5 /* AutoCompletionController.swift in Sources */,
 				8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */,
 				8E4174E71F9021EF00C07CCF /* BaseListViewController.swift in Sources */,
 				8E24623A1FA38EEA00DA7A9A /* AppDelegate.swift in Sources */,

@@ -8,18 +8,6 @@
 
 import UIKit
 
-protocol SearchableItem: class {
-    func resultItemTitle() -> String
-    func resultItemImage() -> UIImage?
-    func shouldResult(for query: String) -> Bool
-}
-
-extension SearchableItem {
-    func resultItemImage() -> UIImage? {
-        return nil
-    }
-}
-
 class SearchResultCell: UITableViewCell, JSSetupableCellProtocol {
     @IBOutlet weak var searchResultTitleLabel: UILabel!
     @IBOutlet weak var searchResultTitleImage: UIImageView!

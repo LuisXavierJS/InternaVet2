@@ -10,10 +10,18 @@ import Foundation
 import FileKit
 
 @objc(Owner)
-class Owner: StorageItem {
+class Owner: StorageItem, SearchableItem {
     dynamic var name: String?
     dynamic var email: String?
     dynamic var celular: String?
     dynamic var telefone: String?
     dynamic var endereco: String?
+    
+    func resultItemTitle() -> String {
+        return self.name ?? ""
+    }
+    
+    func shouldResult(for query: String) -> Bool {
+        return self.name?.localizedCaseInsensitiveContains(query) ?? false
+    }
 }
