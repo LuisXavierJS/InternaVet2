@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1zh-ch-1xD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F5H-oj-Mxd">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Lwm-Ju-t6C">
+            <objects>
+                <navigationController id="F5H-oj-Mxd" customClass="BaseNavigationController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="McM-dx-f8a">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1zh-ch-1xD" kind="relationship" relationship="rootViewController" id="iQL-2C-I8A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVO-gN-Ve8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-953" y="194"/>
+        </scene>
         <!--Nova Tarefa-->
         <scene sceneID="kye-Ls-vmd">
             <objects>
@@ -18,11 +35,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ben-EO-98c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SJL-8h-MFd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="980"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-WW-ncf">
-                                <rect key="frame" x="0.0" y="20" width="320" height="911"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-WW-ncf" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM9-FS-tEk" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="915"/>
@@ -84,7 +101,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="h0F-hz-Iwn"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Intervalo das Aplicações:"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Intervalo:"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Selecionar Intervalo"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="selRightMargin">
                                                         <real key="value" value="25"/>
@@ -243,13 +260,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ben-EO-98c" firstAttribute="top" secondItem="x5h-WW-ncf" secondAttribute="bottom" id="DZ3-Er-bxI"/>
-                            <constraint firstItem="x5h-WW-ncf" firstAttribute="top" secondItem="u8v-ik-xfG" secondAttribute="bottom" id="oI7-bY-lAP"/>
+                            <constraint firstItem="x5h-WW-ncf" firstAttribute="top" secondItem="u8v-ik-xfG" secondAttribute="bottom" constant="-64" id="oI7-bY-lAP"/>
                             <constraint firstAttribute="trailing" secondItem="x5h-WW-ncf" secondAttribute="trailing" id="qhP-tR-6oT"/>
                             <constraint firstItem="x5h-WW-ncf" firstAttribute="leading" secondItem="SJL-8h-MFd" secondAttribute="leading" id="t42-Rx-c9p"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Nova Tarefa" image="clock" id="SSN-uZ-q5u"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Nova Tarefa" id="RiN-oE-rco">
+                        <barButtonItem key="leftBarButtonItem" image="previous" id="lQs-ta-Apj">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="1zh-ch-1xD" id="71q-ci-12t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="task-complete" id="9x1-dN-19V">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="1zh-ch-1xD" id="9Cm-gR-z5C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="980"/>
                 </viewController>
@@ -259,6 +287,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock" width="32" height="32"/>
+        <image name="previous" width="32" height="32"/>
+        <image name="task-complete" width="32" height="32"/>
     </resources>
 </document>

@@ -25,37 +25,30 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRH-Ab-PV9" userLabel="TextContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-Ps-6WG">
-                                        <rect key="frame" x="5" y="10" width="328" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Realizar busca:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-Ps-6WG" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="7" width="345" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="gB9-AX-j4N"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-FO-UzS">
-                                        <rect key="frame" x="338" y="9" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="dbn-gv-EMH"/>
-                                            <constraint firstAttribute="width" constant="32" id="gIc-1M-Pj1"/>
-                                        </constraints>
-                                        <state key="normal" image="magnifier"/>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.58431375029999999" green="0.82352942230000004" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.72156864399999998" green="0.88627451660000001" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Aeg-FO-UzS" firstAttribute="leading" secondItem="Quk-Ps-6WG" secondAttribute="trailing" constant="5" id="0H3-kC-V6m"/>
-                                    <constraint firstItem="Quk-Ps-6WG" firstAttribute="leading" secondItem="MRH-Ab-PV9" secondAttribute="leading" constant="5" id="5u5-IB-09l"/>
+                                    <constraint firstItem="Quk-Ps-6WG" firstAttribute="leading" secondItem="MRH-Ab-PV9" secondAttribute="leading" constant="15" id="5u5-IB-09l"/>
+                                    <constraint firstAttribute="trailing" secondItem="Quk-Ps-6WG" secondAttribute="trailing" constant="15" id="6qp-ua-Wgc"/>
                                     <constraint firstItem="Quk-Ps-6WG" firstAttribute="centerY" secondItem="MRH-Ab-PV9" secondAttribute="centerY" id="LWj-XX-Ot4"/>
-                                    <constraint firstAttribute="trailing" secondItem="Aeg-FO-UzS" secondAttribute="trailing" constant="5" id="hol-n0-ZD2"/>
-                                    <constraint firstItem="Aeg-FO-UzS" firstAttribute="centerY" secondItem="MRH-Ab-PV9" secondAttribute="centerY" id="vNY-oQ-hDn"/>
                                     <constraint firstAttribute="height" constant="50" id="zSK-tw-g0E"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DYm-yv-Acb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="DYm-yv-Acb" customClass="TPKeyboardAvoidingTableView">
                                 <rect key="frame" x="0.0" y="50" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DxL-1N-2iP" customClass="SearchResultCell" customModule="InternaVet2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultCell" id="DxL-1N-2iP" customClass="SearchResultCell" customModule="InternaVet2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxL-1N-2iP" id="Ulb-tN-Nxn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -98,7 +91,7 @@
                             <constraint firstItem="DYm-yv-Acb" firstAttribute="leading" secondItem="n2s-DI-YdN" secondAttribute="leading" id="iPc-2B-Ldm"/>
                             <constraint firstAttribute="trailing" secondItem="MRH-Ab-PV9" secondAttribute="trailing" id="mV9-Ie-C6p"/>
                             <constraint firstItem="MRH-Ab-PV9" firstAttribute="leading" secondItem="n2s-DI-YdN" secondAttribute="leading" id="nqa-jT-mKn"/>
-                            <constraint firstItem="MRH-Ab-PV9" firstAttribute="top" secondItem="n2s-DI-YdN" secondAttribute="top" id="o3h-vz-n0L"/>
+                            <constraint firstItem="MRH-Ab-PV9" firstAttribute="top" secondItem="4kE-Jm-uoe" secondAttribute="bottom" id="o3h-vz-n0L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Busca" id="d7u-k4-eK6">
@@ -126,7 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifier" width="32" height="32"/>
         <image name="previous" width="32" height="32"/>
         <image name="tick" width="32" height="32"/>
     </resources>

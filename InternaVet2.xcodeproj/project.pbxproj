@@ -53,6 +53,104 @@
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
 		8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2FB1F676798007FA9BD /* Localizable.strings */; };
 		8E79E2FE1F676818007FA9BD /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2FD1F676818007FA9BD /* Words.swift */; };
+		8E95D3851FACA4C10063E07A /* ACanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3231FACA4C10063E07A /* ACanis familiaris.txt */; };
+		8E95D3861FACA4C10063E07A /* AExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3241FACA4C10063E07A /* AExame.txt */; };
+		8E95D3871FACA4C10063E07A /* AFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3251FACA4C10063E07A /* AFelis catus.txt */; };
+		8E95D3881FACA4C10063E07A /* AMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3261FACA4C10063E07A /* AMedicamento.txt */; };
+		8E95D3891FACA4C10063E07A /* AProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3271FACA4C10063E07A /* AProcedimento.txt */; };
+		8E95D38A1FACA4C10063E07A /* BCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3281FACA4C10063E07A /* BCanis familiaris.txt */; };
+		8E95D38B1FACA4C10063E07A /* BExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3291FACA4C10063E07A /* BExame.txt */; };
+		8E95D38C1FACA4C10063E07A /* BFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32A1FACA4C10063E07A /* BFelis catus.txt */; };
+		8E95D38D1FACA4C10063E07A /* BMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32B1FACA4C10063E07A /* BMedicamento.txt */; };
+		8E95D38E1FACA4C10063E07A /* BProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32C1FACA4C10063E07A /* BProcedimento.txt */; };
+		8E95D38F1FACA4C10063E07A /* CExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32D1FACA4C10063E07A /* CExame.txt */; };
+		8E95D3901FACA4C10063E07A /* CFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32E1FACA4C10063E07A /* CFelis catus.txt */; };
+		8E95D3911FACA4C10063E07A /* CMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D32F1FACA4C10063E07A /* CMedicamento.txt */; };
+		8E95D3921FACA4C10063E07A /* CProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3301FACA4C10063E07A /* CProcedimento.txt */; };
+		8E95D3931FACA4C10063E07A /* DCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3311FACA4C10063E07A /* DCanis familiaris.txt */; };
+		8E95D3941FACA4C10063E07A /* DExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3321FACA4C10063E07A /* DExame.txt */; };
+		8E95D3951FACA4C10063E07A /* DFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3331FACA4C10063E07A /* DFelis catus.txt */; };
+		8E95D3961FACA4C10063E07A /* DMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3341FACA4C10063E07A /* DMedicamento.txt */; };
+		8E95D3971FACA4C10063E07A /* DProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3351FACA4C10063E07A /* DProcedimento.txt */; };
+		8E95D3981FACA4C10063E07A /* EExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3361FACA4C10063E07A /* EExame.txt */; };
+		8E95D3991FACA4C10063E07A /* EMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3371FACA4C10063E07A /* EMedicamento.txt */; };
+		8E95D39A1FACA4C10063E07A /* EProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3381FACA4C10063E07A /* EProcedimento.txt */; };
+		8E95D39B1FACA4C10063E07A /* FCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3391FACA4C10063E07A /* FCanis familiaris.txt */; };
+		8E95D39C1FACA4C10063E07A /* FExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33A1FACA4C10063E07A /* FExame.txt */; };
+		8E95D39D1FACA4C10063E07A /* FMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33B1FACA4C10063E07A /* FMedicamento.txt */; };
+		8E95D39E1FACA4C10063E07A /* FProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33C1FACA4C10063E07A /* FProcedimento.txt */; };
+		8E95D39F1FACA4C10063E07A /* GCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33D1FACA4C10063E07A /* GCanis familiaris.txt */; };
+		8E95D3A01FACA4C10063E07A /* GExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33E1FACA4C10063E07A /* GExame.txt */; };
+		8E95D3A11FACA4C10063E07A /* GMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D33F1FACA4C10063E07A /* GMedicamento.txt */; };
+		8E95D3A21FACA4C10063E07A /* HCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3401FACA4C10063E07A /* HCanis familiaris.txt */; };
+		8E95D3A31FACA4C10063E07A /* HExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3411FACA4C10063E07A /* HExame.txt */; };
+		8E95D3A41FACA4C10063E07A /* HFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3421FACA4C10063E07A /* HFelis catus.txt */; };
+		8E95D3A51FACA4C10063E07A /* HMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3431FACA4C10063E07A /* HMedicamento.txt */; };
+		8E95D3A61FACA4C10063E07A /* IExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3441FACA4C10063E07A /* IExame.txt */; };
+		8E95D3A71FACA4C10063E07A /* IMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3451FACA4C10063E07A /* IMedicamento.txt */; };
+		8E95D3A81FACA4C10063E07A /* JCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3461FACA4C10063E07A /* JCanis familiaris.txt */; };
+		8E95D3A91FACA4C10063E07A /* JExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3471FACA4C10063E07A /* JExame.txt */; };
+		8E95D3AA1FACA4C10063E07A /* JFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3481FACA4C10063E07A /* JFelis catus.txt */; };
+		8E95D3AB1FACA4C10063E07A /* KCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3491FACA4C10063E07A /* KCanis familiaris.txt */; };
+		8E95D3AC1FACA4C10063E07A /* KExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34A1FACA4C10063E07A /* KExame.txt */; };
+		8E95D3AD1FACA4C10063E07A /* KFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34B1FACA4C10063E07A /* KFelis catus.txt */; };
+		8E95D3AE1FACA4C10063E07A /* KMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34C1FACA4C10063E07A /* KMedicamento.txt */; };
+		8E95D3AF1FACA4C10063E07A /* LCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34D1FACA4C10063E07A /* LCanis familiaris.txt */; };
+		8E95D3B01FACA4C10063E07A /* LExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34E1FACA4C10063E07A /* LExame.txt */; };
+		8E95D3B11FACA4C10063E07A /* LFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D34F1FACA4C10063E07A /* LFelis catus.txt */; };
+		8E95D3B21FACA4C10063E07A /* LMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3501FACA4C10063E07A /* LMedicamento.txt */; };
+		8E95D3B31FACA4C10063E07A /* logM.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3511FACA4C10063E07A /* logM.txt */; };
+		8E95D3B41FACA4C10063E07A /* LProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3521FACA4C10063E07A /* LProcedimento.txt */; };
+		8E95D3B51FACA4C10063E07A /* MCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3531FACA4C10063E07A /* MCanis familiaris.txt */; };
+		8E95D3B61FACA4C10063E07A /* MExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3541FACA4C10063E07A /* MExame.txt */; };
+		8E95D3B71FACA4C10063E07A /* MFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3551FACA4C10063E07A /* MFelis catus.txt */; };
+		8E95D3B81FACA4C10063E07A /* MMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3561FACA4C10063E07A /* MMedicamento.txt */; };
+		8E95D3B91FACA4C10063E07A /* MProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3571FACA4C10063E07A /* MProcedimento.txt */; };
+		8E95D3BA1FACA4C10063E07A /* NCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3581FACA4C10063E07A /* NCanis familiaris.txt */; };
+		8E95D3BB1FACA4C10063E07A /* NExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3591FACA4C10063E07A /* NExame.txt */; };
+		8E95D3BC1FACA4C10063E07A /* NFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35A1FACA4C10063E07A /* NFelis catus.txt */; };
+		8E95D3BD1FACA4C10063E07A /* NMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35B1FACA4C10063E07A /* NMedicamento.txt */; };
+		8E95D3BE1FACA4C10063E07A /* OCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35C1FACA4C10063E07A /* OCanis familiaris.txt */; };
+		8E95D3BF1FACA4C10063E07A /* OExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35D1FACA4C10063E07A /* OExame.txt */; };
+		8E95D3C01FACA4C10063E07A /* OFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35E1FACA4C10063E07A /* OFelis catus.txt */; };
+		8E95D3C11FACA4C10063E07A /* OMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D35F1FACA4C10063E07A /* OMedicamento.txt */; };
+		8E95D3C21FACA4C10063E07A /* OProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3601FACA4C10063E07A /* OProcedimento.txt */; };
+		8E95D3C31FACA4C10063E07A /* PCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3611FACA4C10063E07A /* PCanis familiaris.txt */; };
+		8E95D3C41FACA4C10063E07A /* PExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3621FACA4C10063E07A /* PExame.txt */; };
+		8E95D3C51FACA4C10063E07A /* PFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3631FACA4C10063E07A /* PFelis catus.txt */; };
+		8E95D3C61FACA4C10063E07A /* PMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3641FACA4C10063E07A /* PMedicamento.txt */; };
+		8E95D3C71FACA4C10063E07A /* PProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3651FACA4C10063E07A /* PProcedimento.txt */; };
+		8E95D3C81FACA4C10063E07A /* QExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3661FACA4C10063E07A /* QExame.txt */; };
+		8E95D3C91FACA4C10063E07A /* QMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3671FACA4C10063E07A /* QMedicamento.txt */; };
+		8E95D3CA1FACA4C10063E07A /* RCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3681FACA4C10063E07A /* RCanis familiaris.txt */; };
+		8E95D3CB1FACA4C10063E07A /* RExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3691FACA4C10063E07A /* RExame.txt */; };
+		8E95D3CC1FACA4C10063E07A /* RFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36A1FACA4C10063E07A /* RFelis catus.txt */; };
+		8E95D3CD1FACA4C10063E07A /* RMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36B1FACA4C10063E07A /* RMedicamento.txt */; };
+		8E95D3CE1FACA4C10063E07A /* RProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36C1FACA4C10063E07A /* RProcedimento.txt */; };
+		8E95D3CF1FACA4C10063E07A /* SCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36D1FACA4C10063E07A /* SCanis familiaris.txt */; };
+		8E95D3D01FACA4C10063E07A /* SExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36E1FACA4C10063E07A /* SExame.txt */; };
+		8E95D3D11FACA4C10063E07A /* SFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D36F1FACA4C10063E07A /* SFelis catus.txt */; };
+		8E95D3D21FACA4C10063E07A /* SMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3701FACA4C10063E07A /* SMedicamento.txt */; };
+		8E95D3D31FACA4C10063E07A /* TCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3711FACA4C10063E07A /* TCanis familiaris.txt */; };
+		8E95D3D41FACA4C10063E07A /* TExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3721FACA4C10063E07A /* TExame.txt */; };
+		8E95D3D51FACA4C10063E07A /* TFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3731FACA4C10063E07A /* TFelis catus.txt */; };
+		8E95D3D61FACA4C10063E07A /* TMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3741FACA4C10063E07A /* TMedicamento.txt */; };
+		8E95D3D71FACA4C10063E07A /* TProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3751FACA4C10063E07A /* TProcedimento.txt */; };
+		8E95D3D81FACA4C10063E07A /* UExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3761FACA4C10063E07A /* UExame.txt */; };
+		8E95D3D91FACA4C10063E07A /* UFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3771FACA4C10063E07A /* UFelis catus.txt */; };
+		8E95D3DA1FACA4C10063E07A /* UMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3781FACA4C10063E07A /* UMedicamento.txt */; };
+		8E95D3DB1FACA4C10063E07A /* UProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3791FACA4C10063E07A /* UProcedimento.txt */; };
+		8E95D3DC1FACA4C10063E07A /* VCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37A1FACA4C10063E07A /* VCanis familiaris.txt */; };
+		8E95D3DD1FACA4C10063E07A /* VExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37B1FACA4C10063E07A /* VExame.txt */; };
+		8E95D3DE1FACA4C10063E07A /* VFelis catus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37C1FACA4C10063E07A /* VFelis catus.txt */; };
+		8E95D3DF1FACA4C10063E07A /* VMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37D1FACA4C10063E07A /* VMedicamento.txt */; };
+		8E95D3E01FACA4C10063E07A /* VProcedimento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37E1FACA4C10063E07A /* VProcedimento.txt */; };
+		8E95D3E11FACA4C10063E07A /* WCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D37F1FACA4C10063E07A /* WCanis familiaris.txt */; };
+		8E95D3E21FACA4C10063E07A /* XExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3801FACA4C10063E07A /* XExame.txt */; };
+		8E95D3E31FACA4C20063E07A /* XMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3811FACA4C10063E07A /* XMedicamento.txt */; };
+		8E95D3E41FACA4C20063E07A /* YCanis familiaris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3821FACA4C10063E07A /* YCanis familiaris.txt */; };
+		8E95D3E51FACA4C20063E07A /* ZExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3831FACA4C10063E07A /* ZExame.txt */; };
+		8E95D3E61FACA4C20063E07A /* ZMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3841FACA4C10063E07A /* ZMedicamento.txt */; };
 		8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */; };
 		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
 		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
@@ -140,6 +238,104 @@
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
 		8E79E2FB1F676798007FA9BD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8E79E2FD1F676818007FA9BD /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		8E95D3231FACA4C10063E07A /* ACanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ACanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3241FACA4C10063E07A /* AExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AExame.txt; sourceTree = "<group>"; };
+		8E95D3251FACA4C10063E07A /* AFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3261FACA4C10063E07A /* AMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3271FACA4C10063E07A /* AProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3281FACA4C10063E07A /* BCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3291FACA4C10063E07A /* BExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BExame.txt; sourceTree = "<group>"; };
+		8E95D32A1FACA4C10063E07A /* BFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D32B1FACA4C10063E07A /* BMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BMedicamento.txt; sourceTree = "<group>"; };
+		8E95D32C1FACA4C10063E07A /* BProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BProcedimento.txt; sourceTree = "<group>"; };
+		8E95D32D1FACA4C10063E07A /* CExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CExame.txt; sourceTree = "<group>"; };
+		8E95D32E1FACA4C10063E07A /* CFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D32F1FACA4C10063E07A /* CMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3301FACA4C10063E07A /* CProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3311FACA4C10063E07A /* DCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3321FACA4C10063E07A /* DExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DExame.txt; sourceTree = "<group>"; };
+		8E95D3331FACA4C10063E07A /* DFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3341FACA4C10063E07A /* DMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3351FACA4C10063E07A /* DProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3361FACA4C10063E07A /* EExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EExame.txt; sourceTree = "<group>"; };
+		8E95D3371FACA4C10063E07A /* EMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3381FACA4C10063E07A /* EProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3391FACA4C10063E07A /* FCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D33A1FACA4C10063E07A /* FExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FExame.txt; sourceTree = "<group>"; };
+		8E95D33B1FACA4C10063E07A /* FMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FMedicamento.txt; sourceTree = "<group>"; };
+		8E95D33C1FACA4C10063E07A /* FProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FProcedimento.txt; sourceTree = "<group>"; };
+		8E95D33D1FACA4C10063E07A /* GCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D33E1FACA4C10063E07A /* GExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GExame.txt; sourceTree = "<group>"; };
+		8E95D33F1FACA4C10063E07A /* GMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3401FACA4C10063E07A /* HCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3411FACA4C10063E07A /* HExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HExame.txt; sourceTree = "<group>"; };
+		8E95D3421FACA4C10063E07A /* HFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3431FACA4C10063E07A /* HMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3441FACA4C10063E07A /* IExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IExame.txt; sourceTree = "<group>"; };
+		8E95D3451FACA4C10063E07A /* IMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3461FACA4C10063E07A /* JCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "JCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3471FACA4C10063E07A /* JExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JExame.txt; sourceTree = "<group>"; };
+		8E95D3481FACA4C10063E07A /* JFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "JFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3491FACA4C10063E07A /* KCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D34A1FACA4C10063E07A /* KExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KExame.txt; sourceTree = "<group>"; };
+		8E95D34B1FACA4C10063E07A /* KFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D34C1FACA4C10063E07A /* KMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KMedicamento.txt; sourceTree = "<group>"; };
+		8E95D34D1FACA4C10063E07A /* LCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D34E1FACA4C10063E07A /* LExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LExame.txt; sourceTree = "<group>"; };
+		8E95D34F1FACA4C10063E07A /* LFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3501FACA4C10063E07A /* LMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3511FACA4C10063E07A /* logM.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = logM.txt; sourceTree = "<group>"; };
+		8E95D3521FACA4C10063E07A /* LProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3531FACA4C10063E07A /* MCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3541FACA4C10063E07A /* MExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MExame.txt; sourceTree = "<group>"; };
+		8E95D3551FACA4C10063E07A /* MFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3561FACA4C10063E07A /* MMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3571FACA4C10063E07A /* MProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3581FACA4C10063E07A /* NCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3591FACA4C10063E07A /* NExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NExame.txt; sourceTree = "<group>"; };
+		8E95D35A1FACA4C10063E07A /* NFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D35B1FACA4C10063E07A /* NMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NMedicamento.txt; sourceTree = "<group>"; };
+		8E95D35C1FACA4C10063E07A /* OCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D35D1FACA4C10063E07A /* OExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OExame.txt; sourceTree = "<group>"; };
+		8E95D35E1FACA4C10063E07A /* OFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D35F1FACA4C10063E07A /* OMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3601FACA4C10063E07A /* OProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3611FACA4C10063E07A /* PCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3621FACA4C10063E07A /* PExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PExame.txt; sourceTree = "<group>"; };
+		8E95D3631FACA4C10063E07A /* PFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3641FACA4C10063E07A /* PMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3651FACA4C10063E07A /* PProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3661FACA4C10063E07A /* QExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QExame.txt; sourceTree = "<group>"; };
+		8E95D3671FACA4C10063E07A /* QMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3681FACA4C10063E07A /* RCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3691FACA4C10063E07A /* RExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RExame.txt; sourceTree = "<group>"; };
+		8E95D36A1FACA4C10063E07A /* RFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D36B1FACA4C10063E07A /* RMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RMedicamento.txt; sourceTree = "<group>"; };
+		8E95D36C1FACA4C10063E07A /* RProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RProcedimento.txt; sourceTree = "<group>"; };
+		8E95D36D1FACA4C10063E07A /* SCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D36E1FACA4C10063E07A /* SExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SExame.txt; sourceTree = "<group>"; };
+		8E95D36F1FACA4C10063E07A /* SFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3701FACA4C10063E07A /* SMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3711FACA4C10063E07A /* TCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3721FACA4C10063E07A /* TExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TExame.txt; sourceTree = "<group>"; };
+		8E95D3731FACA4C10063E07A /* TFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3741FACA4C10063E07A /* TMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3751FACA4C10063E07A /* TProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TProcedimento.txt; sourceTree = "<group>"; };
+		8E95D3761FACA4C10063E07A /* UExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UExame.txt; sourceTree = "<group>"; };
+		8E95D3771FACA4C10063E07A /* UFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D3781FACA4C10063E07A /* UMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3791FACA4C10063E07A /* UProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UProcedimento.txt; sourceTree = "<group>"; };
+		8E95D37A1FACA4C10063E07A /* VCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "VCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D37B1FACA4C10063E07A /* VExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VExame.txt; sourceTree = "<group>"; };
+		8E95D37C1FACA4C10063E07A /* VFelis catus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "VFelis catus.txt"; sourceTree = "<group>"; };
+		8E95D37D1FACA4C10063E07A /* VMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VMedicamento.txt; sourceTree = "<group>"; };
+		8E95D37E1FACA4C10063E07A /* VProcedimento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VProcedimento.txt; sourceTree = "<group>"; };
+		8E95D37F1FACA4C10063E07A /* WCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "WCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3801FACA4C10063E07A /* XExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XExame.txt; sourceTree = "<group>"; };
+		8E95D3811FACA4C10063E07A /* XMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XMedicamento.txt; sourceTree = "<group>"; };
+		8E95D3821FACA4C10063E07A /* YCanis familiaris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "YCanis familiaris.txt"; sourceTree = "<group>"; };
+		8E95D3831FACA4C10063E07A /* ZExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZExame.txt; sourceTree = "<group>"; };
+		8E95D3841FACA4C10063E07A /* ZMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZMedicamento.txt; sourceTree = "<group>"; };
 		8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputFieldProtocol.swift; sourceTree = "<group>"; };
 		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
@@ -283,6 +479,7 @@
 			children = (
 				8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */,
 				8E1BABDB1F40D2D900808B16 /* User Interfaces */,
+				8E95D3221FACA4C10063E07A /* AutocompletionResources */,
 				8E79E2FB1F676798007FA9BD /* Localizable.strings */,
 			);
 			name = Resources;
@@ -495,6 +692,111 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		8E95D3221FACA4C10063E07A /* AutocompletionResources */ = {
+			isa = PBXGroup;
+			children = (
+				8E95D3231FACA4C10063E07A /* ACanis familiaris.txt */,
+				8E95D3241FACA4C10063E07A /* AExame.txt */,
+				8E95D3251FACA4C10063E07A /* AFelis catus.txt */,
+				8E95D3261FACA4C10063E07A /* AMedicamento.txt */,
+				8E95D3271FACA4C10063E07A /* AProcedimento.txt */,
+				8E95D3281FACA4C10063E07A /* BCanis familiaris.txt */,
+				8E95D3291FACA4C10063E07A /* BExame.txt */,
+				8E95D32A1FACA4C10063E07A /* BFelis catus.txt */,
+				8E95D32B1FACA4C10063E07A /* BMedicamento.txt */,
+				8E95D32C1FACA4C10063E07A /* BProcedimento.txt */,
+				8E95D32D1FACA4C10063E07A /* CExame.txt */,
+				8E95D32E1FACA4C10063E07A /* CFelis catus.txt */,
+				8E95D32F1FACA4C10063E07A /* CMedicamento.txt */,
+				8E95D3301FACA4C10063E07A /* CProcedimento.txt */,
+				8E95D3311FACA4C10063E07A /* DCanis familiaris.txt */,
+				8E95D3321FACA4C10063E07A /* DExame.txt */,
+				8E95D3331FACA4C10063E07A /* DFelis catus.txt */,
+				8E95D3341FACA4C10063E07A /* DMedicamento.txt */,
+				8E95D3351FACA4C10063E07A /* DProcedimento.txt */,
+				8E95D3361FACA4C10063E07A /* EExame.txt */,
+				8E95D3371FACA4C10063E07A /* EMedicamento.txt */,
+				8E95D3381FACA4C10063E07A /* EProcedimento.txt */,
+				8E95D3391FACA4C10063E07A /* FCanis familiaris.txt */,
+				8E95D33A1FACA4C10063E07A /* FExame.txt */,
+				8E95D33B1FACA4C10063E07A /* FMedicamento.txt */,
+				8E95D33C1FACA4C10063E07A /* FProcedimento.txt */,
+				8E95D33D1FACA4C10063E07A /* GCanis familiaris.txt */,
+				8E95D33E1FACA4C10063E07A /* GExame.txt */,
+				8E95D33F1FACA4C10063E07A /* GMedicamento.txt */,
+				8E95D3401FACA4C10063E07A /* HCanis familiaris.txt */,
+				8E95D3411FACA4C10063E07A /* HExame.txt */,
+				8E95D3421FACA4C10063E07A /* HFelis catus.txt */,
+				8E95D3431FACA4C10063E07A /* HMedicamento.txt */,
+				8E95D3441FACA4C10063E07A /* IExame.txt */,
+				8E95D3451FACA4C10063E07A /* IMedicamento.txt */,
+				8E95D3461FACA4C10063E07A /* JCanis familiaris.txt */,
+				8E95D3471FACA4C10063E07A /* JExame.txt */,
+				8E95D3481FACA4C10063E07A /* JFelis catus.txt */,
+				8E95D3491FACA4C10063E07A /* KCanis familiaris.txt */,
+				8E95D34A1FACA4C10063E07A /* KExame.txt */,
+				8E95D34B1FACA4C10063E07A /* KFelis catus.txt */,
+				8E95D34C1FACA4C10063E07A /* KMedicamento.txt */,
+				8E95D34D1FACA4C10063E07A /* LCanis familiaris.txt */,
+				8E95D34E1FACA4C10063E07A /* LExame.txt */,
+				8E95D34F1FACA4C10063E07A /* LFelis catus.txt */,
+				8E95D3501FACA4C10063E07A /* LMedicamento.txt */,
+				8E95D3511FACA4C10063E07A /* logM.txt */,
+				8E95D3521FACA4C10063E07A /* LProcedimento.txt */,
+				8E95D3531FACA4C10063E07A /* MCanis familiaris.txt */,
+				8E95D3541FACA4C10063E07A /* MExame.txt */,
+				8E95D3551FACA4C10063E07A /* MFelis catus.txt */,
+				8E95D3561FACA4C10063E07A /* MMedicamento.txt */,
+				8E95D3571FACA4C10063E07A /* MProcedimento.txt */,
+				8E95D3581FACA4C10063E07A /* NCanis familiaris.txt */,
+				8E95D3591FACA4C10063E07A /* NExame.txt */,
+				8E95D35A1FACA4C10063E07A /* NFelis catus.txt */,
+				8E95D35B1FACA4C10063E07A /* NMedicamento.txt */,
+				8E95D35C1FACA4C10063E07A /* OCanis familiaris.txt */,
+				8E95D35D1FACA4C10063E07A /* OExame.txt */,
+				8E95D35E1FACA4C10063E07A /* OFelis catus.txt */,
+				8E95D35F1FACA4C10063E07A /* OMedicamento.txt */,
+				8E95D3601FACA4C10063E07A /* OProcedimento.txt */,
+				8E95D3611FACA4C10063E07A /* PCanis familiaris.txt */,
+				8E95D3621FACA4C10063E07A /* PExame.txt */,
+				8E95D3631FACA4C10063E07A /* PFelis catus.txt */,
+				8E95D3641FACA4C10063E07A /* PMedicamento.txt */,
+				8E95D3651FACA4C10063E07A /* PProcedimento.txt */,
+				8E95D3661FACA4C10063E07A /* QExame.txt */,
+				8E95D3671FACA4C10063E07A /* QMedicamento.txt */,
+				8E95D3681FACA4C10063E07A /* RCanis familiaris.txt */,
+				8E95D3691FACA4C10063E07A /* RExame.txt */,
+				8E95D36A1FACA4C10063E07A /* RFelis catus.txt */,
+				8E95D36B1FACA4C10063E07A /* RMedicamento.txt */,
+				8E95D36C1FACA4C10063E07A /* RProcedimento.txt */,
+				8E95D36D1FACA4C10063E07A /* SCanis familiaris.txt */,
+				8E95D36E1FACA4C10063E07A /* SExame.txt */,
+				8E95D36F1FACA4C10063E07A /* SFelis catus.txt */,
+				8E95D3701FACA4C10063E07A /* SMedicamento.txt */,
+				8E95D3711FACA4C10063E07A /* TCanis familiaris.txt */,
+				8E95D3721FACA4C10063E07A /* TExame.txt */,
+				8E95D3731FACA4C10063E07A /* TFelis catus.txt */,
+				8E95D3741FACA4C10063E07A /* TMedicamento.txt */,
+				8E95D3751FACA4C10063E07A /* TProcedimento.txt */,
+				8E95D3761FACA4C10063E07A /* UExame.txt */,
+				8E95D3771FACA4C10063E07A /* UFelis catus.txt */,
+				8E95D3781FACA4C10063E07A /* UMedicamento.txt */,
+				8E95D3791FACA4C10063E07A /* UProcedimento.txt */,
+				8E95D37A1FACA4C10063E07A /* VCanis familiaris.txt */,
+				8E95D37B1FACA4C10063E07A /* VExame.txt */,
+				8E95D37C1FACA4C10063E07A /* VFelis catus.txt */,
+				8E95D37D1FACA4C10063E07A /* VMedicamento.txt */,
+				8E95D37E1FACA4C10063E07A /* VProcedimento.txt */,
+				8E95D37F1FACA4C10063E07A /* WCanis familiaris.txt */,
+				8E95D3801FACA4C10063E07A /* XExame.txt */,
+				8E95D3811FACA4C10063E07A /* XMedicamento.txt */,
+				8E95D3821FACA4C10063E07A /* YCanis familiaris.txt */,
+				8E95D3831FACA4C10063E07A /* ZExame.txt */,
+				8E95D3841FACA4C10063E07A /* ZMedicamento.txt */,
+			);
+			path = AutocompletionResources;
+			sourceTree = "<group>";
+		};
 		8EA87B391F62BB1000682C19 /* BorderedFields */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,19 +954,117 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E95D3881FACA4C10063E07A /* AMedicamento.txt in Resources */,
+				8E95D39F1FACA4C10063E07A /* GCanis familiaris.txt in Resources */,
+				8E95D3B01FACA4C10063E07A /* LExame.txt in Resources */,
+				8E95D3B51FACA4C10063E07A /* MCanis familiaris.txt in Resources */,
+				8E95D3AC1FACA4C10063E07A /* KExame.txt in Resources */,
+				8E95D3A51FACA4C10063E07A /* HMedicamento.txt in Resources */,
+				8E95D3CA1FACA4C10063E07A /* RCanis familiaris.txt in Resources */,
+				8E95D3BB1FACA4C10063E07A /* NExame.txt in Resources */,
+				8E95D3861FACA4C10063E07A /* AExame.txt in Resources */,
+				8E95D3A41FACA4C10063E07A /* HFelis catus.txt in Resources */,
+				8E95D3D91FACA4C10063E07A /* UFelis catus.txt in Resources */,
+				8E95D3AE1FACA4C10063E07A /* KMedicamento.txt in Resources */,
 				8E30CEF91F6623BE007D34F7 /* CreateNewTask.storyboard in Resources */,
+				8E95D3C51FACA4C10063E07A /* PFelis catus.txt in Resources */,
+				8E95D3D01FACA4C10063E07A /* SExame.txt in Resources */,
+				8E95D38A1FACA4C10063E07A /* BCanis familiaris.txt in Resources */,
+				8E95D3E21FACA4C10063E07A /* XExame.txt in Resources */,
+				8E95D3891FACA4C10063E07A /* AProcedimento.txt in Resources */,
+				8E95D3BC1FACA4C10063E07A /* NFelis catus.txt in Resources */,
+				8E95D39C1FACA4C10063E07A /* FExame.txt in Resources */,
+				8E95D3B81FACA4C10063E07A /* MMedicamento.txt in Resources */,
+				8E95D3D21FACA4C10063E07A /* SMedicamento.txt in Resources */,
+				8E95D3941FACA4C10063E07A /* DExame.txt in Resources */,
+				8E95D3D61FACA4C10063E07A /* TMedicamento.txt in Resources */,
+				8E95D3CC1FACA4C10063E07A /* RFelis catus.txt in Resources */,
+				8E95D3B21FACA4C10063E07A /* LMedicamento.txt in Resources */,
+				8E95D3BE1FACA4C10063E07A /* OCanis familiaris.txt in Resources */,
+				8E95D3911FACA4C10063E07A /* CMedicamento.txt in Resources */,
+				8E95D3E11FACA4C10063E07A /* WCanis familiaris.txt in Resources */,
+				8E95D3CB1FACA4C10063E07A /* RExame.txt in Resources */,
+				8E95D3871FACA4C10063E07A /* AFelis catus.txt in Resources */,
+				8E95D3D71FACA4C10063E07A /* TProcedimento.txt in Resources */,
+				8E95D3DD1FACA4C10063E07A /* VExame.txt in Resources */,
+				8E95D3AF1FACA4C10063E07A /* LCanis familiaris.txt in Resources */,
+				8E95D3B91FACA4C10063E07A /* MProcedimento.txt in Resources */,
 				8E48E6451F75A76B007C66A4 /* OwnerList.storyboard in Resources */,
+				8E95D38E1FACA4C10063E07A /* BProcedimento.txt in Resources */,
+				8E95D3DA1FACA4C10063E07A /* UMedicamento.txt in Resources */,
+				8E95D3A31FACA4C10063E07A /* HExame.txt in Resources */,
+				8E95D3C81FACA4C10063E07A /* QExame.txt in Resources */,
+				8E95D39A1FACA4C10063E07A /* EProcedimento.txt in Resources */,
 				8E1BABE61F40D7E600808B16 /* Main.storyboard in Resources */,
+				8E95D3C01FACA4C10063E07A /* OFelis catus.txt in Resources */,
+				8E95D3C91FACA4C10063E07A /* QMedicamento.txt in Resources */,
 				8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */,
+				8E95D3C61FACA4C10063E07A /* PMedicamento.txt in Resources */,
+				8E95D3971FACA4C10063E07A /* DProcedimento.txt in Resources */,
+				8E95D3CD1FACA4C10063E07A /* RMedicamento.txt in Resources */,
 				8E48E64A1F75AD41007C66A4 /* CreateNewReport.storyboard in Resources */,
+				8E95D3A21FACA4C10063E07A /* HCanis familiaris.txt in Resources */,
+				8E95D3B11FACA4C10063E07A /* LFelis catus.txt in Resources */,
+				8E95D39E1FACA4C10063E07A /* FProcedimento.txt in Resources */,
+				8E95D3AA1FACA4C10063E07A /* JFelis catus.txt in Resources */,
+				8E95D3D31FACA4C10063E07A /* TCanis familiaris.txt in Resources */,
+				8E95D3D51FACA4C10063E07A /* TFelis catus.txt in Resources */,
+				8E95D3B71FACA4C10063E07A /* MFelis catus.txt in Resources */,
+				8E95D38F1FACA4C10063E07A /* CExame.txt in Resources */,
+				8E95D38D1FACA4C10063E07A /* BMedicamento.txt in Resources */,
+				8E95D3D41FACA4C10063E07A /* TExame.txt in Resources */,
+				8E95D3A81FACA4C10063E07A /* JCanis familiaris.txt in Resources */,
+				8E95D3E61FACA4C20063E07A /* ZMedicamento.txt in Resources */,
+				8E95D38B1FACA4C10063E07A /* BExame.txt in Resources */,
+				8E95D3D11FACA4C10063E07A /* SFelis catus.txt in Resources */,
 				8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */,
+				8E95D38C1FACA4C10063E07A /* BFelis catus.txt in Resources */,
+				8E95D3A11FACA4C10063E07A /* GMedicamento.txt in Resources */,
 				8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */,
+				8E95D3CF1FACA4C10063E07A /* SCanis familiaris.txt in Resources */,
+				8E95D39D1FACA4C10063E07A /* FMedicamento.txt in Resources */,
+				8E95D3DF1FACA4C10063E07A /* VMedicamento.txt in Resources */,
+				8E95D3DB1FACA4C10063E07A /* UProcedimento.txt in Resources */,
+				8E95D3961FACA4C10063E07A /* DMedicamento.txt in Resources */,
+				8E95D3951FACA4C10063E07A /* DFelis catus.txt in Resources */,
 				8EA87B4F1F6301C200682C19 /* SearchableList.storyboard in Resources */,
+				8E95D3921FACA4C10063E07A /* CProcedimento.txt in Resources */,
+				8E95D3D81FACA4C10063E07A /* UExame.txt in Resources */,
+				8E95D3981FACA4C10063E07A /* EExame.txt in Resources */,
+				8E95D3C11FACA4C10063E07A /* OMedicamento.txt in Resources */,
+				8E95D3B41FACA4C10063E07A /* LProcedimento.txt in Resources */,
+				8E95D3B61FACA4C10063E07A /* MExame.txt in Resources */,
+				8E95D3C71FACA4C10063E07A /* PProcedimento.txt in Resources */,
+				8E95D3C31FACA4C10063E07A /* PCanis familiaris.txt in Resources */,
+				8E95D3DC1FACA4C10063E07A /* VCanis familiaris.txt in Resources */,
+				8E95D3C21FACA4C10063E07A /* OProcedimento.txt in Resources */,
+				8E95D3A61FACA4C10063E07A /* IExame.txt in Resources */,
+				8E95D3A01FACA4C10063E07A /* GExame.txt in Resources */,
+				8E95D3A91FACA4C10063E07A /* JExame.txt in Resources */,
+				8E95D3BF1FACA4C10063E07A /* OExame.txt in Resources */,
 				8E79E2FC1F676798007FA9BD /* Localizable.strings in Resources */,
+				8E95D3E51FACA4C20063E07A /* ZExame.txt in Resources */,
 				8E48E6481F75AD36007C66A4 /* ReportList.storyboard in Resources */,
+				8E95D3E01FACA4C10063E07A /* VProcedimento.txt in Resources */,
+				8E95D3CE1FACA4C10063E07A /* RProcedimento.txt in Resources */,
+				8E95D39B1FACA4C10063E07A /* FCanis familiaris.txt in Resources */,
+				8E95D3E31FACA4C20063E07A /* XMedicamento.txt in Resources */,
+				8E95D3BA1FACA4C10063E07A /* NCanis familiaris.txt in Resources */,
+				8E95D3C41FACA4C10063E07A /* PExame.txt in Resources */,
+				8E95D3B31FACA4C10063E07A /* logM.txt in Resources */,
 				8E48E6431F749BBB007C66A4 /* TaskList.storyboard in Resources */,
+				8E95D3BD1FACA4C10063E07A /* NMedicamento.txt in Resources */,
 				8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */,
+				8E95D3AB1FACA4C10063E07A /* KCanis familiaris.txt in Resources */,
+				8E95D3DE1FACA4C10063E07A /* VFelis catus.txt in Resources */,
 				8E1BABDD1F40D31A00808B16 /* LaunchScreen.storyboard in Resources */,
+				8E95D3901FACA4C10063E07A /* CFelis catus.txt in Resources */,
+				8E95D3931FACA4C10063E07A /* DCanis familiaris.txt in Resources */,
+				8E95D3A71FACA4C10063E07A /* IMedicamento.txt in Resources */,
+				8E95D3851FACA4C10063E07A /* ACanis familiaris.txt in Resources */,
+				8E95D3AD1FACA4C10063E07A /* KFelis catus.txt in Resources */,
+				8E95D3E41FACA4C20063E07A /* YCanis familiaris.txt in Resources */,
+				8E95D3991FACA4C10063E07A /* EMedicamento.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

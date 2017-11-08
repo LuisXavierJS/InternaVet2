@@ -9,5 +9,9 @@
 import UIKit
 
 class TaskListViewController: BaseListViewController {
-    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        if let taskCtrlr: UINavigationController = CreateNewTaskViewController.instantiate(nil) as? UINavigationController {
+            self.navigationController?.present(taskCtrlr, animated: true, completion: nil)
+        }
+    }
 }

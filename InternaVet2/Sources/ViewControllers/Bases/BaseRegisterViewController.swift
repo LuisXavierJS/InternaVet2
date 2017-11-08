@@ -20,4 +20,23 @@ class BaseRegisterViewController: UIViewController, SessionControllerManagerProt
         self.trySetSession(on: viewControllerToPresent)
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
+    
+    func allFieldsFullfilled() -> Bool {
+        return false
+    }
+    
+    func performSave() {
+        
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        if self.allFieldsFullfilled() {
+            self.performSave()
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 }

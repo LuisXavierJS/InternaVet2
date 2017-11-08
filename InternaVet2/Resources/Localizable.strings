@@ -14,8 +14,8 @@
 "kilograms" = "Quilogramas";
 "female" = "Fêmea";
 "male" = "Macho";
-"dog" = "Canis Familiaris";
-"cat" = "Felis Catus";
+"dog" = "Canis familiaris";
+"cat" = "Felis catus";
 "hour" = "Hora";
 "day" = "Dia";
 "month" = "Mês";

@@ -31,10 +31,12 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.setupSelectorsOptions()
         self.setupTextfields()
         self.setupPickerSelectors()
+        self.setupButtons()
     }
     
     fileprivate func setupButtons() {
         self.racePushButton.delegate = self
+        self.ownerPushButton.delegate = self
     }
     
     fileprivate func setupSelectorsOptions(){
@@ -57,7 +59,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
             return begin + end
         }
         
-        let yearsToList: [String] = Array(1...11).map({ getPlural(from: $0, word: Words.year)})
+        let yearsToList: [String] = Array(1...20).map({ getPlural(from: $0, word: Words.year)})
         let monthsToList: [String] = Array(1...11).map({ getPlural(from: $0, word: Words.month)})
         let totalAgesToList: [String] = [monthsToList, yearsToList].flatMap({$0})
         self.agePickerSelector.setItems(totalAgesToList)
@@ -70,7 +72,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.hospitalizationSelectionText.textField.allowsEditingTextAttributes = false
     }
 
-    fileprivate func allFieldsFullfilled() -> Bool{
+    override func allFieldsFullfilled() -> Bool{
         return [self.weightSelectionText,
             self.hospitalizationSelectionText,
             self.racePushButton,
@@ -85,7 +87,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
             })
     }
 
-    fileprivate func performSave(){
+    override func performSave(){
         let newPatient = self.editingPatient ?? Patient()
         newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
         newPatient.name = self.nameTextField.text
@@ -101,26 +103,29 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.sessionController.saveContext()
     }
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        if self.allFieldsFullfilled() {
-            self.performSave()
-            self.navigationController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
     
     func pushButtonWasTapped(_ button: PushButtonViewField) {
+        
         if let vc = SearchableListViewController.instantiate() {
-           vc.setList(items: [],
-                      didChooseItem: { item in
-                        
-                      },
-                      didCreateItem: { itemName in
-                        
-                      })
+            vc.setList(mode: self.getSearchMode(for: button),
+                       didChooseItem: { [weak self] item in self?.didChooseItem(item, for: button)},
+                       didCreateItem: { [weak self] itemName in self?.didCreateItem(itemName, for: button)})
+            self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    fileprivate func getSearchMode(for button: PushButtonViewField) -> SearchMode {
+        switch button {
+        case self.racePushButton: return .autocompletion(type: AutoCompletionType(rawValue: self.specieSelection.selectedItem) ?? .canisFamiliaris)
+        default: return .itemList(list: self.sessionController.currentUser?.owners ?? [])
+        }
+    }
+    
+    fileprivate func didChooseItem(_ item: SearchableItem, for button: PushButtonViewField) {
+        
+    }
+    
+    fileprivate func didCreateItem(_ itemName: String, for button: PushButtonViewField) {
+        
     }
 }

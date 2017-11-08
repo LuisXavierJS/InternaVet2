@@ -11,9 +11,9 @@ import UIKit
 typealias SearchableListChoosedCallback = ((_ item: SearchableItem) -> Void)
 typealias SearchableListCreatedCallback = ((_ itemName: String) -> Void)
 
-fileprivate enum SearchMode {
+enum SearchMode {
     case autocompletion(type: AutoCompletionType)
-    case itemList
+    case itemList(list: [SearchableItem])
 }
 
 class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate {
@@ -23,50 +23,48 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     @IBOutlet weak var textfieldHeightConstraint: NSLayoutConstraint!
     
     private(set) var originalListItems: [SearchableItem] = []
-    lazy var listDatasource: JSGenericTableController<SearchResultCell> = JSGenericTableController<SearchResultCell>(tableView: self.listTableView)
+    var listDatasource: JSGenericTableController<SearchResultCell>!
     
     private(set) var selectedIndex: IndexPath?
    
     private(set) var confirmChoosedItemCallback: SearchableListChoosedCallback?
     private(set) var confirmCreationItemCallback: SearchableListCreatedCallback?
     
-    private var searchMode: SearchMode = .itemList
+    private var searchMode: SearchMode = .itemList(list: [])
     
     //MARK: Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setDatasources()
         self.setDelegates()
     }
     
     //MARK: IBActions
     
     @IBAction func confirmButtonTapped() {
-        self.dismiss(animated: true, completion: { [weak self] in
-            self?.performConfirmation()
-        })
+        self.navigationController?.popViewController(animated: true)
+        self.performConfirmation()
     }
     
     @IBAction func backButtonTapped() {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: Public methods
     
-    func setList(items: [SearchableItem], didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
-        self.searchMode = .itemList
-        self.searchTextfield.text = ""
-        self.originalListItems = items
-        self.listDatasource.items = [items]
-        self.setCallbacks()
-    }
-    
-    func setAutocompletion(_ type: AutoCompletionType, didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
-        self.searchMode = .autocompletion(type: type)
-        self.searchTextfield.text = ""
-        self.originalListItems = []
-        self.listDatasource.items = [[]]
-        self.setCallbacks()
+    func setList(mode: SearchMode, didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
+        self.searchMode = mode
+        self.searchTextfield?.text = ""
+        switch self.searchMode {
+        case .autocompletion(_):
+            self.originalListItems = []
+            self.listDatasource?.items = [[]]
+        case .itemList(let list):
+            self.originalListItems = list
+            self.listDatasource?.items = [list]
+        }
+        self.setCallbacks(didChooseItem: didChooseItem, didCreateItem: didCreateItem)
     }
     
     //MARK: Delegate Methods
@@ -81,9 +79,15 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         return true
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.reloadRows(at: [self.selectedIndex,indexPath].flatMap({$0}), with: .automatic)
+        let oldSelected = self.selectedIndex
         self.selectedIndex = indexPath
+        tableView.reloadRows(at: [self.selectedIndex,oldSelected].flatMap({$0}), with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -91,6 +95,11 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     }
 
     //MARK: Fileprivate methods
+    
+    fileprivate func setDatasources() {
+        self.listDatasource = JSGenericTableController<SearchResultCell>(tableView: self.listTableView)
+        self.listDatasource.items = [self.originalListItems]
+    }
     
     fileprivate func setDelegates() {
         self.listTableView.delegate = self.listDatasource.delegateDatasource

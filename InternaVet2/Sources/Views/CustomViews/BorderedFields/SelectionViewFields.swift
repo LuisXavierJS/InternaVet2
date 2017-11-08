@@ -22,6 +22,10 @@ class LabeledSelectionViewField: SelectionArrowViewField {
         return self.label
     }
     
+    var selectedItem: String {
+        return self.selectionView.selectedItemTitle
+    }
+    
     override func setupViews() {
         let lab = UILabel()
         self.label = lab
