@@ -40,8 +40,8 @@ class AutoCompletionController: NSObject {
         return nil
     }
     
-    class func insertAssetNameIfPossible(string:String, toComplete: AutoCompletionType){
-        var tipoDeAutocomplete = toComplete.rawValue
+    func insertAssetNameIfPossible(string:String){
+        var tipoDeAutocomplete = self.assetType.rawValue
         if let firstChar = string.uppercased().characters.first{
             tipoDeAutocomplete.insert(firstChar, at: tipoDeAutocomplete.startIndex)
             let bundle = Bundle(for: AutoCompletionController.self)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol {
+class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: CustomFloatTextField!
     @IBOutlet weak var registerTextField: CustomFloatTextField!
@@ -31,12 +31,13 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.setupSelectorsOptions()
         self.setupTextfields()
         self.setupPickerSelectors()
-        self.setupButtons()
+        self.setupDelegates()
     }
     
-    fileprivate func setupButtons() {
+    fileprivate func setupDelegates() {
         self.racePushButton.delegate = self
         self.ownerPushButton.delegate = self
+        self.specieSelection.selectionView.delegate = self
     }
     
     fileprivate func setupSelectorsOptions(){
@@ -116,16 +117,46 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     
     fileprivate func getSearchMode(for button: PushButtonViewField) -> SearchMode {
         switch button {
-        case self.racePushButton: return .autocompletion(type: AutoCompletionType(rawValue: self.specieSelection.selectedItem) ?? .canisFamiliaris)
+        case self.racePushButton: return .autocompletion(type: self.currentSpecieAutocompletionType())
         default: return .itemList(list: self.sessionController.currentUser?.owners ?? [])
         }
     }
     
     fileprivate func didChooseItem(_ item: SearchableItem, for button: PushButtonViewField) {
-        
+        switch button {
+        case self.racePushButton:
+            if let race = (item as? SearchableItemM)?.value {
+                self.didChoose(race: race)
+            }
+        case self.ownerPushButton:
+            if let owner = item as? Owner {
+                self.didChoose(owner: owner)
+            }
+        default:return
+        }
     }
     
     fileprivate func didCreateItem(_ itemName: String, for button: PushButtonViewField) {
-        
+        if button == self.racePushButton {
+            self.didCreate(race: itemName)
+        }
+    }
+    
+    fileprivate func didChoose(race: String) {
+        self.racePushButton.setInputValue(newValue: race)
+    }
+    
+    fileprivate func didCreate(race: String) {
+        AutoCompletionController(self.currentSpecieAutocompletionType()).insertAssetNameIfPossible(string: race)
+        self.didChoose(race: race)
+    }
+    
+    fileprivate func didChoose(owner: Owner) {
+        self.ownerPushButton.setInputValue(newValue: owner.name ?? "")
+    }
+    
+    private func currentSpecieAutocompletionType() -> AutoCompletionType {
+        return AutoCompletionType(rawValue: self.specieSelection.selectedItem) ?? .canisFamiliaris
     }
 }
+
