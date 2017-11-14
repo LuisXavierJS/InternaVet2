@@ -24,7 +24,7 @@ class CustomInputField: ContentView {
     weak var delegate: FieldViewContainerProtocol?
     
     var isShowing: Bool {
-        return !((self.isHidden || self.alpha == 0) && ((self.heightConstraint?.constant ?? self.frame.height) == 0))
+        return (self.heightConstraint?.constant ?? self.frame.height) > 0
     }
     
     func changeFieldViewVisibility() {
