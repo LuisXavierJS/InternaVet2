@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol SelectionSliderViewDelegateProtocol: class {
-    @objc optional func userSelectedItem(atIndex index: Int, slider: SelectionSliderView)
+    func selectedItem(atIndex index: Int, slider: SelectionSliderView)
 }
 
 @IBDesignable
@@ -21,6 +21,9 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     @IBInspectable var hiddingLocation: CGFloat = -10{ didSet{ self.setupGradientLayer() } }
     
     fileprivate var scrollPageView: UIScrollView = UIScrollView()
+    
+    fileprivate var lastSelectedIndex: Int = 0
+    
     weak var delegate: SelectionSliderViewDelegateProtocol?
     
     var selectedItemTitle: String {
@@ -38,6 +41,7 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
         set {
             if newValue >= 0 && newValue < self.items.count {
                 self.scrollPageView.setContentOffset(CGPoint.zero.with(x: self.bounds.width * CGFloat(newValue)), animated: false)
+                self.lastSelectedIndex = newValue
             }
         }
     }
@@ -141,7 +145,10 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.delegate?.userSelectedItem?(atIndex: self.selectedItemIndex, slider: self)
+        if self.lastSelectedIndex != self.selectedItemIndex {
+            self.delegate?.selectedItem(atIndex: self.selectedItemIndex, slider: self)
+            self.lastSelectedIndex = self.selectedItemIndex
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -149,9 +156,13 @@ class SelectionSliderView: DoubleArrowsView, UIScrollViewDelegate {
     }
     
     func arrowBeginTouches(arrow: ArrowTouchableView, touches: Set<UITouch>, with event: UIEvent?) {
-        let index = arrow == self.rightArrow ? self.selectedItemIndex + 1 : self.selectedItemIndex - 1
-        let pos = self.scrollPageView.contentOffset.with(x: self.bounds.width * CGFloat(index))
-        self.scrollPageView.setContentOffset(pos, animated: true)        
+        let newIndex = arrow == self.rightArrow ? self.selectedItemIndex + 1 : self.selectedItemIndex - 1
+        let pos = self.scrollPageView.contentOffset.with(x: self.bounds.width * CGFloat(newIndex))
+        self.scrollPageView.setContentOffset(pos, animated: true)
+        if self.lastSelectedIndex != newIndex {
+            self.delegate?.selectedItem(atIndex: newIndex, slider: self)
+            self.lastSelectedIndex = newIndex
+        }
     }
     
     private func updateArrowsVisibility(forSelectedIndex index: Int){

@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="-1" width="320" height="1001"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="027-k7-cjA" userLabel="ContainerView" customClass="ContentView" customModule="InternaVet2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1010"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="950"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoT-55-NiY" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="15" y="25" width="290" height="35"/>
@@ -151,10 +151,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4F-I6-l6N" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="320" width="320" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-SH-e6E">
-                                                        <rect key="frame" x="15" y="12" width="128" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-SH-e6E" userLabel="Sexo">
+                                                        <rect key="frame" x="15" y="14" width="128" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-Ag-Dav" customClass="SelectionSliderView" customModule="InternaVet2" customModuleProvider="target">
@@ -179,10 +179,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztQ-8m-EQ1" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="380" width="320" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq5-5W-kZM">
-                                                        <rect key="frame" x="15" y="12" width="128" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Castrado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq5-5W-kZM" userLabel="Castrado">
+                                                        <rect key="frame" x="15" y="14" width="128" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNq-TY-rNR" customClass="SelectionSliderView" customModule="InternaVet2" customModuleProvider="target">
@@ -204,41 +204,13 @@
                                                     <outlet property="selection" destination="yNq-TY-rNR" id="uxb-dR-WXR"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxi-xZ-OVi" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-Nv-RZQ" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="440" width="320" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avc-TK-1sZ">
-                                                        <rect key="frame" x="15" y="12" width="128" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-R5-vuI" customClass="SelectionSliderView" customModule="InternaVet2" customModuleProvider="target">
-                                                        <rect key="frame" x="148" y="2" width="157" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="QbL-SV-TEg"/>
-                                                    <constraint firstItem="avc-TK-1sZ" firstAttribute="centerY" secondItem="Lxi-xZ-OVi" secondAttribute="centerY" id="XJT-dd-BTX"/>
-                                                    <constraint firstItem="zQY-R5-vuI" firstAttribute="centerY" secondItem="Lxi-xZ-OVi" secondAttribute="centerY" id="dq7-Ek-uiY"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Paciente foi à Óbito:"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="label" destination="avc-TK-1sZ" id="9vM-rI-9et"/>
-                                                    <outlet property="selection" destination="zQY-R5-vuI" id="Rsh-Jo-MAz"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-Nv-RZQ" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="500" width="320" height="45"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-AB-YdH">
-                                                        <rect key="frame" x="15" y="12" width="128" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espécie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-AB-YdH" userLabel="Especie">
+                                                        <rect key="frame" x="15" y="14" width="128" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-Dk-0yY" customClass="SelectionSliderView" customModule="InternaVet2" customModuleProvider="target">
@@ -261,7 +233,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuI-gM-1pU" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="560" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="500" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="6Xi-Sr-1T9"/>
@@ -272,7 +244,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-sw-HgN" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="620" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="560" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="4qk-6M-Gbm"/>
@@ -283,7 +255,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x9-jc-5Ik" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="680" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="620" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="qWn-Lw-tV8"/>
@@ -300,7 +272,7 @@
                                                 </connections>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-CL-IOc" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="725" width="320" height="100"/>
+                                                <rect key="frame" x="0.0" y="665" width="320" height="100"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOe-Fb-z5H">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -322,7 +294,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-Un-Eox" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="840" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="780" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="wJf-g6-gPU"/>
@@ -339,7 +311,7 @@
                                                 </connections>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2J-ih-WHi" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="885" width="320" height="100"/>
+                                                <rect key="frame" x="0.0" y="825" width="320" height="100"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vac-T0-bjQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -365,21 +337,23 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="1P9-Nv-RZQ" secondAttribute="trailing" id="17N-EK-Z3y"/>
                                             <constraint firstItem="WMG-Ka-bIL" firstAttribute="leading" secondItem="ang-gg-kCA" secondAttribute="leading" id="1Xp-Xc-CBu"/>
-                                            <constraint firstItem="1P9-Nv-RZQ" firstAttribute="top" secondItem="Lxi-xZ-OVi" secondAttribute="bottom" constant="15" id="2Hr-kH-dUg"/>
+                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="trailing" secondItem="yNq-TY-rNR" secondAttribute="trailing" id="1Ya-m2-kDu"/>
                                             <constraint firstItem="yNq-TY-rNR" firstAttribute="leading" secondItem="Xfu-Ag-Dav" secondAttribute="leading" id="2TH-fG-8vh"/>
                                             <constraint firstItem="gUI-sw-HgN" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="2sE-4Z-t94"/>
                                             <constraint firstAttribute="bottom" secondItem="V2J-ih-WHi" secondAttribute="bottom" constant="25" id="3fQ-3H-8Bi"/>
                                             <constraint firstItem="Gq5-5W-kZM" firstAttribute="trailing" secondItem="Xlq-SH-e6E" secondAttribute="trailing" id="4Ui-ZL-zX3"/>
+                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="height" secondItem="yNq-TY-rNR" secondAttribute="height" id="52b-cZ-QIi"/>
                                             <constraint firstItem="5x9-jc-5Ik" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="5Cx-eO-RBX"/>
                                             <constraint firstItem="QPI-rj-ZI6" firstAttribute="leading" secondItem="IS3-C0-0Zg" secondAttribute="trailing" constant="15" id="5Oh-cb-al0"/>
                                             <constraint firstItem="V2J-ih-WHi" firstAttribute="top" secondItem="jW0-Un-Eox" secondAttribute="bottom" id="5jk-Hu-B1Q"/>
                                             <constraint firstItem="4K0-CL-IOc" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="6EN-WA-d7H"/>
                                             <constraint firstItem="Gq5-5W-kZM" firstAttribute="leading" secondItem="Xlq-SH-e6E" secondAttribute="leading" id="6Sv-9P-Z3X"/>
-                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="trailing" secondItem="zQY-R5-vuI" secondAttribute="trailing" id="6qn-FU-4Zt"/>
                                             <constraint firstAttribute="trailing" secondItem="5x9-jc-5Ik" secondAttribute="trailing" id="7Va-A7-vZT"/>
+                                            <constraint firstItem="1P9-Nv-RZQ" firstAttribute="top" secondItem="ztQ-8m-EQ1" secondAttribute="bottom" constant="15" id="7lN-MI-NVA"/>
                                             <constraint firstItem="WMG-Ka-bIL" firstAttribute="height" secondItem="ang-gg-kCA" secondAttribute="height" id="AVe-6y-MK5"/>
                                             <constraint firstItem="Qwg-3c-0OX" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="15" id="BfT-8Y-Ogv"/>
                                             <constraint firstItem="Zf4-7R-3dh" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="CfT-7h-flu"/>
+                                            <constraint firstItem="SJ3-AB-YdH" firstAttribute="leading" secondItem="Gq5-5W-kZM" secondAttribute="leading" id="DHP-wR-Gxv"/>
                                             <constraint firstItem="QPI-rj-ZI6" firstAttribute="top" secondItem="XoT-55-NiY" secondAttribute="bottom" constant="15" id="ED2-RP-hTV"/>
                                             <constraint firstItem="5x9-jc-5Ik" firstAttribute="top" secondItem="gUI-sw-HgN" secondAttribute="bottom" constant="15" id="FRV-tQ-Hmg"/>
                                             <constraint firstItem="G4F-I6-l6N" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="G4g-Xj-wVO"/>
@@ -391,12 +365,10 @@
                                             <constraint firstAttribute="trailing" secondItem="jW0-Un-Eox" secondAttribute="trailing" id="LLI-Ql-9XH"/>
                                             <constraint firstItem="WMG-Ka-bIL" firstAttribute="trailing" secondItem="ang-gg-kCA" secondAttribute="trailing" id="Mbs-DR-dTI"/>
                                             <constraint firstItem="GuI-gM-1pU" firstAttribute="top" secondItem="1P9-Nv-RZQ" secondAttribute="bottom" constant="15" id="OGx-Ey-5fn"/>
-                                            <constraint firstItem="Lxi-xZ-OVi" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="Obe-P2-xQL"/>
                                             <constraint firstAttribute="trailing" secondItem="GuI-gM-1pU" secondAttribute="trailing" id="P0h-Wa-xou"/>
+                                            <constraint firstItem="SJ3-AB-YdH" firstAttribute="trailing" secondItem="Gq5-5W-kZM" secondAttribute="trailing" id="QeL-Ca-RRB"/>
                                             <constraint firstItem="jW0-Un-Eox" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="Rg4-Q5-BMc"/>
-                                            <constraint firstItem="zQY-R5-vuI" firstAttribute="height" secondItem="yNq-TY-rNR" secondAttribute="height" id="RiX-jU-j9C"/>
                                             <constraint firstAttribute="trailing" secondItem="4K0-CL-IOc" secondAttribute="trailing" id="RjW-d0-KB1"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lxi-xZ-OVi" secondAttribute="trailing" id="US6-YL-9dG"/>
                                             <constraint firstAttribute="trailing" secondItem="Zf4-7R-3dh" secondAttribute="trailing" id="Ubh-lc-udi"/>
                                             <constraint firstAttribute="trailing" secondItem="ztQ-8m-EQ1" secondAttribute="trailing" id="Uqb-hU-GIH"/>
                                             <constraint firstItem="IS3-C0-0Zg" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" constant="15" id="Vbg-EM-Zxt"/>
@@ -405,7 +377,6 @@
                                             <constraint firstItem="IS3-C0-0Zg" firstAttribute="top" secondItem="XoT-55-NiY" secondAttribute="bottom" constant="25" id="Xjr-Rd-jHU"/>
                                             <constraint firstItem="gUI-sw-HgN" firstAttribute="top" secondItem="GuI-gM-1pU" secondAttribute="bottom" constant="15" id="YfH-bM-DcC"/>
                                             <constraint firstItem="QPI-rj-ZI6" firstAttribute="leading" secondItem="Qwg-3c-0OX" secondAttribute="trailing" constant="15" id="YfT-Oz-q7T"/>
-                                            <constraint firstItem="zQY-R5-vuI" firstAttribute="leading" secondItem="yNq-TY-rNR" secondAttribute="leading" id="Z4w-B8-ybW"/>
                                             <constraint firstItem="aIG-xR-tWz" firstAttribute="top" secondItem="Qwg-3c-0OX" secondAttribute="bottom" constant="20" id="aC8-il-2OB"/>
                                             <constraint firstItem="Ovk-LE-wDc" firstAttribute="trailing" secondItem="Dih-Gg-a5b" secondAttribute="trailing" id="azs-Kh-c4o"/>
                                             <constraint firstItem="Qwg-3c-0OX" firstAttribute="top" secondItem="IS3-C0-0Zg" secondAttribute="bottom" constant="25" id="c3P-DC-9lC"/>
@@ -413,29 +384,22 @@
                                             <constraint firstItem="XoT-55-NiY" firstAttribute="top" secondItem="027-k7-cjA" secondAttribute="top" constant="25" id="eju-YU-0kG"/>
                                             <constraint firstAttribute="trailing" secondItem="XoT-55-NiY" secondAttribute="trailing" constant="15" id="fOV-02-t59"/>
                                             <constraint firstItem="V2J-ih-WHi" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="fOc-YA-Bh8"/>
-                                            <constraint firstItem="Lxi-xZ-OVi" firstAttribute="top" secondItem="ztQ-8m-EQ1" secondAttribute="bottom" constant="15" id="fjS-TF-aW9"/>
-                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="leading" secondItem="zQY-R5-vuI" secondAttribute="leading" id="hTx-f6-isa"/>
                                             <constraint firstItem="GuI-gM-1pU" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="iWF-zm-nCI"/>
                                             <constraint firstItem="Xfu-Ag-Dav" firstAttribute="height" secondItem="WMG-Ka-bIL" secondAttribute="height" id="iu2-Zk-apz"/>
                                             <constraint firstItem="G4F-I6-l6N" firstAttribute="top" secondItem="Zf4-7R-3dh" secondAttribute="bottom" constant="15" id="jhk-2k-o1e"/>
                                             <constraint firstItem="Xfu-Ag-Dav" firstAttribute="leading" secondItem="WMG-Ka-bIL" secondAttribute="leading" id="jiI-X3-54s"/>
-                                            <constraint firstItem="avc-TK-1sZ" firstAttribute="leading" secondItem="Gq5-5W-kZM" secondAttribute="leading" id="ljF-43-njp"/>
                                             <constraint firstItem="jW0-Un-Eox" firstAttribute="top" secondItem="4K0-CL-IOc" secondAttribute="bottom" constant="15" id="n76-cf-yt4"/>
                                             <constraint firstItem="yNq-TY-rNR" firstAttribute="trailing" secondItem="Xfu-Ag-Dav" secondAttribute="trailing" id="nIJ-zf-i2S"/>
-                                            <constraint firstItem="SJ3-AB-YdH" firstAttribute="leading" secondItem="avc-TK-1sZ" secondAttribute="leading" id="nJz-GC-pJ9"/>
                                             <constraint firstAttribute="trailing" secondItem="gUI-sw-HgN" secondAttribute="trailing" id="rgj-oT-ByL"/>
-                                            <constraint firstItem="zQY-R5-vuI" firstAttribute="trailing" secondItem="yNq-TY-rNR" secondAttribute="trailing" id="rvY-HJ-zUh"/>
-                                            <constraint firstItem="SJ3-AB-YdH" firstAttribute="trailing" secondItem="avc-TK-1sZ" secondAttribute="trailing" id="sMX-um-ghG"/>
                                             <constraint firstAttribute="trailing" secondItem="V2J-ih-WHi" secondAttribute="trailing" id="ssi-Ja-dmr"/>
                                             <constraint firstItem="Xlq-SH-e6E" firstAttribute="leading" secondItem="Ovk-LE-wDc" secondAttribute="leading" id="tBX-U3-5c6"/>
                                             <constraint firstItem="Ovk-LE-wDc" firstAttribute="leading" secondItem="Dih-Gg-a5b" secondAttribute="leading" id="tLn-9J-r7A"/>
                                             <constraint firstItem="ztQ-8m-EQ1" firstAttribute="top" secondItem="G4F-I6-l6N" secondAttribute="bottom" constant="15" id="tk2-Nd-cQD"/>
                                             <constraint firstAttribute="trailing" secondItem="QPI-rj-ZI6" secondAttribute="trailing" constant="8" id="tlH-xm-ADZ"/>
-                                            <constraint firstItem="avc-TK-1sZ" firstAttribute="trailing" secondItem="Gq5-5W-kZM" secondAttribute="trailing" id="tsE-nI-zK0"/>
                                             <constraint firstAttribute="trailing" secondItem="G4F-I6-l6N" secondAttribute="trailing" id="ueS-Zc-NFD"/>
                                             <constraint firstItem="Ovk-LE-wDc" firstAttribute="height" secondItem="Dih-Gg-a5b" secondAttribute="height" id="uzO-Sr-kmy"/>
                                             <constraint firstAttribute="trailing" secondItem="aIG-xR-tWz" secondAttribute="trailing" id="wgX-6D-vTQ"/>
-                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="height" secondItem="zQY-R5-vuI" secondAttribute="height" id="yP3-Sd-Zvx"/>
+                                            <constraint firstItem="eEy-Dk-0yY" firstAttribute="leading" secondItem="yNq-TY-rNR" secondAttribute="leading" id="yNz-N8-7w6"/>
                                             <constraint firstItem="ztQ-8m-EQ1" firstAttribute="leading" secondItem="027-k7-cjA" secondAttribute="leading" id="zlm-YU-dhI"/>
                                         </constraints>
                                     </view>
@@ -478,7 +442,6 @@
                         <outlet property="agePickerSelector" destination="jW0-Un-Eox" id="srr-z9-RsR"/>
                         <outlet property="castratedSelection" destination="ztQ-8m-EQ1" id="epP-qW-Pp4"/>
                         <outlet property="chipTextField" destination="Qwg-3c-0OX" id="IbA-tI-BcZ"/>
-                        <outlet property="diedSelection" destination="Lxi-xZ-OVi" id="wa9-18-cVI"/>
                         <outlet property="dogHousePickerSelector" destination="5x9-jc-5Ik" id="p73-NN-zwt"/>
                         <outlet property="genderSelection" destination="G4F-I6-l6N" id="hJM-Nt-oqB"/>
                         <outlet property="hospitalizationSelectionText" destination="Zf4-7R-3dh" id="eVX-Rz-Bza"/>

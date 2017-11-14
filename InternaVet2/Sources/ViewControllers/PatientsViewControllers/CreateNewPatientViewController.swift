@@ -17,7 +17,6 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     @IBOutlet weak var hospitalizationSelectionText: TextSelectionViewField!
     @IBOutlet weak var genderSelection: LabeledSelectionViewField!
     @IBOutlet weak var castratedSelection: LabeledSelectionViewField!
-    @IBOutlet weak var diedSelection: LabeledSelectionViewField!
     @IBOutlet weak var specieSelection: LabeledSelectionViewField!
     @IBOutlet weak var racePushButton: PushButtonViewField!
     @IBOutlet weak var ownerPushButton: PushButtonViewField!
@@ -44,8 +43,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.weightSelectionText.selection.items = [Words.grams, Words.kilograms]
         self.hospitalizationSelectionText.selection.items = [Words.hour + "s", Words.day + "s"]
         self.genderSelection.selection.items = [Words.male, Words.female]
-        self.castratedSelection.selection.items = [Words.no, Words.yes]
-        self.diedSelection.selection.items = [Words.no, Words.yes]
+        self.castratedSelection.selection.items = [Words.no, Words.yes]        
         self.specieSelection.selection.items = [Words.dog, Words.cat]
     }
     
@@ -104,9 +102,19 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.sessionController.saveContext()
     }
     
+    //MARK: Selection view Methods
     
+    func selectedItem(atIndex index: Int, slider: SelectionSliderView) {
+        switch slider {
+        case self.specieSelection.selection: self.didChoose(race: "")
+        default:return
+        }
+    }
+    
+    
+    
+    //MARK: Push Button Methods
     func pushButtonWasTapped(_ button: PushButtonViewField) {
-        
         if let vc = SearchableListViewController.instantiate() {
             vc.setList(mode: self.getSearchMode(for: button),
                        didChooseItem: { [weak self] item in self?.didChooseItem(item, for: button)},
