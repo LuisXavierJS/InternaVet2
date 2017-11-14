@@ -12,7 +12,27 @@ protocol FieldViewContainerProtocol: class {
     func valueWasChanged(_ newValue: StringRepresentable )
 }
 
-class PickerViewContainer: ContentView, UIPickerViewDelegate, UIPickerViewDataSource {
+class CustomInputField: ContentView {
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint? {
+        didSet{
+            self.originalHeight = heightConstraint?.constant ?? self.frame.height
+        }
+    }
+    
+    private var originalHeight: CGFloat = 0
+    
+    weak var delegate: FieldViewContainerProtocol?
+    
+    var isShowing: Bool {
+        return !((self.isHidden || self.alpha == 0) && ((self.heightConstraint?.constant ?? self.frame.height) == 0))
+    }
+    
+    func changeFieldViewVisibility() {
+        self.heightConstraint?.constant = self.isShowing ? 0 : self.originalHeight
+    }
+}
+
+class PickerViewContainer: CustomInputField, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var pickerview: UIPickerView? {
         didSet {
             self.pickerview?.delegate = self
@@ -24,8 +44,6 @@ class PickerViewContainer: ContentView, UIPickerViewDelegate, UIPickerViewDataSo
             self.pickerview?.reloadAllComponents()
         }
     }
-    
-    weak var delegate: FieldViewContainerProtocol?
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return self.datasourceItems.count
@@ -44,28 +62,24 @@ class PickerViewContainer: ContentView, UIPickerViewDelegate, UIPickerViewDataSo
     }
 }
 
-class TextViewContainer: ContentView, UITextViewDelegate {
+class TextViewContainer: CustomInputField, UITextViewDelegate {
     @IBOutlet weak var textview: UITextView? {
         didSet{
             self.textview?.delegate = self
         }
     }
     
-    weak var delegate: FieldViewContainerProtocol?
-    
     func textViewDidChange(_ textView: UITextView) {
         self.delegate?.valueWasChanged(textView.text)
     }
 }
 
-class DatePickerViewContainer: ContentView {
+class DatePickerViewContainer: CustomInputField {
     @IBOutlet weak var datepicker: UIDatePicker? {
         didSet{
             self.datepicker?.addTarget(self, action: #selector(self.datePickerValueChanged(_:)), for: .valueChanged)
         }
     }
-    
-    weak var delegate: FieldViewContainerProtocol?
     
     func datePickerValueChanged(_ sender: UIDatePicker){
         print(sender.date)

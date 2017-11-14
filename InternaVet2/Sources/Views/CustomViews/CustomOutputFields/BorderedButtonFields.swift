@@ -42,7 +42,7 @@ class PickerViewButtonField: ExpandCollapseContainerButton {
 
 @IBDesignable
 class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProtocol{
-    @IBOutlet fileprivate weak var containerField: FieldViewContainerView? {
+    @IBOutlet fileprivate weak var containerField: CustomInputField? {
         didSet{
             self.containerField?.delegate = self
         }
@@ -61,7 +61,7 @@ class ExpandCollapseContainerButton: PushButtonViewField, FieldViewContainerProt
         container.changeFieldViewVisibility()
         UIView.animate(withDuration: 0.25) {self.rootView?.layoutIfNeeded()}
         if let scroll = self.scrollSuperview {
-            let yVariation: CGFloat = container.fieldIsShowing ? container.bounds.height : 0
+            let yVariation: CGFloat = container.isShowing ? container.bounds.height : 0
             scroll.setContentOffset(scroll.contentOffset.adding(onY: yVariation), animated: true)
         }
     }
