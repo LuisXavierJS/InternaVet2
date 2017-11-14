@@ -37,16 +37,16 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     fileprivate func setupDelegates() {
         self.racePushButton.delegate = self
         self.ownerPushButton.delegate = self
-        self.specieSelection.selectionView.delegate = self
+        self.specieSelection.selection.delegate = self
     }
     
     fileprivate func setupSelectorsOptions(){
-        self.weightSelectionText.selectionOptions = [Words.grams, Words.kilograms]
-        self.hospitalizationSelectionText.selectionOptions = [Words.hour + "s", Words.day + "s"]
-        self.genderSelection.selectionOptions = [Words.male, Words.female]
-        self.castratedSelection.selectionOptions = [Words.no, Words.yes]
-        self.diedSelection.selectionOptions = [Words.no, Words.yes]
-        self.specieSelection.selectionOptions = [Words.dog, Words.cat]
+        self.weightSelectionText.selection.items = [Words.grams, Words.kilograms]
+        self.hospitalizationSelectionText.selection.items = [Words.hour + "s", Words.day + "s"]
+        self.genderSelection.selection.items = [Words.male, Words.female]
+        self.castratedSelection.selection.items = [Words.no, Words.yes]
+        self.diedSelection.selection.items = [Words.no, Words.yes]
+        self.specieSelection.selection.items = [Words.dog, Words.cat]
     }
     
     fileprivate func setupPickerSelectors(){
@@ -67,10 +67,10 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     }
     
     fileprivate func setupTextfields() {
-        self.weightSelectionText.textField.keyboardType = .numbersAndPunctuation
-        self.weightSelectionText.textField.allowsEditingTextAttributes = false
-        self.hospitalizationSelectionText.textField.keyboardType = .numbersAndPunctuation
-        self.hospitalizationSelectionText.textField.allowsEditingTextAttributes = false
+        self.weightSelectionText.textfield.keyboardType = .numbersAndPunctuation
+        self.weightSelectionText.textfield.allowsEditingTextAttributes = false
+        self.hospitalizationSelectionText.textfield.keyboardType = .numbersAndPunctuation
+        self.hospitalizationSelectionText.textfield.allowsEditingTextAttributes = false
     }
 
     override func allFieldsFullfilled() -> Bool{
@@ -92,8 +92,8 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         let newPatient = self.editingPatient ?? Patient()
         newPatient.age = self.agePickerSelector.selectedItem?.stringRepresentation
         newPatient.name = self.nameTextField.text
-        newPatient.specie = self.specieSelection.selectionView.selectedItemTitle
-        newPatient.gender = self.genderSelection.selectionView.selectedItemTitle
+        newPatient.specie = self.specieSelection.selection.selectedItemTitle
+        newPatient.gender = self.genderSelection.selection.selectedItemTitle
         newPatient.chip = self.chipTextField.text
         newPatient.record = self.registerTextField.text
         newPatient.race = self.racePushButton.valueLabelText
@@ -156,7 +156,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     }
     
     private func currentSpecieAutocompletionType() -> AutoCompletionType {
-        return AutoCompletionType(rawValue: self.specieSelection.selectedItem) ?? .canisFamiliaris
+        return AutoCompletionType(rawValue: self.specieSelection.selection.selectedItemTitle) ?? .canisFamiliaris
     }
 }
 

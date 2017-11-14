@@ -48,6 +48,10 @@
 		8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C9E81F40F57100C3C4CE /* Colors.swift */; };
 		8E76F5AB1F6EE17C00AC1039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */; };
 		8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */; };
+		8E775F451FBA50B000F6E234 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F431FBA50AF00F6E234 /* ArrowView.swift */; };
+		8E775F461FBA50B000F6E234 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F441FBA50B000F6E234 /* BorderedView.swift */; };
+		8E775F481FBA6D4A00F6E234 /* TextSelectionViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F471FBA6D4A00F6E234 /* TextSelectionViewField.swift */; };
+		8E775F4A1FBA6E4000F6E234 /* LabeledSelectionViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F491FBA6E4000F6E234 /* LabeledSelectionViewField.swift */; };
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
@@ -152,9 +156,6 @@
 		8E95D3E51FACA4C20063E07A /* ZExame.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3831FACA4C10063E07A /* ZExame.txt */; };
 		8E95D3E61FACA4C20063E07A /* ZMedicamento.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E95D3841FACA4C10063E07A /* ZMedicamento.txt */; };
 		8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */; };
-		8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3A1F62BB1000682C19 /* ArrowView.swift */; };
-		8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3B1F62BB1000682C19 /* BorderedView.swift */; };
-		8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */; };
 		8EA87B441F62BB1000682C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3D1F62BB1000682C19 /* ContentView.swift */; };
 		8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */; };
 		8EA87B461F62BB1000682C19 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA87B401F62BB1000682C19 /* SelectionView.swift */; };
@@ -233,6 +234,10 @@
 		8E67C9E81F40F57100C3C4CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E76F5AA1F6EE17C00AC1039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E76F5AE1F6EEA0F00AC1039 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
+		8E775F431FBA50AF00F6E234 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		8E775F441FBA50B000F6E234 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
+		8E775F471FBA6D4A00F6E234 /* TextSelectionViewField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSelectionViewField.swift; sourceTree = "<group>"; };
+		8E775F491FBA6E4000F6E234 /* LabeledSelectionViewField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledSelectionViewField.swift; sourceTree = "<group>"; };
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
@@ -337,9 +342,6 @@
 		8E95D3831FACA4C10063E07A /* ZExame.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZExame.txt; sourceTree = "<group>"; };
 		8E95D3841FACA4C10063E07A /* ZMedicamento.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZMedicamento.txt; sourceTree = "<group>"; };
 		8E961AB11F9BD724004CA884 /* CustomInputFieldProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputFieldProtocol.swift; sourceTree = "<group>"; };
-		8EA87B3A1F62BB1000682C19 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
-		8EA87B3B1F62BB1000682C19 /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
-		8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewFields.swift; sourceTree = "<group>"; };
 		8EA87B3D1F62BB1000682C19 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatTextField.swift; sourceTree = "<group>"; };
 		8EA87B401F62BB1000682C19 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
@@ -648,9 +650,10 @@
 		8E67C9E21F40F48E00C3C4CE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8E775F431FBA50AF00F6E234 /* ArrowView.swift */,
+				8E775F441FBA50B000F6E234 /* BorderedView.swift */,
 				8EA87B3D1F62BB1000682C19 /* ContentView.swift */,
 				8E30CEEB1F65F1C8007D34F7 /* CustomOutputFields */,
-				8EA87B391F62BB1000682C19 /* BorderedFields */,
 				8EA87B3E1F62BB1000682C19 /* CustomInputFields */,
 			);
 			path = CustomViews;
@@ -797,20 +800,12 @@
 			path = AutocompletionResources;
 			sourceTree = "<group>";
 		};
-		8EA87B391F62BB1000682C19 /* BorderedFields */ = {
-			isa = PBXGroup;
-			children = (
-				8EA87B3A1F62BB1000682C19 /* ArrowView.swift */,
-				8EA87B3B1F62BB1000682C19 /* BorderedView.swift */,
-				8EA87B3C1F62BB1000682C19 /* SelectionViewFields.swift */,
-			);
-			path = BorderedFields;
-			sourceTree = "<group>";
-		};
 		8EA87B3E1F62BB1000682C19 /* CustomInputFields */ = {
 			isa = PBXGroup;
 			children = (
+				8E775F491FBA6E4000F6E234 /* LabeledSelectionViewField.swift */,
 				8EA87B3F1F62BB1000682C19 /* CustomFloatTextField.swift */,
+				8E775F471FBA6D4A00F6E234 /* TextSelectionViewField.swift */,
 				8EA87B471F62CF1B00682C19 /* FieldViewContainerView.swift */,
 				8EA87B401F62BB1000682C19 /* SelectionView.swift */,
 			);
@@ -1175,13 +1170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E775F4A1FBA6E4000F6E234 /* LabeledSelectionViewField.swift in Sources */,
 				8EEE026F1F6F22F300A007C5 /* CreateNewOwnerViewController.swift in Sources */,
 				8EEE02701F6F22F300A007C5 /* CreateNewPatientViewController.swift in Sources */,
 				8EEE02711F6F22F300A007C5 /* CreateNewTaskViewController.swift in Sources */,
 				8EEE026E1F6F22EC00A007C5 /* PatientsListViewController.swift in Sources */,
 				8E79E2FE1F676818007FA9BD /* Words.swift in Sources */,
 				8E961AB21F9BD724004CA884 /* CustomInputFieldProtocol.swift in Sources */,
-				8EA87B431F62BB1000682C19 /* SelectionViewFields.swift in Sources */,
 				8EA87B451F62BB1000682C19 /* CustomFloatTextField.swift in Sources */,
 				8EA87B481F62CF1B00682C19 /* FieldViewContainerView.swift in Sources */,
 				8EA87B551F63605800682C19 /* Owner.swift in Sources */,
@@ -1191,8 +1186,9 @@
 				8E135B8A1F648C1E00F9162B /* SessionController.swift in Sources */,
 				8E496A3E1F6ED49D00BBC65E /* BaseNavigationController.swift in Sources */,
 				8E30CEED1F65F1E5007D34F7 /* DualLabelView.swift in Sources */,
-				8EA87B421F62BB1000682C19 /* BorderedView.swift in Sources */,
 				8E67C9E91F40F57100C3C4CE /* Colors.swift in Sources */,
+				8E775F461FBA50B000F6E234 /* BorderedView.swift in Sources */,
+				8E775F481FBA6D4A00F6E234 /* TextSelectionViewField.swift in Sources */,
 				8EE38B141F6A259300360732 /* JSExpansableTableProtocol+Implementations.swift in Sources */,
 				8E135B8C1F648DF700F9162B /* User.swift in Sources */,
 				8E4174EF1F90282900C07CCF /* CreateNewReportViewController.swift in Sources */,
@@ -1201,7 +1197,6 @@
 				8E135B881F648BBA00F9162B /* Patient.swift in Sources */,
 				8EEE026B1F6F20C100A007C5 /* CGRect+Helpers.swift in Sources */,
 				8E76F5AF1F6EEA0F00AC1039 /* DefaultValues.swift in Sources */,
-				8EA87B411F62BB1000682C19 /* ArrowView.swift in Sources */,
 				8E30CF031F662C45007D34F7 /* ValuedUILabel.swift in Sources */,
 				8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */,
 				8E4174EB1F90265500C07CCF /* OwnersListViewController.swift in Sources */,
@@ -1210,6 +1205,7 @@
 				8E4174ED1F90271900C07CCF /* TasksListViewController.swift in Sources */,
 				8EEE026C1F6F20C100A007C5 /* CGContext+Helpers.swift in Sources */,
 				8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */,
+				8E775F451FBA50B000F6E234 /* ArrowView.swift in Sources */,
 				8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */,
 				8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */,
 				8E232C591FABFCED00E223D5 /* AutoCompletionController.swift in Sources */,

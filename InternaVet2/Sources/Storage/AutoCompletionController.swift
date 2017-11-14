@@ -24,7 +24,7 @@ class AutoCompletionController: NSObject {
     
     func stringsToComplete(string: String) -> [String]?{
         var tipoDeAutocomplete = self.assetType.rawValue
-        if let firstChar = string.uppercased().characters.first{
+        if let firstChar = string.uppercased().first{
             tipoDeAutocomplete.insert(firstChar, at: tipoDeAutocomplete.startIndex)
             let bundle = Bundle(for: AutoCompletionController.self)
             if let filePath = bundle.path(forResource: tipoDeAutocomplete, ofType: "txt"){
@@ -42,7 +42,7 @@ class AutoCompletionController: NSObject {
     
     func insertAssetNameIfPossible(string:String){
         var tipoDeAutocomplete = self.assetType.rawValue
-        if let firstChar = string.uppercased().characters.first{
+        if let firstChar = string.uppercased().first{
             tipoDeAutocomplete.insert(firstChar, at: tipoDeAutocomplete.startIndex)
             let bundle = Bundle(for: AutoCompletionController.self)
             if let filePath = bundle.path(forResource: tipoDeAutocomplete, ofType: "txt"){
