@@ -8,6 +8,16 @@
 
 import UIKit
 
+protocol EntityConsumerProtocol: class {
+    func createdItem(_ item: StorageItem, for: EntityServerProtocol) -> Void
+}
+
+protocol EntityServerProtocol: class {
+    weak var delegate: EntityConsumerProtocol? {get set}
+}
+
+typealias RegisterViewController = EntityServerProtocol&UIViewController
+
 class BaseRegisterViewController: UIViewController, SessionControllerManagerProtocol {
     weak var sessionController: SessionController!
         

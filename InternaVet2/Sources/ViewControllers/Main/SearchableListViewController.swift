@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol SearchableListDelegate: class {
+    func didConfirmChoosedItem(_ item: SearchableItem) -> Void
+    func didCreatedItem(_ item: SearchableItem) -> Void
+    func needsViewControllerToCreateItem(for listViewController: SearchableListViewController) -> RegisterViewController?
+}
+
 typealias SearchableListChoosedCallback = ((_ item: SearchableItem) -> Void)
 typealias SearchableListCreatedCallback = ((_ itemName: String) -> Void)
 
@@ -16,7 +22,7 @@ enum SearchMode {
     case itemList(list: [SearchableItem])
 }
 
-class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate {
+class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate, EntityConsumerProtocol {
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var listTableView: UITableView!
     
@@ -26,11 +32,10 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     var listDatasource: JSGenericTableController<SearchResultCell>!
     
     private(set) var selectedIndex: IndexPath?
-   
-    private(set) var confirmChoosedItemCallback: SearchableListChoosedCallback?
-    private(set) var confirmCreationItemCallback: SearchableListCreatedCallback?
     
     private var searchMode: SearchMode = .itemList(list: [])
+    
+    weak var delegate: SearchableListDelegate?
     
     //MARK: Override methods
     
@@ -41,6 +46,13 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     }
     
     //MARK: IBActions
+    
+    @IBAction func createButtonTaped() {
+        if let controller = self.delegate?.needsViewControllerToCreateItem(for: self) {
+            controller.delegate = self
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
     @IBAction func confirmButtonTapped() {
         self.navigationController?.popViewController(animated: true)
@@ -53,8 +65,9 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     
     //MARK: Public methods
     
-    func setList(mode: SearchMode, didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil) {
+    func setList(mode: SearchMode, delegate: SearchableListDelegate) {
         self.searchMode = mode
+        self.delegate = delegate
         self.searchTextfield?.text = ""
         switch self.searchMode {
         case .autocompletion(_):
@@ -64,10 +77,9 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
             self.originalListItems = list
             self.listDatasource?.items = [list]
         }
-        self.setCallbacks(didChooseItem: didChooseItem, didCreateItem: didCreateItem)
     }
     
-    //MARK: Delegate Methods
+    //MARK: UITextFieldDelegate Methods
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let newText = NSString(string:textField.text!).replacingCharacters(in: range, with: string)
@@ -84,6 +96,8 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         return false
     }
     
+    //MARL: UITableViewDelegate methods
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let oldSelected = self.selectedIndex
         self.selectedIndex = indexPath
@@ -92,6 +106,12 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.contentView.backgroundColor = self.cellColor(at: indexPath)
+    }
+    
+    //MARK: Entity Consumer Protocol methods
+    
+    func createdItem(_ item: StorageItem, for: EntityServerProtocol) {
+        //shit happening
     }
 
     //MARK: Fileprivate methods
@@ -114,15 +134,10 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     
     fileprivate func performConfirmation() {
         if let selected = self.selectedIndex {
-            self.confirmChoosedItemCallback?(self.listDatasource.items[selected.section][selected.row])
+            self.delegate?.didConfirmChoosedItem(self.listDatasource.items[selected.section][selected.row])
         }else{
-            self.confirmCreationItemCallback?(self.searchTextfield.text!)
+            self.delegate?.didCreatedItem(SearchableItemM(self.searchTextfield.text!))
         }
-    }
-    
-    fileprivate func setCallbacks(didChooseItem: SearchableListChoosedCallback? = nil, didCreateItem: SearchableListCreatedCallback? = nil){
-        self.confirmChoosedItemCallback = didChooseItem
-        self.confirmCreationItemCallback = didCreateItem
     }
     
     fileprivate func calculateNewListDatasourceItems(for newText: String) -> [SearchableItem] {
@@ -131,4 +146,5 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         case .itemList: return self.originalListItems.filter({$0.shouldResult(for: newText)})
         }
     }
+    
 }

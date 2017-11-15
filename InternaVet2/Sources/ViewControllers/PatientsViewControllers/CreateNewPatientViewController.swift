@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol {
+class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol, SearchableListDelegate {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: CustomFloatTextField!
     @IBOutlet weak var registerTextField: CustomFloatTextField!
@@ -25,6 +26,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     
     weak var editingPatient: Patient?
     
+    private weak var lastSelectedPushButton: PushButtonViewField?
     private var triedSave: Bool = false
     
     override func viewDidLoad() {
@@ -121,13 +123,30 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     
     
     //MARK: Push Button Methods
+    
     func pushButtonWasTapped(_ button: PushButtonViewField) {
         if let vc = SearchableListViewController.instantiate() {
             vc.setList(mode: self.getSearchMode(for: button),
-                       didChooseItem: { [weak self] item in self?.didChooseItem(item, for: button)},
-                       didCreateItem: { [weak self] itemName in self?.didCreateItem(itemName, for: button)})
+                       delegate: self)
             self.navigationController?.pushViewController(vc, animated: true)
+            self.lastSelectedPushButton = button
         }
+    }
+    
+    func didConfirmChoosedItem(_ item: SearchableItem) {
+        if let lastButton = self.lastSelectedPushButton {
+            self.didChooseItem(item, for: lastButton)
+        }
+    }
+    
+    func didCreatedItem(_ item: SearchableItem) {
+        if let lastButton = self.lastSelectedPushButton {
+            self.didCreateItem(item, for: lastButton)
+        }
+    }
+    
+    func needsViewControllerToCreateItem(for listViewController: SearchableListViewController) -> RegisterViewController? {        
+        return nil
     }
     
     fileprivate func getSearchMode(for button: PushButtonViewField) -> SearchMode {
@@ -151,9 +170,9 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         }
     }
     
-    fileprivate func didCreateItem(_ itemName: String, for button: PushButtonViewField) {
+    fileprivate func didCreateItem(_ item: SearchableItem, for button: PushButtonViewField) {
         if button == self.racePushButton {
-            self.didCreate(race: itemName)
+            self.didCreate(race: item.resultItemTitle())
         }
     }
     
