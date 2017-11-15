@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CreateNewOwnerViewController: BaseRegisterViewController {
+class CreateNewOwnerViewController: BaseRegisterViewController, EntityServerProtocol {
+    var delegate: EntityConsumerProtocol?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

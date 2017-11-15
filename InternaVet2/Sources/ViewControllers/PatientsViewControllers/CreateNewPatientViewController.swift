@@ -146,6 +146,10 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     }
     
     func needsViewControllerToCreateItem(for listViewController: SearchableListViewController) -> RegisterViewController? {        
+        if self.lastSelectedPushButton == self.ownerPushButton,
+            let controller = CreateNewOwnerViewController.instantiate(){
+            return controller as? RegisterViewController
+        }
         return nil
     }
     

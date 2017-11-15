@@ -43,11 +43,12 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         super.viewDidLoad()
         self.setDatasources()
         self.setDelegates()
+        self.setCreateButton()
     }
     
     //MARK: IBActions
     
-    @IBAction func createButtonTaped() {
+    func createButtonTaped() {
         if let controller = self.delegate?.needsViewControllerToCreateItem(for: self) {
             controller.delegate = self
             self.navigationController?.pushViewController(controller, animated: true)
@@ -111,7 +112,8 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     //MARK: Entity Consumer Protocol methods
     
     func createdItem(_ item: StorageItem, for: EntityServerProtocol) {
-        //shit happening
+        self.navigationController?.popViewController(animated: true)
+        self.delegate?.didCreatedItem(item as! SearchableItem)
     }
 
     //MARK: Fileprivate methods
@@ -126,6 +128,15 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         self.listTableView.dataSource = self.listDatasource.delegateDatasource
         self.listDatasource.delegateDatasource.listener = self
         self.searchTextfield.delegate = self
+    }
+    
+    fileprivate func setCreateButton() {
+        switch self.searchMode {
+        case .itemList(_):
+            let button = UIBarButtonItem(image: #imageLiteral(resourceName: "plus"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.createButtonTaped))
+            self.navigationItem.rightBarButtonItems?.append(button)
+        default:return
+        }
     }
     
     fileprivate func cellColor(at index: IndexPath) -> UIColor {
