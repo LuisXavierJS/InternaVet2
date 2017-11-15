@@ -19,7 +19,8 @@ protocol CustomInputFieldProtocol: class {
     func updateFullfilledState() -> Bool
 }
 
-extension CustomInputFieldProtocol {    
+extension CustomInputFieldProtocol {
+    @discardableResult
     func updateFullfilledState() -> Bool {
         let isFullfilled = self.isFullfilled
         if isFullfilled {

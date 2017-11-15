@@ -25,6 +25,8 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     
     weak var editingPatient: Patient?
     
+    private var triedSave: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSelectorsOptions()
@@ -71,6 +73,11 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         self.hospitalizationSelectionText.textfield.allowsEditingTextAttributes = false
     }
 
+    override func saveButtonTapped(_ sender: Any) {
+        super.saveButtonTapped(sender)
+        self.triedSave = true
+    }
+    
     override func allFieldsFullfilled() -> Bool{
         return [self.weightSelectionText,
             self.hospitalizationSelectionText,
@@ -152,6 +159,9 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     
     fileprivate func didChoose(race: String) {
         self.racePushButton.setInputValue(newValue: race)
+        if self.triedSave && !race.isEmpty {
+            self.racePushButton.updateFullfilledState()
+        }
     }
     
     fileprivate func didCreate(race: String) {

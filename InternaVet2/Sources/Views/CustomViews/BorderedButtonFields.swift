@@ -144,7 +144,7 @@ class PushButtonViewField: BorderedArrowViewField, CustomInputFieldProtocol {
     }
     
     func setInputValue(newValue: String) {
-        self.dualLabelView.valueLabelText = newValue
+        self.valueLabelText = newValue
     }
     
     func setInvalidState() {
