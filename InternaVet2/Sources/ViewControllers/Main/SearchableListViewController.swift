@@ -151,6 +151,11 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         if let selected = self.selectedIndex {
             self.delegate?.didConfirmChoosedItem(self.listDatasource.items[selected.section][selected.row])
         }else{
+            switch self.searchMode {
+            case .autocompletion(let type):
+                AutoCompletionController(type).insertAssetNameIfPossible(string: self.searchTextfield.text!)                
+            default:break
+            }
             self.delegate?.didCreatedItem(SearchableItemM(self.searchTextfield.text!))
         }
     }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F5H-oj-Mxd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F5H-oj-Mxd">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,24 +36,49 @@
                         <viewControllerLayoutGuide type="bottom" id="ben-EO-98c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SJL-8h-MFd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="980"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-WW-ncf" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="-64" width="320" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM9-FS-tEk" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="915"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="905"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-QR-hxd" customClass="LabeledSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="25" width="320" height="45"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-eD-oG3">
+                                                        <rect key="frame" x="15" y="14" width="128" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-pt-n7E" customClass="SelectionSliderView" customModule="InternaVet2" customModuleProvider="target">
+                                                        <rect key="frame" x="148" y="3" width="157" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="qs2-97-Uvj"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="ISd-pt-n7E" firstAttribute="leading" secondItem="Df1-eD-oG3" secondAttribute="trailing" constant="5" id="5vE-1i-c2t"/>
+                                                    <constraint firstItem="ISd-pt-n7E" firstAttribute="centerY" secondItem="9ad-QR-hxd" secondAttribute="centerY" id="6Gp-RK-vRG"/>
+                                                    <constraint firstItem="Df1-eD-oG3" firstAttribute="width" secondItem="9ad-QR-hxd" secondAttribute="width" multiplier="0.4" id="DRT-Ja-Ob2"/>
                                                     <constraint firstAttribute="height" constant="45" id="Eis-MP-SQi"/>
+                                                    <constraint firstItem="Df1-eD-oG3" firstAttribute="centerY" secondItem="9ad-QR-hxd" secondAttribute="centerY" id="Irm-cv-G57"/>
+                                                    <constraint firstItem="Df1-eD-oG3" firstAttribute="leading" secondItem="9ad-QR-hxd" secondAttribute="leading" constant="15" id="ayB-x6-JaQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ISd-pt-n7E" secondAttribute="trailing" constant="15" id="ql2-GE-JRf"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Tipo de Tarefa:"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="label" destination="Df1-eD-oG3" id="09m-ZF-0KK"/>
+                                                    <outlet property="selection" destination="ISd-pt-n7E" id="dIk-CH-oW5"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-s4-mtc" userLabel="DynamicSeparatorSpaceView">
                                                 <rect key="frame" x="145" y="70" width="30" height="15"/>
@@ -62,18 +88,18 @@
                                                     <constraint firstAttribute="width" constant="30" id="aOz-k4-ifJ"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="85" width="320" height="45"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="85" width="290" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Hcd-RO-w3r"/>
+                                                    <constraint firstAttribute="height" constant="35" id="Hcd-RO-w3r"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Dosagem:"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-al-Uhs" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="145" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="135" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="yE9-SG-9tr"/>
@@ -84,7 +110,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtV-bK-Peu" customClass="PushButtonViewField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="205" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="195" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="gQz-Qf-Zks"/>
@@ -95,7 +121,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Va-OMu" customClass="PickerViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="265" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="255" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="h0F-hz-Iwn"/>
@@ -111,18 +137,30 @@
                                                     <outlet property="containerField" destination="kTM-0s-iSB" id="WwC-ng-62E"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-0s-iSB" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="310" width="320" height="100"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-0s-iSB" customClass="PickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="300" width="320" height="100"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAw-W5-U0r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="5SS-C8-jO3"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="iAw-W5-U0r" firstAttribute="top" secondItem="kTM-0s-iSB" secondAttribute="top" id="CNZ-GW-yxM"/>
+                                                    <constraint firstItem="iAw-W5-U0r" firstAttribute="leading" secondItem="kTM-0s-iSB" secondAttribute="leading" id="Guh-H2-oTv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iAw-W5-U0r" secondAttribute="trailing" id="hdS-GP-cUo"/>
                                                     <constraint firstAttribute="height" constant="100" id="wh0-B2-Raa"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="heightConstraint" destination="wh0-B2-Raa" id="zs2-4X-qX2"/>
+                                                    <outlet property="pickerview" destination="iAw-W5-U0r" id="3nd-Hw-8Db"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-Ee-S6u" customClass="DateViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="425" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="415" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="lkr-45-YG5"/>
@@ -138,18 +176,33 @@
                                                     <outlet property="containerField" destination="Tkx-ks-gXf" id="gVI-IJ-sir"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-ks-gXf" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="470" width="320" height="100"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-ks-gXf" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="460" width="320" height="100"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fZ8-uB-m7s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="vtb-x6-RAZ"/>
+                                                        </constraints>
+                                                        <date key="date" timeIntervalSinceReferenceDate="532527244.23461998">
+                                                            <!--2017-11-16 12:14:04 +0000-->
+                                                        </date>
+                                                    </datePicker>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="fZ8-uB-m7s" secondAttribute="trailing" id="DJC-Rt-Jcr"/>
                                                     <constraint firstAttribute="height" constant="100" id="Iry-Xk-ugU"/>
+                                                    <constraint firstItem="fZ8-uB-m7s" firstAttribute="leading" secondItem="Tkx-ks-gXf" secondAttribute="leading" id="gY3-Ix-bvq"/>
+                                                    <constraint firstItem="fZ8-uB-m7s" firstAttribute="top" secondItem="Tkx-ks-gXf" secondAttribute="top" id="tfN-Ia-bnv"/>
                                                 </constraints>
                                                 <connections>
+                                                    <outlet property="datepicker" destination="fZ8-uB-m7s" id="Ncv-QH-aaU"/>
                                                     <outlet property="heightConstraint" destination="Iry-Xk-ugU" id="nJE-Er-Uij"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-zp-HUG" customClass="DateViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="585" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="575" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="8PZ-g0-Dei"/>
@@ -165,18 +218,33 @@
                                                     <outlet property="containerField" destination="Pjl-Yh-o5P" id="Qxz-B0-olT"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Yh-o5P" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="630" width="320" height="100"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Yh-o5P" customClass="DatePickerViewContainer" customModule="InternaVet2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="620" width="320" height="100"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-45-6Hu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="J8W-Du-RHl"/>
+                                                        </constraints>
+                                                        <date key="date" timeIntervalSinceReferenceDate="532527292.18466902">
+                                                            <!--2017-11-16 12:14:52 +0000-->
+                                                        </date>
+                                                    </datePicker>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="QSX-45-6Hu" firstAttribute="leading" secondItem="Pjl-Yh-o5P" secondAttribute="leading" id="GYh-lv-3eA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QSX-45-6Hu" secondAttribute="trailing" id="HTi-yF-jgh"/>
                                                     <constraint firstAttribute="height" constant="100" id="RE8-KJ-Ik0"/>
+                                                    <constraint firstItem="QSX-45-6Hu" firstAttribute="top" secondItem="Pjl-Yh-o5P" secondAttribute="top" id="zSP-Yb-4Hi"/>
                                                 </constraints>
                                                 <connections>
+                                                    <outlet property="datepicker" destination="QSX-45-6Hu" id="xcD-rp-IPB"/>
                                                     <outlet property="heightConstraint" destination="RE8-KJ-Ik0" id="iAF-K0-k04"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-6g-lHc" customClass="TextViewButtonField" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="745" width="320" height="45"/>
+                                                <rect key="frame" x="0.0" y="735" width="320" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="F3w-zN-FY3"/>
@@ -193,13 +261,29 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-aw-nAy" customClass="TextViewContainer" customModule="InternaVet2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="790" width="320" height="100"/>
+                                                <rect key="frame" x="0.0" y="780" width="320" height="100"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rbi-qZ-ssV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="Xb1-sz-9Pd"/>
+                                                        </constraints>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Rbi-qZ-ssV" secondAttribute="trailing" id="7a2-Oq-O3T"/>
+                                                    <constraint firstItem="Rbi-qZ-ssV" firstAttribute="leading" secondItem="5mW-aw-nAy" secondAttribute="leading" id="m4y-0J-SAf"/>
                                                     <constraint firstAttribute="height" constant="100" id="nAT-Jk-tYA"/>
+                                                    <constraint firstItem="Rbi-qZ-ssV" firstAttribute="top" secondItem="5mW-aw-nAy" secondAttribute="top" id="rJC-5J-0vR"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="heightConstraint" destination="nAT-Jk-tYA" id="noI-vu-nfW"/>
+                                                    <outlet property="textview" destination="Rbi-qZ-ssV" id="rnW-2z-4am"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -237,9 +321,9 @@
                                             <constraint firstItem="Pl3-Ee-S6u" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="mRu-Y9-3nX"/>
                                             <constraint firstItem="UiS-s4-mtc" firstAttribute="top" secondItem="9ad-QR-hxd" secondAttribute="bottom" id="mdA-t7-REj"/>
                                             <constraint firstItem="kTM-0s-iSB" firstAttribute="top" secondItem="pmD-Va-OMu" secondAttribute="bottom" id="nbg-H6-IcS"/>
-                                            <constraint firstItem="0Xc-ga-vB0" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="oCl-E8-eL8"/>
+                                            <constraint firstItem="0Xc-ga-vB0" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" constant="15" id="oCl-E8-eL8"/>
                                             <constraint firstAttribute="trailing" secondItem="Pl3-Ee-S6u" secondAttribute="trailing" id="pKC-JY-skY"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Xc-ga-vB0" secondAttribute="trailing" id="qpk-2h-RcC"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Xc-ga-vB0" secondAttribute="trailing" constant="15" id="qpk-2h-RcC"/>
                                             <constraint firstItem="UiS-s4-mtc" firstAttribute="centerX" secondItem="9ad-QR-hxd" secondAttribute="centerX" id="uIt-MQ-ccK"/>
                                             <constraint firstItem="sWf-al-Uhs" firstAttribute="leading" secondItem="iM9-FS-tEk" secondAttribute="leading" id="uuO-eF-IhP"/>
                                             <constraint firstItem="Pjl-Yh-o5P" firstAttribute="top" secondItem="hW2-zp-HUG" secondAttribute="bottom" id="vaU-WT-D8h"/>
@@ -277,9 +361,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="980"/>
+                    <connections>
+                        <outlet property="beginHospitalizationDateSelector" destination="Pl3-Ee-S6u" id="2ry-a1-TkC"/>
+                        <outlet property="dosageHeight" destination="Hcd-RO-w3r" id="SRg-h9-Sl8"/>
+                        <outlet property="dosageTextfield" destination="0Xc-ga-vB0" id="7fG-jk-KUW"/>
+                        <outlet property="endHospitalizationDateSelector" destination="hW2-zp-HUG" id="f5G-Vh-LUQ"/>
+                        <outlet property="intervalPickerSelector" destination="pmD-Va-OMu" id="ZnY-Cd-qXS"/>
+                        <outlet property="observationsTextView" destination="tVh-6g-lHc" id="zVo-bR-2PC"/>
+                        <outlet property="patientPushButton" destination="mtV-bK-Peu" id="K5l-D2-SF4"/>
+                        <outlet property="taskNamePushButton" destination="sWf-al-Uhs" id="wcj-eN-ag5"/>
+                        <outlet property="taskTypeSelection" destination="9ad-QR-hxd" id="2Fu-FQ-pZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oa6-ep-cKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

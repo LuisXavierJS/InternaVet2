@@ -15,7 +15,7 @@ class CreateNewOwnerViewController: BaseRegisterViewController, EntityServerProt
     @IBOutlet weak var homephoneTextfield: CustomFloatTextField!
     @IBOutlet weak var addressTextfield: CustomFloatTextField!
     
-    var delegate: EntityConsumerProtocol?
+    weak var delegate: EntityConsumerProtocol?
     
     weak var editingOwner: Owner?
     
@@ -43,9 +43,10 @@ class CreateNewOwnerViewController: BaseRegisterViewController, EntityServerProt
         owner.telefone = self.homephoneTextfield.text
         owner.endereco = self.addressTextfield.text
         if self.editingOwner == nil {
+            owner.identifier = UUID().uuidString
             self.sessionController.currentUser?.owners.append(owner)
-            self.sessionController.saveContext()
         }
+        self.sessionController.saveContext()
         self.delegate?.createdItem(owner, for: self)
     }
 

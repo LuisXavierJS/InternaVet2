@@ -10,8 +10,9 @@ import Foundation
 import FileKit
 
 @objc(Patient)
-class Patient: StorageItem {
-    dynamic fileprivate(set) var ownerId: String?
+class Patient: StorageItem, SearchableItem {
+    dynamic var ownerId: String?
+    dynamic var identifier: String?
     dynamic var name: String?
     dynamic var specie: String?
     dynamic var race: String?
@@ -27,6 +28,14 @@ class Patient: StorageItem {
     func getHospitalizationTimeInterval() -> TimeInterval {
         assertionFailure("MUST CONVERT hospitalizationTime: String TO TIME INTERVAL!")
         return 0
+    }
+    
+    func resultItemTitle() -> String {
+        return self.name ?? "-"
+    }
+    
+    func shouldResult(for query: String) -> Bool {
+        return self.resultItemTitle().localizedCaseInsensitiveContains(query)
     }
     
 }

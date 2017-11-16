@@ -51,8 +51,8 @@ class DualLabelView: ContentView {
     }
     
     override func setupFrames() {
-        self.firsLabel.frame = self.bounds
-        self.secondLabel.frame = self.bounds
+        self.firsLabel.frame = self.bounds.with(width: self.bounds.width/2)
+        self.secondLabel.frame = self.firsLabel.bounds.with(x: self.firsLabel.frame.maxX)
     }
     
     func beginTouchAnimation(){

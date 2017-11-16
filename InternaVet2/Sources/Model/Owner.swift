@@ -11,6 +11,7 @@ import FileKit
 
 @objc(Owner)
 class Owner: StorageItem, SearchableItem {
+    dynamic var identifier: String?
     dynamic var name: String?
     dynamic var email: String?
     dynamic var celular: String?

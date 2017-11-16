@@ -55,6 +55,7 @@
 		8E775F581FBB227800F6E234 /* TextSelectionViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F511FBB227800F6E234 /* TextSelectionViewField.swift */; };
 		8E775F591FBB227800F6E234 /* LabeledSelectionViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F521FBB227800F6E234 /* LabeledSelectionViewField.swift */; };
 		8E775F5A1FBB227800F6E234 /* ValuedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F531FBB227800F6E234 /* ValuedUILabel.swift */; };
+		8E775F5E1FBE0ECE00F6E234 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775F5D1FBE0ECE00F6E234 /* Task.swift */; };
 		8E79E2F31F675A17007FA9BD /* PatientsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */; };
 		8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */; };
 		8E79E2F71F675E95007FA9BD /* JSGenericTableController+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */; };
@@ -241,6 +242,7 @@
 		8E775F511FBB227800F6E234 /* TextSelectionViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectionViewField.swift; sourceTree = "<group>"; };
 		8E775F521FBB227800F6E234 /* LabeledSelectionViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledSelectionViewField.swift; sourceTree = "<group>"; };
 		8E775F531FBB227800F6E234 /* ValuedUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuedUILabel.swift; sourceTree = "<group>"; };
+		8E775F5D1FBE0ECE00F6E234 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8E79E2F21F675A17007FA9BD /* PatientsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientsList.storyboard; sourceTree = "<group>"; };
 		8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		8E79E2F61F675E95007FA9BD /* JSGenericTableController+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSGenericTableController+Implementations.swift"; sourceTree = "<group>"; };
@@ -812,6 +814,7 @@
 				8E135B8B1F648DF700F9162B /* User.swift */,
 				8EA87B541F63605800682C19 /* Owner.swift */,
 				8E135B871F648BBA00F9162B /* Patient.swift */,
+				8E775F5D1FBE0ECE00F6E234 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1206,6 +1209,7 @@
 				8E67C9DE1F40F35000C3C4CE /* MainTabBarController.swift in Sources */,
 				8E79E2F51F675A81007FA9BD /* PatientTableViewCell.swift in Sources */,
 				8E1BABD81F40D2B700808B16 /* InternaVet2.xcdatamodeld in Sources */,
+				8E775F5E1FBE0ECE00F6E234 /* Task.swift in Sources */,
 				8E775F571FBB227800F6E234 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

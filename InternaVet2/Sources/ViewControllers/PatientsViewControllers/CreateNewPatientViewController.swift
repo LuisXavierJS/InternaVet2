@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol, SearchableListDelegate {
+class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol, SearchableListDelegate, EntityServerProtocol {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: CustomFloatTextField!
@@ -24,8 +24,11 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     @IBOutlet weak var dogHousePickerSelector: PickerViewButtonField!
     @IBOutlet weak var agePickerSelector: PickerViewButtonField!
     
+    weak var delegate: EntityConsumerProtocol?
+    
     weak var editingPatient: Patient?
     
+    private weak var currentOwner: Owner?
     private weak var lastSelectedPushButton: PushButtonViewField?
     private var triedSave: Bool = false
     
@@ -105,10 +108,13 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         newPatient.record = self.registerTextField.text
         newPatient.race = self.racePushButton.valueLabelText
         newPatient.dogHouseNumber = self.dogHousePickerSelector.valueLabelText
+        newPatient.ownerId = self.currentOwner?.identifier
         if self.editingPatient == nil {
+            newPatient.identifier = UUID().uuidString
             self.sessionController.currentUser?.patients.append(newPatient)
         }
         self.sessionController.saveContext()
+        self.delegate?.createdItem(newPatient, for: self)
     }
     
     //MARK: Selection view Methods
@@ -191,8 +197,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
         }
     }
     
-    fileprivate func didCreate(race: String) {
-        AutoCompletionController(self.currentSpecieAutocompletionType()).insertAssetNameIfPossible(string: race)
+    fileprivate func didCreate(race: String) {        
         self.didChoose(race: race)
     }
     
@@ -201,6 +206,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     }
     
     fileprivate func didChoose(owner: Owner) {
+        self.currentOwner = owner
         self.ownerPushButton.setInputValue(newValue: owner.name ?? "")
     }
     

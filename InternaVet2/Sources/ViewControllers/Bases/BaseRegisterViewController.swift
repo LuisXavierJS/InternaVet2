@@ -19,6 +19,8 @@ protocol EntityServerProtocol: class {
 typealias RegisterViewController = EntityServerProtocol&UIViewController
 
 class BaseRegisterViewController: UIViewController, SessionControllerManagerProtocol {
+    @IBInspectable var dissmissWhenSave: Bool = true
+    
     weak var sessionController: SessionController!
         
     override func show(_ vc: UIViewController, sender: Any?) {
@@ -42,7 +44,9 @@ class BaseRegisterViewController: UIViewController, SessionControllerManagerProt
     @IBAction func saveButtonTapped(_ sender: Any) {
         if self.allFieldsFullfilled() {
             self.performSave()
-            self.navigationController?.dismiss(animated: true, completion: nil)
+            if self.dissmissWhenSave {
+                self.navigationController?.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
