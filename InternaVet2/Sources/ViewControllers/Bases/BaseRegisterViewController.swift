@@ -47,6 +47,6 @@ class BaseRegisterViewController: UIViewController, SessionControllerManagerProt
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }

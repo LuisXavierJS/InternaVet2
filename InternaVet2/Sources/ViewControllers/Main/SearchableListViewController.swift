@@ -112,8 +112,12 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     //MARK: Entity Consumer Protocol methods
     
     func createdItem(_ item: StorageItem, for: EntityServerProtocol) {
-        self.navigationController?.popViewController(animated: true)
         self.delegate?.didCreatedItem(item as! SearchableItem)
+        if let root = self.delegate as? UIViewController {
+            self.navigationController?.popToViewController(root, animated: true)
+        }else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     //MARK: Fileprivate methods

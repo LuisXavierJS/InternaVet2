@@ -148,7 +148,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     func needsViewControllerToCreateItem(for listViewController: SearchableListViewController) -> RegisterViewController? {        
         if self.lastSelectedPushButton == self.ownerPushButton,
             let controller = CreateNewOwnerViewController.instantiate(){
-            return controller as? RegisterViewController
+            return controller
         }
         return nil
     }
@@ -163,9 +163,7 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     fileprivate func didChooseItem(_ item: SearchableItem, for button: PushButtonViewField) {
         switch button {
         case self.racePushButton:
-            if let race = (item as? SearchableItemM)?.value {
-                self.didChoose(race: race)
-            }
+            self.didChoose(race: item.resultItemTitle())            
         case self.ownerPushButton:
             if let owner = item as? Owner {
                 self.didChoose(owner: owner)
@@ -175,8 +173,14 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     }
     
     fileprivate func didCreateItem(_ item: SearchableItem, for button: PushButtonViewField) {
-        if button == self.racePushButton {
+        switch button {
+        case self.racePushButton:
             self.didCreate(race: item.resultItemTitle())
+        case self.ownerPushButton:
+            if let owner = item as? Owner {
+                self.didCreate(owner: owner)
+            }
+        default:return
         }
     }
     
@@ -190,6 +194,10 @@ class CreateNewPatientViewController: BaseRegisterViewController, PushButtonProt
     fileprivate func didCreate(race: String) {
         AutoCompletionController(self.currentSpecieAutocompletionType()).insertAssetNameIfPossible(string: race)
         self.didChoose(race: race)
+    }
+    
+    fileprivate func didCreate(owner: Owner) {
+        self.didChoose(owner: owner)
     }
     
     fileprivate func didChoose(owner: Owner) {

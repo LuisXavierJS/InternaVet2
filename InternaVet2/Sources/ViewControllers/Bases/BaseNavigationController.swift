@@ -33,6 +33,11 @@ class BaseNavigationController : UINavigationController, SessionControllerManage
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        self.trySetSession(on: viewController)
+        super.pushViewController(viewController, animated: animated)
+    }
+    
     override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
         viewControllers.forEach({self.trySetSession(on: $0)})
         super.setViewControllers(viewControllers, animated: animated)
