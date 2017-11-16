@@ -10,7 +10,7 @@ import UIKit
 
 class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtocol, SelectionSliderViewDelegateProtocol, SearchableListDelegate {
     @IBOutlet weak var taskTypeSelection: LabeledSelectionViewField!
-    @IBOutlet weak var dosageTextfield: CustomFloatTextField!
+    @IBOutlet weak var dosageTextfield: TextSelectionViewField!
     @IBOutlet weak var taskNamePushButton: PushButtonViewField!
     @IBOutlet weak var patientPushButton: PushButtonViewField!
     @IBOutlet weak var intervalPickerSelector: PickerViewButtonField!
@@ -31,6 +31,7 @@ class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtoco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setDatasources()
         self.setDelegates()
     }
     
@@ -43,7 +44,8 @@ class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtoco
     }
     
     private func setDatasources() {
-        
+        self.taskTypeSelection.selection.items = ([.medicamento,.procedimento,.exame] as [AutoCompletionType]).map({$0.rawValue})
+        self.dosageTextfield.selection.items = [Words.grams, Words.kilograms]
     }
     
     private func getCurrentTaskAutocompletionType() -> AutoCompletionType {
