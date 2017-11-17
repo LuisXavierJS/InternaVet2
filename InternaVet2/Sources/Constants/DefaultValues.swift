@@ -10,6 +10,8 @@ import UIKit
 
 struct DefaultValues {
     static let standardUsername = "standard_user"
-    static let medium: CGFloat = 15
+    static let mediumFontSize: CGFloat = 15
     static let numberOfDogHouses = 45
+    static let minimumHospitalizationDate = Date()
+    static let maximumHospitalizationDate = Date().addingTimeInterval(60*60*24*30)
 }

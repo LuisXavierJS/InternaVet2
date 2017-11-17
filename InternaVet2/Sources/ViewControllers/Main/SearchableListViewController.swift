@@ -24,7 +24,6 @@ enum SearchMode {
 
 class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate, EntityConsumerProtocol {
     @IBOutlet weak var searchTextfield: UITextField!
-    @IBOutlet weak var listTableView: UITableView!
     
     @IBOutlet weak var textfieldHeightConstraint: NSLayoutConstraint!
     
@@ -87,7 +86,7 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
         if !newText.isEmpty {
             self.selectedIndex = nil
             self.listDatasource.items = [self.calculateNewListDatasourceItems(for:newText)]
-            self.listTableView.reloadData()
+            self.tableView.reloadData()
         }
         return true
     }
@@ -123,13 +122,13 @@ class SearchableListViewController: BaseListViewController, UITextFieldDelegate,
     //MARK: Fileprivate methods
     
     fileprivate func setDatasources() {
-        self.listDatasource = JSGenericTableController<SearchResultCell>(tableView: self.listTableView)
+        self.listDatasource = JSGenericTableController<SearchResultCell>(tableView: self.tableView)
         self.listDatasource.items = [self.originalListItems]
     }
     
     fileprivate func setDelegates() {
-        self.listTableView.delegate = self.listDatasource.delegateDatasource
-        self.listTableView.dataSource = self.listDatasource.delegateDatasource
+        self.tableView.delegate = self.listDatasource.delegateDatasource
+        self.tableView.dataSource = self.listDatasource.delegateDatasource
         self.listDatasource.delegateDatasource.listener = self
         self.searchTextfield.delegate = self
     }

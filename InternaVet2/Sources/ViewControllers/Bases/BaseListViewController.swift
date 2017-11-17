@@ -8,16 +8,7 @@
 
 import UIKit
 
-class BaseListViewController: UIViewController, SessionControllerManagerProtocol {
-    weak var sessionController: SessionController!
+class BaseListViewController: BaseViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-    override func show(_ vc: UIViewController, sender: Any?) {
-        self.trySetSession(on: vc)
-        super.show(vc, sender: sender)
-    }
-    
-    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.trySetSession(on: viewControllerToPresent)
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
-    }
 }

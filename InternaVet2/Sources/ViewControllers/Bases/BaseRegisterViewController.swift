@@ -18,20 +18,7 @@ protocol EntityServerProtocol: class {
 
 typealias RegisterViewController = EntityServerProtocol&UIViewController
 
-class BaseRegisterViewController: UIViewController, SessionControllerManagerProtocol {
-    @IBInspectable var dissmissWhenSave: Bool = true
-    
-    weak var sessionController: SessionController!
-        
-    override func show(_ vc: UIViewController, sender: Any?) {
-        self.trySetSession(on: vc)
-        super.show(vc, sender: sender)
-    }
-    
-    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.trySetSession(on: viewControllerToPresent)
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
-    }
+class BaseRegisterViewController: BaseViewController {
     
     func allFieldsFullfilled() -> Bool {
         return false
@@ -44,13 +31,11 @@ class BaseRegisterViewController: UIViewController, SessionControllerManagerProt
     @IBAction func saveButtonTapped(_ sender: Any) {
         if self.allFieldsFullfilled() {
             self.performSave()
-            if self.dissmissWhenSave {
-                self.navigationController?.dismiss(animated: true, completion: nil)
-            }
+            self.performReturn()
         }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.performReturn()
     }
 }

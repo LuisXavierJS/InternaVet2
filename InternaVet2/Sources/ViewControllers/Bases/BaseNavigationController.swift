@@ -25,6 +25,7 @@ class BaseNavigationController : UINavigationController, SessionControllerManage
     
     override func show(_ vc: UIViewController, sender: Any?) {
         self.trySetSession(on: vc)
+        if let vc = vc as? BaseViewController {vc.returnMode = .pop}
         super.show(vc, sender: sender)
     }
     
@@ -35,6 +36,7 @@ class BaseNavigationController : UINavigationController, SessionControllerManage
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         self.trySetSession(on: viewController)
+        if let vc = viewController as? BaseViewController {vc.returnMode = .pop}
         super.pushViewController(viewController, animated: animated)
     }
     

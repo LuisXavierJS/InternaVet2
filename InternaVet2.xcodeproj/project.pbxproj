@@ -26,6 +26,7 @@
 		8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */; };
 		8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */; };
 		8E24623A1FA38EEA00DA7A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */; };
+		8E30824B1FBF1350005C99D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30824A1FBF1350005C99D5 /* BaseViewController.swift */; };
 		8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */; };
 		8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */; };
 		8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */; };
@@ -213,6 +214,7 @@
 		8E2462351FA0217A00DA7A9A /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E30824A1FBF1350005C99D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringRepresentable+Implementations.swift"; sourceTree = "<group>"; };
 		8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
 		8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				8E496A3D1F6ED49D00BBC65E /* BaseNavigationController.swift */,
+				8E30824A1FBF1350005C99D5 /* BaseViewController.swift */,
 				8E4174E81F90233200C07CCF /* BaseRegisterViewController.swift */,
 				8E4174E61F9021EF00C07CCF /* BaseListViewController.swift */,
 			);
@@ -1192,6 +1195,7 @@
 				8EF87B8B1F9C3EC900EAAF2B /* SearchResultCell.swift in Sources */,
 				8E775F451FBA50B000F6E234 /* ArrowView.swift in Sources */,
 				8E2462321FA0212D00DA7A9A /* UIViewController+Helpers.swift in Sources */,
+				8E30824B1FBF1350005C99D5 /* BaseViewController.swift in Sources */,
 				8E2462301FA0210600DA7A9A /* UITableViewCell+Helpers.swift in Sources */,
 				8E232C591FABFCED00E223D5 /* AutoCompletionController.swift in Sources */,
 				8E2462361FA0217A00DA7A9A /* Date+Helpers.swift in Sources */,

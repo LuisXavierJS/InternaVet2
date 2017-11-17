@@ -24,6 +24,7 @@ class Patient: StorageItem, SearchableItem {
     dynamic var isDead: Bool = false
     dynamic var dogHouseNumber: String?
     dynamic var hospitalizationTime: String?
+    dynamic var tasks: [Task] = []
     
     func getHospitalizationTimeInterval() -> TimeInterval {
         assertionFailure("MUST CONVERT hospitalizationTime: String TO TIME INTERVAL!")

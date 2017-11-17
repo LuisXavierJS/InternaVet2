@@ -91,7 +91,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="85" width="320" height="45"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSk-de-tG6">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSk-de-tG6" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="7" width="128" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
