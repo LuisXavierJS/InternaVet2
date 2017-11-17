@@ -30,7 +30,7 @@
         <!--Paciente-->
         <scene sceneID="fbV-PH-F0t">
             <objects>
-                <viewController id="MuB-kB-orf" customClass="CreateNewPatientViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateNewPatientViewController" id="MuB-kB-orf" customClass="CreateNewPatientViewController" customModule="InternaVet2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wYI-GZ-udR"/>
                         <viewControllerLayoutGuide type="bottom" id="BUi-SZ-g3n"/>

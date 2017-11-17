@@ -25,7 +25,7 @@ class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtoco
     
     weak var editingTask: Task?
     
-    var delegate: EntityConsumerProtocol?
+    weak var delegate: EntityConsumerProtocol?
     
     fileprivate weak var beginDatePicker: UIDatePicker? {
         return self.beginHospitalizationDateSelector.datePickerContainer?.datepicker
@@ -88,6 +88,7 @@ class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtoco
     private func setDatasources() {
         self.taskTypeSelection.selection.items = ([.medicamento,.procedimento,.exame] as [AutoCompletionType]).map({$0.rawValue})
         self.dosageTextfield.selection.items = [Words.grams, Words.kilograms]
+        self.intervalPickerSelector.setItems(Array(1...24).map({return "\($0) hora" + ($0 > 1 ? "s" : "")}))
         self.beginDatePicker?.addTarget(self, action: #selector(self.beginDatePickerValueChanged), for: .valueChanged)
         self.beginDatePicker?.minimumDate = DefaultValues.minimumHospitalizationDate
         self.beginDatePicker?.maximumDate = DefaultValues.maximumHospitalizationDate
@@ -149,7 +150,7 @@ class CreateNewTaskViewController: BaseRegisterViewController, PushButtonProtoco
     
     func needsViewControllerToCreateItem(for listViewController: SearchableListViewController) -> RegisterViewController? {
         if self.lastSelectedPushButton == self.patientPushButton {
-            return CreateNewPatientViewController.instantiate()
+            return CreateNewPatientViewController.instantiate(withIdentifier: CreateNewPatientViewController.className())
         }
         return nil
     }
