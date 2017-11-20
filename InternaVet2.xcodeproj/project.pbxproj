@@ -27,6 +27,7 @@
 		8E2462381FA021B000DA7A9A /* Bool+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */; };
 		8E24623A1FA38EEA00DA7A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */; };
 		8E30824B1FBF1350005C99D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30824A1FBF1350005C99D5 /* BaseViewController.swift */; };
+		8E30824D1FBF59FA005C99D5 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30824C1FBF59FA005C99D5 /* TaskTableViewCell.swift */; };
 		8E30CEF01F65FBF8007D34F7 /* StringRepresentable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */; };
 		8E30CEF71F6623BE007D34F7 /* CreateNewOwner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */; };
 		8E30CEF81F6623BE007D34F7 /* CreateNewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */; };
@@ -215,6 +216,7 @@
 		8E2462371FA021B000DA7A9A /* Bool+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Helpers.swift"; sourceTree = "<group>"; };
 		8E2462391FA38EEA00DA7A9A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E30824A1FBF1350005C99D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8E30824C1FBF59FA005C99D5 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		8E30CEEF1F65FBF8007D34F7 /* StringRepresentable+Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringRepresentable+Implementations.swift"; sourceTree = "<group>"; };
 		8E30CEF21F6623BE007D34F7 /* CreateNewOwner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewOwner.storyboard; sourceTree = "<group>"; };
 		8E30CEF41F6623BE007D34F7 /* CreateNewPatient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewPatient.storyboard; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 		8E67C9E11F40F48E00C3C4CE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8E30824C1FBF59FA005C99D5 /* TaskTableViewCell.swift */,
 				8E79E2F41F675A81007FA9BD /* PatientTableViewCell.swift */,
 				8EF87B8A1F9C3EC900EAAF2B /* SearchResultCell.swift */,
 			);
@@ -1160,6 +1163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E30824D1FBF59FA005C99D5 /* TaskTableViewCell.swift in Sources */,
 				8EEE026F1F6F22F300A007C5 /* CreateNewOwnerViewController.swift in Sources */,
 				8EEE02701F6F22F300A007C5 /* CreateNewPatientViewController.swift in Sources */,
 				8EEE02711F6F22F300A007C5 /* CreateNewTaskViewController.swift in Sources */,

@@ -10,9 +10,9 @@ import UIKit
 
 
 class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
-    static var collapsedHeight: CGFloat { return 54 }
+    static var collapsedHeight: CGFloat { return 52 }
 
-    var expandedHeight: CGFloat { return 195}
+    var expandedHeight: CGFloat { return self.ownerLabel.superview?.frame.maxY ?? PatientTableViewCell.collapsedHeight }
 
     typealias DataType = Patient
     
@@ -21,14 +21,10 @@ class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dogHoseLabel: ValuedUILabel!
     
-    @IBOutlet weak var hospitalizationTimeLabel: ValuedUILabel!
-    @IBOutlet weak var ageLabel: ValuedUILabel!
-    @IBOutlet weak var isDiedLabel: ValuedUILabel!
-    @IBOutlet weak var isCastratedLabel: ValuedUILabel!
-    @IBOutlet weak var genderLabel: ValuedUILabel!
-    @IBOutlet weak var ownerLabel: ValuedUILabel!
-    @IBOutlet weak var recordLabel: ValuedUILabel!
-    @IBOutlet weak var chipLabel: ValuedUILabel!
+    @IBOutlet weak var hospitalizationTimeLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var ownerLabel: UILabel!
 
     
     override func awakeFromNib() {
@@ -37,19 +33,14 @@ class PatientTableViewCell: UITableViewCell, JSExpansableCellProtocol {
     }
 
     func setup(_ object: Patient) {
-        self.specieLabel.text = object.specie
-        self.nameLabel.text = object.name
-        self.dogHoseLabel.text = object.dogHouseNumber
-        self.raceLabel.text = object.race
+        self.specieLabel.text = object.race ?? "-"
+        self.nameLabel.text = object.name ?? "-"
+        self.dogHoseLabel.text = object.dogHouseNumber ?? "-"
+        self.raceLabel.text = object.specie ?? "-"
         
-        self.hospitalizationTimeLabel.text = object.hospitalizationTime
-        self.ageLabel.text = object.age
-        self.isDiedLabel.text = object.isDead.semantic
-        self.isCastratedLabel.text = object.isCastrated.semantic
-        self.genderLabel.text = object.gender
-        self.ownerLabel.text = object.ownerId
-        self.recordLabel.text = object.record
-        self.chipLabel.text = object.chip
+        self.hospitalizationTimeLabel.text = object.hospitalizationTime ?? "-"
+        self.ageLabel.text = object.age ?? "-"
+        self.ownerLabel.text = object.ownerId ?? "-"
     }
 
 }

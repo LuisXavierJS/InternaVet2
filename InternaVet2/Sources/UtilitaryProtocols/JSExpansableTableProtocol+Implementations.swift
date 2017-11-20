@@ -14,12 +14,6 @@ protocol JSExpansableCellProtocol: JSSetupableCellProtocol {
     var expandedHeight: CGFloat {get}
 }
 
-class TableViewDelegateDatasource: JSTableViewDelegateDatasource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.delegate.tableView?(tableView, heightForRowAt: indexPath) ?? 44
-    }
-}
-
 class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>:JSGenericTableController<CellType> where CellType: UITableViewCell{
     override var items: [[DataType]] {
         get { return super.items }
@@ -32,13 +26,7 @@ class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>
     
     private(set) var cellsVisibilityState: [IndexPath:Bool] = [:]
     
-    init(_ tableView: UITableView) {
-        super.init(tableView: tableView)
-    }
-    
-    override func createDelegateDatasourceObject() -> JSTableViewDelegateDatasource {
-        return TableViewDelegateDatasource()
-    }
+    private var isPerformingExpandCollapse: Bool = false
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.cellsVisibilityState[indexPath] = !(self.cellsVisibilityState[indexPath] ?? false)
@@ -53,9 +41,12 @@ class JSGenericExpansableCellTableController<CellType: JSExpansableCellProtocol>
     private func getCellHeight(at indexPath: IndexPath) -> CGFloat {
         let cellIsShowing = self.cellsVisibilityState[indexPath] ?? false
         func expandedHeight() -> CGFloat {
-            return (self.tableView?.cellForRow(at: indexPath) as? CellType)?.expandedHeight ?? CellType.collapsedHeight
+            self.isPerformingExpandCollapse = true
+            let cellHeight = (self.tableView?.cellForRow(at: indexPath) as? CellType)?.expandedHeight ?? CellType.collapsedHeight
+            self.isPerformingExpandCollapse = false
+            return cellHeight
         }        
-        return cellIsShowing ? expandedHeight() : CellType.collapsedHeight
+        return cellIsShowing && !self.isPerformingExpandCollapse ? expandedHeight() : CellType.collapsedHeight
     }
 }
 

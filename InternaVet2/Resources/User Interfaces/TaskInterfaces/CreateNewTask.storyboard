@@ -88,11 +88,14 @@
                                                     <constraint firstAttribute="width" constant="30" id="aOz-k4-ifJ"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-ga-vB0" customClass="TextSelectionViewField" customModule="InternaVet2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="85" width="320" height="45"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSk-de-tG6" customClass="CustomFloatTextField" customModule="InternaVet2" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="6" width="128" height="32"/>
+                                                        <rect key="frame" x="15" y="4.5" width="128" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="eZL-We-U62"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>

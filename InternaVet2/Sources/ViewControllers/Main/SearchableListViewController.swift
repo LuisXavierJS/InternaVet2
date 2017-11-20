@@ -22,7 +22,7 @@ enum SearchMode {
     case itemList(list: [SearchableItem])
 }
 
-class SearchableListViewController: BaseListViewController, UITextFieldDelegate, UITableViewDelegate, EntityConsumerProtocol {
+class SearchableListViewController: BaseListViewController, UITextFieldDelegate, JSTableViewControllerListener, EntityConsumerProtocol {
     @IBOutlet weak var searchTextfield: UITextField!
     
     @IBOutlet weak var textfieldHeightConstraint: NSLayoutConstraint!
