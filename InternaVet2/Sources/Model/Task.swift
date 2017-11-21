@@ -19,6 +19,7 @@ class Task: StorageItem {
     dynamic var observations: String?
     dynamic var dosage: String?
     dynamic var dosageType: String?
+    dynamic var interval: Int = 0
     
     func getNextApplication() -> Date? {
         return nil

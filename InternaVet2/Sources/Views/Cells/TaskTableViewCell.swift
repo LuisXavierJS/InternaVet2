@@ -11,7 +11,7 @@ import UIKit
 class TaskTableViewCell: UITableViewCell, JSExpansableCellProtocol {
     typealias DataType = Task
     
-    static var collapsedHeight: CGFloat { return 97 }
+    static var collapsedHeight: CGFloat { return 45 }
     
     @IBOutlet weak var expandedBodyView: UIView!
     @IBOutlet weak var hourAndDoghouseLabel: UILabel!
@@ -29,6 +29,6 @@ class TaskTableViewCell: UITableViewCell, JSExpansableCellProtocol {
         self.taskNameLabel.text = object.name
         self.taskTypeLabel.text = object.type
         self.patientNameLabel.text = object.getPatient()?.name
-        self.intervalLabel.text = object.
+        self.intervalLabel.text = "\(object.interval)"
     }
 }
