@@ -15,3 +15,10 @@ struct DefaultValues {
     static let minimumHospitalizationDate = Date()
     static let maximumHospitalizationDate = Date().addingTimeInterval(60*60*24*30)
 }
+
+
+struct DateFormat {
+    static let date = "dd/MM/yyyy"
+    static let hour = "HH:mm"
+    static let dateAndHour = "dd/MM/yyyy HH:mm"
+}

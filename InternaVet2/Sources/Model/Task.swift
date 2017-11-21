@@ -19,4 +19,12 @@ class Task: StorageItem {
     dynamic var observations: String?
     dynamic var dosage: String?
     dynamic var dosageType: String?
+    
+    func getNextApplication() -> Date? {
+        return nil
+    }
+    
+    func getPatient() -> Patient? {
+        return nil
+    }
 }
