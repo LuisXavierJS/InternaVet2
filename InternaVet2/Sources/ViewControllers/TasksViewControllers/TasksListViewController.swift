@@ -10,11 +10,11 @@ import UIKit
 
 class TaskListViewController: BaseListViewController {
     
-    var tableDatasource: JSGenericExpansableCellTableController<TaskTableViewCell>!
+    var tableDatasource: MainListDatasource<TaskTableViewCell>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableDatasource = JSGenericExpansableCellTableController(tableView: self.tableView)
+        self.tableDatasource = MainListDatasource(tableView: self.tableView)
         self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }
     

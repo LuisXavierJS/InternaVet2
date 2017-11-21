@@ -10,11 +10,11 @@ import UIKit
 
 class PatientsListViewController: BaseListViewController, JSTableViewControllerListener {
     
-    var tableDatasource: JSGenericExpansableCellTableController<PatientTableViewCell>!
+    var tableDatasource: MainListDatasource<PatientTableViewCell>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableDatasource = JSGenericExpansableCellTableController(tableView: self.tableView)
+        self.tableDatasource = MainListDatasource(tableView: self.tableView)
         self.tableDatasource.delegateDatasource.listener = self
         self.tableView.setDataSourceAndDelegate(self.tableDatasource.delegateDatasource)
     }
@@ -31,11 +31,4 @@ class PatientsListViewController: BaseListViewController, JSTableViewControllerL
         }
     }
     
-    //MARK: JSTableViewControllerListener methods
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let patientCellHeader = (cell as? PatientTableViewCell)?.nameLabel.superview {
-            patientCellHeader.backgroundColor = indexPath.row % 2 == 0 ? Colors.mainLight : Colors.lightGreen
-        }
-    }
 }

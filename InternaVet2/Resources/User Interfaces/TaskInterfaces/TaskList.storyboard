@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,12 +39,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ppr-3x-QMG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ppr-3x-QMG">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskTableViewCell" rowHeight="200" id="5aB-J9-70Q" customClass="TaskTableViewCell" customModule="InternaVet2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5aB-J9-70Q" id="6iN-Qz-86K">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
@@ -234,14 +233,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Prontuário Geral" id="tgq-fE-Pb5">
-                        <rightBarButtonItems>
-                            <barButtonItem image="plus" id="YrY-tf-Gxj">
-                                <connections>
-                                    <action selector="addButtonTapped:" destination="C5w-F7-Q96" id="iZI-yg-0B0"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="magnifier" id="B2v-j3-Mnr"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="YrY-tf-Gxj">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="C5w-F7-Q96" id="iZI-yg-0B0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ppr-3x-QMG" id="vam-Yq-G0p"/>
@@ -254,7 +250,6 @@
     </scenes>
     <resources>
         <image name="clock" width="32" height="32"/>
-        <image name="magnifier" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
     </resources>
 </document>

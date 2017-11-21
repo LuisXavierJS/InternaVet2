@@ -106,6 +106,7 @@ class JSTableViewDelegateDatasource: NSObject, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.listener?.tableView?(tableView, willDisplay: cell, forRowAt: indexPath)
+        self.delegate.tableView?(tableView, willDisplay: cell, forRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -154,7 +155,11 @@ class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JST
         return JSTableViewDelegateDatasource()
     }
     
-    fileprivate(set) weak var tableView: UITableView?
+    fileprivate(set) weak var tableView: UITableView? {
+        didSet{
+            self.didSetTableView()
+        }
+    }
     
     var cellIdentifier: String {
         return CellType.className()
@@ -165,6 +170,10 @@ class JSGenericTableController<CellType: JSSetupableCellProtocol>: NSObject, JST
         super.init()
         self.setDelegateDatasourceObject()
         self.delegateDatasource.delegate = self
+    }
+    
+    func didSetTableView() {
+        
     }
     
     func reloadData(with items: [[DataType]]) {
